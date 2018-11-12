@@ -9,6 +9,7 @@ public class BallGame extends JFrame {
 	Image desk = Toolkit.getDefaultToolkit().getImage("images/desk.jpg");
 	double x = 100, y = 100;
 	boolean right = true;
+	double degree = 3.14/3;
 	
 	public void paint(Graphics g) {
 		System.out.println("Window draw...");
@@ -16,14 +17,20 @@ public class BallGame extends JFrame {
 		g.drawImage(ball, (int)x, (int)y, null);
 		//x++;
 		
-		if(x > 856-70) {
+		x += 10*Math.cos(degree);
+		y += 10*Math.sin(degree);
+		
+		if(y>500-70||y<80) {
+			degree = -degree;
+		}
+		/*if(x > 856-70) {
 			right = false;
 		}
 		if(x<40) {
 			right = true;
 		}
 		
-		x = (right) ? x+10 : x-10;
+		x = (right) ? x+10 : x-10;*/
 	}
 	
 	void launchFrame() {
