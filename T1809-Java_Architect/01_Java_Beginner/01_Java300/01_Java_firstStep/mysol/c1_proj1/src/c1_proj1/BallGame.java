@@ -23,6 +23,9 @@ public class BallGame extends JFrame {
 		if(y>500-70||y<80) {
 			degree = -degree;
 		}
+		if(x<40||x>856-70) {
+			degree = 3.14 - degree;
+		}
 		/*if(x > 856-70) {
 			right = false;
 		}
