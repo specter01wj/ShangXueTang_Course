@@ -5,6 +5,9 @@ import javax.swing.*;
 
 public class BallGame extends JFrame {
 
+	Image ball = Toolkit.getDefaultToolkit().getImage("images/ball.png");
+	Image desk = Toolkit.getDefaultToolkit().getImage("images/desk.jpg");
+	
 	void launchFrame() {
 		setSize(300,300);
 		setLocation(50,50);
