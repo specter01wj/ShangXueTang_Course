@@ -8,6 +8,12 @@ public class BallGame extends JFrame {
 	Image ball = Toolkit.getDefaultToolkit().getImage("images/ball.png");
 	Image desk = Toolkit.getDefaultToolkit().getImage("images/desk.jpg");
 	
+	public void paint(Graphics g) {
+		System.out.println("Window draw...");
+		g.drawImage(desk,  0 , 0,  null);
+		g.drawImage(ball, 100, 100, null);
+	}
+	
 	void launchFrame() {
 		setSize(300,300);
 		setLocation(50,50);
