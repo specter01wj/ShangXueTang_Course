@@ -18,6 +18,15 @@ public class BallGame extends JFrame {
 		setSize(300,300);
 		setLocation(50,50);
 		setVisible(true);
+		
+		while(true) {
+			repaint();
+			try {
+				Thread.sleep(40);
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public static void main(String[] args){
