@@ -6,17 +6,18 @@ public class TestClass {
 	static int size;
 	
 	public static void main(String[] args) {
-		//char
+		//--char
 		int $123 = 1;
-		//variable
+		//--variable
 		int age = 19;
-		//var classify
+		//--var classify
 		{
 			int i=11;
 		}
 		//System.out.println(i);
-		
-		
+		//--constant
+		final String name = "jin";
+		//name = "jim";
 		
 	}
 	
