@@ -18,7 +18,8 @@ public class TestClass {
 		//--constant
 		final String name = "jin";
 		//name = "jim";
-		
+		//--primitive data type
+		//--integer
 	}
 	
 }
