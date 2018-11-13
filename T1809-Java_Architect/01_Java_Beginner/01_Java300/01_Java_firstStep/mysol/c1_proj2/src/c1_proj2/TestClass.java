@@ -3,6 +3,7 @@ package c1_proj2;
 public class TestClass {
 
 	int a;
+	static int size;
 	
 	public static void main(String[] args) {
 		//char
