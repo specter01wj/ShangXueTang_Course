@@ -20,6 +20,8 @@ public class TestClass {
 		//name = "jim";
 		//--primitive data type
 		//--integer
+		int b = 015, c = 0x15, d = 0b1101;
+		System.out.println(b + " ," + c + " ," + d);
 	}
 	
 }
