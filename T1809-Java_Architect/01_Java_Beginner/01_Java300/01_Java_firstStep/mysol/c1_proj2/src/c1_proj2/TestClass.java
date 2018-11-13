@@ -7,6 +7,7 @@ public class TestClass {
 		int $123 = 1;
 		//variable
 		
+		
 	}
 	
 }
