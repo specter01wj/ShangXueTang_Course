@@ -26,8 +26,8 @@ public class TestClass {
 		System.out.println(b + " ," + c + " ," + d);
 		//--float
 		float a1 = 3.14f;
-		double b1 = 628e-2;
-		System.out.println(a1==b1/2);
+		double b1 = 628e-2, b11 = 3.14;;
+		System.out.println(a1 == b1/2);
 		
 		System.out.println("##################");
 		BigDecimal bd = BigDecimal.valueOf(1.0);
