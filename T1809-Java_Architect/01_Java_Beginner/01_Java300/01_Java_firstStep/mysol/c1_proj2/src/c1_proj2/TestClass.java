@@ -43,6 +43,7 @@ public class TestClass {
 		BigDecimal  bd3 = BigDecimal.valueOf(1.0/10.0);
 		
 		System.out.println(bd2.equals(bd3)); 
+		
 	}
 	
 }
