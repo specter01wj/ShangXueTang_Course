@@ -44,8 +44,8 @@ public class TestClass {
 		
 		System.out.println(bd2.equals(bd3)); 
 		
-
-
+		char a11 = '\u0061';
+		System.out.println(a11); 
 
 
 
