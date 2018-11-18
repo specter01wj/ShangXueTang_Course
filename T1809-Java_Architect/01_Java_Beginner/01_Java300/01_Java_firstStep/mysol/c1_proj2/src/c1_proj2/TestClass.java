@@ -47,7 +47,8 @@ public class TestClass {
 		char a11 = '\u0061';
 		System.out.println(a11); 
 
-
+		boolean a12 = true;
+		System.out.println(a12); 
 
 		
 	}
