@@ -62,6 +62,10 @@ public class TestClass {
 		b31 = ++a31;
 		System.out.println("b = " + b31 + "; a = " + a31);
 		
+		int a41 = 3, b41 = 4;
+		a41 *= b41 + 3;
+		System.out.println("b = " + b41 + "; a = " + a41);
+		
 	}
 	
 }
