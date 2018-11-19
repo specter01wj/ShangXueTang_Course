@@ -66,6 +66,9 @@ public class TestClass {
 		a41 *= b41 + 3;
 		System.out.println("b = " + b41 + "; a = " + a41);
 		
+		char a51 = 'a', b51 = 'b';
+		System.out.println("a = " + (int)a51 + " / a = " + (0+a51) + "; a<b " + (a51<b51));
+		
 	}
 	
 }
