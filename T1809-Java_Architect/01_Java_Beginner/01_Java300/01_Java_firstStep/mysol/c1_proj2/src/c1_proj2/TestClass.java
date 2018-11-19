@@ -50,6 +50,14 @@ public class TestClass {
 		boolean a12 = true;
 		System.out.println(a12); 
 
+		byte a21 = 1;
+		int b21 = 2;
+		long b22 = 3;
+		float f1 = 3.14f;
+		float d21 = b21 + b22;
+		
+		
+		
 		
 	}
 	
