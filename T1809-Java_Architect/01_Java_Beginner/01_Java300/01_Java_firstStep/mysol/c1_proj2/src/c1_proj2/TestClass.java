@@ -56,8 +56,11 @@ public class TestClass {
 		float f1 = 3.14f;
 		float d21 = b21 + b22;
 		
-		
-		
+		int a31 = 3;
+		int b31 = a31++;
+		System.out.println("b = " + b31 + "; a = " + a31);
+		b31 = ++a31;
+		System.out.println("b = " + b31 + "; a = " + a31);
 		
 	}
 	
