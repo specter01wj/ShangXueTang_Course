@@ -69,9 +69,10 @@ public class TestClass {
 		char a51 = 'a', b51 = 'b';
 		System.out.println("a = " + (int)a51 + " / a = " + (0+a51) + "; a<b " + (a51<b51));
 		
-		
-
-
+		boolean b61 = true, b62 = true;
+		System.out.println("b1 ^ b2: " + (b61 ^ b62));
+		boolean b63 = 1>2 && 2<(3/0);
+		System.out.println("b3: " + b63);
 
 
 
