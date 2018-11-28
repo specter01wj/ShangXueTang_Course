@@ -77,7 +77,7 @@ public class TestClass {
 		// 039
 		int a71 = 3, b71 = 4, c71 = 5;
 		System.out.println("a &|^ b = " + (a71&b71) + "/" + (a71|b71) + "/" + (a71^b71));
-		System.out.println("c: >> <<" + (c71>>2) + "/" + (c71<<2));
+		System.out.println("c: >> <<" + (c71>>1) + "/" + (c71<<2));
 
 
 
