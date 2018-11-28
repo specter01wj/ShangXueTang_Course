@@ -74,8 +74,10 @@ public class TestClass {
 		boolean b63 = 1>2 && 2<(3/0);
 		System.out.println("b3: " + b63);
 
-
-
+		// 039
+		int a71 = 3, b71 = 4;
+		System.out.println("a &|^ b = " + (a71&b71) + "/" + (a71|b71) + "/" + (a71^b71));
+		
 
 
 
