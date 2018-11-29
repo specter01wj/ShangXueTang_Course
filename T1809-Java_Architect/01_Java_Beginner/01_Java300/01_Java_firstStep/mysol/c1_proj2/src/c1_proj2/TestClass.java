@@ -79,9 +79,13 @@ public class TestClass {
 		System.out.println("a &|^ b = " + (a71&b71) + "/" + (a71|b71) + "/" + (a71^b71));
 		System.out.println("c: >> <<" + (c71>>1) + "/" + (c71<<2));
 
-
-
-
+		// 040
+		String a81 = "101";
+		int b81 = 3, c81 = 4;
+		char d81 = 'a';
+		System.out.println("a+b+c: " + (a81+b81+c81));
+		System.out.println("b+c+a: " + (b81+c81+a81));
+		System.out.println("d+c: " + (d81+c81));
 
 		
 		
