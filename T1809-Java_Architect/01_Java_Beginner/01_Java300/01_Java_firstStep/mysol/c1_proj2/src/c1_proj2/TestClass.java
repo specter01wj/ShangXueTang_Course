@@ -91,6 +91,16 @@ public class TestClass {
 		int score = 95, score2 = -100;
 		System.out.println("pass?: " + (score > 60 ? (score > 85 ? "A+" : "pass") : "fail"));
 		System.out.println("x: " + (score2 > 0 ? 1 : score2 == 0 ? 0 : -1));
+		
+		// 043
+		int a91 = 10;
+		long b91 = a91;
+		double d91 = b91;
+		float f91 = 2323L;
+		byte g91 = 123;
+		
+		// 044
+		
 	}
 	
 }
