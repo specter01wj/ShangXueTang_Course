@@ -1,5 +1,6 @@
 package c1_proj2;
 
+import java.util.Scanner;
 import java.math.*;
 
 public class TestClass {
@@ -112,6 +113,14 @@ public class TestClass {
 		int a02 = 1000000000, b02 = 20;
 		long c02 = a02 * (long)b02;
 		System.out.println("c02:long " + c02);
+		
+		// 046
+		Scanner scanner01 = new Scanner(System.in);
+		String a03 = scanner01.nextLine();
+		int b03 = scanner01.nextInt();
+		System.out.println("you are: " + a03 + "; age = " + b03);
+		
+		
 		
 		
 	}
