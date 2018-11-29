@@ -120,7 +120,7 @@ public class TestClass {
 		int b03 = scanner01.nextInt();
 		System.out.println("you are: " + a03 + "; age = " + b03);
 		
-		
+		// 047
 		
 		
 	}
