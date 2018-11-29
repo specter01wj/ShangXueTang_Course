@@ -108,6 +108,11 @@ public class TestClass {
 		System.out.println("d01: " + d01);
 		System.out.println("d01:char " + (char)d01);
 		
+		// 045
+		int a02 = 1000000000, b02 = 20;
+		long c02 = a02 * (long)b02;
+		System.out.println("c02:long " + c02);
+		
 		
 	}
 	
