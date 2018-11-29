@@ -100,6 +100,14 @@ public class TestClass {
 		byte g91 = 123;
 		
 		// 044
+		double a01 = 3.99;
+		int b01 = (int)a01;
+		System.out.println("b01: " + b01);
+		char c01 = 'a';
+		int d01 = c01 + 2;
+		System.out.println("d01: " + d01);
+		System.out.println("d01:char " + (char)d01);
+		
 		
 	}
 	
