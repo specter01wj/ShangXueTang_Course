@@ -87,8 +87,10 @@ public class TestClass {
 		System.out.println("b+c+a: " + (b81+c81+a81));
 		System.out.println("d+c: " + (d81+c81));
 
-		
-		
+		// 041
+		int score = 95, score2 = -100;
+		System.out.println("pass?: " + (score > 60 ? (score > 85 ? "A+" : "pass") : "fail"));
+		System.out.println("x: " + (score2 > 0 ? 1 : score2 == 0 ? 0 : -1));
 	}
 	
 }
