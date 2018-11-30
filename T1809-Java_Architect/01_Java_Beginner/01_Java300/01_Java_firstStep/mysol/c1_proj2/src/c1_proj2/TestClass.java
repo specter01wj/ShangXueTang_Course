@@ -127,15 +127,18 @@ public class TestClass {
 		int b04 = (int)(6*Math.random()+1), c04 = (int)(6*Math.random()+1),
 				d04 = (int)(6*Math.random()+1);
 		int e04 = b04 + c04 + d04;
-		if(e04 > 15) {
+		if(e04 > 12) {
 			System.out.println("Big! - " + e04);
 		}
-		if(e04 >= 10 && e04 <= 15) {
+		if(e04 >= 8 && e04 <= 12) {
 			System.out.println("Ave=: " + e04);
 		}
-		if(e04 < 10) {
+		if(e04 < 8) {
 			System.out.println("Low?: " + e04);
 		}
+		
+		// 049
+		
 		
 	}
 	
