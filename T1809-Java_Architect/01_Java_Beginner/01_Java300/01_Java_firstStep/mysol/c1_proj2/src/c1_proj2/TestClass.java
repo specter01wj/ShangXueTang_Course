@@ -124,6 +124,9 @@ public class TestClass {
 		double a04 = Math.random();
 		System.out.println("num: " + a04);
 		
+		int b04 = (int)(6*Math.random()+1), c04 = (int)(6*Math.random()+1),
+				d04 = (int)(6*Math.random()+1);
+		int e04 = b04 + c04 + d04;
 		
 		
 		
