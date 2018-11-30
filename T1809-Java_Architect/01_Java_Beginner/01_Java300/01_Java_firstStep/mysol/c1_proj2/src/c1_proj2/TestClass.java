@@ -115,13 +115,14 @@ public class TestClass {
 		System.out.println("c02:long " + c02);
 		
 		// 046
-		Scanner scanner01 = new Scanner(System.in);
-		String a03 = scanner01.nextLine();
-		int b03 = scanner01.nextInt();
-		System.out.println("you are: " + a03 + "; age = " + b03);
+//		Scanner scanner01 = new Scanner(System.in);
+//		String a03 = scanner01.nextLine();
+//		int b03 = scanner01.nextInt();
+//		System.out.println("you are: " + a03 + "; age = " + b03);
 		
-		// 047
-		
+		// 048
+		double a04 = Math.random();
+		System.out.println("num: " + a04);
 		
 		
 		
