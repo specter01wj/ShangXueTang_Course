@@ -160,7 +160,27 @@ public class TestClass {
 			System.out.println("Old man?");
 		}
 		
+		// 051
+		char c07 = 'a';
+		int rand07 = (int)(26*Math.random());
+		char d07 = (char)(c07+rand07);
+		System.out.println("Add - " + rand07 + "/Char " + d07 + " is: ");
 		
+		switch(d07) {
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+				System.out.println("Vowel!");
+				break;
+			case 'y':
+			case 'w':
+				System.out.println("Semi-Vowel!");
+				break;
+			default:
+				System.out.println("Consonant!");
+		}
 		
 		
 	}
