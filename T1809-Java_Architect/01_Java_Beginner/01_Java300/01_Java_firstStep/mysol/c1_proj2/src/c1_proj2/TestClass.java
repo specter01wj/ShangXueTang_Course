@@ -182,6 +182,13 @@ public class TestClass {
 				System.out.println("Consonant!");
 		}
 		
+		// 052
+		int i08 = 1, sum08 = 0;
+		while(i08 <= 100) {
+			sum08 += i08;
+			i08++;
+		}
+		System.out.println("Sum: " + sum08);
 		
 	}
 	
