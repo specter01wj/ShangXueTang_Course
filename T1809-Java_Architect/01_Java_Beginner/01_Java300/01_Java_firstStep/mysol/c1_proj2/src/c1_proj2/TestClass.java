@@ -212,6 +212,15 @@ public class TestClass {
 			System.out.println();
 		}
 		
+		int sum09_1 = 0, sum09_2 = 0;
+		for(int i=1; i <= 100; i++) {
+			if(i%2 == 0) {
+				sum09_1 += i;
+			} else {
+				sum09_2 += i;
+			}
+		}
+		System.out.println("Even: " + sum09_1 + "; Odd: " + sum09_2);
 		
 		
 		
