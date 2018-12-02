@@ -190,6 +190,14 @@ public class TestClass {
 		}
 		System.out.println("Sum: " + sum08);
 		
+		// 053
+		for(int i = 1; i <= 100; i++) {
+			sum08 += i;
+		}
+		System.out.println("Sum:(for) " + sum08);
+		
+		
+		
 	}
 	
 }
