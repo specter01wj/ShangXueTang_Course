@@ -147,9 +147,18 @@ public class TestClass {
 			System.out.println("Area < Perimeter");
 		}
 		
-		
-		
-		
+		// 050
+		int age06 = (int)(100 * Math.random());
+		System.out.println("your age: " + age06 + " belong to: ");
+		if(age06 < 15) {
+			System.out.println("Kid!");
+		} else if (age06 < 30) {
+			System.out.println("College Student!");
+		} else if (age06 < 60) {
+			System.out.println("Working people!");
+		} else {
+			System.out.println("Old man?");
+		}
 		
 		
 		
