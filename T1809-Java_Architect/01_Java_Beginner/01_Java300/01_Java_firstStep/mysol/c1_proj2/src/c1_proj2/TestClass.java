@@ -138,6 +138,14 @@ public class TestClass {
 		}
 		
 		// 049
+		double a05 = 4 * Math.random(), area05 = Math.PI*Math.pow(a05, 2),
+				circle05 = 2 * Math.PI * a05;
+		System.out.println("radius: " + a05 + ",area: " + area05 + ",perimeter: " + circle05);
+		if(area05 > circle05) {
+			System.out.println("Area > Perimeter");
+		} else {
+			System.out.println("Area < Perimeter");
+		}
 		
 		
 		
