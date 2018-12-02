@@ -222,7 +222,16 @@ public class TestClass {
 		}
 		System.out.println("Even: " + sum09_1 + "; Odd: " + sum09_2);
 		
-		
+		int flag5 = 1;
+		for(int i = 1; i <= 1000; i++) {
+			if(i%5 == 0) {
+				System.out.print(" " + i);
+				if(flag5 % 5 == 0) {
+					System.out.println();
+				}
+				flag5 = flag5 == 5 ? flag5 = 1 : ++flag5;
+			}
+		}
 		
 		
 	}
