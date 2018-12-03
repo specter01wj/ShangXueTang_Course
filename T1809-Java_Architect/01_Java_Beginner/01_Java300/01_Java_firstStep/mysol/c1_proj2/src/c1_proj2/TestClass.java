@@ -282,7 +282,7 @@ public class TestClass {
 		int c010 = tm.add(30, 40, 50)+1000;
 		System.out.println(c010);
 		
-		
+		// 058
 		
 		
 	}
