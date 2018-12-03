@@ -283,6 +283,8 @@ public class TestClass {
 		System.out.println(c010);
 		
 		// 058
+		System.out.println(add(1,2,3));
+		System.out.println(add(1,2));
 		
 		
 	}
@@ -291,7 +293,13 @@ public class TestClass {
 		System.out.println("Shanghai SXT!");
 	}
 	
-	int add(int a, int b, int c) {
+	static int add(int a, int b) {
+		int sum = a + b;
+		System.out.println(sum);
+		return sum;
+	}
+	
+	static int add(int a, int b, int c) {
 		int sum = a + b + c;
 		System.out.println(sum);
 		return sum;
