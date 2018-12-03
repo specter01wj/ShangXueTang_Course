@@ -286,7 +286,34 @@ public class TestClass {
 		System.out.println(add(1,2,3));
 		System.out.println(add(1,2));
 		
+		// 059
+		a011();
 		
+		Scanner scanner011 = new Scanner(System.in);
+		int a011 = scanner011.nextInt();
+		long d011_1 = System.currentTimeMillis();
+		System.out.printf("Factorial - %d: %s%n", a011, factorial(a011));
+		long d011_2 = System.currentTimeMillis();
+		System.out.printf("Tiem elapsed: %s%n", d011_2-d011_1);
+		
+	}
+	
+	static long factorial(int n) {
+		if(n==1) return 1;
+		else {
+			return n*factorial(n-1);
+		}
+	}
+	
+	static int count011 = 0;
+	static void a011() {
+		System.out.println("K");
+		count011++;
+		if(count011<5) {
+			a011();
+		} else {
+			return;
+		}
 	}
 	
 	void printSxt() {
