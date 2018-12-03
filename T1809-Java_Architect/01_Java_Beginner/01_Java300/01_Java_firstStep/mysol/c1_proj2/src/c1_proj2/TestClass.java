@@ -234,10 +234,28 @@ public class TestClass {
 		}
 		
 		// 055
+		int total010 = 0;
+		while(true) {
+			total010++;
+			int i010 = (int)Math.round(100*Math.random());
+			System.out.println("Num: " + i010);
+			if(i010==88) {
+				break;
+			}
+		}
+		System.out.println("Used: " + total010 + " Times!");
 		
-		
-		
-		
+		int count010 = 0;
+		for(int i = 100; i < 150; i++) {
+			if(i%3 == 0) {
+				continue;
+			}
+			System.out.print(i + ", ");
+			count010++;
+			if(count010%5 == 0) {
+				System.out.println();
+			}
+		}
 		
 		
 		
