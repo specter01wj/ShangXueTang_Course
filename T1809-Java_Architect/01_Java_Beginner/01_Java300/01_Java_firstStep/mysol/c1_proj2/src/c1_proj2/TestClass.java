@@ -257,9 +257,24 @@ public class TestClass {
 			}
 		}
 		
-		
-		
-		
+		// 056
+		// prime num between 101-150
+		System.out.println();
+		System.out.println("==================");
+		count010 = 0;
+		outer: for(int i = 101; i < 150; i++) {
+			for(int j = 2; j < i/2; j++) {
+				if(i%j == 0) {
+					continue outer;
+				}
+				
+			}
+			System.out.print(i + " ");
+			count010++;
+			if(count010%5 == 0) {
+				System.out.println();
+			}
+		}
 		
 		
 		
