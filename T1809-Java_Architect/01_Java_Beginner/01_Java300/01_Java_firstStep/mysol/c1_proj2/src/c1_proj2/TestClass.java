@@ -276,12 +276,25 @@ public class TestClass {
 			}
 		}
 		
+		// 057
+		TestClass tm = new TestClass();
+		tm.printSxt();
+		int c010 = tm.add(30, 40, 50)+1000;
+		System.out.println(c010);
 		
 		
 		
 		
-		
-		
+	}
+	
+	void printSxt() {
+		System.out.println("Shanghai SXT!");
+	}
+	
+	int add(int a, int b, int c) {
+		int sum = a + b + c;
+		System.out.println(sum);
+		return sum;
 	}
 	
 }
