@@ -296,6 +296,17 @@ public class TestClass {
 		long d011_2 = System.currentTimeMillis();
 		System.out.printf("Tiem elapsed: %s%n", d011_2-d011_1);
 		
+		long d011_3 = System.currentTimeMillis();
+		long result011 = 1;
+		while(a011>1) {
+			result011 *= a011 * (a011 - 1);
+			a011 -= 2;
+		}
+		long d011_4 = System.currentTimeMillis();
+		System.out.printf("Factorial(while) - %d: %s%n", a011, result011);
+		System.out.printf("Tiem elapsed: %s%n", d011_4-d011_3);
+		
+		
 	}
 	
 	static long factorial(int n) {
