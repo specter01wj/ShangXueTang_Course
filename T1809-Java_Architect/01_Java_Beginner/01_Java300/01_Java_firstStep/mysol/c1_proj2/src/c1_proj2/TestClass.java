@@ -306,7 +306,6 @@ public class TestClass {
 		System.out.printf("Factorial(while) - %d: %s%n", a011, result011);
 		System.out.printf("Tiem elapsed: %s%n", d011_4-d011_3);
 		
-		
 	}
 	
 	static long factorial(int n) {
