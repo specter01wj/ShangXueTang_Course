@@ -31,9 +31,9 @@ public class TestClass2 {
 		tl2.comp = c1;
 		tl2.study();
 		
+		// 064
 		
-		
-		
+		// 065
 		
 		
 		
