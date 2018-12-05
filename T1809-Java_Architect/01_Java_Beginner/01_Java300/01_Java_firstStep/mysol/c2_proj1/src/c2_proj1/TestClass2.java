@@ -5,8 +5,10 @@ public class TestClass2 {
 	int id, age;
 	String name;
 	
+	Computer comp;
+	
 	void study() {
-		System.out.println("Studying!");
+		System.out.println("Studying!" + comp.brand);
 	}
 	
 	void play() {
@@ -31,3 +33,10 @@ public class TestClass2 {
 	}
 	
 }
+
+class Computer {
+	
+}
+
+
+
