@@ -47,7 +47,8 @@ public class TestClass2 {
 		// 066
 		// 067
 		// 068
-		
+		TestThis testThis04 = new TestThis(2, 3);
+		testThis04.eat();
 		
 		
 		
@@ -96,4 +97,27 @@ class User03 {
 	
 }
 
+class TestThis {
+	int a, b, c;
+	
+	TestThis(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+	
+	TestThis(int a, int b, int c) {
+		this(a,b);
+		this.c = c;
+	}
+	
+	void sing() {
+		
+	}
+	
+	void eat() {
+		this.sing();
+		System.out.println("TestThis: eat!" + a + b);
+	}
+	
+}
 
