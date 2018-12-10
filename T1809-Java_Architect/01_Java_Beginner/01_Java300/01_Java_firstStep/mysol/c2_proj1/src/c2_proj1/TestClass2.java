@@ -59,6 +59,9 @@ class Point {
 		y = _y;
 	}
 	
+	public double getDistance(Point p) {
+		return Math.sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y));
+	}
 	
 }
 
