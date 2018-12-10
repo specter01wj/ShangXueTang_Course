@@ -38,7 +38,7 @@ public class TestClass2 {
 		Point origin03 = new Point(0, 0);
 		
 		System.out.println(p03.getDistance(origin03));
-
+		System.out.println(p03.getDistance(p03));
 
 
 
