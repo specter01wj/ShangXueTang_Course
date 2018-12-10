@@ -40,7 +40,6 @@ public class TestClass2 {
 		System.out.println(p03.getDistance(origin03));
 		System.out.println(p03.getDistance(p03));
 
-
 		
 		
 		
