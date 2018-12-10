@@ -79,6 +79,12 @@ class User03 {
 		this.name = name;
 	}
 	
+	public User03(int id, String name, String pwd) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
 }
 
 
