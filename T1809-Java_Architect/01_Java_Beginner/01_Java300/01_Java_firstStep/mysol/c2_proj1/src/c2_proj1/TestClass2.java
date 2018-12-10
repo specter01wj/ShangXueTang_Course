@@ -35,9 +35,9 @@ public class TestClass2 {
 		
 		// 065
 		Point p03 = new Point(3, 4);
-		Point origin03 = newe Point(0, 0);
+		Point origin03 = new Point(0, 0);
 		
-		
+		System.out.println(p03.getDistance(origin03));
 
 
 
