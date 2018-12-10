@@ -34,6 +34,9 @@ public class TestClass2 {
 		// 064
 		
 		// 065
+		Point p03 = new Point(3, 4);
+		Point origin03 = newe Point(0, 0);
+		
 		
 
 
