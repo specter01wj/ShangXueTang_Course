@@ -65,5 +65,16 @@ class Point {
 	
 }
 
+class User03 {
+	int id;
+	String name, pwd;
+	
+	public User03() {
+		
+	}
+	
+	
+	
+}
 
 
