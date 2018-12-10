@@ -41,7 +41,7 @@ public class TestClass2 {
 		System.out.println(p03.getDistance(p03));
 		
 		User03 u03_1 = new User03();
-		
+		User03 u03_2 = new User03(101, "James");
 		
 		
 	}
