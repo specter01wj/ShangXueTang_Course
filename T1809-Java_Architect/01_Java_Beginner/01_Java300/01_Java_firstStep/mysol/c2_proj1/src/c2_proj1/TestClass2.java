@@ -83,6 +83,7 @@ class User03 {
 		super();
 		this.id = id;
 		this.name = name;
+		this.pwd = pwd;
 	}
 	
 }
