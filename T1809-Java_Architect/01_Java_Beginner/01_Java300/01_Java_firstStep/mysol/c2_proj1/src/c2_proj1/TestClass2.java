@@ -139,10 +139,13 @@ class User04 {
 	}
 	
 	public void login() {
+		printCompany();
+		System.out.println(company);
 		System.out.println("Login: " + name);
 	}
 	
 	public static void printCompany() {
+		//login();
 		System.out.println(company);
 	}
 	
