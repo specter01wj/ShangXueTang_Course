@@ -124,3 +124,24 @@ class TestThis {
 	
 }
 
+class User04 {
+	int id;
+	String name, pwd;
+	
+	static String company = "Google";
+	
+	public User04(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	public void login() {
+		System.out.println("Login: " + name);
+	}
+	
+	public static void printCompany() {
+		System.out.println(company);
+	}
+	
+}
+
