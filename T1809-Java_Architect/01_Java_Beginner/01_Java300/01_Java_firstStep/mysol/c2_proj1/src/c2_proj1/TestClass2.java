@@ -55,7 +55,9 @@ public class TestClass2 {
 		User04.printCompany();
 		User04.company = "Amazon";
 		User04.printCompany();
+		//User04.login();
 		
+		// 070
 		
 		
 	}
