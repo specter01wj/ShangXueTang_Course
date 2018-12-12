@@ -51,7 +51,10 @@ public class TestClass2 {
 		testThis04.eat();
 		
 		// 069
-		
+		User04 user04 = new User04(100012, "James");
+		User04.printCompany();
+		User04.company = "Amazon";
+		User04.printCompany();
 		
 		
 		
