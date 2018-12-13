@@ -58,7 +58,7 @@ public class TestClass2 {
 		//User04.login();
 		
 		// 070
-		
+		User05 user05 = null;
 		
 		
 		
