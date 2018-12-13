@@ -157,3 +157,16 @@ class User04 {
 	
 }
 
+class User05 {
+	int id;
+	String name, pwd;
+	static String company;
+	
+	static {
+		System.out.println("Class init!");
+		company = "Apple";
+		printCompany();
+	}
+	
+}
+
