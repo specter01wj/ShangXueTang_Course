@@ -58,7 +58,8 @@ public class TestClass2 {
 		//User04.login();
 		
 		// 070
-		User05 user05 = null;
+		User05 user05 = new User05();
+		//user05.printCompany();
 		
 		
 		
