@@ -168,5 +168,9 @@ class User05 {
 		printCompany();
 	}
 	
+	public static void printCompany() {
+		System.out.println(company);
+	}
+	
 }
 
