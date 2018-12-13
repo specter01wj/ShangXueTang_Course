@@ -62,9 +62,12 @@ public class TestClass2 {
 		//user05.printCompany();
 		
 		// 071
+		User06 user06 = new User06(10101, "Kim");
+		user06.testParaTransfer01(user06);
+		System.out.println(user06.name);
 		
-		
-		
+		user06.testParaTransfer02(user06);
+		System.out.println(user06.name);
 		
 	}
 	
@@ -175,4 +178,24 @@ class User05 {
 	}
 	
 }
+
+class User06 {
+	int id;
+	String name, pwd;
+	
+	public User06(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	public void testParaTransfer01(User06 user06) {
+		user06.name = "John";
+	}
+	
+	public void testParaTransfer02(User06 user06) {
+		user06 = new User06(200201, "Ling");
+	}
+	
+}
+
 
