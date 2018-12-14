@@ -19,7 +19,8 @@ public class TestUI {
 		stu1.name = "Jin";
 		stu1.height = 180;
 		stu1.rest();
-		
+		//Student1 stu2 = new Student1("John", 198. "EE");
+		System.out.println(stu1 instanceof Student1);
 		
 	}
 
