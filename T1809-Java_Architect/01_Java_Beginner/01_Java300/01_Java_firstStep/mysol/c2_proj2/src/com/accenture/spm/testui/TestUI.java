@@ -21,6 +21,8 @@ public class TestUI {
 		stu1.rest();
 		//Student1 stu2 = new Student1("John", 198. "EE");
 		System.out.println(stu1 instanceof Student1);
+		System.out.println(stu1 instanceof Person1);
+		System.out.println(stu1 instanceof Object);
 		
 	}
 
