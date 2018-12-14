@@ -24,6 +24,8 @@ public class TestUI {
 		System.out.println(stu1 instanceof Person1);
 		System.out.println(stu1 instanceof Object);
 		
+		// 075
+		
 	}
 
 	
