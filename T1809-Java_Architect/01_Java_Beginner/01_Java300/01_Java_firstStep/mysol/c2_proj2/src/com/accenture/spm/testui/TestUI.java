@@ -2,6 +2,7 @@ package com.accenture.spm.testui;
 
 import com.accenture.spm.oo.*;
 import com.accenture.spm.oo2.*;
+import com.accenture.spm.oo75.Horse75;
 
 import static java.lang.Math.*;
 
@@ -25,8 +26,8 @@ public class TestUI {
 		System.out.println(stu1 instanceof Object);
 		
 		// 075
-		
-		
+		Horse75 horse75 = new Horse75();
+		horse75.run();
 		
 		
 		
