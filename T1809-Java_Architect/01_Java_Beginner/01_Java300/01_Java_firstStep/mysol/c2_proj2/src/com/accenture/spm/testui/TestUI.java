@@ -3,6 +3,7 @@ package com.accenture.spm.testui;
 import com.accenture.spm.oo.*;
 import com.accenture.spm.oo2.*;
 import com.accenture.spm.oo75.Horse75;
+import com.accenture.spm.oo76.Person76;
 
 import static java.lang.Math.*;
 
@@ -30,11 +31,17 @@ public class TestUI {
 		horse75.run();
 		
 		// 076
+		//Object obj = new Object();
+		TestUI tu = new TestUI();
+		System.out.println(tu);
+		Person76 person76 = new Person76("King", 36);
+		System.out.println(person76.toString());
 		
 		
-		
-		
-		
+	}
+	
+	public String toString() {
+		return "Override toString!";
 	}
 
 	
