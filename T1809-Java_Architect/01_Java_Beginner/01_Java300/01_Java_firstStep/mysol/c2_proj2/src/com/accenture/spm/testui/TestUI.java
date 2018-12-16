@@ -4,6 +4,7 @@ import com.accenture.spm.oo.*;
 import com.accenture.spm.oo2.*;
 import com.accenture.spm.oo75.Horse75;
 import com.accenture.spm.oo76.Person76;
+import com.accenture.spm.oo77.*;
 
 import static java.lang.Math.*;
 
@@ -38,10 +39,10 @@ public class TestUI {
 		System.out.println(person76.toString());
 		
 		// 077
-		
-		
-		
-		
+		User77 user77_1 = new User77(1001, "James", "123");
+		User77 user77_2 = new User77(1001, "James", "123");
+		System.out.println(user77_1 == user77_2);
+		System.out.println(user77_1.equals(user77_2));
 		
 		
 	}
