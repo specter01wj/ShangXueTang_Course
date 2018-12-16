@@ -44,6 +44,11 @@ public class TestUI {
 		System.out.println(user77_1 == user77_2);
 		System.out.println(user77_1.equals(user77_2));
 		
+		String str77_1 = new String("KK");
+		String str77_2 = new String("KK");
+		System.out.println(str77_1 == str77_2);
+		System.out.println(str77_1.equals(str77_2));
+		
 		
 	}
 	
