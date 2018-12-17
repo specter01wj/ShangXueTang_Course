@@ -52,7 +52,7 @@ public class TestUI {
 		
 		// 078
 		new ChildClass78().f();
-		
+		new ChildClass78_2();
 		
 		
 		
