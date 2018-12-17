@@ -5,6 +5,7 @@ import com.accenture.spm.oo2.*;
 import com.accenture.spm.oo75.Horse75;
 import com.accenture.spm.oo76.Person76;
 import com.accenture.spm.oo77.*;
+import com.accenture.spm.oo78.*;
 
 import static java.lang.Math.*;
 
@@ -50,7 +51,7 @@ public class TestUI {
 		System.out.println(str77_1.equals(str77_2));
 		
 		// 078
-		
+		new ChildClass78().f();
 		
 		
 		
