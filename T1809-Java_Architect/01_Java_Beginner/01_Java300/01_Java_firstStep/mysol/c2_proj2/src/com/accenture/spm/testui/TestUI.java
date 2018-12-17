@@ -6,6 +6,7 @@ import com.accenture.spm.oo75.Horse75;
 import com.accenture.spm.oo76.Person76;
 import com.accenture.spm.oo77.*;
 import com.accenture.spm.oo78.*;
+import com.accenture.spm.oo79.*;
 
 import static java.lang.Math.*;
 
@@ -55,7 +56,8 @@ public class TestUI {
 		new ChildClass78_2();
 		
 		// 079
-		
+		Human79 human79 = new Human79();
+		//human79.age = 13;
 		
 		
 		
