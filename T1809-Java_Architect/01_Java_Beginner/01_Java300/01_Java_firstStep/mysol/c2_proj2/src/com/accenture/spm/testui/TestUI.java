@@ -59,6 +59,8 @@ public class TestUI {
 		Human79 human79 = new Human79();
 		//human79.age = 13;
 		//human79.name = "Jin";
+		//human79.height = 131;
+		human79.sayName();
 		
 		
 		
