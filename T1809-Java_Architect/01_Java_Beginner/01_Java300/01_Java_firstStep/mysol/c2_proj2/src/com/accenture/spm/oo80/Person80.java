@@ -16,7 +16,12 @@ public class Person80 {
 		return age;
 	}
 	public void setAge(int age) {
-		this.age = age;
+		if(age >= 1 && age <= 110) {
+			this.age = age;
+		} else {
+			System.out.println("Age out of range!");
+		}
+		
 	}
 	public String getName() {
 		return name;

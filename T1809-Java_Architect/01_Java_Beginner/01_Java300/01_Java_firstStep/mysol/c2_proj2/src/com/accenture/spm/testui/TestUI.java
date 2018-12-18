@@ -65,7 +65,7 @@ public class TestUI {
 		
 		// 080
 		Person80 person80 = new Person80();
-		person80.setAge(34);
+		person80.setAge(134);
 		System.out.println("Age: " + person80.getAge());
 		
 		
