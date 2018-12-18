@@ -7,6 +7,7 @@ import com.accenture.spm.oo76.Person76;
 import com.accenture.spm.oo77.*;
 import com.accenture.spm.oo78.*;
 import com.accenture.spm.oo79.*;
+import com.accenture.spm.oo80.*;
 
 import static java.lang.Math.*;
 
@@ -63,7 +64,9 @@ public class TestUI {
 		human79.sayName();
 		
 		// 080
-		
+		Person80 person80 = new Person80();
+		person80.setAge(34);
+		System.out.println("Age: " + person80.getAge());
 		
 		
 	}
