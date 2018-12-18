@@ -70,6 +70,7 @@ public class TestUI {
 		System.out.println("Age: " + person80.getAge());
 		
 		// 081
+		Animal81 animal81 = new Animal81();
 		
 		
 		
@@ -77,6 +78,10 @@ public class TestUI {
 		
 		
 		
+	}
+	
+	static void animalCry81(Animal81 a) {
+		a.shout();
 	}
 	
 	public String toString() {
