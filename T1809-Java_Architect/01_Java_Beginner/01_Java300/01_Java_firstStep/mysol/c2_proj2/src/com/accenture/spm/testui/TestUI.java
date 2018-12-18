@@ -71,8 +71,10 @@ public class TestUI {
 		
 		// 081
 		Animal81 animal81 = new Animal81();
-		
-		
+		animalCry81(animal81);
+		Dog81 dog81 = new Dog81();
+		animalCry81(dog81);
+		animalCry81(new Cat81());
 		
 		
 		
