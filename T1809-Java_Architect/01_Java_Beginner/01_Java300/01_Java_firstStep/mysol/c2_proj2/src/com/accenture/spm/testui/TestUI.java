@@ -79,7 +79,9 @@ public class TestUI {
 		// 082
 		Animal81 dog82 = new Dog81();
 		animalCry81(dog82);
+		//dog82.seeDoor();
 		Dog81 dog82_2 = (Dog81) dog82;
+		dog82_2.seeDoor();
 		
 		
 		
