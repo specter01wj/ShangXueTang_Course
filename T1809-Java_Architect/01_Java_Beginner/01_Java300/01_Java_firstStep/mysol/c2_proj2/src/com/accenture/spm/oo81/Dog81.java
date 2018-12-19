@@ -6,4 +6,8 @@ public class Dog81 extends Animal81 {
 		System.out.println("WangWang!");
 	}
 	
+	public void seeDoor() {
+		System.out.println("See Door!!!");
+	}
+	
 }
