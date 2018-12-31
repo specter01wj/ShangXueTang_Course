@@ -119,7 +119,13 @@ public class TestUI {
 		};
 		
 		// 086
-		
+		int[] arr86 = new int[10];
+		for(int i = 0; i < arr84_1.length; i++) {
+			arr86[i] = 20*i;
+		}
+		for(int m : arr86) {
+			System.out.println("Array86 foreach: " + m);
+		}
 		
 		
 	}
