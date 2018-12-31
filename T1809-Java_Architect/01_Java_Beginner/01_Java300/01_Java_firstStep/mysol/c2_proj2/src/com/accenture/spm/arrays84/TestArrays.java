@@ -3,7 +3,7 @@ package com.accenture.spm.arrays84;
 public class TestArrays {
 
 	
-	class User84 {
+	public class User84 {
 		
 		private int id;
 		private String name;

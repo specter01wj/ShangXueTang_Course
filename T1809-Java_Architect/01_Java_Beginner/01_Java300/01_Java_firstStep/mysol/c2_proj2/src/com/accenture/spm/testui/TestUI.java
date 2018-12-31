@@ -9,6 +9,7 @@ import com.accenture.spm.oo78.*;
 import com.accenture.spm.oo79.*;
 import com.accenture.spm.oo80.*;
 import com.accenture.spm.oo81.*;
+import com.accenture.spm.arrays84.*;
 
 import static java.lang.Math.*;
 
@@ -87,7 +88,7 @@ public class TestUI {
 		//String str83;
 		
 		// 084
-		
+		TestArrays.User84[] arr84_3;
 		
 		
 	}
