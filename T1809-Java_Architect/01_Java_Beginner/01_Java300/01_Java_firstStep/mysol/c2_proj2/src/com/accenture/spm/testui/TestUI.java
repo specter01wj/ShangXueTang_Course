@@ -12,6 +12,7 @@ import com.accenture.spm.oo81.*;
 import com.accenture.spm.arrays84.*;
 
 import static java.lang.Math.*;
+import java.util.Arrays;
 
 public class TestUI {
 	
@@ -92,6 +93,10 @@ public class TestUI {
 		String[] arr84_2 = new String[5];
 		TestArrays.User84[] arr84_3 = new TestArrays.User84[3];
 		
+		for(int i = 0; i < arr84_1.length; i++) {
+			arr84_1[i] = 10*i;
+		}
+		System.out.println("Array84: " + Arrays.toString(arr84_1));
 		
 	}
 	
