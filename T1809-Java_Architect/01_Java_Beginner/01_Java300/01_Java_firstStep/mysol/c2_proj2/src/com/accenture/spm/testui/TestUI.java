@@ -111,6 +111,12 @@ public class TestUI {
 		}
 		
 		// 085
+		int[] a85 = {2, 4, 5, 6};
+		TestArrays.User84[] b85 = {
+				tAs.new User84(1001, "James1"),
+				tAs.new User84(1002, "James2"),
+				tAs.new User84(1003, "James3")
+		};
 		
 		
 		
