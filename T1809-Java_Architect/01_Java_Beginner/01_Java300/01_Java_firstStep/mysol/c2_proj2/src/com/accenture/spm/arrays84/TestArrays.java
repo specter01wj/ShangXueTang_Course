@@ -8,6 +8,11 @@ public class TestArrays {
 		private int id;
 		private String name;
 		
+		public User84(int id, String name) {
+			super();
+			this.id = id;
+			this.name = name;
+		}
 		
 		public int getId() {
 			return id;
