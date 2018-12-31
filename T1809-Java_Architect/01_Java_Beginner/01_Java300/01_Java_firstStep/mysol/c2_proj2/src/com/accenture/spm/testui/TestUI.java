@@ -91,12 +91,26 @@ public class TestUI {
 		// 084
 		int[] arr84_1 = new int[10];
 		String[] arr84_2 = new String[5];
+		TestArrays tAs= new TestArrays();
 		TestArrays.User84[] arr84_3 = new TestArrays.User84[3];
 		
 		for(int i = 0; i < arr84_1.length; i++) {
 			arr84_1[i] = 10*i;
 		}
-		System.out.println("Array84: " + Arrays.toString(arr84_1));
+		System.out.println("Array84 arrays: " + Arrays.toString(arr84_1));
+		
+//		arr84_3[0] = tAs.new User84(1001,"James1");
+//		arr84_3[1] = tAs.new User84(1002,"James2");
+//		arr84_3[2] = tAs.new User84(1003,"James3");
+		for(int i = 0; i < arr84_3.length; i++) {
+			arr84_3[i] = tAs.new User84(i, "Jin");
+		}
+		for(int i = 0; i < arr84_3.length; i++) {
+			System.out.println("Array84 class: " + (arr84_3[i].getId()) + "," 
+					+ (arr84_3[i].getName()));
+		}
+		
+		
 		
 	}
 	
