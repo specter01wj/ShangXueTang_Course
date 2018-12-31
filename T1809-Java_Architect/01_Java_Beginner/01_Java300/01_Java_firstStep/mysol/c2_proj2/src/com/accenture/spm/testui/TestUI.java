@@ -88,6 +88,8 @@ public class TestUI {
 		//String str83;
 		
 		// 084
+		int[] arr84_1;
+		String[] arr84_2;
 		TestArrays.User84[] arr84_3;
 		
 		
