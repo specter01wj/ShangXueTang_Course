@@ -84,7 +84,7 @@ public class TestUI {
 		dog82_2.seeDoor();
 		
 		// 083
-		
+		//String str83;
 		
 		
 		
