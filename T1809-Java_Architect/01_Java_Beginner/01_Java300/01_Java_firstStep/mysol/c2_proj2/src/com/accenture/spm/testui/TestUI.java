@@ -139,6 +139,7 @@ public class TestUI {
 		
 		
 		
+		
 	}
 	
 	static void animalCry81(Animal81 a) {
