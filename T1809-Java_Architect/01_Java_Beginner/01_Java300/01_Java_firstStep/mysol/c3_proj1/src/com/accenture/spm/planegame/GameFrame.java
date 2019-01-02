@@ -30,6 +30,7 @@ public class GameFrame extends JFrame {
 		g.drawOval(100, 100, 300, 300);
 		
 		
+		
 	}
 	
 	
