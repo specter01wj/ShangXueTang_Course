@@ -26,6 +26,7 @@ public class GameFrame extends JFrame {
 	@Override
 	public void paint(Graphics g) {
 		g.drawLine(100, 100, 300, 300);
+		g.drawRect(100, 100, 300, 300);
 	}
 	
 	
