@@ -1,6 +1,8 @@
 package com.accenture.spm.planegame;
 
 import javax.swing.JFrame;
+
+import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -19,6 +21,11 @@ public class GameFrame extends JFrame {
                 System.exit(0);
             }
         });
+	}
+	
+	@Override
+	public void paint(Graphics g) {
+		g.drawLine(100, 100, 300, 300);
 	}
 	
 	
