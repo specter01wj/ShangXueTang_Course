@@ -28,7 +28,7 @@ public class GameFrame extends JFrame {
 		g.drawLine(100, 100, 300, 300);
 		g.drawRect(100, 100, 300, 300);
 		g.drawOval(100, 100, 300, 300);
-		
+		g.fillRect(100,100, 20, 20);
 		
 		
 	}
