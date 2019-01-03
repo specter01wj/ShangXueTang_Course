@@ -47,6 +47,7 @@ public class GameFrame extends JFrame {
 		g.setColor(c);
 		g.setFont(f);
 		
+		
 	}
 	
 	
