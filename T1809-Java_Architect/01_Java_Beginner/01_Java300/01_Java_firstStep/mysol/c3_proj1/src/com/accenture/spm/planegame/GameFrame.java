@@ -14,7 +14,7 @@ public class GameFrame extends JFrame {
 	
 	//Image ball = GameUtil.getImage("images/ball.png");
 	Image plane = GameUtil.getImage("images/plane.png");
-	Image bg = GameUtil.getImage("images/bg.png");
+	Image bg = GameUtil.getImage("images/bg.jpg");
 
 	public void launchFrame() {
 		this.setTitle("PlaneGame by James");
@@ -44,10 +44,11 @@ public class GameFrame extends JFrame {
 //		g.setFont(new Font("Times New Roman", Font.BOLD, 50));
 //		g.drawString("James", 200, 200);
 		
-		g.drawImage(ball, 50, 50, null);
+		g.drawImage(bg, 0, 0, null);
+		g.drawImage(plane, 250, 250, null);
 		
-		g.setColor(c);
-		g.setFont(f);
+//		g.setColor(c);
+//		g.setFont(f);
 		
 		
 	}
