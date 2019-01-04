@@ -80,8 +80,6 @@ public class GameFrame extends JFrame {
 		GameFrame gf = new GameFrame();
 		gf.launchFrame();
 		
-		
-		
 	}
 	
 }
