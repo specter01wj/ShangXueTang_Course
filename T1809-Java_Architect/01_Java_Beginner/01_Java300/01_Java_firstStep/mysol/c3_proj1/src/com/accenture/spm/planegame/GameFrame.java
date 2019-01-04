@@ -12,7 +12,9 @@ import java.awt.event.WindowListener;
 
 public class GameFrame extends JFrame {
 	
-	Image ball = GameUtil.getImage("images/ball.png");
+	//Image ball = GameUtil.getImage("images/ball.png");
+	Image plane = GameUtil.getImage("images/plane.png");
+	Image bg = GameUtil.getImage("images/bg.png");
 
 	public void launchFrame() {
 		this.setTitle("PlaneGame by James");
@@ -30,17 +32,17 @@ public class GameFrame extends JFrame {
 	
 	@Override
 	public void paint(Graphics g) {
-		Color c = g.getColor();
-		Font f = g.getFont();
-		g.setColor(Color.CYAN);
-		
-		g.drawLine(100, 100, 300, 300);
-		g.drawRect(100, 100, 300, 300);
-		g.drawOval(100, 100, 300, 300);
-		g.fillRect(100,100, 20, 20);
-		g.setColor(Color.red);
-		g.setFont(new Font("Times New Roman", Font.BOLD, 50));
-		g.drawString("James", 200, 200);
+//		Color c = g.getColor();
+//		Font f = g.getFont();
+//		g.setColor(Color.CYAN);
+//		
+//		g.drawLine(100, 100, 300, 300);
+//		g.drawRect(100, 100, 300, 300);
+//		g.drawOval(100, 100, 300, 300);
+//		g.fillRect(100,100, 20, 20);
+//		g.setColor(Color.red);
+//		g.setFont(new Font("Times New Roman", Font.BOLD, 50));
+//		g.drawString("James", 200, 200);
 		
 		g.drawImage(ball, 50, 50, null);
 		
