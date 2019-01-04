@@ -49,7 +49,23 @@ public class GameFrame extends JFrame {
 		
 //		g.setColor(c);
 //		g.setFont(f);
+	}
+	
+	class PaintThread extends Thread {
 		
+		@Override
+		public void run() {
+			while(true) {
+				repaint();
+				
+				try {
+					Thread.sleep(40);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
 		
 	}
 	
