@@ -15,6 +15,8 @@ public class GameFrame extends JFrame {
 	//Image ball = GameUtil.getImage("images/ball.png");
 	Image plane = GameUtil.getImage("images/plane.png");
 	Image bg = GameUtil.getImage("images/bg.jpg");
+	
+	int planeX = 250, planeY = 250;
 
 	public void launchFrame() {
 		this.setTitle("PlaneGame by James");
@@ -28,6 +30,8 @@ public class GameFrame extends JFrame {
                 System.exit(0);
             }
         });
+		
+		new PaintThread().start();
 	}
 	
 	@Override
@@ -45,8 +49,8 @@ public class GameFrame extends JFrame {
 //		g.drawString("James", 200, 200);
 		
 		g.drawImage(bg, 0, 0, null);
-		g.drawImage(plane, 250, 250, null);
-		
+		g.drawImage(plane, planeX, planeY, null);
+		planeX++;
 //		g.setColor(c);
 //		g.setFont(f);
 	}
@@ -56,6 +60,7 @@ public class GameFrame extends JFrame {
 		@Override
 		public void run() {
 			while(true) {
+				//System.out.println("Window Run!");
 				repaint();
 				
 				try {
