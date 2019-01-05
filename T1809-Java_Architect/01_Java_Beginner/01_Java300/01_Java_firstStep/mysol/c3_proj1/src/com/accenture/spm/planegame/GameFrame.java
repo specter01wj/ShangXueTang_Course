@@ -13,10 +13,11 @@ import java.awt.event.WindowListener;
 public class GameFrame extends JFrame {
 	
 	//Image ball = GameUtil.getImage("images/ball.png");
-	Image plane = GameUtil.getImage("images/plane.png");
+	Image planeImg = GameUtil.getImage("images/plane.png");
 	Image bg = GameUtil.getImage("images/bg.jpg");
 	
-	int planeX = 250, planeY = 250;
+	//int planeX = 250, planeY = 250;
+	Plane plane = new Plane(planeImg, 250, 250);
 
 	public void launchFrame() {
 		this.setTitle("PlaneGame by James");
@@ -49,8 +50,9 @@ public class GameFrame extends JFrame {
 //		g.drawString("James", 200, 200);
 		
 		g.drawImage(bg, 0, 0, null);
-		g.drawImage(plane, planeX, planeY, null);
-		planeX++;
+//		g.drawImage(planeImg, planeX, planeY, null);
+//		planeX++;
+		
 //		g.setColor(c);
 //		g.setFont(f);
 	}

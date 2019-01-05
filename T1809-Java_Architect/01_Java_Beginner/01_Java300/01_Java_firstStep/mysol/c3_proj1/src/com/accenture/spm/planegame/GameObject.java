@@ -5,10 +5,10 @@ import java.awt.Image;
 
 public class GameObject {
 
-	private Image img;
-	private double x, y;
-	private int speed;
-	private int width, height;
+	protected Image img;
+	protected double x, y;
+	protected int speed;
+	protected int width, height;
 	
 	public void drawSelf(Graphics g) {
 		g.drawImage(img, (int)x, (int)y, null);
