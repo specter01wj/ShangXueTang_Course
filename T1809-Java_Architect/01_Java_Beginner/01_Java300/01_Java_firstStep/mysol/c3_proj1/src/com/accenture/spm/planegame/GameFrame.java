@@ -52,7 +52,7 @@ public class GameFrame extends JFrame {
 		g.drawImage(bg, 0, 0, null);
 //		g.drawImage(planeImg, planeX, planeY, null);
 //		planeX++;
-		
+		plane.drawSelf(g);
 //		g.setColor(c);
 //		g.setFont(f);
 	}

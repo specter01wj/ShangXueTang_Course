@@ -2,6 +2,7 @@ package com.accenture.spm.planegame;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 
 public class GameObject {
 
@@ -33,6 +34,10 @@ public class GameObject {
 	
 	public GameObject() {
 		
+	}
+	
+	public Rectangle getRect() {
+		return new Rectangle((int)x, (int)y, width, height);
 	}
 	
 }
