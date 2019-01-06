@@ -27,14 +27,14 @@ public class GameFrame extends JFrame {
 		public void keyPressed(KeyEvent e) {
 			// TODO Auto-generated method stub
 			//super.keyPressed(e);
-			System.out.println(e.getKeyCode());
+			System.out.println("Press: " + e.getKeyCode());
 		}
 
 		@Override
 		public void keyReleased(KeyEvent e) {
 			// TODO Auto-generated method stub
 			//super.keyReleased(e);
-			System.out.println(e.getKeyCode());
+			System.out.println("Lift: " + e.getKeyCode());
 		}
 		
 		
@@ -55,6 +55,7 @@ public class GameFrame extends JFrame {
         });
 		
 		new PaintThread().start();
+		addKeyListener(new KeyMonitor());
 	}
 	
 	@Override
