@@ -58,6 +58,7 @@ public class GameFrame extends JFrame {
 		addKeyListener(new KeyMonitor());
 		
 		
+		
 	}
 	
 	@Override
