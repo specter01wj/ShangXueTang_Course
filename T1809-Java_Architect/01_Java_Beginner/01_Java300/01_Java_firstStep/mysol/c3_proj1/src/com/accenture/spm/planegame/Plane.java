@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 
 public class Plane extends GameObject {
 
+	int speed = 5;
 	boolean left, right, up, down;
 	
 	public void drawSelf(Graphics g) {
