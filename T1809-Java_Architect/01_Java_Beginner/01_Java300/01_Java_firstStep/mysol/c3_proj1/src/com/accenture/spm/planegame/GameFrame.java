@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.KeyAdapter;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -18,6 +19,12 @@ public class GameFrame extends JFrame {
 	
 	//int planeX = 250, planeY = 250;
 	Plane plane = new Plane(planeImg, 250, 250);
+	
+	class KeyMonitor extends KeyAdapter {
+		
+		
+		
+	}
 
 	public void launchFrame() {
 		this.setTitle("PlaneGame by James");
