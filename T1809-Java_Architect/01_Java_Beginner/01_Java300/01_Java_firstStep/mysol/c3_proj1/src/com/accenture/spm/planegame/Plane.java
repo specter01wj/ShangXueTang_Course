@@ -21,17 +21,36 @@ public class Plane extends GameObject {
 	
 	public void addDirection(KeyEvent e) {
 		switch(e.getKeyCode()) {
-		case 37:
+		case KeyEvent.VK_LEFT:
 			left = true;
 			break;
-		case 38:
+		case KeyEvent.VK_UP:
 			up = true;
 			break;
-		case 39:
+		case KeyEvent.VK_RIGHT:
 			right = true;
 			break;
-		case 40:
+		case KeyEvent.VK_DOWN:
 			down = true;
+			break;
+		default:
+			break;
+		}
+	}
+	
+	public void minusDirection(KeyEvent e) {
+		switch(e.getKeyCode()) {
+		case KeyEvent.VK_LEFT:
+			left = false;
+			break;
+		case KeyEvent.VK_UP:
+			up = false;
+			break;
+		case KeyEvent.VK_RIGHT:
+			right = false;
+			break;
+		case KeyEvent.VK_DOWN:
+			down = false;
 			break;
 		default:
 			break;
