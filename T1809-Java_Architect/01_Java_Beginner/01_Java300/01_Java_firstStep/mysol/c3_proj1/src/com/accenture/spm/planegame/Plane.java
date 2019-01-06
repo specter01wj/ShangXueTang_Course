@@ -10,7 +10,20 @@ public class Plane extends GameObject {
 	
 	public void drawSelf(Graphics g) {
 		g.drawImage(img, (int)x, (int)y, null);
-		x++;
+		//x++;
+		if(left) {
+			x -= speed;
+		}
+		if(right) {
+			x += speed;
+		}
+		if(up) {
+			y -= speed;
+		}
+		if(down) {
+			y += speed;
+		}
+		
 	}
 	
 	public Plane(Image img, double x, double y) {
