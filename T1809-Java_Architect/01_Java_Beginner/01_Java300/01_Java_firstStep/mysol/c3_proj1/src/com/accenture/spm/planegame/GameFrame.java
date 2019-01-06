@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -21,6 +22,20 @@ public class GameFrame extends JFrame {
 	Plane plane = new Plane(planeImg, 250, 250);
 	
 	class KeyMonitor extends KeyAdapter {
+
+		@Override
+		public void keyPressed(KeyEvent e) {
+			// TODO Auto-generated method stub
+			//super.keyPressed(e);
+			System.out.println(e.getKeyCode());
+		}
+
+		@Override
+		public void keyReleased(KeyEvent e) {
+			// TODO Auto-generated method stub
+			//super.keyReleased(e);
+			System.out.println(e.getKeyCode());
+		}
 		
 		
 		
