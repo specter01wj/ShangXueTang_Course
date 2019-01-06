@@ -20,6 +20,7 @@ public class GameFrame extends JFrame {
 	
 	//int planeX = 250, planeY = 250;
 	Plane plane = new Plane(planeImg, 250, 250);
+	Shell shell = new Shell();
 	
 	class KeyMonitor extends KeyAdapter {
 
@@ -81,6 +82,7 @@ public class GameFrame extends JFrame {
 		plane.drawSelf(g);
 //		g.setColor(c);
 //		g.setFont(f);
+		shell.draw(g);
 	}
 	
 	class PaintThread extends Thread {
