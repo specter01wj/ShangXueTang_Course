@@ -46,7 +46,7 @@ public class GameFrame extends JFrame {
 
 	public void launchFrame() {
 		this.setTitle("PlaneGame by James");
-		this.setSize(500, 500);
+		this.setSize(Constant.GAME_WIDTH, Constant.GAME_HEIGHT);
 		this.setLocation(300, 300);
 		this.setVisible(true);
 		

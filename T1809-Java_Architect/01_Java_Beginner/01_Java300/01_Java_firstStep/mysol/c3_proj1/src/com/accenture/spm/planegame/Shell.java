@@ -22,6 +22,13 @@ public class Shell extends GameObject {
 		x += speed*Math.cos(degree);
 		y += speed*Math.sin(degree);
 		
+		if(x < 0 || x > Constant.GAME_WIDTH - width) {
+			degree = Math.PI - degree;
+		}
+		if(y < 25 || y > Constant.GAME_HEIGHT- height) {
+			degree = - degree;
+		}
+		
 		g.setColor(c);
 	}
 	
