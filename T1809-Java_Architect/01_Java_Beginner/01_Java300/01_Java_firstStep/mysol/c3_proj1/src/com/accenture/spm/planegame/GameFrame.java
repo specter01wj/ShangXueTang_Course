@@ -21,7 +21,7 @@ public class GameFrame extends JFrame {
 	
 	//int planeX = 250, planeY = 250;
 	Plane plane = new Plane(planeImg, 250, 250);
-	Shell shell = new Shell();
+	//Shell shell = new Shell();
 	Shell[] shells = new Shell[50];
 	
 	
@@ -91,6 +91,8 @@ public class GameFrame extends JFrame {
 		//shell.draw(g);
 		for(int i = 0;i < shells.length;i++) {
 			shells[i].draw(g);
+			
+			boolean hit = shells[i].getRect().intersects(plane.getRect());
 		}
 	}
 	
@@ -125,7 +127,7 @@ public class GameFrame extends JFrame {
 	 
 	public void update(Graphics g) {
 	    if(offScreenImage == null)
-	        offScreenImage = this.createImage(Constant.GAME_WIDTH,Constant.GAME_HEIGHT);//ÕâÊÇÓÎÏ·´°¿ÚµÄ¿í¶ÈºÍ¸ß¶È
+	        offScreenImage = this.createImage(Constant.GAME_WIDTH,Constant.GAME_HEIGHT);
 	     
 	    Graphics gOff = offScreenImage.getGraphics();
 	    paint(gOff);
