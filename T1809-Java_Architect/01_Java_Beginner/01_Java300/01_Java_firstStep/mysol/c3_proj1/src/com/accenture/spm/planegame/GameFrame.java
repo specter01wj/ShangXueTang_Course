@@ -21,6 +21,8 @@ public class GameFrame extends JFrame {
 	//int planeX = 250, planeY = 250;
 	Plane plane = new Plane(planeImg, 250, 250);
 	Shell shell = new Shell();
+	Shell[] shells = new Shell[50];
+	
 	
 	class KeyMonitor extends KeyAdapter {
 
@@ -40,8 +42,6 @@ public class GameFrame extends JFrame {
 			plane.minusDirection(e);
 		}
 		
-		
-		
 	}
 
 	public void launchFrame() {
@@ -59,6 +59,10 @@ public class GameFrame extends JFrame {
 		
 		new PaintThread().start();
 		addKeyListener(new KeyMonitor());
+		
+		for(int i = 0;i < shells.length;i++) {
+			shells[i] = new Shell();
+		}
 		
 	}
 	
@@ -82,7 +86,11 @@ public class GameFrame extends JFrame {
 		plane.drawSelf(g);
 //		g.setColor(c);
 //		g.setFont(f);
-		shell.draw(g);
+		
+		//shell.draw(g);
+		for(int i = 0;i < shells.length;i++) {
+			shells[i].draw(g);
+		}
 	}
 	
 	class PaintThread extends Thread {
