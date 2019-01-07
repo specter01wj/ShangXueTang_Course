@@ -23,6 +23,7 @@ public class GameFrame extends JFrame {
 	Plane plane = new Plane(planeImg, 250, 250);
 	//Shell shell = new Shell();
 	Shell[] shells = new Shell[50];
+	Explode explode;
 	int hitTime = 0;
 	
 	class KeyMonitor extends KeyAdapter {
@@ -98,6 +99,13 @@ public class GameFrame extends JFrame {
 			if(hit) {
 				System.out.println("Hit!!!!" + hitTime);
 				plane.live = false;
+				
+				if(explode == null) {
+					explode = new Explode(plane.x, plane.y);
+				}
+				
+				explode.draw(g);
+				
 				hitTime++;
 			}
 		}
