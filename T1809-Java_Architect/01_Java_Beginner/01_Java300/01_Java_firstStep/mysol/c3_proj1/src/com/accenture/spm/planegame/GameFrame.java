@@ -12,6 +12,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.Date;
 
 public class GameFrame extends JFrame {
 	
@@ -24,6 +25,10 @@ public class GameFrame extends JFrame {
 	//Shell shell = new Shell();
 	Shell[] shells = new Shell[50];
 	Explode explode;
+	Date startTime = new Date();
+	Date endTime;
+	double period;
+	
 	int hitTime = 0;
 	
 	class KeyMonitor extends KeyAdapter {
@@ -102,12 +107,18 @@ public class GameFrame extends JFrame {
 				
 				if(explode == null) {
 					explode = new Explode(plane.x, plane.y);
+					endTime = new Date();
+					period = (double)((endTime.getTime() - startTime.getTime())/1000);
 				}
 				
 				explode.draw(g);
-				
 				hitTime++;
 			}
+			if(!plane.live) {
+				g.setColor(Color.red);
+				g.drawString("Time:" + period + "s", (int)plane.x, (int)plane.y);
+			}
+			
 		}
 	}
 	
