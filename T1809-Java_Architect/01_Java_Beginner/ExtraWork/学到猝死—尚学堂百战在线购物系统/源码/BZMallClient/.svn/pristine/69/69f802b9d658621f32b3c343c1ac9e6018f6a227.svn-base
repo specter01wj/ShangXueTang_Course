@@ -1,0 +1,164 @@
+package com.xdcs.swing.consumer;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.AbstractListModel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import com.xdcs.util.SocketUtil;
+import com.xdcs.vo.Goods;
+import com.xdcs.vo.User;
+
+/**
+ * 商品信息页面
+ * 
+ * @author Administrator
+ *
+ */
+public class GoodsInfo extends JFrame {
+
+	private JPanel contentPane;
+	private JList<String> list;
+	private String temp;
+	private ObjectInputStream ois;
+	private ObjectOutputStream oos;
+	private Goods good;
+	private User user;
+
+	public JList<String> getList() {
+		return list;
+	}
+
+	public void setList(JList<String> list) {
+		this.list = list;
+	}
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+
+		GoodsInfo frame = new GoodsInfo();
+		frame.setVisible(true);
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public GoodsInfo() {
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setBounds(100, 100, 396, 402);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JButton buyButton = new JButton("添加购物车");
+		buyButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				String str = JOptionPane.showInputDialog("请输入购买数量");
+				if (str != null) {
+					String regex = "[1-9][0-9]{1,20}|[1-9]";
+					if (str.matches(regex)) {
+						Integer count = Integer.parseInt(str);
+						if (count > good.getGoodRepertory()) {
+							JOptionPane.showMessageDialog(null, "库存不足！！");
+							return;
+						}
+						JOptionPane.showMessageDialog(null, "添加购物车成功");
+						GoodsInfo.this.setVisible(false);
+						List<Object> objectList = new ArrayList<>();
+						objectList.add("addToOrder");
+						objectList.add(count);
+						objectList.add(good);
+						objectList.add(user);
+						try {
+							oos = SocketUtil.getObjectOutputStream();
+							oos.writeObject(objectList);
+							oos.flush();
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						}
+					} else {
+						JOptionPane.showMessageDialog(null, "输入的数据不合法!!!");
+					}
+
+					// System.out.println(count);
+					// System.out.println(JOptionPane);
+					// JOptionPane.showMessageDialog(null, "添加成功!");
+				}
+			}
+		});
+		buyButton.setForeground(Color.GRAY);
+		buyButton.setFont(new Font("微软雅黑", Font.BOLD, 22));
+		buyButton.setBounds(170, 315, 200, 39);
+		buyButton.setContentAreaFilled(false);
+		contentPane.add(buyButton);
+
+		list = new JList<String>();
+		list.setFont(new Font("华文楷体", Font.BOLD, 18));
+		// list.setModel(new AbstractListModel<String>() {
+		// String[] values = new String[] { "订单1","订单2","订单3" };
+		//
+		// public int getSize() {
+		// return values.length;
+		// }
+		//
+		// public String getElementAt(int index) {
+		// return values[index];
+		// }
+		// });
+		list.setBounds(10, 27, 360, 280);
+		list.addMouseListener(
+
+				new MouseAdapter() {
+					public void mouseClicked(MouseEvent e) {
+						temp = list.getSelectedValue();
+					}
+				});
+		contentPane.add(list);
+
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(GoodsInfo.class.getResource("../image/client.png")));
+		lblNewLabel.setBounds(0, 0, 380, 364);
+		contentPane.add(lblNewLabel);
+	}
+
+	/**
+	 * 创建信息显示格式化类
+	 * 
+	 * @param good
+	 */
+	public GoodsInfo(Goods good) {
+		this();
+		this.good = good;
+		String[] str = { "商品名：" + good.getGoodName(), "商品单价：" + good.getGoodPrice(), "商品类型： " + good.getGoodType(),
+				"商品描述:" + good.getGoodDesception(), "商品库存:" + good.getGoodRepertory(), "品牌:" + good.getGoodBrand(),
+				"月销：" + good.getGoodSellCount() };
+		this.list.setListData(str);
+	}
+
+	public GoodsInfo(Goods good2, User user) {
+		this(good2);
+		this.user = user;
+	}
+}

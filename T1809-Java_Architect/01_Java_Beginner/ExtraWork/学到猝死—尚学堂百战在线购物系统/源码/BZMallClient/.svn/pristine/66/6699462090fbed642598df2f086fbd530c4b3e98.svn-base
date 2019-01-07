@@ -1,0 +1,190 @@
+package com.xdcs.swing.consumer;
+
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import com.xdcs.util.SocketUtil;
+import com.xdcs.vo.User;
+
+/**
+ * 用户信息页面
+ * 
+ * @author Administrator
+ *
+ */
+public class UserInfo extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JPasswordField passwordField;
+	private JLabel lblNewLabel_1;
+	private User user;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					UserInfo frame = new UserInfo();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * 创建用户信息页面并添加控件以及事件
+	 */
+	public UserInfo() {
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setBounds(100, 100, 391, 419);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JLabel lblNewLabel = new JLabel("用户名 :");
+		lblNewLabel.setFont(new Font("华文楷体", Font.BOLD, 18));
+		lblNewLabel.setBounds(50, 43,70, 21);
+		contentPane.add(lblNewLabel);
+
+		JLabel label = new JLabel("密   码 :");
+		label.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label.setBounds(50, 107, 70, 21);
+		contentPane.add(label);
+
+		JLabel label_1 = new JLabel("性   别 :");
+		label_1.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label_1.setBounds(50, 171, 70, 21);
+		contentPane.add(label_1);
+
+		JLabel label_2 = new JLabel("联系地址 :");
+		label_2.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label_2.setBounds(50, 299, 90, 21);
+		contentPane.add(label_2);
+
+		JLabel label_3 = new JLabel("联系方式 :");
+		label_3.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label_3.setBounds(50, 235, 90, 21);
+		contentPane.add(label_3);
+
+		textField = new JTextField();
+		textField.setEnabled(false);
+		textField.setEditable(false);
+		textField.setBounds(148, 44, 191, 21);
+		contentPane.add(textField);
+		textField.setColumns(10);
+
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setEnabled(false);
+		textField_2.setEditable(false);
+		textField_2.setBounds(148, 172, 191, 21);
+		contentPane.add(textField_2);
+
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(148, 236, 191, 21);
+		contentPane.add(textField_3);
+
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(148, 300, 191, 21);
+		contentPane.add(textField_4);
+
+		passwordField = new JPasswordField();
+		passwordField.setBounds(148, 108, 191, 21);
+		contentPane.add(passwordField);
+
+		JButton btnNewButton = new JButton("确定");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				List<Object> list = new ArrayList<>();
+				list.add("modifyPwd");
+				ObjectOutputStream oos = SocketUtil.getObjectOutputStream();
+				ObjectInputStream ois = SocketUtil.getObjectInputStream();
+
+				user.setPassword(new String(passwordField.getPassword()));
+				// System.out.println("这是修改密码的输出的密码-----" + user.getPassword());
+				User uu = new User();
+				uu.setID(user.getID());
+				uu.setUsername(user.getUsername());
+				uu.setPassword(user.getPassword());
+				uu.setTel(user.getTel());
+				uu.setSex(user.getSex());
+				uu.setAge(user.getAge());
+				uu.setType(user.getType());
+				uu.setAddress(user.getAddress());
+				uu.setIconUrl(user.getIconUrl());
+				list.add(uu);
+				try {
+					// System.out.println("这是取出来的user的长度-----+" + list.size());
+					// oos.writeUnshared(list);
+					oos.writeObject(list);
+					oos.flush();
+
+					list = (List<Object>) ois.readObject();
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				} catch (ClassNotFoundException e1) {
+					e1.printStackTrace();
+				}
+				boolean bool = Boolean.parseBoolean(list.get(0).toString());
+				// System.out.println("修改密码的返回值为：————————————" + bool);
+				if (bool) {
+					JOptionPane.showMessageDialog(null, "修改成功");
+					UserInfo.this.setVisible(false);
+				} else {
+					JOptionPane.showMessageDialog(null, "修改失败");
+					UserInfo.this.setVisible(false);
+				}
+			}
+		});
+		btnNewButton.setContentAreaFilled(false);
+		btnNewButton.setFont(new Font("华文楷体", Font.BOLD, 18));
+		btnNewButton.setBounds(246, 342, 93, 29);
+		contentPane.add(btnNewButton);
+
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(UserInfo.class.getResource("/com/xdcs/swing/image/client.png")));
+		lblNewLabel_1.setBounds(0, 0, 375, 381);
+		contentPane.add(lblNewLabel_1);
+	}
+
+	public UserInfo(User user) {
+		this();
+		this.user = user;
+		// System.out.println("userinfo页面接受的user" + user);
+		this.textField.setText(user.getUsername());
+		this.textField_2.setText(user.getSex());
+		this.textField_3.setText(user.getTel());
+		this.textField_4.setText(user.getAddress());
+		this.passwordField.setText(user.getPassword());
+	}
+
+}

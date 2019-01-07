@@ -1,0 +1,370 @@
+package com.xdcs.swing.merchant;
+
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.HeadlessException;
+import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+import javax.swing.filechooser.FileFilter;
+
+import com.xdcs.util.SocketUtil;
+import com.xdcs.vo.Goods;
+import com.xdcs.vo.User;
+
+/**
+ * 添加商品的frame
+ * 
+ * @author Administrator
+ *
+ */
+public class AddGoodFrm extends JFrame {
+	private User user;
+	private List<Goods> goods;
+	private JList jlist;
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private TextArea textArea;
+	private JFileChooser chooser;
+	private JTextField text_url;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AddGoodFrm frame = new AddGoodFrm();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * 创建添加商品信息的页面 并初始化控件以及添加事件
+	 */
+	public AddGoodFrm() {
+		setBounds(100, 100, 399, 500);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JLabel lblNewLabel = new JLabel("添加商品信息");
+		lblNewLabel.setToolTipText("");
+		lblNewLabel.setFont(new Font("华文楷体", Font.BOLD, 25));
+		lblNewLabel.setBounds(103, 10, 180, 33);
+		contentPane.add(lblNewLabel);
+
+		JLabel lblNewLabel_1 = new JLabel("商品编号");
+		lblNewLabel_1.setFont(new Font("华文楷体", Font.BOLD, 18));
+		lblNewLabel_1.setBounds(37, 62, 80, 15);
+		contentPane.add(lblNewLabel_1);
+
+		JLabel lblNewLabel_2 = new JLabel("商品名称");
+		lblNewLabel_2.setFont(new Font("华文楷体", Font.BOLD, 18));
+		lblNewLabel_2.setBounds(37, 97, 80, 15);
+		contentPane.add(lblNewLabel_2);
+
+		JLabel lblNewLabel_3 = new JLabel("商品价格");
+		lblNewLabel_3.setFont(new Font("华文楷体", Font.BOLD, 18));
+		lblNewLabel_3.setBounds(37, 132, 80, 15);
+		contentPane.add(lblNewLabel_3);
+
+		JLabel label = new JLabel("商品类型");
+		label.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label.setBounds(37, 172, 80, 15);
+		contentPane.add(label);
+
+		JLabel label_1 = new JLabel("商品品牌");
+		label_1.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label_1.setBounds(37, 210, 80, 15);
+		contentPane.add(label_1);
+
+		JLabel label_url = new JLabel("商品图片");
+		label_url.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label_url.setBounds(37, 250, 80, 15);
+		contentPane.add(label_url);
+
+		text_url = new JTextField();
+		text_url.setEditable(true);
+		text_url.setEditable(false);
+		text_url.setBounds(130, 245, 160, 24);
+		contentPane.add(text_url);
+
+		JButton butUrl = new JButton("选择");
+		butUrl.setFont(new Font("华文楷体", Font.BOLD, 18));
+		butUrl.setContentAreaFilled(false);
+		butUrl.setBounds(300, 245, 75, 24);
+		contentPane.add(butUrl);
+
+		butUrl.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				chooser = new JFileChooser();
+				JpgFileFilter jpgFilter = new JpgFileFilter(); // jpg过滤器
+				GifFileFilter gifFilter = new GifFileFilter(); // gif过滤器
+				chooser.addChoosableFileFilter(jpgFilter); // 加载jpg文件过滤器
+				chooser.addChoosableFileFilter(gifFilter); // 加载gif文件过滤器
+
+				chooser.setFileFilter(jpgFilter); // 设置默认的文件管理器。如果不设置,则最后添加的文件过滤器为默认过滤器
+				chooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);// 设置只能选择目录
+				int returnVal = chooser.showOpenDialog(chooser);
+				if (returnVal == JFileChooser.APPROVE_OPTION) {
+					String selectPath = chooser.getSelectedFile().getPath();
+					AddGoodFrm.this.text_url.setText(selectPath);
+				}
+			}
+		});
+
+		JLabel label_2 = new JLabel("商品库存");
+		label_2.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label_2.setBounds(37, 370, 80, 15);
+		contentPane.add(label_2);
+
+		textField = new JTextField();
+		textField.setBounds(130, 60, 160, 24);
+		contentPane.add(textField);
+		textField.setColumns(10);
+
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(130, 95, 160, 24);
+		contentPane.add(textField_1);
+
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(130, 130, 160, 24);
+		contentPane.add(textField_2);
+
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(130, 170, 160, 24);
+		contentPane.add(textField_3);
+
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(130, 208, 160, 24);
+		contentPane.add(textField_4);
+
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(130, 368, 160, 24);
+		contentPane.add(textField_5);
+
+		JLabel label_3 = new JLabel("商品描述");
+		label_3.setFont(new Font("华文楷体", Font.BOLD, 18));
+		label_3.setBounds(37, 290, 80, 15);
+		contentPane.add(label_3);
+
+		textArea = new TextArea();
+		textArea.setBounds(130, 285, 210, 68);
+		contentPane.add(textArea);
+
+		JButton button = new JButton("添加商品");
+		button.setFont(new Font("华文楷体", Font.BOLD, 18));
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// 进行输入检验
+				if ("".equals(textField.getText())) {
+					JOptionPane.showMessageDialog(null, "商品ID不能为空");
+					return;
+				}
+				// 进行输入检验
+				if ("".equals(textField_1.getText())) {
+					JOptionPane.showMessageDialog(null, "商品名称不能为空");
+					return;
+				}
+				// 进行输入检验
+				if ("".equals(textField_2.getText())) {
+					JOptionPane.showMessageDialog(null, "商品价格不能为空");
+					return;
+				}
+				// 进行输入检验
+				if ("".equals(textField_3.getText())) {
+					JOptionPane.showMessageDialog(null, "商品类型不能为空");
+					return;
+				}
+				// 进行输入检验
+				if ("".equals(textField_4.getText())) {
+					JOptionPane.showMessageDialog(null, "商品品牌不能为空");
+					return;
+				}
+				// 进行输入检验
+				if ("".equals(textField_5.getText())) {
+					JOptionPane.showMessageDialog(null, "商品库存不能为空");
+					return;
+				} else {
+					String regex = "[1-9][0-9]{1,20}";
+					if (!textField_5.getText().matches(regex)) {
+						JOptionPane.showMessageDialog(null, "商品库存输入不合法");
+						return;
+					}
+				}
+				// 进行输入检验
+				if ("".equals(textArea.getText())) {
+					JOptionPane.showMessageDialog(null, "商品描述不能为空");
+					return;
+				}
+				// 进行输入检验
+				for (int i = 0; i < goods.size(); i++) {
+					if (goods.get(i).getGoodName().equals(textField_1.getText())) {
+						JOptionPane.showMessageDialog(null, "商品信息已经存在，请去修改商品信息！！");
+						return;
+					}
+				}
+
+				// 获取输入框信息将信息封装到实体类中
+				String ID = textField.getText();
+				String goodName = textField_1.getText();
+				String price = textField_2.getText();
+				String type = textField_3.getText();
+				String brand = textField_4.getText();
+				String count = textField_5.getText();
+				String des = textArea.getText();
+				String url = text_url.getText();
+				if (user == null && SocketUtil.socketEmpty()) {
+					JOptionPane.showMessageDialog(null, "你是怎么进来的？？？是不是没登录");
+					return;
+				}
+				File file = new File(url);
+				// file.renameTo(new File("src/com/xdcs/swing/image/" +
+				// file.getName()));
+				if(!(new File("src/com/xdcs/swing/image/" + file.getName()).exists())){
+					try {
+						BufferedInputStream bi = new BufferedInputStream(new FileInputStream(file));
+						BufferedOutputStream bo = new BufferedOutputStream(
+								new FileOutputStream("src/com/xdcs/swing/image/" + file.getName()));
+						byte[] buff = new byte[1024];
+						int len = 0;
+						while ((len = bi.read(buff)) != -1) {
+							bo.write(buff, 0, len);
+							bo.flush();
+						}
+					} catch (FileNotFoundException e2) {
+						e2.printStackTrace();
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+				}
+
+				Goods g = new Goods(ID, goodName, Double.parseDouble(price), type, des, Integer.parseInt(count),
+						user.getID(), brand, 0, "src/com/xdcs/swing/image/" + file.getName());
+
+				ObjectInputStream ois = SocketUtil.getObjectInputStream();
+				ObjectOutputStream oos = SocketUtil.getObjectOutputStream();
+				// System.out.println("这是添加商品页面" + g);
+				List<Object> list = new ArrayList<>();
+				list.add("addGoods");
+				list.add(g);
+
+				try {
+					oos.writeObject(list);
+					oos.flush();
+					list = (List<Object>) ois.readObject();
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				} catch (ClassNotFoundException e1) {
+					e1.printStackTrace();
+				}
+				boolean bool = Boolean.parseBoolean(list.get(0).toString());
+				if (bool) {
+					goods.add(g);
+					jlist.setListData(goods.toArray());
+					JOptionPane.showMessageDialog(null, "添加成功");
+				} else {
+					JOptionPane.showMessageDialog(null, "添加失败");
+				}
+				AddGoodFrm.this.setVisible(false);
+			}
+		});
+		button.setBounds(90, 410, 200, 30);
+		button.setContentAreaFilled(false);
+		contentPane.add(button);
+
+		JLabel label_4 = new JLabel("");
+		label_4.setIcon(new ImageIcon(AddGoodFrm.class.getResource("/com/xdcs/swing/image/client.png")));
+		label_4.setBounds(0, 0, 383, 500);
+		contentPane.add(label_4);
+	}
+
+	/**
+	 * 重写构造方法
+	 * 
+	 * @param user
+	 * @param goods
+	 * @param jlist
+	 * @throws HeadlessException
+	 */
+	public AddGoodFrm(User user, List<Goods> goods, JList jlist) throws HeadlessException {
+		this();
+		this.user = user;
+		this.goods = goods;
+		this.jlist = jlist;
+	}
+
+	/**
+	 * 创建jpg文件过滤器
+	 * 
+	 * @author Administrator
+	 *
+	 */
+	class JpgFileFilter extends FileFilter {
+		public String getDescription() {
+			return "*.jpg";
+		}
+
+		public boolean accept(File file) {
+			String name = file.getName();
+			return name.toLowerCase().endsWith(".jpg");
+		}
+	}
+
+	/**
+	 * 创建gif文件过滤器
+	 * 
+	 * @author Administrator
+	 *
+	 */
+	class GifFileFilter extends FileFilter {
+		public String getDescription() {
+			return "*.gif";
+		}
+
+		public boolean accept(File file) {
+			String name = file.getName();
+			return name.toLowerCase().endsWith(".gif");
+		}
+	}
+
+}

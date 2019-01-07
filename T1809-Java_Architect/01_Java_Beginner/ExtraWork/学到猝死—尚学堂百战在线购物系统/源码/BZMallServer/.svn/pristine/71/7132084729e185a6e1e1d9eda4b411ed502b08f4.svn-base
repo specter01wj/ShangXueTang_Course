@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE goods SYSTEM "goods.dtd">
+
+<goods>
+  <good ID="111">
+    <goodName>可口可乐</goodName>
+    <goodPrice>3.0</goodPrice>
+    <goodType>饮料</goodType>
+    <goodDesception>你说好不好喝呢</goodDesception>
+    <goodRepertory>60</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>可口可乐</goodBrand>
+    <goodSellCount>1309</goodSellCount>
+    <url>src/com/xdcs/swing/image/userIcon.png</url>
+  </good>
+  <good ID="1325">
+    <goodName>百事</goodName>
+    <goodPrice>3.5</goodPrice>
+    <goodType>薯片</goodType>
+    <goodDesception>可比可比</goodDesception>
+    <goodRepertory>6</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>百事</goodBrand>
+    <goodSellCount>519</goodSellCount>
+    <url>src/com/xdcs/swing/image/userIcon.png</url>
+  </good>
+  <good ID="2014">
+    <goodName>百事</goodName>
+    <goodPrice>3.5</goodPrice>
+    <goodType>饮料</goodType>
+    <goodDesception>咕嘟咕嘟</goodDesception>
+    <goodRepertory>0</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>百事</goodBrand>
+    <goodSellCount>254</goodSellCount>
+    <url>src/com/xdcs/swing/image/userIcon.png</url>
+  </good>
+</goods>

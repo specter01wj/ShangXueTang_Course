@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE goods SYSTEM "goods.dtd">
+
+<goods>
+  <good ID="20142203744">
+    <goodName>伊利</goodName>
+    <goodPrice>5.0</goodPrice>
+    <goodType>营养品</goodType>
+    <goodDesception>伊利纯牛奶</goodDesception>
+    <goodRepertory>500</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>伊利</goodBrand>
+    <goodSellCount>890</goodSellCount>
+    <url>src/com/xdcs/swing/image/milk.jpg</url>
+  </good>
+  <good ID="201">
+    <goodName>百事</goodName>
+    <goodPrice>3.5</goodPrice>
+    <goodType>饮料</goodType>
+    <goodDesception>额呵呵呵呵呵</goodDesception>
+    <goodRepertory>300</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>百事</goodBrand>
+    <goodSellCount>260</goodSellCount>
+    <url>src/com/xdcs/swing/image/7up.jpg</url>
+  </good>
+  <good ID="202">
+    <goodName>可口</goodName>
+    <goodPrice>3.5</goodPrice>
+    <goodType>饮料</goodType>
+    <goodDesception>嗬嗬嗬嗬</goodDesception>
+    <goodRepertory>300</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>可口</goodBrand>
+    <goodSellCount>90</goodSellCount>
+    <url>src/com/xdcs/swing/image/kekou.jpg</url>
+  </good>
+  <good ID="201730022">
+    <goodName>可比克</goodName>
+    <goodPrice>3.0</goodPrice>
+    <goodType>薯片</goodType>
+    <goodDesception>周杰伦代言的</goodDesception>
+    <goodRepertory>4566</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>百事</goodBrand>
+    <goodSellCount>0</goodSellCount>
+    <url>src/com/xdcs/swing/image/kebike.jpg</url>
+  </good>
+  <good ID="20237821">
+    <goodName>可比克</goodName>
+    <goodPrice>3.0</goodPrice>
+    <goodType>薯片</goodType>
+    <goodDesception>周杰伦代言的，你是我的优乐美</goodDesception>
+    <goodRepertory>567</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>百事</goodBrand>
+    <goodSellCount>0</goodSellCount>
+    <url>src/com/xdcs/swing/image/kebike.jpg</url>
+  </good>
+</goods>

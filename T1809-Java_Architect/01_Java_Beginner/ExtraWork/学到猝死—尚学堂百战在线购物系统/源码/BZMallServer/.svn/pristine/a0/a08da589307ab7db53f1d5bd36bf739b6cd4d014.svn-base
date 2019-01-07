@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orders SYSTEM "order.dtd">
+
+<orders>
+  <order ID="xdcs1504095530074">
+    <goodsMsg>
+      <good goodID="111">
+        <count>44</count>
+      </good>
+      <good goodID="1325">
+        <count>44</count>
+      </good>
+    </goodsMsg>
+    <orderTime>2017-08-30 08:18:50</orderTime>
+    <consumerID>user1504057858984</consumerID>
+    <merchantID>lisi</merchantID>
+    <recvOrder>false</recvOrder>
+    <checkPay>true</checkPay>
+    <payTime>未支付</payTime>
+    <deliver>false</deliver>
+  </order>
+  <order ID="xdcs1504146731338">
+    <goodsMsg>
+      <good goodID="1325">
+        <count>10</count>
+      </good>
+    </goodsMsg>
+    <orderTime>2017-08-31 10:32:11</orderTime>
+    <consumerID>zhangsan</consumerID>
+    <merchantID>lisi</merchantID>
+    <recvOrder>false</recvOrder>
+    <checkPay>true</checkPay>
+    <payTime>未支付</payTime>
+    <deliver>false</deliver>
+  </order>
+  <order ID="xdcs1504147020705">
+    <goodsMsg>
+      <good goodID="111">
+        <count>10</count>
+      </good>
+    </goodsMsg>
+    <orderTime>2017-08-31 10:37:00</orderTime>
+    <consumerID>zhangsan</consumerID>
+    <merchantID>lisi</merchantID>
+    <recvOrder>false</recvOrder>
+    <checkPay>true</checkPay>
+    <payTime>未支付</payTime>
+    <deliver>false</deliver>
+  </order>
+  <order ID="xdcs1504147187481">
+    <goodsMsg>
+      <good goodID="1325">
+        <count>20</count>
+      </good>
+      <good goodID="2014">
+        <count>30</count>
+      </good>
+    </goodsMsg>
+    <orderTime>2017-08-31 10:39:47</orderTime>
+    <consumerID>zhangsan</consumerID>
+    <merchantID>lisi</merchantID>
+    <recvOrder>true</recvOrder>
+    <checkPay>true</checkPay>
+    <payTime>未支付</payTime>
+    <deliver>true</deliver>
+  </order>
+</orders>

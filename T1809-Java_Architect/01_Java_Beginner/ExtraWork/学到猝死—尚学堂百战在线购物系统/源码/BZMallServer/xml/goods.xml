@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE goods SYSTEM "goods.dtd">
+
+<goods>
+  <good ID="20142203744">
+    <goodName>伊利</goodName>
+    <goodPrice>5.0</goodPrice>
+    <goodType>营养品</goodType>
+    <goodDesception>伊利纯牛奶</goodDesception>
+    <goodRepertory>500</goodRepertory>
+    <merchantID>user1504057858984</merchantID>
+    <goodBrand>伊利</goodBrand>
+    <goodSellCount>902</goodSellCount>
+    <url>src/com/xdcs/swing/image/milk.jpg</url>
+  </good>
+  <good ID="201">
+    <goodName>百事</goodName>
+    <goodPrice>3.5</goodPrice>
+    <goodType>饮料</goodType>
+    <goodDesception>额呵呵呵呵呵</goodDesception>
+    <goodRepertory>300</goodRepertory>
+    <merchantID>user1504057858984</merchantID>
+    <goodBrand>百事</goodBrand>
+    <goodSellCount>293</goodSellCount>
+    <url>src/com/xdcs/swing/image/7up.jpg</url>
+  </good>
+  <good ID="202">
+    <goodName>可口</goodName>
+    <goodPrice>3.5</goodPrice>
+    <goodType>饮料</goodType>
+    <goodDesception>嗬嗬嗬嗬</goodDesception>
+    <goodRepertory>300</goodRepertory>
+    <merchantID>user1504057858984</merchantID>
+    <goodBrand>可口</goodBrand>
+    <goodSellCount>90</goodSellCount>
+    <url>src/com/xdcs/swing/image/kekou.jpg</url>
+  </good>
+  <good ID="201730022">
+    <goodName>百事</goodName>
+    <goodPrice>3.0</goodPrice>
+    <goodType>薯片</goodType>
+    <goodDesception>周杰伦代言的</goodDesception>
+    <goodRepertory>4566</goodRepertory>
+    <merchantID>user1504057858984</merchantID>
+    <goodBrand>百事</goodBrand>
+    <goodSellCount>20</goodSellCount>
+    <url>src/com/xdcs/swing/image/kebike.jpg</url>
+  </good>
+  <good ID="20178899">
+    <goodName>康帅傅</goodName>
+    <goodPrice>2.5</goodPrice>
+    <goodType>方便面</goodType>
+    <goodDesception>康师傅方便面，有嚼劲</goodDesception>
+    <goodRepertory>300</goodRepertory>
+    <merchantID>lisi</merchantID>
+    <goodBrand>康帅傅</goodBrand>
+    <goodSellCount>10</goodSellCount>
+    <url>src/com/xdcs/swing/image/kashifu.jpg</url>
+  </good>
+  <good ID="201788999">
+    <goodName>康帅傅</goodName>
+    <goodPrice>19.2</goodPrice>
+    <goodType>方便面</goodType>
+    <goodDesception>鸡肉味，嘎嘣脆</goodDesception>
+    <goodRepertory>2000</goodRepertory>
+    <merchantID>user1504057858984</merchantID>
+    <goodBrand>康帅傅</goodBrand>
+    <goodSellCount>0</goodSellCount>
+    <url>src/com/xdcs/swing/image/kangshifu.jpg</url>
+  </good>
+</goods>
