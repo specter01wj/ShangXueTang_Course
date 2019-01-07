@@ -75,8 +75,8 @@ public class GameFrame extends JFrame {
 	
 	@Override
 	public void paint(Graphics g) {
-//		Color c = g.getColor();
-//		Font f = g.getFont();
+		Color c = g.getColor();
+		Font f = g.getFont();
 //		g.setColor(Color.CYAN);
 //		
 //		g.drawLine(100, 100, 300, 300);
@@ -91,8 +91,6 @@ public class GameFrame extends JFrame {
 //		g.drawImage(planeImg, planeX, planeY, null);
 //		planeX++;
 		plane.drawSelf(g);
-//		g.setColor(c);
-//		g.setFont(f);
 		
 		//shell.draw(g);
 		
@@ -115,11 +113,15 @@ public class GameFrame extends JFrame {
 				hitTime++;
 			}
 			if(!plane.live) {
+				g.setFont(new Font("Times New Roman", Font.BOLD, 20));
 				g.setColor(Color.red);
 				g.drawString("Time:" + period + "s", (int)plane.x, (int)plane.y);
 			}
 			
 		}
+		
+		g.setColor(c);
+		g.setFont(f);
 	}
 	
 	class PaintThread extends Thread {
