@@ -93,6 +93,10 @@ public class GameFrame extends JFrame {
 			shells[i].draw(g);
 			
 			boolean hit = shells[i].getRect().intersects(plane.getRect());
+			
+			if(hit) {
+				System.out.println("Hit!!!!");
+			}
 		}
 	}
 	
