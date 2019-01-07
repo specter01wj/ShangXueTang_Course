@@ -1,5 +1,0 @@
-服务器端：BZMallServer项目下的  com.xdcs.server包下的BZMallServer.java
-客户端：  BZMallClient项目下的  com.xdcs.client包下的login.java
-
-买家：用户名：张钰潇   密码：123
-卖家：用户名：肖勇     密码：123
