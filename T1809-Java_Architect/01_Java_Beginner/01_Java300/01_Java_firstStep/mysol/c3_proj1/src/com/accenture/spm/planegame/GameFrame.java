@@ -23,7 +23,7 @@ public class GameFrame extends JFrame {
 	Plane plane = new Plane(planeImg, 250, 250);
 	//Shell shell = new Shell();
 	Shell[] shells = new Shell[50];
-	
+	int hitTime = 0;
 	
 	class KeyMonitor extends KeyAdapter {
 
@@ -89,13 +89,16 @@ public class GameFrame extends JFrame {
 //		g.setFont(f);
 		
 		//shell.draw(g);
+		
 		for(int i = 0;i < shells.length;i++) {
 			shells[i].draw(g);
 			
 			boolean hit = shells[i].getRect().intersects(plane.getRect());
 			
 			if(hit) {
-				System.out.println("Hit!!!!");
+				System.out.println("Hit!!!!" + hitTime);
+				plane.live = false;
+				hitTime++;
 			}
 		}
 	}
