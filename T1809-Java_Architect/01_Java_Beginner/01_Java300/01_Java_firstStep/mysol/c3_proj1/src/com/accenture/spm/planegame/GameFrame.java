@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyAdapter;
@@ -118,6 +119,17 @@ public class GameFrame extends JFrame {
 		GameFrame gf = new GameFrame();
 		gf.launchFrame();
 		
+	}
+	
+	private Image offScreenImage = null;
+	 
+	public void update(Graphics g) {
+	    if(offScreenImage == null)
+	        offScreenImage = this.createImage(Constant.GAME_WIDTH,Constant.GAME_HEIGHT);//ÕâÊÇÓÎÏ·´°¿ÚµÄ¿í¶ÈºÍ¸ß¶È
+	     
+	    Graphics gOff = offScreenImage.getGraphics();
+	    paint(gOff);
+	    g.drawImage(offScreenImage, 0, 0, null);
 	}
 	
 }
