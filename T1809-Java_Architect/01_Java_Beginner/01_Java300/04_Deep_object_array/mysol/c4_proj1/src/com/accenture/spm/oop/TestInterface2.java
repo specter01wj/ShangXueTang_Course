@@ -30,19 +30,19 @@ class MySubClass implements C {
 	@Override
 	public void testa() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Test A!");
 	}
 
 	@Override
 	public void testb() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Test B!");
 	}
 
 	@Override
 	public void testc() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Test C!");
 	}
 	
 }
