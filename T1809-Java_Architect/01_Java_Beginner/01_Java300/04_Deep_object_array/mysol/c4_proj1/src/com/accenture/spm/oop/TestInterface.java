@@ -4,8 +4,11 @@ public class TestInterface {
 
 	public static void main(String[] args) {
 		
+		Angel v1 = new Angel();
+		v1.helpOther();
 		
-		
+		GoodMan m1 = new GoodMan();
+		m1.helpOther();
 	}
 	
 }
@@ -32,6 +35,26 @@ class Angel implements Volant, Honest {
 	public void fly() {
 		// TODO Auto-generated method stub
 		System.out.println("Fly!");
+	}
+	
+}
+
+class GoodMan implements Honest {
+
+	@Override
+	public void helpOther() {
+		// TODO Auto-generated method stub
+		System.out.println("Help man!");
+	}
+	
+}
+
+class BirdMan implements Volant {
+
+	@Override
+	public void fly() {
+		// TODO Auto-generated method stub
+		System.out.println("Fly man!");
 	}
 	
 }
