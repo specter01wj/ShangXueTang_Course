@@ -2,7 +2,12 @@ package com.accenture.spm.oop;
 
 public class TestInterface2 {
 
-	
+	public static void main(String[] args) {
+		
+		MySubClass ms1 = new MySubClass();
+		ms1.testb();
+		
+	}
 	
 	
 }
