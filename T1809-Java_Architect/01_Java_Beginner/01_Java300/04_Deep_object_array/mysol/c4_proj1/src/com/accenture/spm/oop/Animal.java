@@ -8,6 +8,12 @@ public abstract class Animal {
 		System.out.println("Run!");
 	}
 	
+	public static void main(String[] args) {
+		
+		Animal a1 = new Dog();
+		a1.shout();
+	}
+	
 }
 
 class Dog extends Animal {
@@ -15,7 +21,7 @@ class Dog extends Animal {
 	@Override
 	public void shout() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Wooo!");
 	}
 	
 }
