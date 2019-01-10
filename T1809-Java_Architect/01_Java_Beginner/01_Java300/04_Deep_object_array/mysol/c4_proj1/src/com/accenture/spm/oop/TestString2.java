@@ -23,11 +23,13 @@ public class TestString2 {
 		System.out.println(s4.startsWith("How"));
 		System.out.println(s4.endsWith("?"));
 		
-		s = s4.substring(4);
-		System.out.println(s);
-		s = s4.substring(4, 6);
-		System.out.println(s);
+		String s_t1 = s4.substring(4);
+		String s_t2 = s4.substring(4, 6);
+		System.out.println(s_t1 + " / " + s_t2);
 		
+		s_t1 = s4.toLowerCase();
+		s_t2 = s4.toUpperCase();
+		System.out.println(s_t1 + " / " + s_t2);
 		
 	}
 	
