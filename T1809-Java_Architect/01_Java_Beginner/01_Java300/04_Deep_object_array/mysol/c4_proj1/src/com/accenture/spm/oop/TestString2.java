@@ -31,6 +31,10 @@ public class TestString2 {
 		s_t2 = s4.toUpperCase();
 		System.out.println(s_t1 + " / " + s_t2);
 		
+		String s5 = "   Live in Maryland!  ";
+		s_t1 = s5.trim();
+		System.out.println(s5 + " / " + s_t1);
+		
 	}
 	
 }
