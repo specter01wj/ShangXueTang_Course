@@ -6,7 +6,8 @@ public class TestString {
 		String str = "abc";
 		String str2 = new String("def");
 		String str3 = "abc" + "defg";
-		
+		String str4 = "19" + 21;
+		System.out.println("str4: " + str4);
 		
 	}
 	
