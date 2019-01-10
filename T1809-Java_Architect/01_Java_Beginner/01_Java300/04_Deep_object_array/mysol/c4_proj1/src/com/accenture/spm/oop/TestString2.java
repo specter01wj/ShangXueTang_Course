@@ -23,6 +23,8 @@ public class TestString2 {
 		System.out.println(s4.startsWith("How"));
 		System.out.println(s4.endsWith("?"));
 		
+		s = s4.substring(4);
+		System.out.println(s);
 		
 	}
 	
