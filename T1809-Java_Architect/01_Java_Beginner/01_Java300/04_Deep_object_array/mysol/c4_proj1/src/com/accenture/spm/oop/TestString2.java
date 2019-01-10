@@ -25,6 +25,9 @@ public class TestString2 {
 		
 		s = s4.substring(4);
 		System.out.println(s);
+		s = s4.substring(4, 6);
+		System.out.println(s);
+		
 		
 	}
 	
