@@ -18,6 +18,12 @@ public class TestString2 {
 		String s = s1.replace(' ', '$');
 		System.out.println(s);
 		
+		
+		String s3 = "", s4 = "How are you?";
+		System.out.println(s4.startsWith("How"));
+		System.out.println(s4.endsWith("?"));
+		
+		
 	}
 	
 }
