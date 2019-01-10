@@ -4,6 +4,10 @@ public class TestArrayCopy {
 
 	public static void main(String[] args) {
 		
+		
+	}
+	
+	public static void testBasicCopy() {
 		String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
 		String[] s2 = new String[10];
 		
