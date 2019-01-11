@@ -39,7 +39,7 @@ public class TestArrayCopy {
 		//String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
 		//String[] s2 = new String[5];
 		
-		System.arraycopy(s, index, s, index-1, s.length - index);
+		System.arraycopy(s, index+1, s, index, s.length - index - 1);
 		s[s.length - 1] = null;
 		
 		for(int i = 0; i < s.length; i++) {
