@@ -10,6 +10,7 @@ public class TestArrayCopy {
 		String[] str = {"Aaron", "Betty", "Charles", "Dicky", "Eddy", "Zak"};
 		testBasicCopy3(str, 2);
 		
+		testBasicCopy4();
 	}
 	
 	public static void testBasicCopy() {
@@ -47,6 +48,18 @@ public class TestArrayCopy {
 		}
 		
 		return s;
+	}
+	
+	public static void testBasicCopy4() {
+		String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
+		String[] s2 = new String[s1.length + 5];
+		
+		System.arraycopy(s1, 0, s2, 0, s1.length);
+		s1[s1.length - 1] = null;
+		
+		for(String temp : s2) {
+			System.out.println(temp);
+		}
 	}
 	
 }
