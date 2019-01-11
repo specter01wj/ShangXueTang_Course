@@ -15,7 +15,11 @@ public class TestArrayTable {
 		tableData[1] = emp2;
 		tableData[2] = emp3;
 		
-		System.out.println(Arrays.toString(tableData));
+		System.out.println(Arrays.deepToString(tableData));
+		
+		for(Object[] temp : tableData) {
+			System.out.println(Arrays.toString(temp));
+		}
 		
 	}
 	
