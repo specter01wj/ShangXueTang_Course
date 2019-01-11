@@ -32,4 +32,18 @@ public class TestArrayCopy {
 		}
 	}
 	
+	public static String[] testBasicCopy3(String[] s,int index) {
+		//String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
+		//String[] s2 = new String[5];
+		
+		System.arraycopy(s, index, s, index-1, s.length - index);
+		s[s.length - 1] = null;
+		
+		for(int i = 0; i < s.length; i++) {
+			System.out.println(i + "--" + s[i]);
+		}
+		
+		return s;
+	}
+	
 }
