@@ -15,6 +15,7 @@ public class TestArrays {
 		Arrays.sort(a2);
 		System.out.println(Arrays.toString(a2));
 		
+		System.out.println(Arrays.binarySearch(a2, 61));
 		
 	}
 	
