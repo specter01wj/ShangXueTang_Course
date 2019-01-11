@@ -7,6 +7,9 @@ public class TestArrayCopy {
 		testBasicCopy();
 		testBasicCopy2();
 		
+		String[] str = {"Aaron", "Betty", "Charles", "Dicky", "Eddy", "Zak"};
+		testBasicCopy3(str, 2);
+		
 	}
 	
 	public static void testBasicCopy() {
