@@ -1,5 +1,7 @@
 package com.accenture.spm.oop;
 
+import java.util.Arrays;
+
 public class TestBubbleSort {
 
 	public static void main(String[] args) {
@@ -14,7 +16,7 @@ public class TestBubbleSort {
 				values[i] = values[i+1];
 				values[i+1] = temp;
 			}
-			
+			System.out.println(Arrays.toString(values));
 			
 		}
 		
