@@ -21,6 +21,7 @@ public class TestBubbleSort {
 				System.out.println(Arrays.toString(values));
 			}
 			if(flag) {
+				System.out.println("End of Sort!");
 				break;
 			}
 			System.out.println("=======================");
