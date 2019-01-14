@@ -16,7 +16,7 @@ public class TestWrappedClass {
 		String g1 = f1.toString();
 		String g2 = f1 + "";
 		
-		System.out.println("Result: ");
+		System.out.println("Max Int: " + Integer.MAX_VALUE);
 	}
 	
 }
