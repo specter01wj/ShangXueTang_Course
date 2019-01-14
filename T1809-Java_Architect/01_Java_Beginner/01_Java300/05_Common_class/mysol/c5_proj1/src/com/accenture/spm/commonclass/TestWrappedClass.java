@@ -13,6 +13,9 @@ public class TestWrappedClass {
 		Integer e1 = new Integer("9889");
 		Integer f1 = Integer.parseInt("88993");
 		
+		String g1 = f1.toString();
+		String g2 = f1 + "";
+		
 		System.out.println("Result: ");
 	}
 	
