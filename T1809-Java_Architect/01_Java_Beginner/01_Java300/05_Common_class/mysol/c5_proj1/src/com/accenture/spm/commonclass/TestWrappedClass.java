@@ -10,6 +10,9 @@ public class TestWrappedClass {
 		int c1 = b1.intValue();
 		double d1 = b1.doubleValue();
 		
+		Integer e1 = new Integer("9889");
+		Integer f1 = Integer.parseInt("88993");
+		
 		System.out.println("Result: ");
 	}
 	
