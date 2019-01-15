@@ -18,6 +18,8 @@ public class TestStringBuilder2 {
 		System.out.println(sb1);
 		sb1.insert(1, '+');
 		System.out.println(sb1);
+		sb1.delete(20, 23);
+		System.out.println(sb1);
 		
 	}
 	
