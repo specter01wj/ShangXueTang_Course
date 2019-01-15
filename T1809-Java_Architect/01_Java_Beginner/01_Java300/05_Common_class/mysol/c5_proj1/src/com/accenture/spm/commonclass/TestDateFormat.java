@@ -17,7 +17,9 @@ public class TestDateFormat {
 		Date date = df2.parse("05-14-98 23:12:33");
 		System.out.println(date);
 		
-		
+		DateFormat df3 = new SimpleDateFormat("D");
+		String str3 = df3.format(new Date());
+		System.out.println(str3);
 		
 	}
 	
