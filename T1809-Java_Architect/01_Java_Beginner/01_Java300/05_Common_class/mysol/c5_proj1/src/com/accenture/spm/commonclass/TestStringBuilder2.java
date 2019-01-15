@@ -14,6 +14,8 @@ public class TestStringBuilder2 {
 		System.out.println(sb1);
 		sb1.reverse();
 		System.out.println(sb1);
+		sb1.setCharAt(3, '&');
+		System.out.println(sb1);
 		
 	}
 	
