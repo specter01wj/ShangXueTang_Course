@@ -14,8 +14,11 @@ public class TestDate {
 		
 		Date d2 = new Date();
 		System.out.println(d2.getTime());
-		
 		System.out.println(d2.after(d1));
+		
+		Date d3 = new Date(120, 2, 12);
+		System.out.println(d3);
+		
 	}
 	
 }
