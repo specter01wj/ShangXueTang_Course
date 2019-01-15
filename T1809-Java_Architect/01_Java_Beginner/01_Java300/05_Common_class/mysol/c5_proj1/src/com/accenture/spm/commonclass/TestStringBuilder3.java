@@ -7,7 +7,7 @@ public class TestStringBuilder3 {
 		String str1 = "";
 		long num1 = Runtime.getRuntime().freeMemory();
 		long time1 = System.currentTimeMillis();
-		for(int i = 0; i < 500; i++) {
+		for(int i = 0; i < 5000; i++) {
 			str1 += i;
 		}
 		System.out.println("CPU Memory: " + (num1));
@@ -19,7 +19,7 @@ public class TestStringBuilder3 {
 		StringBuilder sb1 = new StringBuilder("");
 		long num3 = Runtime.getRuntime().freeMemory();
 		long time3 = System.currentTimeMillis();
-		for(int i = 0; i < 500; i++) {
+		for(int i = 0; i < 5000; i++) {
 			sb1.append(i);
 		}
 		System.out.println("CPU Memory: " + (num3));
