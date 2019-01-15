@@ -12,6 +12,8 @@ public class TestStringBuilder2 {
 			sb1.append(temp);
 		}
 		System.out.println(sb1);
+		sb1.reverse();
+		System.out.println(sb1);
 		
 	}
 	
