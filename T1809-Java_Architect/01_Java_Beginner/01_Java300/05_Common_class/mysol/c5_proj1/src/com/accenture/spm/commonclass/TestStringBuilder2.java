@@ -16,6 +16,8 @@ public class TestStringBuilder2 {
 		System.out.println(sb1);
 		sb1.setCharAt(3, '&');
 		System.out.println(sb1);
+		sb1.insert(1, '+');
+		System.out.println(sb1);
 		
 	}
 	
