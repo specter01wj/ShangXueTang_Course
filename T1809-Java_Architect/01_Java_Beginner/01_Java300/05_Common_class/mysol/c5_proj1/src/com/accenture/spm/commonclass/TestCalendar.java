@@ -20,7 +20,7 @@ public class TestCalendar {
 		System.out.println(cal2);
 		
 		Calendar cal3 = new GregorianCalendar();
-		cal2.add(Calendar.DATE, 100);
+		cal3.add(Calendar.DATE, 100);
 		System.out.println(cal3);
 		
 	}
