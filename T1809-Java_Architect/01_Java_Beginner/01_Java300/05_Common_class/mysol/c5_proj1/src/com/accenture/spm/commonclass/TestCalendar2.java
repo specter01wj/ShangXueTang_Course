@@ -21,8 +21,15 @@ public class TestCalendar2 {
 		
 		cal1.set(Calendar.DAY_OF_MONTH, 1);
 		
+		for(int i = 0; i < cal1.get(Calendar.DAY_OF_WEEK)-1; i++) {
+			System.out.print("\t");
+		}
+		
 		for(int i = 1; i <= 31; i++) {
 			System.out.print(cal1.get(Calendar.DAY_OF_MONTH) + "\t");
+			if(cal1.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
+				System.out.println();
+			}
 			cal1.add(Calendar.DAY_OF_MONTH, 1);
 		}
 	}
