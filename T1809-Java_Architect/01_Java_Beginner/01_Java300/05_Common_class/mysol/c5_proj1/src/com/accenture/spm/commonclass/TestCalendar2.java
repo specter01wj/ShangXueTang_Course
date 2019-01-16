@@ -17,6 +17,14 @@ public class TestCalendar2 {
 		Calendar cal1 = new GregorianCalendar();
 		cal1.setTime(date1);
 		
+		System.out.println("Sun\tMon\tTue\tWed\tThur\tFri\tSat");
+		
+		cal1.set(Calendar.DAY_OF_MONTH, 1);
+		
+		for(int i = 1; i <= 31; i++) {
+			System.out.print(cal1.get(Calendar.DAY_OF_MONTH) + "\t");
+			cal1.add(Calendar.DAY_OF_MONTH, 1);
+		}
 	}
 	
 }
