@@ -1,6 +1,7 @@
 package com.accenture.spm.commonclass;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class TestCalendar {
@@ -23,6 +24,10 @@ public class TestCalendar {
 		cal3.add(Calendar.DATE, 100);
 		System.out.println(cal3);
 		
+		Date date4 = cal3.getTime();
+		Calendar cal4 = new GregorianCalendar();
+		cal4.setTime(new Date());
+		System.out.println(date4 + " / " + cal4);
 	}
 	
 }
