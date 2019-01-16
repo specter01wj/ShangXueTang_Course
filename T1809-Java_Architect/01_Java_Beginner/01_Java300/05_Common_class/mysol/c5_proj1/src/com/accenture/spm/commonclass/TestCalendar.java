@@ -37,7 +37,7 @@ public class TestCalendar {
 		int year1 = c.get(Calendar.YEAR);
 		int month1 = c.get(Calendar.MONTH)+1;
 		int day1 = c.get(Calendar.DAY_OF_MONTH);
-		int weekday1 = c.get(Calendar.DAY_OF_WEEK);
+		int weekday1 = c.get(Calendar.DAY_OF_WEEK)-1;
 		String dayweek = weekday1 == 0 ? "day" : weekday1 + "";
 		int hour = c.get(Calendar.HOUR);
 		int minute = c.get(Calendar.MINUTE);
