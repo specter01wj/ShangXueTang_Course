@@ -30,4 +30,19 @@ public class TestCalendar {
 		System.out.println(date4 + " / " + cal4);
 	}
 	
+	public static void printCalendar(Calendar c) {
+		
+		int year1 = c.get(Calendar.YEAR);
+		int month1 = c.get(Calendar.MONTH)+1;
+		int day1 = c.get(Calendar.DAY_OF_MONTH);
+		int weekday1 = c.get(Calendar.DAY_OF_WEEK);
+		String dayweek = weekday1 == 0 ? "day" : weekday1 + "";
+		int hour = c.get(Calendar.HOUR);
+		int minute = c.get(Calendar.MINUTE);
+		int second = c.get(Calendar.SECOND);
+		
+		System.out.println(year1 + " year," + month1 + " month," + day1 + " day," +
+				hour + " hour," + minute + " min," + second + " sec. " + "Week of " + dayweek);
+	}
+	
 }
