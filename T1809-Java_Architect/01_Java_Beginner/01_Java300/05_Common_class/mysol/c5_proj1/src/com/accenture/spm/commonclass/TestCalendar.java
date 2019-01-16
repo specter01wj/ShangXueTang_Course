@@ -28,6 +28,8 @@ public class TestCalendar {
 		Calendar cal4 = new GregorianCalendar();
 		cal4.setTime(new Date());
 		System.out.println(date4 + " / " + cal4);
+		
+		printCalendar(cal4);
 	}
 	
 	public static void printCalendar(Calendar c) {
