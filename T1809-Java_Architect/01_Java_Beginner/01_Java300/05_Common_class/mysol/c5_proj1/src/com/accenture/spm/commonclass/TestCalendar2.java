@@ -11,7 +11,7 @@ public class TestCalendar2 {
 
 	public static void main(String[] args) throws ParseException {
 	
-		String str1 = "2020-09-23";
+		String str1 = "2020-10-23";
 		DateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
 		Date date1 = df1.parse(str1);
 		Calendar cal1 = new GregorianCalendar();
@@ -25,7 +25,9 @@ public class TestCalendar2 {
 			System.out.print("\t");
 		}
 		
-		for(int i = 1; i <= cal1.getActualMaximum(Calendar.DATE); i++) {
+		int maxDay = cal1.getActualMaximum(Calendar.DATE);
+		
+		for(int i = 1; i <= maxDay; i++) {
 			System.out.print(cal1.get(Calendar.DAY_OF_MONTH) + "\t");
 			if(cal1.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
 				System.out.println();
