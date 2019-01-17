@@ -6,16 +6,20 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Scanner;
 
 public class TestCalendar3 {
 
 	public static void main(String[] args) throws ParseException {
 		
-		String str1 = "2019-01-23";
+		System.out.println("Input date: (yyyy-mm-dd)");
+		Scanner scanner = new Scanner(System.in);
+		String str1 = scanner.nextLine();
+		//String str1 = "2019-01-23";
 		DateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
 		Date date1 = df1.parse(str1);
 		Calendar cal1 = new GregorianCalendar();
-		//cal1.setTime(date1);
+		cal1.setTime(date1);
 		
 		int today = cal1.get(Calendar.DAY_OF_MONTH);
 		System.out.print("Today: " + today + "\n");
