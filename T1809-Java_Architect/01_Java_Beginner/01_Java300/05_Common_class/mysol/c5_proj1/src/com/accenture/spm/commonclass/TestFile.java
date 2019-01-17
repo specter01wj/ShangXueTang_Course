@@ -25,6 +25,12 @@ public class TestFile {
         System.out.println("File size: "+f2.length());
         System.out.println("File name: "+f2.getName());
         System.out.println("File dir: "+f2.getAbsolutePath());
+        
+        File f3 = new File("files4/f3");
+        //boolean flag = f3.mkdir(); 
+        boolean flag = f3.mkdirs();
+        System.out.println(flag);
+        
 	}
 	
 }
