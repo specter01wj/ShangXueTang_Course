@@ -8,6 +8,11 @@ public class TestIOException {
 
 	public static void main(String[] args) {
 		
+		readMyFile();
+		
+	}
+	
+	public static void readMyFile() {
 		FileReader reader = null;
 		
 		try {
@@ -29,7 +34,6 @@ public class TestIOException {
 				e.printStackTrace();
 			}
 		}
-		
 	}
 	
 }
