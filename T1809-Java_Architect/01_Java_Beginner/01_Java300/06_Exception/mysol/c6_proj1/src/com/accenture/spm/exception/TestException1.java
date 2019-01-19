@@ -12,7 +12,10 @@ public class TestException1 {
 		}
 		
 		String str = null;
-		str.length();
+		if(str!=null) {
+			System.out.println(str.length());
+		}
+		
 		
 	}
 	
