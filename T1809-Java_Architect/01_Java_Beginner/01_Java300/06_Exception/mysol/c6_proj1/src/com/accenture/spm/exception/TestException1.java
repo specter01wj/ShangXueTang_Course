@@ -17,7 +17,10 @@ public class TestException1 {
 		}
 		
 		Animal a1 = new Dog();
-		Cat c1 = (Cat)a1;
+		if(a1 instanceof Cat) {
+			Cat c1 = (Cat)a1;
+		}
+		
 		
 	}
 	
