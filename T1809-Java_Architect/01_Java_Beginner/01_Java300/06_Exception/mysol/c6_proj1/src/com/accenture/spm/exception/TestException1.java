@@ -21,6 +21,11 @@ public class TestException1 {
 			Cat c1 = (Cat)a1;
 		}
 		
+		int[] arr = new int[5];
+		int a2 = 5;
+		if(a2 < arr.length) {
+			System.out.println(arr[a2]);
+		}
 		
 	}
 	
