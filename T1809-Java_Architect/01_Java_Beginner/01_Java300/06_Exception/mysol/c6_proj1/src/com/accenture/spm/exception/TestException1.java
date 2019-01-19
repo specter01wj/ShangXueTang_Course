@@ -16,7 +16,21 @@ public class TestException1 {
 			System.out.println(str.length());
 		}
 		
+		Animal a1 = new Dog();
+		Cat c1 = (Cat)a1;
 		
 	}
+	
+}
+
+class Animal {
+	
+}
+
+class Dog extends Animal {
+	
+}
+
+class Cat extends Animal {
 	
 }
