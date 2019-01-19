@@ -14,7 +14,7 @@ public class TestIOException {
 			reader = new FileReader("bb1.txt");
 			char c1 = (char) reader.read();
 			char c2 = (char) reader.read();
-			System.out.println("" + c1 + c2);
+			System.out.println("Read file content: " + c1 + c2);
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
 		} catch(IOException e) {
@@ -22,6 +22,7 @@ public class TestIOException {
 		} finally {
 			try {
 				if(reader != null) {
+					System.out.println("File close!");
 					reader.close();
 				}
 			} catch(Exception e) {
