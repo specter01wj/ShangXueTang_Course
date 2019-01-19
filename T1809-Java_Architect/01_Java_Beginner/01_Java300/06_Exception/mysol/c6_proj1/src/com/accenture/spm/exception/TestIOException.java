@@ -20,7 +20,13 @@ public class TestIOException {
 		} catch(IOException e) {
 			e.printStackTrace();
 		} finally {
-			
+			try {
+				if(reader != null) {
+					reader.close();
+				}
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 	}
