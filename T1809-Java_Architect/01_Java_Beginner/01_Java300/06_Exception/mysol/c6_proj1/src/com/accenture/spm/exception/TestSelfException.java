@@ -27,8 +27,6 @@ class Person {
 		this.age = age;
 	}
 	
-	
-	
 }
 
 //class IllegalAgeException extends RuntimeException {
