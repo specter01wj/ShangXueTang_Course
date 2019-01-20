@@ -8,7 +8,10 @@ public class TestGeneric {
 		mc1.setObjs("James", 0);
 		mc1.setObjs(1011, 1);
 		
-		System.out.println(mc1);
+		String a1 = (String)mc1.getObjs(0);
+		Integer b1 = (Integer)mc1.getObjs(1);
+		System.out.println(mc1.getObjs(1));
+		System.out.println("/" + a1 + "/" + b1);
 	}
 	
 }
