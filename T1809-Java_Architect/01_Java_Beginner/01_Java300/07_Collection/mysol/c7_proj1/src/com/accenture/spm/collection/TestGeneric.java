@@ -10,9 +10,11 @@ public class TestGeneric {
 		//mc1.setObjs(1011, 1);
 		
 		//String a1 = (String)mc1.getObjs(0);
+		String a1 = mc1.getObjs(0);
 		//Integer b1 = (Integer)mc1.getObjs(1);
-		System.out.println(mc1.getObjs(1));
-		System.out.println("/" + a1 + "/" + b1);
+		System.out.println(mc1.getObjs(0));
+		//System.out.println("/" + a1 + "/" + b1);
+		System.out.println("/" + a1);
 	}
 	
 }
