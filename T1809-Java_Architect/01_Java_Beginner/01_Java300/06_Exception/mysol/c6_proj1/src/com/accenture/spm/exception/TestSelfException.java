@@ -4,7 +4,8 @@ public class TestSelfException {
 
 	public static void main(String[] args) {
 		
-		
+		Person p = new Person();
+		p.setAge(-10);
 		
 	}
 	
@@ -19,6 +20,10 @@ class Person {
 	}
 
 	public void setAge(int age) {
+		if(age < 0) {
+			throw new IllegalAgeException("Age cannot be negative!");
+		}
+		
 		this.age = age;
 	}
 	
