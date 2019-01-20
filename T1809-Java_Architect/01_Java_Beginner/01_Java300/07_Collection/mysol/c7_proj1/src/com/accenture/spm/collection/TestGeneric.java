@@ -4,7 +4,11 @@ public class TestGeneric {
 
 	public static void main(String[] args) {
 		
+		MyCollection mc1 = new MyCollection();
+		mc1.setObjs("James", 0);
+		mc1.setObjs(1011, 1);
 		
+		System.out.println(mc1);
 	}
 	
 }
