@@ -8,3 +8,19 @@ public class TestGeneric {
 	}
 	
 }
+
+class MyCollection {
+	
+	Object[] objs = new Object[5];
+
+	public Object[] getObjs() {
+		return objs;
+	}
+
+	public void setObjs(Object[] objs) {
+		this.objs = objs;
+	}
+	
+	
+	
+}
