@@ -2,7 +2,7 @@ package com.accenture.spm.exception;
 
 public class TestSelfException {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IllegalAgeException {
 		
 		Person p = new Person();
 		p.setAge(-10);
@@ -19,7 +19,7 @@ class Person {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(int age) throws IllegalAgeException {
 		if(age < 0) {
 			throw new IllegalAgeException("Age cannot be negative!");
 		}
@@ -31,7 +31,8 @@ class Person {
 	
 }
 
-class IllegalAgeException extends RuntimeException {
+//class IllegalAgeException extends RuntimeException {
+class IllegalAgeException extends Exception {
 	
 	public IllegalAgeException() {
 		
