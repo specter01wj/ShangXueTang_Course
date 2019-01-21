@@ -40,4 +40,9 @@ public class TestListAll {
 		
 	}
 	
+	public static void test03() {
+		List<String> list3 = new ArrayList<>();
+		
+	}
+	
 }
