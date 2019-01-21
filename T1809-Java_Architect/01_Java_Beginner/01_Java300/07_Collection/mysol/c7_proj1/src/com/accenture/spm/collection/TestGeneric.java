@@ -1,5 +1,7 @@
 package com.accenture.spm.collection;
 
+import java.util.List;
+
 public class TestGeneric {
 
 	public static void main(String[] args) {
