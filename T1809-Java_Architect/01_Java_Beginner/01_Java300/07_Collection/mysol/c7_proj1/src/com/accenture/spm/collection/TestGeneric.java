@@ -2,6 +2,7 @@ package com.accenture.spm.collection;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class TestGeneric {
 
