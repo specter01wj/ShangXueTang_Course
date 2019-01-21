@@ -24,6 +24,7 @@ public class TestGeneric {
 		List list1 = new ArrayList();
 		Map map = new HashMap();
 		
+		
 	}
 	
 }
