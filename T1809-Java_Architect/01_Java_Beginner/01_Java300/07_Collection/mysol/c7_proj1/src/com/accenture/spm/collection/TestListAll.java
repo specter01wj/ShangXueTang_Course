@@ -36,6 +36,7 @@ public class TestListAll {
 		System.out.println("List1: " + list1);
 		list1.retainAll(list2);
 		System.out.println("List1: " + list1);
+		System.out.println(list1.containsAll(list2));
 		
 	}
 	
