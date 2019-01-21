@@ -18,7 +18,7 @@ public class TestGeneric {
 		//System.out.println("/" + a1 + "/" + b1);
 		System.out.println("/" + a1);
 		
-		List list1;
+		List list1 = new ArrayList();
 		
 	}
 	
