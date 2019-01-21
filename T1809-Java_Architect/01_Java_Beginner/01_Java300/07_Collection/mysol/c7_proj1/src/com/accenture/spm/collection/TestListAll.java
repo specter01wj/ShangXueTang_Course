@@ -22,6 +22,11 @@ public class TestListAll {
 		list1.add("aa2");
 		list1.add("aa3");
 		
+		List<String> list2 = new ArrayList<>();
+		list2.add("bb1");
+		list2.add("bb2");
+		list2.add("bb3");
+		
 	}
 	
 }
