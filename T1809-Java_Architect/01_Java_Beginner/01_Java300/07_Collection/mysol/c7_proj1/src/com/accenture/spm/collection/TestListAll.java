@@ -58,6 +58,8 @@ public class TestListAll {
 		list3.set(1, "Kate");
 		System.out.println("List3: " + list3);
 		
+		System.out.println(list3.get(2));
+		
 	}
 	
 }
