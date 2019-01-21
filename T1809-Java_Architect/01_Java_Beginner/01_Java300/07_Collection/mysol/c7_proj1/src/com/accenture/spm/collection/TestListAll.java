@@ -49,6 +49,9 @@ public class TestListAll {
 		list3.add("d4");
 		System.out.println("List3: " + list3);
 		
+		list3.add(2, "Jim");
+		System.out.println("List3: " + list3);
+		
 	}
 	
 }
