@@ -55,6 +55,9 @@ public class TestListAll {
 		list3.remove(3);
 		System.out.println("List3: " + list3);
 		
+		list3.set(1, "Kate");
+		System.out.println("List3: " + list3);
+		
 	}
 	
 }
