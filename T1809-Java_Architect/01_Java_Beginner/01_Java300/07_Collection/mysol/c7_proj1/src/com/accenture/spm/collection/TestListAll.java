@@ -60,6 +60,10 @@ public class TestListAll {
 		
 		System.out.println(list3.get(2));
 		
+		list3.add("Jim");
+		System.out.println("List3: " + list3);
+		System.out.println(list3.indexOf("Jim"));
+		
 	}
 	
 }
