@@ -15,6 +15,15 @@ public class TestList {
 		System.out.println(c1.isEmpty());
 		System.out.println(c1);
 		
+		c1.remove("Jin");
+		System.out.println(c1);
+		
+		c1.clear();
+		System.out.println(c1.size());
+		System.out.println(c1);
+		
+		
+		
 	}
 	
 }
