@@ -20,6 +20,7 @@ public class TestGeneric {
 		System.out.println("/" + a1);
 		
 		List list1 = new ArrayList();
+		Map map = new HashMap();
 		
 	}
 	
