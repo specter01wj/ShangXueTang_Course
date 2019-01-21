@@ -14,6 +14,10 @@ public class TestList {
 		System.out.println(c1.size());
 		System.out.println(c1.isEmpty());
 		System.out.println(c1);
+		System.out.println(c1.contains("Jin"));
+		
+		Object[] objs1 = c1.toArray();
+		System.out.println(objs1);
 		
 		c1.remove("Jin");
 		System.out.println(c1);
