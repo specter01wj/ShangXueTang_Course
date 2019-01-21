@@ -63,6 +63,7 @@ public class TestListAll {
 		list3.add("Jim");
 		System.out.println("List3: " + list3);
 		System.out.println(list3.indexOf("Jim"));
+		System.out.println(list3.lastIndexOf("Jim"));
 		
 	}
 	
