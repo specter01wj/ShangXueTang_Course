@@ -6,7 +6,10 @@ public class TestList {
 
 	public static void main(String[] args) {
 		
-		Collection c1 = new ArrayList();
+		Collection<String> c1 = new ArrayList<>();
+		
+		System.out.println(c1.size());
+		System.out.println(c1.isEmpty());
 		
 	}
 	
