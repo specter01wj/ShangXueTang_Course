@@ -25,6 +25,7 @@ public class TestGeneric {
 		Map map = new HashMap();
 		
 		
+		
 	}
 	
 }
