@@ -7,7 +7,8 @@ public class TestListAll {
 
 	public static void main(String[] args) {
 		
-		test02();
+		//test02();
+		test03();
 		
 	}
 	
@@ -42,6 +43,11 @@ public class TestListAll {
 	
 	public static void test03() {
 		List<String> list3 = new ArrayList<>();
+		list3.add("a1");
+		list3.add("b2");
+		list3.add("c3");
+		list3.add("d4");
+		System.out.println("List3: " + list3);
 		
 	}
 	
