@@ -27,6 +27,8 @@ public class TestListAll {
 		list2.add("bb2");
 		list2.add("bb3");
 		
+		System.out.println("List1: " + list1);
+		
 	}
 	
 }
