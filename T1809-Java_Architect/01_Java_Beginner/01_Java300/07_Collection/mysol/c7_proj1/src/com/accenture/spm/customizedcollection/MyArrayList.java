@@ -26,10 +26,14 @@ public class MyArrayList {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("[");
-		for(Object obj : elementData) {
+		/*for(Object obj : elementData) {
 			sb.append(obj + ",");
+		}*/
+		for(int i = 0; i < size; i++) {
+			sb.append(elementData[i] + ",");
 		}
-		sb.append("]");
+		sb.setCharAt(sb.length()-1, ']');
+		//sb.append("]");
 		
 		return sb.toString();
 	}
