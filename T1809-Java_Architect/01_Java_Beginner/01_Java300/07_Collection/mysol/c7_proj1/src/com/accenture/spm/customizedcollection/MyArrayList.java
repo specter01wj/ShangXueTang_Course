@@ -16,16 +16,19 @@ public class MyArrayList {
 		
 	}
 	
-	
+	public void add(Object obj) {
+		elementData[size++] = obj;
+	}
 	
 
 	public static void main(String[] args) {
 		
+		MyArrayList s1 = new MyArrayList(20);
+		s1.add("aa1");
+		s1.add("bb1");
 		
 		
-		
-		
-		System.out.println();
+		System.out.println(s1);
 	}
 	
 }
