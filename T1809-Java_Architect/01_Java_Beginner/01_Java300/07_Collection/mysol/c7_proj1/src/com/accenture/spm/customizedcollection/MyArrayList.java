@@ -1,5 +1,7 @@
 package com.accenture.spm.customizedcollection;
 
+import java.util.Arrays;
+
 public class MyArrayList {
 	
 	private Object[] elementData;
@@ -20,6 +22,17 @@ public class MyArrayList {
 		elementData[size++] = obj;
 	}
 	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("[");
+		for(Object obj : elementData) {
+			sb.append(obj + ",");
+		}
+		sb.append("]");
+		
+		return sb.toString();
+	}
 
 	public static void main(String[] args) {
 		
