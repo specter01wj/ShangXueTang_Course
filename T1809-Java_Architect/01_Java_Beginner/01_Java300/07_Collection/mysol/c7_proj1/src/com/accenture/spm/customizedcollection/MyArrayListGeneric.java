@@ -1,25 +1,23 @@
 package com.accenture.spm.customizedcollection;
 
-import java.util.Arrays;
+public class MyArrayListGeneric<E> {
 
-public class MyArrayList {
-	
 	private Object[] elementData;
 	private int size;
 	private static final int DEFAULT_CAPACITY = 10;
 	
-	public MyArrayList() {
+	public MyArrayListGeneric() {
 		elementData = new Object[DEFAULT_CAPACITY];
 		
 	}
 	
-	public MyArrayList(int capacity) {
+	public MyArrayListGeneric(int capacity) {
 		elementData = new Object[capacity];
 		
 	}
 	
-	public void add(Object obj) {
-		elementData[size++] = obj;
+	public void add(E element) {
+		elementData[size++] = element;
 	}
 	
 	@Override
@@ -41,7 +39,7 @@ public class MyArrayList {
 
 	public static void main(String[] args) {
 		
-		MyArrayList s1 = new MyArrayList(20);
+		MyArrayListGeneric s1 = new MyArrayListGeneric(20);
 		s1.add("aa1");
 		s1.add("bb1");
 		
