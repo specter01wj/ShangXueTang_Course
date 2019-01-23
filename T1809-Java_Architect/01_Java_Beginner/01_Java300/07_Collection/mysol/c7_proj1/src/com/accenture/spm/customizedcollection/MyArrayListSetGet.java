@@ -27,6 +27,10 @@ public class MyArrayListSetGet<E> {
 		elementData[size++] = element;
 	}
 	
+	public E get(int index) {
+		
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
