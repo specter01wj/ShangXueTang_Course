@@ -19,7 +19,7 @@ public class MyArrayListEnlarge<E> {
 	public void add(E element) {
 		
 		if(size == elementData.length) {
-			Object[] newArray = new Object[elementData.length + elementData.length >> 1];
+			Object[] newArray = new Object[elementData.length + (elementData.length >> 1)];
 			System.arraycopy(elementData, 0, newArray, 0, elementData.length);
 			elementData = newArray;
 		}
