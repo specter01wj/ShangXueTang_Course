@@ -17,7 +17,12 @@ public class MyArrayListEnlarge<E> {
 	}
 	
 	public void add(E element) {
-		elementData[size++] = element;
+		//elementData[size++] = element;
+		if(size == elementData.length) {
+			Object[] newArray = new Object[elementData.length + elementData.length >> 1];
+			System.arraycopy(elementData, 0, newArray, 0, elementData.length);
+			elementData = newArray;
+		}
 	}
 	
 	@Override
@@ -40,9 +45,10 @@ public class MyArrayListEnlarge<E> {
 	public static void main(String[] args) {
 		
 		MyArrayListEnlarge s1 = new MyArrayListEnlarge(20);
-		s1.add("aa1");
-		s1.add("bb1");
 		
+		for(int i = 0; i < 40; i++) {
+			s1.add("We_" + i);
+		}
 		
 		System.out.println(s1);
 		
