@@ -28,7 +28,7 @@ public class MyArrayListSetGet<E> {
 	}
 	
 	public E get(int index) {
-		
+		return (E)elementData[index];
 	}
 	
 	@Override
