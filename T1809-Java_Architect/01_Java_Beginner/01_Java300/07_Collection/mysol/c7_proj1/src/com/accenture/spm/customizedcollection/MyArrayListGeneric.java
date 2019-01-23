@@ -44,15 +44,6 @@ public class MyArrayListGeneric<E> {
 		s1.add("bb1");
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		System.out.println(s1);
 	}
 	
