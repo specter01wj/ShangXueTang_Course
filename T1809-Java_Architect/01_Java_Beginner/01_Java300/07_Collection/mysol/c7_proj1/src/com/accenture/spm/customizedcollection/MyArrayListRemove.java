@@ -116,6 +116,9 @@ public class MyArrayListRemove<E> {
 		s1.remove("We_6");
 		System.out.println(s1);
 		
+		System.out.println(s1.size());
+		System.out.println(s1.isEmpty());
+		
 	}
 	
 }
