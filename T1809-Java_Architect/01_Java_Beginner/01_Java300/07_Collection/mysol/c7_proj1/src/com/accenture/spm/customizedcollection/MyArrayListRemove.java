@@ -103,7 +103,11 @@ public class MyArrayListRemove<E> {
 		
 		s1.set("James_01", 10);
 		System.out.println(s1.get(10));
-		System.out.println(s1.get(50));
+		System.out.println(s1.get(39));
+		
+		s1.remove(3);
+		s1.remove("We_6");
+		System.out.println(s1);
 		
 	}
 	
