@@ -22,16 +22,15 @@ public class MyLinkedListAdd {
 		}
 	}
 	
-/*	@Override
+	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		
-		sb.append("[");
-		
-		sb.setCharAt(sb.length()-1, ']');
-		
-		return sb.toString();
-	}*/
+		Node temp = first;
+		while(temp != null) {
+			System.out.println(temp.element);
+			temp = temp.next;
+		}
+		return "";
+	}
 	
 	public static void main(String[] args) {
 		
