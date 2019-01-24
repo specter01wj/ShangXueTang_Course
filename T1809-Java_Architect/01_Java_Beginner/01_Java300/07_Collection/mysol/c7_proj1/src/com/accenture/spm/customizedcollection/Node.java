@@ -12,6 +12,11 @@ public class Node {
 		this.next = next;
 		this.element = element;
 	}
+
+	public Node(Object element) {
+		super();
+		this.element = element;
+	}
 	
 	
 	
