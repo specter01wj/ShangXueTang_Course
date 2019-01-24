@@ -75,8 +75,9 @@ public class MyArrayListSetGet<E> {
 		
 		System.out.println(s1);
 		
-		s1.set("James_01", 60);
+		s1.set("James_01", 10);
 		System.out.println(s1.get(10));
+		System.out.println(s1.get(50));
 		
 	}
 	
