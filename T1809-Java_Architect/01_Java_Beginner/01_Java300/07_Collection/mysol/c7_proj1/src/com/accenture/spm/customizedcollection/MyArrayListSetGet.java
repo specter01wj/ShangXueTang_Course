@@ -34,7 +34,7 @@ public class MyArrayListSetGet<E> {
 	public void set(E element, int index) {
 		
 		if(index < 0 || index > size - 1) {
-			throw new RuntimeException();
+			throw new RuntimeException("Illegal! " + index);
 		}
 		
 		elementData[index] = element;
