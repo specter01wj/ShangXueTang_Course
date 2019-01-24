@@ -22,10 +22,26 @@ public class MyLinkedListAdd {
 		}
 	}
 	
+/*	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("[");
+		
+		sb.setCharAt(sb.length()-1, ']');
+		
+		return sb.toString();
+	}*/
+	
 	public static void main(String[] args) {
 		
+		MyLinkedListAdd list1 = new MyLinkedListAdd();
 		
+		list1.add("a");
+		list1.add("b");
+		list1.add("c");
 		
+		System.out.println(list1);
 	}
 	
 }
