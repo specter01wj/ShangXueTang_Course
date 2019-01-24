@@ -58,6 +58,8 @@ public class MyArrayListSetGet<E> {
 		
 		System.out.println(s1);
 		
+		System.out.println(s1.get(10));
+		
 	}
 	
 }
