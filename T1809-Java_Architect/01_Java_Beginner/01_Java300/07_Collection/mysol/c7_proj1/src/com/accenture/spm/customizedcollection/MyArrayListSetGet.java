@@ -31,6 +31,10 @@ public class MyArrayListSetGet<E> {
 		return (E)elementData[index];
 	}
 	
+	public void set(E element, int index) {
+		elementData[index] = element;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
@@ -58,6 +62,7 @@ public class MyArrayListSetGet<E> {
 		
 		System.out.println(s1);
 		
+		s1.set("James_01", 10);
 		System.out.println(s1.get(10));
 		
 	}
