@@ -32,6 +32,11 @@ public class MyArrayListSetGet<E> {
 	}
 	
 	public void set(E element, int index) {
+		
+		if(index < 0 || index > size - 1) {
+			throw new RuntimeException();
+		}
+		
 		elementData[index] = element;
 	}
 	
@@ -62,7 +67,7 @@ public class MyArrayListSetGet<E> {
 		
 		System.out.println(s1);
 		
-		s1.set("James_01", 10);
+		s1.set("James_01", 60);
 		System.out.println(s1.get(10));
 		
 	}
