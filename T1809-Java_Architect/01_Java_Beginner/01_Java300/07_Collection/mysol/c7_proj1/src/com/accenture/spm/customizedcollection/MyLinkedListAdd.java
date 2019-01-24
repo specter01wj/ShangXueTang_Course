@@ -24,12 +24,16 @@ public class MyLinkedListAdd {
 	
 	@Override
 	public String toString() {
+		StringBuilder sb = new StringBuilder("[");
 		Node temp = first;
+		
 		while(temp != null) {
-			System.out.println(temp.element);
+			//System.out.println(temp.element);
+			sb.append(temp.element + ",");
 			temp = temp.next;
 		}
-		return "";
+		sb.setCharAt(sb.length()-1, ']');
+		return sb.toString();
 	}
 	
 	public static void main(String[] args) {
