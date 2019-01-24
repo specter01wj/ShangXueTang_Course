@@ -55,6 +55,19 @@ public class MyArrayListRemove<E> {
 		}
 	}
 	
+	public void remove(E element) {
+		for(int i = 0; i < size; i++) {
+			if(element.equals(get(i))) {
+				remove(i);
+			}
+		}
+	}
+	
+	public void remove(int index) {
+		
+	}
+	
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
