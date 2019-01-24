@@ -12,7 +12,14 @@ public class MyArrayListSetGet<E> {
 	}
 	
 	public MyArrayListSetGet(int capacity) {
-		elementData = new Object[capacity];
+		
+		if(capacity < 0) {
+			throw new RuntimeException("Cannot be Negative!");
+		} else if(capacity == 0) {
+			elementData = new Object[DEFAULT_CAPACITY];
+		} else {
+			elementData = new Object[capacity];
+		}
 		
 	}
 	
