@@ -28,16 +28,24 @@ public class MyArrayListSetGet<E> {
 	}
 	
 	public E get(int index) {
+		checkRange(index);
 		return (E)elementData[index];
 	}
 	
 	public void set(E element, int index) {
 		
+		/*if(index < 0 || index > size - 1) {
+			throw new RuntimeException("Illegal! " + index);
+		}*/
+		checkRange(index);
+		
+		elementData[index] = element;
+	}
+	
+	public void checkRange(int index) {
 		if(index < 0 || index > size - 1) {
 			throw new RuntimeException("Illegal! " + index);
 		}
-		
-		elementData[index] = element;
 	}
 	
 	@Override
