@@ -67,12 +67,10 @@ public class MyArrayListRemove<E> {
 		int numMoved = elementData.length - index - 1;
 		if(numMoved > 0) {
 			System.arraycopy(elementData, index+1, elementData, index, numMoved);
-			elementData[size - 1] = null;
-			size--;
-		} else {
-			elementData[size - 1] = null;
-			size--;
-		}
+		} 
+		
+		elementData[--size] = null;
+		
 	}
 	
 	
