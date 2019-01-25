@@ -5,26 +5,20 @@ public class MyLinkedListRemove {
 	private Node first, last;
 	private int size;
 
+	public void remove(int index) {
+		
+		
+		
+	}
+	
 	public Object get(int index) {
 		if(index < 0 || index > size - 1) {
 			throw new RuntimeException("LinkedList overflow!" + index);
 		}
 		
-		Node temp = null;
+		Node temp = getNode(index);
 		
-		if(index <= (size>>1)) {
-			temp = first;
-			for(int i = 0; i < index; i++) {
-				temp = temp.next;
-			}
-		} else {
-			temp = last;
-			for(int i = size - 1; i > index; i--) {
-				temp = temp.previous;
-			}
-		}
-		
-		return temp.element;
+		return temp != null ? temp.element : null;
 		
 	}
 	
@@ -44,6 +38,24 @@ public class MyLinkedListRemove {
 			last = node;
 		}
 		size++;
+	}
+	
+	public Node getNode(int index) {
+		Node temp = null;
+		
+		if(index <= (size>>1)) {
+			temp = first;
+			for(int i = 0; i < index; i++) {
+				temp = temp.next;
+			}
+		} else {
+			temp = last;
+			for(int i = size - 1; i > index; i--) {
+				temp = temp.previous;
+			}
+		}
+		
+		return temp;
 	}
 	
 	@Override
