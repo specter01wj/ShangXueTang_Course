@@ -12,9 +12,17 @@ public class MyLinkedListGet {
 		
 		Node temp = first;
 		
-		for(int i = 0; i < index; i++) {
-			temp = temp.next;
+		if(index <= (size>>1)) {
+			for(int i = 0; i < index; i++) {
+				temp = temp.next;
+			}
+		} else {
+			for(int i = size - 1; i < index; i--) {
+				temp = temp.previous;
+			}
 		}
+		
+		
 		
 		return temp.element;
 		
