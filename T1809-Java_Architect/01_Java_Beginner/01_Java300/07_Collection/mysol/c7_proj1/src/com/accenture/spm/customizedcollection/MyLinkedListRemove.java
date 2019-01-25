@@ -7,7 +7,21 @@ public class MyLinkedListRemove {
 
 	public void remove(int index) {
 		
+		Node temp = getNode(index);
 		
+		if(temp != null) {
+			Node up = temp.previous;
+			Node down = temp.next;
+			
+			if(up != null) {
+				up.next = down;
+			}
+			if(down != null) {
+				down.previous = up;
+			}
+			
+			size--;
+		}
 		
 	}
 	
