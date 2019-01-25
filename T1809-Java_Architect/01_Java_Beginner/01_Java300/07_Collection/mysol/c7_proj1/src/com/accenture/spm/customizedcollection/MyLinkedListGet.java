@@ -6,6 +6,9 @@ public class MyLinkedListGet {
 	private int size;
 	
 	public Object get(int index) {
+		if(index < 0 || index > size - 1) {
+			throw new RuntimeException("LinkedList overflow!" + index);
+		}
 		
 		Node temp = first;
 		
@@ -44,7 +47,7 @@ public class MyLinkedListGet {
 		
 		System.out.println(list1);
 		
-		System.out.println(list1.get(2));
+		System.out.println(list1.get(3));
 	}
 	
 }
