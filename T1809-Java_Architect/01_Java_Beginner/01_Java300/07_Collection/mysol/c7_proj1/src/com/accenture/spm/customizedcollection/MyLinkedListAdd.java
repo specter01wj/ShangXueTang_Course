@@ -5,6 +5,18 @@ public class MyLinkedListAdd {
 	private Node first, last;
 	private int size;
 	
+	public Object get(int index) {
+		
+		Node temp = first;
+		
+		for(int i = 0; i < index; i++) {
+			temp = temp.next;
+		}
+		
+		return temp.element;
+		
+	}
+	
 	public void add(Object obj) {
 		Node node = new Node(obj);
 		
