@@ -32,6 +32,7 @@ public class MyLinkedListAdd {
 			last.next = node;
 			last = node;
 		}
+		size++;
 	}
 	
 	@Override
