@@ -24,10 +24,26 @@ public class MyLinkedListGet {
 			}
 		}
 		
-		
-		
 		return temp.element;
 		
+	}
+	
+	public void add(Object obj) {
+		Node node = new Node(obj);
+		
+		if(first == null) {
+			node.previous = null;
+			node.next = null;
+			
+			first = node;
+			last = node;
+		} else {
+			node.previous = last;
+			node.next = null;
+			last.next = node;
+			last = node;
+		}
+		size++;
 	}
 	
 	@Override
@@ -46,7 +62,7 @@ public class MyLinkedListGet {
 	
 	public static void main(String[] args) {
 		
-		MyLinkedListAdd list1 = new MyLinkedListAdd();
+		MyLinkedListGet list1 = new MyLinkedListGet();
 		
 		list1.add("a");
 		list1.add("b");
