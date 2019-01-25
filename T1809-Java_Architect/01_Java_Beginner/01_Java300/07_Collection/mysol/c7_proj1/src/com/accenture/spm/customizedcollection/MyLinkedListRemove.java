@@ -100,6 +100,10 @@ public class MyLinkedListRemove {
 		System.out.println(list1);
 		
 		System.out.println(list1.get(5));
+		
+		list1.remove(2);
+		System.out.println(list1);
+		
 	}
 	
 }
