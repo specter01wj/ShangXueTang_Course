@@ -19,6 +19,12 @@ public class MyLinkedListRemove {
 			if(down != null) {
 				down.previous = up;
 			}
+			if(index == 0) {
+				first = down;
+			}
+			if(index == size - 1) {
+				last = up;
+			}
 			
 			size--;
 		}
@@ -101,7 +107,7 @@ public class MyLinkedListRemove {
 		
 		System.out.println(list1.get(5));
 		
-		list1.remove(2);
+		list1.remove(5);
 		System.out.println(list1);
 		
 	}
