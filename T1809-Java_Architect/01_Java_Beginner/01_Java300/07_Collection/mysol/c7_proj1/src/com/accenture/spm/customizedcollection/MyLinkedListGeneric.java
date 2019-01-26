@@ -6,6 +6,7 @@ public class MyLinkedListGeneric {
 	private int size;
 	
 	public void insert(int index, Object obj) {
+		checkRange(index);
 		
 		Node newNode = new Node(obj);
 		Node temp = getNode(index);
@@ -23,6 +24,7 @@ public class MyLinkedListGeneric {
 	}
 
 	public void remove(int index) {
+		checkRange(index);
 		
 		Node temp = getNode(index);
 		
@@ -83,6 +85,7 @@ public class MyLinkedListGeneric {
 	}
 	
 	public Node getNode(int index) {
+		checkRange(index);
 		Node temp = null;
 		
 		if(index <= (size>>1)) {
