@@ -127,6 +127,9 @@ public class MyLinkedListInsert {
 		list1.remove(5);
 		System.out.println(list1);
 		
+		list1.insert(2, "Tim");
+		System.out.println(list1);
+		
 	}
 	
 }
