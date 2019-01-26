@@ -120,7 +120,7 @@ public class MyLinkedListGeneric<E> {
 	
 	public static void main(String[] args) {
 		
-		MyLinkedListGeneric list1 = new MyLinkedListGeneric();
+		MyLinkedListGeneric<String> list1 = new MyLinkedListGeneric<>();
 		
 		list1.add("a");
 		list1.add("b");
@@ -131,7 +131,7 @@ public class MyLinkedListGeneric<E> {
 		
 		System.out.println(list1);
 		
-		System.out.println(list1.get(5));
+		System.out.println(list1.get(3));
 		
 		list1.remove(5);
 		System.out.println(list1);
