@@ -31,6 +31,9 @@ public class TestMap {
 		m1.putAll(m3);
 		System.out.println(m1);
 		
+		m1.put(4, "four-kill");
+		System.out.println(m1);
+		
 	}
 	
 }
