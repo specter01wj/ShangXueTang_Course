@@ -1,14 +1,14 @@
 package com.accenture.spm.customizedcollection;
 
-public class MyLinkedListGeneric {
+public class MyLinkedListGeneric<E> {
 
 	private Node first, last;
 	private int size;
 	
-	public void insert(int index, Object obj) {
+	public void insert(int index, E element) {
 		checkRange(index);
 		
-		Node newNode = new Node(obj);
+		Node newNode = new Node(element);
 		Node temp = getNode(index);
 		
 		if(temp != null) {
@@ -50,12 +50,12 @@ public class MyLinkedListGeneric {
 		
 	}
 	
-	public Object get(int index) {
+	public E get(int index) {
 		checkRange(index);
 		
 		Node temp = getNode(index);
 		
-		return temp != null ? temp.element : null;
+		return temp != null ? (E)temp.element : null;
 		
 	}
 	
@@ -66,8 +66,8 @@ public class MyLinkedListGeneric {
 		}
 	}
 	
-	public void add(Object obj) {
-		Node node = new Node(obj);
+	public void add(E element) {
+		Node node = new Node(element);
 		
 		if(first == null) {
 			node.previous = null;
