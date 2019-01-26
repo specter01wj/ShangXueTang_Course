@@ -49,14 +49,19 @@ public class MyLinkedListGeneric {
 	}
 	
 	public Object get(int index) {
-		if(index < 0 || index > size - 1) {
-			throw new RuntimeException("LinkedList overflow!" + index);
-		}
+		checkRange(index);
 		
 		Node temp = getNode(index);
 		
 		return temp != null ? temp.element : null;
 		
+	}
+	
+	private void checkRange(int index) {
+		
+		if(index < 0 || index > size - 1) {
+			throw new RuntimeException("LinkedList overflow!" + index);
+		}
 	}
 	
 	public void add(Object obj) {
