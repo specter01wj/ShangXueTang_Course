@@ -84,8 +84,9 @@ public class MyLinkedListGeneric {
 		size++;
 	}
 	
-	public Node getNode(int index) {
+	private Node getNode(int index) {
 		checkRange(index);
+		
 		Node temp = null;
 		
 		if(index <= (size>>1)) {
