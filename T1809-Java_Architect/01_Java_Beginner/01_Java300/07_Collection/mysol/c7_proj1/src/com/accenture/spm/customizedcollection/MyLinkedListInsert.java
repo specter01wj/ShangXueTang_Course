@@ -7,7 +7,18 @@ public class MyLinkedListInsert {
 	
 	public void insert(int index, Object obj) {
 		
+		Node newNode = new Node(obj);
+		Node temp = getNode(index);
 		
+		if(temp != null) {
+			Node up = temp.previous;
+			
+			up.next = newNode;
+			newNode.previous = up;
+			
+			newNode.next = temp;
+			temp.previous = newNode;
+		}
 		
 	}
 
