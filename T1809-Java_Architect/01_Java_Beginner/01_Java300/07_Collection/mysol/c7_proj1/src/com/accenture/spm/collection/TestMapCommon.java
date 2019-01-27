@@ -10,16 +10,20 @@ public class TestMapCommon {
 		Employee emp1 = new Employee(1001, "James", 6500);
 		Employee emp2 = new Employee(1002, "Tim", 4500);
 		Employee emp3 = new Employee(1003, "Kate", 3500);
+		Employee emp4 = new Employee(1004, "Mike", 5500);
 		
 		Map<Integer, Employee> map1 = new HashMap<>();
 		
 		map1.put(001, emp1);
 		map1.put(002, emp2);
 		map1.put(003, emp3);
+		map1.put(002, emp4);
 		
-		Employee man1 = map1.get(002);
+		Employee human1 = map1.get(002);
 		
-		System.out.println(man1.getName());
+		System.out.println(human1.getName());
+		
+		System.out.println(map1);
 		
 	}
 	
@@ -37,6 +41,10 @@ class Employee {
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
+	}
+	
+	public String toString() {
+		return "id:" + id + "name:" + name + "salary:" + salary;
 	}
 
 	public int getId() {
