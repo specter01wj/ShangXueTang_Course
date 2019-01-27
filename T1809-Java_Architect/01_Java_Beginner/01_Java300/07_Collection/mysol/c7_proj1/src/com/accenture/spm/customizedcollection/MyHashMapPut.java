@@ -56,11 +56,15 @@ public class MyHashMapPut {
 		m1.put(102, "Kate");
 		
 		System.out.println(m1);
+		
+		for(int i = 10; i < 100; i++) { // 42, 58, 74
+			System.out.println(i + "-----" + myHash(i, 16));
+		}
 	}
 	
-	public int myHash(int v, int length) {
-		System.out.println("&: " + (v & (length - 1)));
-		System.out.println("%: " + (v % (length - 1)));
+	public static int myHash(int v, int length) {
+		//System.out.println("&: " + (v & (length - 1)));
+		//System.out.println("%: " + (v % (length - 1)));
 		return v & (length - 1);
 	}
 	
