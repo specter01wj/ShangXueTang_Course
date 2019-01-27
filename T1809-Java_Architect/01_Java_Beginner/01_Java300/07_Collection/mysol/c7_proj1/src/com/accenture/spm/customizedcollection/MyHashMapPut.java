@@ -19,6 +19,7 @@ public class MyHashMapPut {
 		
 		Node_HashMap temp = table[newNode1.hash];
 		Node_HashMap iterLast = null;
+		boolean keyRepeat = false;
 		
 		if(temp == null) {
 			table[newNode1.hash] = newNode1;
@@ -26,8 +27,10 @@ public class MyHashMapPut {
 			while(temp != null) {
 				
 				if(temp.key.equals(key)) {
+					keyRepeat = true;
 					System.out.println("Duplicate key!!!");
 					temp.value = value;
+					break;
 				} else {
 					iterLast = temp;
 					temp = temp.next;
@@ -35,7 +38,10 @@ public class MyHashMapPut {
 				
 			}
 			
-			iterLast.next = newNode1;
+			if(!keyRepeat) {
+				iterLast.next = newNode1;
+			}
+			
 			
 		}
 		
