@@ -55,11 +55,15 @@ public class MyHashMapPut {
 		m1.put(103, "Zion");
 		m1.put(102, "Kate");
 		
+		m1.put(42, "R1");
+		m1.put(58, "R2");
+		m1.put(74, "R3");
+		
 		System.out.println(m1);
 		
-		for(int i = 10; i < 100; i++) { // 42, 58, 74
+		/*for(int i = 10; i < 100; i++) { // 42, 58, 74
 			System.out.println(i + "-----" + myHash(i, 16));
-		}
+		}*/
 	}
 	
 	public static int myHash(int v, int length) {
