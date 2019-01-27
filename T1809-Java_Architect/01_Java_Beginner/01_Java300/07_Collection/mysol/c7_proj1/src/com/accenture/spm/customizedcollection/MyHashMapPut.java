@@ -18,10 +18,23 @@ public class MyHashMapPut {
 		newNode1.next = null;
 		
 		Node_HashMap temp = table[newNode1.hash];
+		Node_HashMap iterLast = null;
 		
 		if(temp == null) {
 			table[newNode1.hash] = newNode1;
 		} else {
+			while(temp != null) {
+				
+				if(temp.key.equals(key)) {
+					System.out.println("Duplicate key!!!");
+				} else {
+					iterLast = temp;
+					temp = temp.next;
+				}
+				
+			}
+			
+			iterLast.next = newNode1;
 			
 		}
 		
