@@ -20,9 +20,19 @@ public class MyHashMapPut {
 		
 	}
 	
+	public static void main(String[] args) {
+		
+		MyHashMapPut m1 = new MyHashMapPut();
+		m1.put(101, "Jim");
+		m1.put(102, "Yebo");
+		m1.put(103, "Zion");
+		
+		System.out.println(m1);
+	}
+	
 	public int myHash(int v, int length) {
-		System.out.println(v & (length - 1));
-		System.out.println(v % (length - 1));
+		System.out.println("&: " + (v & (length - 1)));
+		System.out.println("%: " + (v % (length - 1)));
 		return v & (length - 1);
 	}
 	
