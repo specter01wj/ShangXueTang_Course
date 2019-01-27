@@ -1,5 +1,8 @@
 package com.accenture.spm.collection;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TestMapCommon {
 
 	public static void main(String[] args) {
@@ -8,6 +11,9 @@ public class TestMapCommon {
 		Employee emp2 = new Employee(1002, "Tim", 4500);
 		Employee emp3 = new Employee(1003, "Kate", 3500);
 		
+		Map<Integer, Employee> map1 = new HashMap<>();
+		
+		System.out.println(emp1);
 		
 	}
 	
