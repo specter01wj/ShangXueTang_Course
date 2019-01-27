@@ -1,7 +1,5 @@
 package com.accenture.spm.customizedcollection;
 
-public class MyHashMapPut {
+public class Node_HashMap {
 
-	
-	
 }
