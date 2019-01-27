@@ -27,6 +27,7 @@ public class MyHashMapPut {
 				
 				if(temp.key.equals(key)) {
 					System.out.println("Duplicate key!!!");
+					temp.value = value;
 				} else {
 					iterLast = temp;
 					temp = temp.next;
