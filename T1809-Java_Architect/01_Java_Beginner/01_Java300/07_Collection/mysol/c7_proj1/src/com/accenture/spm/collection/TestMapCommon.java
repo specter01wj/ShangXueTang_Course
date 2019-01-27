@@ -13,7 +13,13 @@ public class TestMapCommon {
 		
 		Map<Integer, Employee> map1 = new HashMap<>();
 		
-		System.out.println(emp1);
+		map1.put(001, emp1);
+		map1.put(002, emp2);
+		map1.put(003, emp3);
+		
+		Employee man1 = map1.get(002);
+		
+		System.out.println(man1.getName());
 		
 	}
 	
