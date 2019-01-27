@@ -53,6 +53,7 @@ public class MyHashMapPut {
 		m1.put(101, "Jim");
 		m1.put(102, "Yebo");
 		m1.put(103, "Zion");
+		m1.put(102, "Kate");
 		
 		System.out.println(m1);
 	}
