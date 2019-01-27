@@ -2,6 +2,15 @@ package com.accenture.spm.collection;
 
 public class TestMapCommon {
 
+	public static void main(String[] args) {
+		
+		Employee emp1 = new Employee(1001, "James", 6500);
+		Employee emp2 = new Employee(1002, "Tim", 4500);
+		Employee emp3 = new Employee(1003, "Kate", 3500);
+		
+		
+	}
+	
 }
 
 
