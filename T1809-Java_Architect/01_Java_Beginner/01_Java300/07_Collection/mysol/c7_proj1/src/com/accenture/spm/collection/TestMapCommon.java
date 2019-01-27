@@ -25,6 +25,10 @@ public class TestMapCommon {
 		
 		System.out.println(map1);
 		
+		System.out.println(emp1.hashCode());
+		System.out.println(emp2.hashCode());
+		System.out.println(emp3.hashCode());
+		
 	}
 	
 }
@@ -43,6 +47,7 @@ class Employee {
 		this.salary = salary;
 	}
 	
+	@Override
 	public String toString() {
 		return "id:" + id + "name:" + name + "salary:" + salary;
 	}
