@@ -17,6 +17,13 @@ public class MyHashMapPut {
 		newNode1.value = value;
 		newNode1.next = null;
 		
+		Node_HashMap temp = table[newNode1.hash];
+		
+		if(temp == null) {
+			table[newNode1.hash] = newNode1;
+		} else {
+			
+		}
 		
 	}
 	
