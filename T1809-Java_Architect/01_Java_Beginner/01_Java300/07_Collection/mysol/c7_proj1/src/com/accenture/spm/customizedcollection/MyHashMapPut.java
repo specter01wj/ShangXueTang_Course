@@ -13,6 +13,11 @@ public class MyHashMapPut {
 	public void put(Object key, Object value) {
 		Node_HashMap newNode1 = new Node_HashMap();
 		newNode1.hash = myHash(key.hashCode(), table.length);
+		newNode1.key = key;
+		newNode1.value = value;
+		newNode1.next = null;
+		
+		
 	}
 	
 	public int myHash(int v, int length) {
