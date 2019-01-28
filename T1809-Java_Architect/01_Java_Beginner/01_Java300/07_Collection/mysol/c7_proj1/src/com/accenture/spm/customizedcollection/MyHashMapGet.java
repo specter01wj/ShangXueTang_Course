@@ -15,7 +15,18 @@ public class MyHashMapGet {
 		int hash = myHash(key.hashCode(), table.length-1);
 		Object value = null;
 		
-		
+		if(table[hash] != null) {
+			Node_HashMap temp = table[hash];
+			
+			while(temp != null) {
+				if(temp.key.equals(key)) {
+					value = temp.value;
+					break;
+				} else {
+					temp = temp.next;
+				}
+			}
+		}
 		
 		return value;
 	}
