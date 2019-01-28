@@ -47,6 +47,25 @@ public class MyHashMapToString {
 		
 	}
 	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		StringBuilder sb1 = new StringBuilder("{");
+		
+		for(int i = 0; i < table.length; i++) {
+			Node_HashMap temp = table[i];
+			
+			while(temp != null) {
+				sb1.append(temp.key + ":" + temp.value + ",");
+				temp = temp.next;
+			}
+		}
+		sb1.setCharAt(sb1.length()-1, '}');
+		
+		return sb1.toString();
+	}
+
 	public static void main(String[] args) {
 		
 		MyHashMapToString m1 = new MyHashMapToString();
