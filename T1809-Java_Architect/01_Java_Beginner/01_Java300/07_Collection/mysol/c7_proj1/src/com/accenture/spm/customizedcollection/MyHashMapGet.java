@@ -101,6 +101,10 @@ public class MyHashMapGet {
 		
 		System.out.println(m1);
 		
+		
+		System.out.println(m1.get(42));
+		
+		
 	}
 	
 	public static int myHash(int v, int length) {
