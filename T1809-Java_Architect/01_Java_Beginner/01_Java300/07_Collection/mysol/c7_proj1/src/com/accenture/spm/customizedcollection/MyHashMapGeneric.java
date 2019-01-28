@@ -44,6 +44,7 @@ public class MyHashMapGeneric {
 		
 		if(temp == null) {
 			table[newNode1.hash] = newNode1;
+			size++;
 		} else {
 			while(temp != null) {
 				
@@ -61,6 +62,7 @@ public class MyHashMapGeneric {
 			
 			if(!keyRepeat) {
 				iterLast.next = newNode1;
+				size++;
 			}
 			
 			
