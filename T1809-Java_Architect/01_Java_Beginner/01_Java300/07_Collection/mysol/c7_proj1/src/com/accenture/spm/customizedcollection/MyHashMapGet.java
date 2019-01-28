@@ -10,6 +10,16 @@ public class MyHashMapGet {
 		this.table = new Node_HashMap[16];
 	}
 	
+	public Object get(Object key) {
+		
+		int hash = myHash(key.hashCode(), table.length-1);
+		Object value = null;
+		
+		
+		
+		return value;
+	}
+	
 	public void put(Object key, Object value) {
 		Node_HashMap newNode1 = new Node_HashMap();
 		newNode1.hash = myHash(key.hashCode(), table.length);
