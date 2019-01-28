@@ -12,7 +12,7 @@ public class MyHashMapGet {
 	
 	public Object get(Object key) {
 		
-		int hash = myHash(key.hashCode(), table.length-1);
+		int hash = myHash(key.hashCode(), table.length);
 		Object value = null;
 		
 		if(table[hash] != null) {
@@ -102,7 +102,7 @@ public class MyHashMapGet {
 		System.out.println(m1);
 		
 		
-		System.out.println(m1.get(42));
+		System.out.println(m1.get(58));
 		
 		
 	}
