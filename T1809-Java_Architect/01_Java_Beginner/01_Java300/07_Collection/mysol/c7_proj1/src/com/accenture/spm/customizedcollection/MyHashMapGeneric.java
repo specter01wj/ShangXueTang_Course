@@ -1,26 +1,26 @@
 package com.accenture.spm.customizedcollection;
 
-public class MyHashMapGeneric {
+public class MyHashMapGeneric<K, V> {
 
-	Node_HashMap[] table;
+	Node_HashMapGeneric[] table;
 	int size;
 	
 	
 	public MyHashMapGeneric() {
-		this.table = new Node_HashMap[16];
+		this.table = new Node_HashMapGeneric[16];
 	}
 	
-	public Object get(Object key) {
+	public V get(K key) {
 		
 		int hash = myHash(key.hashCode(), table.length);
-		Object value = null;
+		V value = null;
 		
 		if(table[hash] != null) {
-			Node_HashMap temp = table[hash];
+			Node_HashMapGeneric temp = table[hash];
 			
 			while(temp != null) {
 				if(temp.key.equals(key)) {
-					value = temp.value;
+					value = (V)temp.value;
 					break;
 				} else {
 					temp = temp.next;
@@ -31,15 +31,15 @@ public class MyHashMapGeneric {
 		return value;
 	}
 	
-	public void put(Object key, Object value) {
-		Node_HashMap newNode1 = new Node_HashMap();
+	public void put(K key, V value) {
+		Node_HashMapGeneric newNode1 = new Node_HashMapGeneric();
 		newNode1.hash = myHash(key.hashCode(), table.length);
 		newNode1.key = key;
 		newNode1.value = value;
 		newNode1.next = null;
 		
-		Node_HashMap temp = table[newNode1.hash];
-		Node_HashMap iterLast = null;
+		Node_HashMapGeneric temp = table[newNode1.hash];
+		Node_HashMapGeneric iterLast = null;
 		boolean keyRepeat = false;
 		
 		if(temp == null) {
@@ -77,7 +77,7 @@ public class MyHashMapGeneric {
 		StringBuilder sb1 = new StringBuilder("{");
 		
 		for(int i = 0; i < table.length; i++) {
-			Node_HashMap temp = table[i];
+			Node_HashMapGeneric temp = table[i];
 			
 			while(temp != null) {
 				sb1.append(temp.key + ":" + temp.value + ",");
@@ -91,7 +91,7 @@ public class MyHashMapGeneric {
 
 	public static void main(String[] args) {
 		
-		MyHashMapGeneric m1 = new MyHashMapGeneric();
+		MyHashMapGeneric<Integer, String> m1 = new MyHashMapGeneric();
 		m1.put(101, "Jim");
 		m1.put(102, "Yebo");
 		m1.put(103, "Zion");
