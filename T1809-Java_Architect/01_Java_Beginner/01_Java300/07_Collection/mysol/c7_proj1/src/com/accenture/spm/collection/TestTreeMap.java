@@ -21,13 +21,13 @@ public class TestTreeMap {
 	
 }
 
-class Employee implements Comparable<Employee> {
+class Employee01 implements Comparable<Employee01> {
 	
 	int id;
 	String name;
 	double salary;
 	
-	public Employee(int id, String name, double salary) {
+	public Employee01(int id, String name, double salary) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -35,9 +35,23 @@ class Employee implements Comparable<Employee> {
 	}
 
 	@Override
-	public int compareTo(Employee o) {
+	public int compareTo(Employee01 o) {
 		// TODO Auto-generated method stub
-		return 0;
+		if(this.salary > o.salary) {
+			return 1;
+		} else if(this.salary < o.salary) {
+			return -1;
+		} else {
+			if(this.id > o.id) {
+				return 1;
+			} else if(this.id < o.id) {
+				return -1;
+			} else {
+				return 0;
+			}
+		}
+		
+
 	}
 	
 	
