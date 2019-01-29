@@ -17,6 +17,16 @@ public class TestTreeMap {
 			System.out.println(key + "---" + tm1.get(key));
 		}
 		
+		Map<Employee01, String> tm2 = new TreeMap<>();
+		
+		tm2.put(new Employee01(2001, "James", 3500), "Chinese");
+		tm2.put(new Employee01(2002, "Mike", 4500), "USA");
+		tm2.put(new Employee01(2003, "Kyo", 3500), "Japanese");
+		
+		for(Employee01 key : tm2.keySet()) {
+			System.out.println(key + "---" + tm2.get(key));
+		}
+		
 	}
 	
 }
@@ -33,6 +43,14 @@ class Employee01 implements Comparable<Employee01> {
 		this.name = name;
 		this.salary = salary;
 	}
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "id:" + id + ",name:" + name + ",salary:" + salary;
+	}
+
 
 	@Override
 	public int compareTo(Employee01 o) {
