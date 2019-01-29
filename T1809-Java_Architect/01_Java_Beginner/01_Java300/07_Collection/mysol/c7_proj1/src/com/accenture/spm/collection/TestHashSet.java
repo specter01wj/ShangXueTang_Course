@@ -15,6 +15,18 @@ public class TestHashSet {
 		set1.add("bb1");
 		
 		System.out.println(set1);
+		
+		set1.remove("bb1");
+		System.out.println(set1);
+		
+		Set<String> set2 = new HashSet<>();
+		
+		set2.add("James");
+		set2.add("Kimmy");
+		set2.addAll(set1);
+		System.out.println(set2);
+		
+		
 	}
 	
 }
