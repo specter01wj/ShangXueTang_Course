@@ -21,7 +21,8 @@ public class TestTreeMap {
 		
 		tm2.put(new Employee01(2001, "James", 3500), "Chinese");
 		tm2.put(new Employee01(2002, "Mike", 4500), "USA");
-		tm2.put(new Employee01(2003, "Kyo", 3500), "Japanese");
+		tm2.put(new Employee01(2004, "Michelle", 4500), "USA");
+		tm2.put(new Employee01(2003, "Kyo", 6500), "Japanese");
 		
 		for(Employee01 key : tm2.keySet()) {
 			System.out.println(key + "---" + tm2.get(key));
