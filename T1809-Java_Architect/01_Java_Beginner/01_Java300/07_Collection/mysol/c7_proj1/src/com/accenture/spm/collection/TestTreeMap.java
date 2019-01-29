@@ -70,9 +70,6 @@ class Employee01 implements Comparable<Employee01> {
 			}
 		}
 		
-
 	}
-	
-	
 	
 }
