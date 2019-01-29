@@ -9,6 +9,12 @@ public class TestHashSet {
 		
 		Set<String> set1 = new HashSet<>();
 		
+		set1.add("aa1");
+		set1.add("bb1");
+		set1.add("cc1");
+		set1.add("bb1");
+		
+		System.out.println(set1);
 	}
 	
 }
