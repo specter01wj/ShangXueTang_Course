@@ -24,6 +24,10 @@ public class TestTreeSet {
 		set2.add(new Employee02(2004, "Michelle", 4500));
 		set2.add(new Employee02(2003, "Kyo", 6500));
 		
+		for(Employee02 m2 : set2) {
+			System.out.println(m2);
+		}
+		
 	}
 	
 }
