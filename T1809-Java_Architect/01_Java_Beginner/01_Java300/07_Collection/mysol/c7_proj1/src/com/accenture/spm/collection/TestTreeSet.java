@@ -19,10 +19,10 @@ public class TestTreeSet {
 		
 		Set<Employee02> set2 = new TreeSet<>();
 		
-		set2.put(new Employee02(2001, "James", 3500), "Chinese");
-		set2.put(new Employee02(2002, "Mike", 4500), "USA");
-		set2.put(new Employee02(2004, "Michelle", 4500), "USA");
-		set2.put(new Employee02(2003, "Kyo", 6500), "Japanese");
+		set2.add(new Employee02(2001, "James", 3500));
+		set2.add(new Employee02(2002, "Mike", 4500));
+		set2.add(new Employee02(2004, "Michelle", 4500));
+		set2.add(new Employee02(2003, "Kyo", 6500));
 		
 	}
 	
