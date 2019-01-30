@@ -9,6 +9,14 @@ public class TestTreeSet {
 		
 		Set<Integer> set1 = new TreeSet<>();
 		
+		set1.add(100);
+		set1.add(200);
+		set1.add(300);
+		
+		for(Integer m : set1) {
+			System.out.println(m);
+		}
+		
 	}
 	
 }
