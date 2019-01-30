@@ -6,12 +6,14 @@ public class MyHashSet {
 
 	HashMap map1;
 	
+	private static final Object PRESENT = new Object();
+	
 	public MyHashSet() {
 		this.map1 = new HashMap();
 	}
 
 	public void add(Object o) {
-		
+		map1.put(o, PRESENT);
 	}
 
 
