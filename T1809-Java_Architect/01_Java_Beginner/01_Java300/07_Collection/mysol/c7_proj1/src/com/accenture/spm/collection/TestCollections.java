@@ -13,10 +13,13 @@ public class TestCollections {
 		for(int i = 0; i < 10; i++) {
 			list1.add("James: " + i);
 		}
-		System.out.println(list1);
+		System.out.println("Orig: " + list1);
 
 		Collections.shuffle(list1);
-		System.out.println(list1);
+		System.out.println("Shuffle: " + list1);
+		
+		Collections.reverse(list1);
+		System.out.println("Reverse: " + list1);
 		
 		
 	}
