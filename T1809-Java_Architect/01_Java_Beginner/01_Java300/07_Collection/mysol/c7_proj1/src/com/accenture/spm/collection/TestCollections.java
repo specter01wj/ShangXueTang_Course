@@ -11,7 +11,7 @@ public class TestCollections {
 		List<String> list1 = new ArrayList<>();
 		
 		for(int i = 0; i < 10; i++) {
-			list1.add("James: " + i);
+			list1.add("James:" + i);
 		}
 		System.out.println("Orig: " + list1);
 
@@ -23,6 +23,9 @@ public class TestCollections {
 		
 		Collections.sort(list1);
 		System.out.println("Sort: " + list1);
+		
+		System.out.println("BS: " + Collections.binarySearch(list1, "James:2"));
+		
 		
 		
 	}
