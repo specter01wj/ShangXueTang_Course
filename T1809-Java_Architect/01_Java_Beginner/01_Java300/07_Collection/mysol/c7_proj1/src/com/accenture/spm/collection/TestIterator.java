@@ -1,9 +1,12 @@
 package com.accenture.spm.collection;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class TestIterator {
@@ -12,7 +15,7 @@ public class TestIterator {
 		
 		testIteratorList();
 		testIteratorSet();
-		
+		testIteratorMap();
 	}
 	
 	public static void testIteratorList() {
@@ -37,6 +40,21 @@ public class TestIterator {
 		for(Iterator<String> iter = set1.iterator(); iter.hasNext();) {
 			String temp = iter.next();
 			System.out.println(temp);
+		}
+		
+	}
+	
+	public static void testIteratorMap() {
+		Map<Integer, String> map1 = new HashMap<>();
+		map1.put(1001, "aa3");
+		map1.put(1002, "bb3");
+		map1.put(1003, "cc3");
+		
+		Set<Entry<Integer, String>> ss1 = map1.entrySet();
+		
+		for(Iterator<Entry<Integer, String>> iter = ss1.iterator(); iter.hasNext();) {
+			Entry<Integer, String> temp = iter.next();
+			System.out.println(temp.getKey() + "--" + temp.getValue());
 		}
 		
 	}
