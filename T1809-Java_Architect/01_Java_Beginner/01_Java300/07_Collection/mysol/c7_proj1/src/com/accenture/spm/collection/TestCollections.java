@@ -21,6 +21,9 @@ public class TestCollections {
 		Collections.reverse(list1);
 		System.out.println("Reverse: " + list1);
 		
+		Collections.sort(list1);
+		System.out.println("Sort: " + list1);
+		
 		
 	}
 	
