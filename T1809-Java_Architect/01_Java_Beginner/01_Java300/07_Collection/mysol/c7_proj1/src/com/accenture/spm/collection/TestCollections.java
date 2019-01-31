@@ -26,8 +26,6 @@ public class TestCollections {
 		
 		System.out.println("BS: " + Collections.binarySearch(list1, "James:2"));
 		
-		
-		
 	}
 	
 }
