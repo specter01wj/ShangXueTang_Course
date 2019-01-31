@@ -9,7 +9,10 @@ public class TestCollections {
 		
 		List<String> list1 = new ArrayList<>();
 		
-		
+		for(int i = 0; i < 0; i++) {
+			list1.add("James: " + i);
+		}
+		System.out.println(list1);
 		
 	}
 	
