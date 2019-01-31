@@ -57,6 +57,15 @@ public class TestIterator {
 			System.out.println(temp.getKey() + "--" + temp.getValue());
 		}
 		
+		System.out.println("+++++++++++++++");
+		
+		Set<Integer> keyset1 = map1.keySet();
+		
+		for(Iterator<Integer> iter = keyset1.iterator(); iter.hasNext();) {
+			Integer key = iter.next();
+			System.out.println(key + "--" + map1.get(key));
+		}
+		
 	}
 	
 }
