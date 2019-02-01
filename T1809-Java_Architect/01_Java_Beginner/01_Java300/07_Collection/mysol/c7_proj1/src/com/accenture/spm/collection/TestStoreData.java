@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class TestStoreData {
 
@@ -28,7 +29,16 @@ public class TestStoreData {
 		row3.put("date", "06/07/2008");
 		
 		List<Map<String, Object>> table1 = new ArrayList<>();
+		table1.add(row1);
+		table1.add(row2);
+		table1.add(row3);
 		
+		for(Map<String, Object> row : table1) {
+			Set<String> keyset = row.keySet();
+			for(String key : keyset) {
+				System.out.println(key + ":" + row.get(key));
+			}
+		}
 		
 	}
 	
