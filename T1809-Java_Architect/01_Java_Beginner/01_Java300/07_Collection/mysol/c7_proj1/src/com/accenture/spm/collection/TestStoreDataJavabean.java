@@ -1,5 +1,8 @@
 package com.accenture.spm.collection;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestStoreDataJavabean {
 
 	public static void main(String[] args) {
@@ -8,6 +11,16 @@ public class TestStoreDataJavabean {
 		User user2 = new User(1002, "Reno", 5500, "02/12/2018");
 		User user3 = new User(1002, "Derro", 7500, "03/09/2014");
 		User user4 = new User(1003, "Wendy", 23500, "07/11/2009");
+		
+		List<User> list = new ArrayList<>();
+		list.add(user1);
+		list.add(user2);
+		list.add(user3);
+		list.add(user4);
+		
+		for(User u : list) {
+			System.out.println(u);
+		}
 		
 	}
 	
@@ -67,7 +80,7 @@ class User {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "id:" + id + ", name:" + name + ", salary:" + salary + ", hiredate:" + hireDate;
+		return "id:" + id + ", name:" + name + ", salary:" + salary + ", hireDate:" + hireDate;
 	}
 	
 	
