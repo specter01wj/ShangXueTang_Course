@@ -1,6 +1,8 @@
 package com.accenture.spm.collection;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TestStoreData {
@@ -25,7 +27,7 @@ public class TestStoreData {
 		row3.put("salary", 30000);
 		row3.put("date", "06/07/2008");
 		
-		
+		List<Map<String, Object>> table1 = new ArrayList<>();
 		
 		
 	}
