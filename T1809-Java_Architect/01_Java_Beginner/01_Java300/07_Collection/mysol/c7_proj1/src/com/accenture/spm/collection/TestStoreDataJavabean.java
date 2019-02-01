@@ -67,7 +67,7 @@ class User {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString();
+		return "id:" + id + ", name:" + name + ", salary:" + salary + ", hiredate:" + hireDate;
 	}
 	
 	
