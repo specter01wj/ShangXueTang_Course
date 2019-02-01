@@ -1,7 +1,10 @@
 package com.accenture.spm.collection;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class TestStoreDataJavabean {
 
@@ -20,6 +23,17 @@ public class TestStoreDataJavabean {
 		
 		for(User u : list) {
 			System.out.println(u);
+		}
+		
+		Map<Integer, User> map = new HashMap<>();
+		map.put(001, user1);
+		map.put(002, user2);
+		map.put(003, user3);
+		map.put(004, user4);
+		
+		Set<Integer> keyset = map.keySet();
+		for(Integer key : keyset) {
+			System.out.println(key + "---" + map.get(key));
 		}
 		
 	}
