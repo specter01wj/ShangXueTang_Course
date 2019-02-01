@@ -10,6 +10,10 @@ class User {
 	private String name, hireDate;
 	private double salary;
 	
+	public User() {
+		
+	}
+	
 	public User(int id, String name, String hireDate, double salary) {
 		super();
 		this.id = id;
