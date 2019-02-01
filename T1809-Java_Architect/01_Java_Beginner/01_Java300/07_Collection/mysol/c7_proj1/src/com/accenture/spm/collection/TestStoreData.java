@@ -36,8 +36,9 @@ public class TestStoreData {
 		for(Map<String, Object> row : table1) {
 			Set<String> keyset = row.keySet();
 			for(String key : keyset) {
-				System.out.println(key + ":" + row.get(key));
+				System.out.print(key + ":" + row.get(key) + "\t");
 			}
+			System.out.println();
 		}
 		
 	}
