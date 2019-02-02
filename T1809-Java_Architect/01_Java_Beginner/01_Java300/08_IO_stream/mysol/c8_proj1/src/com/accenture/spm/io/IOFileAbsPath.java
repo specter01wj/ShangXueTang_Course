@@ -10,6 +10,9 @@ public class IOFileAbsPath {
 		File src = new File(path);
 		System.out.println(src.getAbsolutePath());
 		System.out.println(System.getProperty("user.dir"));
+		
+		src = new File("aaa/IO2.png");
+		System.out.println(src.getAbsolutePath());
 	}
 	
 }
