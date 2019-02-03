@@ -11,6 +11,10 @@ public class IOFileCreate {
 		System.out.println(flag);
 		//flag = src.delete();
 		//System.out.println(flag);
+		
+		/*src = new File("com");
+		flag =src.createNewFile();
+		System.out.println(flag);*/
 	}
 	
 }
