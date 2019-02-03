@@ -9,7 +9,8 @@ public class IOFileCreate {
 		File src = new File("io.txt");
 		boolean flag = src.createNewFile();
 		System.out.println(flag);
-		
+		//flag = src.delete();
+		//System.out.println(flag);
 	}
 	
 }
