@@ -12,7 +12,7 @@ public class IOFileDirLength {
 		
 	}
 	
-	private static long len =0;
+	private static long len = 0;
 	public static void count(File src) {
 		
 		if(null != src && src.exists()) {
