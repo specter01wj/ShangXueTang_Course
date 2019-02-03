@@ -13,7 +13,7 @@ public class IOFilePrintList {
 	public static void printName(File src, int deep) {
 		
 		for(int i = 0; i < deep; i++) {
-			System.out.println("-");
+			System.out.print("-");
 		}
 		
 		System.out.println(src.getName());
