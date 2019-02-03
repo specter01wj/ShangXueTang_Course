@@ -18,6 +18,17 @@ public class IOFileStatus {
 		System.out.println("File:" + src2.isFile());
 		System.out.println("Directory:" + src2.isDirectory());
 		
+		src = new File("IO.png");
+		if(null == src || !src.exists()) {
+			System.out.println("File not exist!");
+		}else {
+			if(src.isFile()) {
+				System.out.println("File!");
+			}else {
+				System.out.println("Directory!");
+			}
+		}
+		
 	}
 	
 }
