@@ -14,6 +14,12 @@ public class IOFileList {
 			System.out.println(s);
 		}
 		
+		File[] subFiles = dir.listFiles();
+		for(File s : subFiles) {
+			System.out.println(s);
+			//System.out.println(s.getAbsolutePath());
+		}
+		
 	}
 	
 }
