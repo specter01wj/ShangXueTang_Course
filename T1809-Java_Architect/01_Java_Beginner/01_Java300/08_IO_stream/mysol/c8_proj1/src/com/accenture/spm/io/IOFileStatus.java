@@ -12,6 +12,12 @@ public class IOFileStatus {
 		System.out.println("File:" + src.isFile());
 		System.out.println("Directory:" + src.isDirectory());
 		
+		File src2 = new File("io_test");
+		System.out.println(src2.getAbsolutePath());
+		System.out.println("Exist:" + src2.exists());
+		System.out.println("File:" + src2.isFile());
+		System.out.println("Directory:" + src2.isDirectory());
+		
 	}
 	
 }
