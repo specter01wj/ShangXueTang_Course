@@ -47,10 +47,13 @@ public class IOFileDirCount {
 	public static void main(String[] args) {
 		IOFileDirCount dir = new IOFileDirCount("./src");
 		System.out.println(dir.getLen());
+		System.out.println(dir.getFileSize()+"-->"+dir.getDirSize());
+		
+		System.out.println("=============");
 		
 		IOFileDirCount dir2 = new IOFileDirCount("./bin");
 		System.out.println(dir2.getLen());
-		
+		System.out.println(dir2.getFileSize()+"-->"+dir2.getDirSize());
 	}
 	
 }
