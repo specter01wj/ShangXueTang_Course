@@ -14,9 +14,9 @@ public class IOStreamOutputStream {
 		OutputStream os = null;
 		
 		try {
-			os = new FileOutputStream(src);
+			os = new FileOutputStream(src, true);
 			
-			String msg = "James Wang is coming!";
+			String msg = "James Wang is coming!\r\n";
 			byte[] data = msg.getBytes();
 			os.write(data, 0, data.length);
 			os.flush();
