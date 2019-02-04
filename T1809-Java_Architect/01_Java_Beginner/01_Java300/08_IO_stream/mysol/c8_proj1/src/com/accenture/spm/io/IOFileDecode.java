@@ -12,6 +12,13 @@ public class IOFileDecode {
 		String msg_dec = new String(data, 0, data.length, "utf8");
 		System.out.println(msg_dec);
 		
+		msg_dec = new String(data,0,data.length-2,"utf8");
+		System.out.println(msg_dec);
+		msg_dec = new String(data,0,data.length-1,"utf8");
+		System.out.println(msg_dec);
+		
+		msg_dec = new String(data,0,data.length-1,"gbk");
+		System.out.println(msg_dec);
 	}
 	
 }
