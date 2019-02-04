@@ -14,9 +14,12 @@ public class IOStreamInputStreamCache {
 		InputStream is = null;
 		try {
 			is = new FileInputStream(src);
-			int temp;
-			while((temp = is.read()) != -1) {
-				System.out.println((char)temp);
+			
+			byte[] car = new byte[3];
+			int len = -1;
+			while((len = is.read(car)) != -1) {
+				String str = new String(car, 0, len);
+				System.out.println(str);
 			}
 			
 			
