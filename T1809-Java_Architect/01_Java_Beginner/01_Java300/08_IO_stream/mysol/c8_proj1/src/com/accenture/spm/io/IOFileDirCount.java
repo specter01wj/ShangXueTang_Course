@@ -18,13 +18,13 @@ public class IOFileDirCount {
 
 	private void count(File src) {	
 		
-		if(null!=src && src.exists()) {
+		if(null != src && src.exists()) {
 			if(src.isFile()) {
-				len+=src.length();
+				len += src.length();
 				this.fileSize++;
 			}else {
 				this.dirSize++;
-				for(File s:src.listFiles()) {
+				for(File s : src.listFiles()) {
 					count(s);
 				}
 			}
