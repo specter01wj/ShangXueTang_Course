@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang=zh-cn>
+<meta charset="UTF-8">
+<head>
+<title>HBuilder</title>
+<script tyep="text/javascript" src="jquery1.3.2.js"></script>
+<!--
+	作者：wuliang@dcloud.io
+	时间：2013-09-26
+	描述： 禁止鼠标右键
+-->
+<script type="text/javascript" charset="utf-8">
+	function nocontextmenu(){return event.cancelBubble=!0,event.returnValue=!1,!1}function norightclick(e){if(window.Event){if(e.which==2||e.which==3)return!1}else if(event.button==2||event.button==3)return event.cancelBubble=!0,event.returnValue=!1,!1}if(window.Event)try{document.captureEvents(Event.MOUSEUP)}catch(e){}document.oncontextmenu=nocontextmenu,document.onmousedown=norightclick
+</script>
+<!--
+	作者：wuliang@dcloud.io
+	时间：2014-03-25
+	描述：这段js是未移动HBuilder窗体用的
+-->	
+<script type="text/javascript" charset="utf-8">
+	/**/
+		var ClickPointX ;
+		var ClickPointY;
+		var bIsMove = false;
+		document.addEventListener("mousedown", function(e)
+		{
+			ClickPointX = e.clientX;
+			ClickPointY = e.clientY;
+			bIsMove = true;
+		});
+		document.addEventListener("mouseup", function(){bIsMove = false;})
+		document.addEventListener("mouseover", function()
+		{ bIsMove = false; });
+	    
+		document.addEventListener("mousemove", function(e)
+		{
+			if(bIsMove)
+			{
+			var moveX  = e.clientX - ClickPointX;
+			var moveY  = e.clientY - ClickPointY;
+			
+			HBMoveWindow(moveX, moveY);
+				
+			}
+			
+		});
+</script>
+<link rel="stylesheet" href="loading.css" type="text/css" />  
+</head>
+
+<body>
+
+<section class="radiotabs">
+	<div class="progressbar" cstyle="display: block;">
+		<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay:0ms;"></div>
+		<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay:160ms;"></div>
+		<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 320ms;"></div>
+		<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 480ms;"></div>
+		<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 640ms;"></div>
+	</div>
+</section>
+</body>
+</html>

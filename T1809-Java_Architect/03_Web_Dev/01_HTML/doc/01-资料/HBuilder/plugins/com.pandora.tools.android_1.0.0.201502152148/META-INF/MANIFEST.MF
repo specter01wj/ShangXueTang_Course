@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Export-Package: com.pandora.tools.android
+Require-Bundle: org.eclipse.core.runtime,com.aptana.core;bundle-versio
+ n="3.3.0",org.eclipse.ui.workbench;bundle-version="3.7.1",org.eclipse
+ .jface;bundle-version="3.7.0"
+Bundle-Vendor: HBuilder
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0.201502152148
+Bundle-Name: Android
+Bundle-Activator: com.pandora.tools.android.AndroidPlugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.pandora.tools.android
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

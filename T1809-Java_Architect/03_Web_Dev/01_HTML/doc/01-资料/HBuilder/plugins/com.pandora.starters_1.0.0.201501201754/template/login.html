@@ -1,0 +1,1122 @@
+<!DOCTYPE HTML>
+<html lang=zh-cn>
+<meta charset="UTF-8">
+<head>
+<title>HBuilder</title>
+<link rel="stylesheet" href="login.css" type="text/css" />  
+<!--
+	作者：wuliang@dcloud.io
+	时间：2013-09-26
+	描述：zepto js
+-->
+<script type="text/javascript" charset="utf-8">
+	(function(a){String.prototype.trim===a&&(String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}),Array.prototype.reduce===a&&(Array.prototype.reduce=function(b){if(this===void 0||this===null)throw new TypeError;var c=Object(this),d=c.length>>>0,e=0,f;if(typeof b!="function")throw new TypeError;if(d==0&&arguments.length==1)throw new TypeError;if(arguments.length>=2)f=arguments[1];else do{if(e in c){f=c[e++];break}if(++e>=d)throw new TypeError}while(!0);while(e<d)e in c&&(f=b.call(a,f,c[e],e,c)),e++;return f})})();var Zepto=function(){function E(a){return a==null?String(a):y[z.call(a)]||"object"}function F(a){return E(a)=="function"}function G(a){return a!=null&&a==a.window}function H(a){return a!=null&&a.nodeType==a.DOCUMENT_NODE}function I(a){return E(a)=="object"}function J(a){return I(a)&&!G(a)&&a.__proto__==Object.prototype}function K(a){return a instanceof Array}function L(a){return typeof a.length=="number"}function M(a){return g.call(a,function(a){return a!=null})}function N(a){return a.length>0?c.fn.concat.apply([],a):a}function O(a){return a.replace(/::/g,"/").replace(/([A-Z]+)([A-Z][a-z])/g,"$1_$2").replace(/([a-z\d])([A-Z])/g,"$1_$2").replace(/_/g,"-").toLowerCase()}function P(a){return a in j?j[a]:j[a]=new RegExp("(^|\\s)"+a+"(\\s|$)")}function Q(a,b){return typeof b=="number"&&!l[O(a)]?b+"px":b}function R(a){var b,c;return i[a]||(b=h.createElement(a),h.body.appendChild(b),c=k(b,"").getPropertyValue("display"),b.parentNode.removeChild(b),c=="none"&&(c="block"),i[a]=c),i[a]}function S(a){return"children"in a?f.call(a.children):c.map(a.childNodes,function(a){if(a.nodeType==1)return a})}function T(c,d,e){for(b in d)e&&(J(d[b])||K(d[b]))?(J(d[b])&&!J(c[b])&&(c[b]={}),K(d[b])&&!K(c[b])&&(c[b]=[]),T(c[b],d[b],e)):d[b]!==a&&(c[b]=d[b])}function U(b,d){return d===a?c(b):c(b).filter(d)}function V(a,b,c,d){return F(b)?b.call(a,c,d):b}function W(a,b,c){c==null?a.removeAttribute(b):a.setAttribute(b,c)}function X(b,c){var d=b.className,e=d&&d.baseVal!==a;if(c===a)return e?d.baseVal:d;e?d.baseVal=c:b.className=c}function Y(a){var b;try{return a?a=="true"||(a=="false"?!1:a=="null"?null:isNaN(b=Number(a))?/^[\[\{]/.test(a)?c.parseJSON(a):a:b):a}catch(d){return a}}function Z(a,b){b(a);for(var c in a.childNodes)Z(a.childNodes[c],b)}var a,b,c,d,e=[],f=e.slice,g=e.filter,h=window.document,i={},j={},k=h.defaultView.getComputedStyle,l={"column-count":1,columns:1,"font-weight":1,"line-height":1,opacity:1,"z-index":1,zoom:1},m=/^\s*<(\w+|!)[^>]*>/,n=/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/ig,o=/^(?:body|html)$/i,p=["val","css","html","text","data","width","height","offset"],q=["after","prepend","before","append"],r=h.createElement("table"),s=h.createElement("tr"),t={tr:h.createElement("tbody"),tbody:r,thead:r,tfoot:r,td:s,th:s,"*":h.createElement("div")},u=/complete|loaded|interactive/,v=/^\.([\w-]+)$/,w=/^#([\w-]*)$/,x=/^[\w-]+$/,y={},z=y.toString,A={},B,C,D=h.createElement("div");return A.matches=function(a,b){if(!a||a.nodeType!==1)return!1;var c=a.webkitMatchesSelector||a.mozMatchesSelector||a.oMatchesSelector||a.matchesSelector;if(c)return c.call(a,b);var d,e=a.parentNode,f=!e;return f&&(e=D).appendChild(a),d=~A.qsa(e,b).indexOf(a),f&&D.removeChild(a),d},B=function(a){return a.replace(/-+(.)?/g,function(a,b){return b?b.toUpperCase():""})},C=function(a){return g.call(a,function(b,c){return a.indexOf(b)==c})},A.fragment=function(b,d,e){b.replace&&(b=b.replace(n,"<$1></$2>")),d===a&&(d=m.test(b)&&RegExp.$1),d in t||(d="*");var g,h,i=t[d];return i.innerHTML=""+b,h=c.each(f.call(i.childNodes),function(){i.removeChild(this)}),J(e)&&(g=c(h),c.each(e,function(a,b){p.indexOf(a)>-1?g[a](b):g.attr(a,b)})),h},A.Z=function(a,b){return a=a||[],a.__proto__=c.fn,a.selector=b||"",a},A.isZ=function(a){return a instanceof A.Z},A.init=function(b,d){if(!b)return A.Z();if(F(b))return c(h).ready(b);if(A.isZ(b))return b;var e;if(K(b))e=M(b);else if(I(b))e=[J(b)?c.extend({},b):b],b=null;else if(m.test(b))e=A.fragment(b.trim(),RegExp.$1,d),b=null;else{if(d!==a)return c(d).find(b);e=A.qsa(h,b)}return A.Z(e,b)},c=function(a,b){return A.init(a,b)},c.extend=function(a){var b,c=f.call(arguments,1);return typeof a=="boolean"&&(b=a,a=c.shift()),c.forEach(function(c){T(a,c,b)}),a},A.qsa=function(a,b){var c;return H(a)&&w.test(b)?(c=a.getElementById(RegExp.$1))?[c]:[]:a.nodeType!==1&&a.nodeType!==9?[]:f.call(v.test(b)?a.getElementsByClassName(RegExp.$1):x.test(b)?a.getElementsByTagName(b):a.querySelectorAll(b))},c.contains=function(a,b){return a!==b&&a.contains(b)},c.type=E,c.isFunction=F,c.isWindow=G,c.isArray=K,c.isPlainObject=J,c.isEmptyObject=function(a){var b;for(b in a)return!1;return!0},c.inArray=function(a,b,c){return e.indexOf.call(b,a,c)},c.camelCase=B,c.trim=function(a){return a.trim()},c.uuid=0,c.support={},c.expr={},c.map=function(a,b){var c,d=[],e,f;if(L(a))for(e=0;e<a.length;e++)c=b(a[e],e),c!=null&&d.push(c);else for(f in a)c=b(a[f],f),c!=null&&d.push(c);return N(d)},c.each=function(a,b){var c,d;if(L(a)){for(c=0;c<a.length;c++)if(b.call(a[c],c,a[c])===!1)return a}else for(d in a)if(b.call(a[d],d,a[d])===!1)return a;return a},c.grep=function(a,b){return g.call(a,b)},window.JSON&&(c.parseJSON=JSON.parse),c.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){y["[object "+b+"]"]=b.toLowerCase()}),c.fn={forEach:e.forEach,reduce:e.reduce,push:e.push,sort:e.sort,indexOf:e.indexOf,concat:e.concat,map:function(a){return c(c.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return c(f.apply(this,arguments))},ready:function(a){return u.test(h.readyState)?a(c):h.addEventListener("DOMContentLoaded",function(){a(c)},!1),this},get:function(b){return b===a?f.call(this):this[b>=0?b:b+this.length]},toArray:function(){return this.get()},size:function(){return this.length},remove:function(){return this.each(function(){this.parentNode!=null&&this.parentNode.removeChild(this)})},each:function(a){return e.every.call(this,function(b,c){return a.call(b,c,b)!==!1}),this},filter:function(a){return F(a)?this.not(this.not(a)):c(g.call(this,function(b){return A.matches(b,a)}))},add:function(a,b){return c(C(this.concat(c(a,b))))},is:function(a){return this.length>0&&A.matches(this[0],a)},not:function(b){var d=[];if(F(b)&&b.call!==a)this.each(function(a){b.call(this,a)||d.push(this)});else{var e=typeof b=="string"?this.filter(b):L(b)&&F(b.item)?f.call(b):c(b);this.forEach(function(a){e.indexOf(a)<0&&d.push(a)})}return c(d)},has:function(a){return this.filter(function(){return I(a)?c.contains(this,a):c(this).find(a).size()})},eq:function(a){return a===-1?this.slice(a):this.slice(a,+a+1)},first:function(){var a=this[0];return a&&!I(a)?a:c(a)},last:function(){var a=this[this.length-1];return a&&!I(a)?a:c(a)},find:function(a){var b,d=this;return typeof a=="object"?b=c(a).filter(function(){var a=this;return e.some.call(d,function(b){return c.contains(b,a)})}):this.length==1?b=c(A.qsa(this[0],a)):b=this.map(function(){return A.qsa(this,a)}),b},closest:function(a,b){var d=this[0],e=!1;typeof a=="object"&&(e=c(a));while(d&&!(e?e.indexOf(d)>=0:A.matches(d,a)))d=d!==b&&!H(d)&&d.parentNode;return c(d)},parents:function(a){var b=[],d=this;while(d.length>0)d=c.map(d,function(a){if((a=a.parentNode)&&!H(a)&&b.indexOf(a)<0)return b.push(a),a});return U(b,a)},parent:function(a){return U(C(this.pluck("parentNode")),a)},children:function(a){return U(this.map(function(){return S(this)}),a)},contents:function(){return this.map(function(){return f.call(this.childNodes)})},siblings:function(a){return U(this.map(function(a,b){return g.call(S(b.parentNode),function(a){return a!==b})}),a)},empty:function(){return this.each(function(){this.innerHTML=""})},pluck:function(a){return c.map(this,function(b){return b[a]})},show:function(){return this.each(function(){this.style.display=="none"&&(this.style.display=null),k(this,"").getPropertyValue("display")=="none"&&(this.style.display=R(this.nodeName))})},replaceWith:function(a){return this.before(a).remove()},wrap:function(a){var b=F(a);if(this[0]&&!b)var d=c(a).get(0),e=d.parentNode||this.length>1;return this.each(function(f){c(this).wrapAll(b?a.call(this,f):e?d.cloneNode(!0):d)})},wrapAll:function(a){if(this[0]){c(this[0]).before(a=c(a));var b;while((b=a.children()).length)a=b.first();c(a).append(this)}return this},wrapInner:function(a){var b=F(a);return this.each(function(d){var e=c(this),f=e.contents(),g=b?a.call(this,d):a;f.length?f.wrapAll(g):e.append(g)})},unwrap:function(){return this.parent().each(function(){c(this).replaceWith(c(this).children())}),this},clone:function(){return this.map(function(){return this.cloneNode(!0)})},hide:function(){return this.css("display","none")},toggle:function(b){return this.each(function(){var d=c(this);(b===a?d.css("display")=="none":b)?d.show():d.hide()})},prev:function(a){return c(this.pluck("previousElementSibling")).filter(a||"*")},next:function(a){return c(this.pluck("nextElementSibling")).filter(a||"*")},html:function(b){return b===a?this.length>0?this[0].innerHTML:null:this.each(function(a){var d=this.innerHTML;c(this).empty().append(V(this,b,a,d))})},text:function(b){return b===a?this.length>0?this[0].textContent:null:this.each(function(){this.textContent=b})},attr:function(c,d){var e;return typeof c=="string"&&d===a?this.length==0||this[0].nodeType!==1?a:c=="value"&&this[0].nodeName=="INPUT"?this.val():!(e=this[0].getAttribute(c))&&c in this[0]?this[0][c]:e:this.each(function(a){if(this.nodeType!==1)return;if(I(c))for(b in c)W(this,b,c[b]);else W(this,c,V(this,d,a,this.getAttribute(c)))})},removeAttr:function(a){return this.each(function(){this.nodeType===1&&W(this,a)})},prop:function(b,c){return c===a?this[0]&&this[0][b]:this.each(function(a){this[b]=V(this,c,a,this[b])})},data:function(b,c){var d=this.attr("data-"+O(b),c);return d!==null?Y(d):a},val:function(b){return b===a?this[0]&&(this[0].multiple?c(this[0]).find("option").filter(function(a){return this.selected}).pluck("value"):this[0].value):this.each(function(a){this.value=V(this,b,a,this.value)})},offset:function(a){if(a)return this.each(function(b){var d=c(this),e=V(this,a,b,d.offset()),f=d.offsetParent().offset(),g={top:e.top-f.top,left:e.left-f.left};d.css("position")=="static"&&(g.position="relative"),d.css(g)});if(this.length==0)return null;var b=this[0].getBoundingClientRect();return{left:b.left+window.pageXOffset,top:b.top+window.pageYOffset,width:Math.round(b.width),height:Math.round(b.height)}},css:function(a,c){if(arguments.length<2&&typeof a=="string")return this[0]&&(this[0].style[B(a)]||k(this[0],"").getPropertyValue(a));var d="";if(E(a)=="string")!c&&c!==0?this.each(function(){this.style.removeProperty(O(a))}):d=O(a)+":"+Q(a,c);else for(b in a)!a[b]&&a[b]!==0?this.each(function(){this.style.removeProperty(O(b))}):d+=O(b)+":"+Q(b,a[b])+";";return this.each(function(){this.style.cssText+=";"+d})},index:function(a){return a?this.indexOf(c(a)[0]):this.parent().children().indexOf(this[0])},hasClass:function(a){return e.some.call(this,function(a){return this.test(X(a))},P(a))},addClass:function(a){return this.each(function(b){d=[];var e=X(this),f=V(this,a,b,e);f.split(/\s+/g).forEach(function(a){c(this).hasClass(a)||d.push(a)},this),d.length&&X(this,e+(e?" ":"")+d.join(" "))})},removeClass:function(b){return this.each(function(c){if(b===a)return X(this,"");d=X(this),V(this,b,c,d).split(/\s+/g).forEach(function(a){d=d.replace(P(a)," ")}),X(this,d.trim())})},toggleClass:function(b,d){return this.each(function(e){var f=c(this),g=V(this,b,e,X(this));g.split(/\s+/g).forEach(function(b){(d===a?!f.hasClass(b):d)?f.addClass(b):f.removeClass(b)})})},scrollTop:function(){if(!this.length)return;return"scrollTop"in this[0]?this[0].scrollTop:this[0].scrollY},position:function(){if(!this.length)return;var a=this[0],b=this.offsetParent(),d=this.offset(),e=o.test(b[0].nodeName)?{top:0,left:0}:b.offset();return d.top-=parseFloat(c(a).css("margin-top"))||0,d.left-=parseFloat(c(a).css("margin-left"))||0,e.top+=parseFloat(c(b[0]).css("border-top-width"))||0,e.left+=parseFloat(c(b[0]).css("border-left-width"))||0,{top:d.top-e.top,left:d.left-e.left}},offsetParent:function(){return this.map(function(){var a=this.offsetParent||h.body;while(a&&!o.test(a.nodeName)&&c(a).css("position")=="static")a=a.offsetParent;return a})}},c.fn.detach=c.fn.remove,["width","height"].forEach(function(b){c.fn[b]=function(d){var e,f=this[0],g=b.replace(/./,function(a){return a[0].toUpperCase()});return d===a?G(f)?f["inner"+g]:H(f)?f.documentElement["offset"+g]:(e=this.offset())&&e[b]:this.each(function(a){f=c(this),f.css(b,V(this,d,a,f[b]()))})}}),q.forEach(function(a,b){var d=b%2;c.fn[a]=function(){var a,e=c.map(arguments,function(b){return a=E(b),a=="object"||a=="array"||b==null?b:A.fragment(b)}),f,g=this.length>1;return e.length<1?this:this.each(function(a,h){f=d?h:h.parentNode,h=b==0?h.nextSibling:b==1?h.firstChild:b==2?h:null,e.forEach(function(a){if(g)a=a.cloneNode(!0);else if(!f)return c(a).remove();Z(f.insertBefore(a,h),function(a){a.nodeName!=null&&a.nodeName.toUpperCase()==="SCRIPT"&&(!a.type||a.type==="text/javascript")&&!a.src&&window.eval.call(window,a.innerHTML)})})})},c.fn[d?a+"To":"insert"+(b?"Before":"After")]=function(b){return c(b)[a](this),this}}),A.Z.prototype=c.fn,A.uniq=C,A.deserializeValue=Y,c.zepto=A,c}();window.Zepto=Zepto,"$"in window||(window.$=Zepto),function(a){function b(a){var b=this.os={},c=this.browser={},d=a.match(/WebKit\/([\d.]+)/),e=a.match(/(Android)\s+([\d.]+)/),f=a.match(/(iPad).*OS\s([\d_]+)/),g=!f&&a.match(/(iPhone\sOS)\s([\d_]+)/),h=a.match(/(webOS|hpwOS)[\s\/]([\d.]+)/),i=h&&a.match(/TouchPad/),j=a.match(/Kindle\/([\d.]+)/),k=a.match(/Silk\/([\d._]+)/),l=a.match(/(BlackBerry).*Version\/([\d.]+)/),m=a.match(/(BB10).*Version\/([\d.]+)/),n=a.match(/(RIM\sTablet\sOS)\s([\d.]+)/),o=a.match(/PlayBook/),p=a.match(/Chrome\/([\d.]+)/)||a.match(/CriOS\/([\d.]+)/),q=a.match(/Firefox\/([\d.]+)/);if(c.webkit=!!d)c.version=d[1];e&&(b.android=!0,b.version=e[2]),g&&(b.ios=b.iphone=!0,b.version=g[2].replace(/_/g,".")),f&&(b.ios=b.ipad=!0,b.version=f[2].replace(/_/g,".")),h&&(b.webos=!0,b.version=h[2]),i&&(b.touchpad=!0),l&&(b.blackberry=!0,b.version=l[2]),m&&(b.bb10=!0,b.version=m[2]),n&&(b.rimtabletos=!0,b.version=n[2]),o&&(c.playbook=!0),j&&(b.kindle=!0,b.version=j[1]),k&&(c.silk=!0,c.version=k[1]),!k&&b.android&&a.match(/Kindle Fire/)&&(c.silk=!0),p&&(c.chrome=!0,c.version=p[1]),q&&(c.firefox=!0,c.version=q[1]),b.tablet=!!(f||o||e&&!a.match(/Mobile/)||q&&a.match(/Tablet/)),b.phone=!b.tablet&&!!(e||g||h||l||m||p&&a.match(/Android/)||p&&a.match(/CriOS\/([\d.]+)/)||q&&a.match(/Mobile/))}b.call(a,navigator.userAgent),a.__detect=b}(Zepto),function(a){function g(a){return a._zid||(a._zid=d++)}function h(a,b,d,e){b=i(b);if(b.ns)var f=j(b.ns);return(c[g(a)]||[]).filter(function(a){return a&&(!b.e||a.e==b.e)&&(!b.ns||f.test(a.ns))&&(!d||g(a.fn)===g(d))&&(!e||a.sel==e)})}function i(a){var b=(""+a).split(".");return{e:b[0],ns:b.slice(1).sort().join(" ")}}function j(a){return new RegExp("(?:^| )"+a.replace(" "," .* ?")+"(?: |$)")}function k(b,c,d){a.type(b)!="string"?a.each(b,d):b.split(/\s/).forEach(function(a){d(a,c)})}function l(a,b){return a.del&&(a.e=="focus"||a.e=="blur")||!!b}function m(a){return f[a]||a}function n(b,d,e,h,j,n){var o=g(b),p=c[o]||(c[o]=[]);k(d,e,function(c,d){var e=i(c);e.fn=d,e.sel=h,e.e in f&&(d=function(b){var c=b.relatedTarget;if(!c||c!==this&&!a.contains(this,c))return e.fn.apply(this,arguments)}),e.del=j&&j(d,c);var g=e.del||d;e.proxy=function(a){var c=g.apply(b,[a].concat(a.data));return c===!1&&(a.preventDefault(),a.stopPropagation()),c},e.i=p.length,p.push(e),b.addEventListener(m(e.e),e.proxy,l(e,n))})}function o(a,b,d,e,f){var i=g(a);k(b||"",d,function(b,d){h(a,b,d,e).forEach(function(b){delete c[i][b.i],a.removeEventListener(m(b.e),b.proxy,l(b,f))})})}function t(b){var c,d={originalEvent:b};for(c in b)!r.test(c)&&b[c]!==undefined&&(d[c]=b[c]);return a.each(s,function(a,c){d[a]=function(){return this[c]=p,b[a].apply(b,arguments)},d[c]=q}),d}function u(a){if(!("defaultPrevented"in a)){a.defaultPrevented=!1;var b=a.preventDefault;a.preventDefault=function(){this.defaultPrevented=!0,b.call(this)}}}var b=a.zepto.qsa,c={},d=1,e={},f={mouseenter:"mouseover",mouseleave:"mouseout"};e.click=e.mousedown=e.mouseup=e.mousemove="MouseEvents",a.event={add:n,remove:o},a.proxy=function(b,c){if(a.isFunction(b)){var d=function(){return b.apply(c,arguments)};return d._zid=g(b),d}if(typeof c=="string")return a.proxy(b[c],b);throw new TypeError("expected function")},a.fn.bind=function(a,b){return this.each(function(){n(this,a,b)})},a.fn.unbind=function(a,b){return this.each(function(){o(this,a,b)})},a.fn.one=function(a,b){return this.each(function(c,d){n(this,a,b,null,function(a,b){return function(){var c=a.apply(d,arguments);return o(d,b,a),c}})})};var p=function(){return!0},q=function(){return!1},r=/^([A-Z]|layer[XY]$)/,s={preventDefault:"isDefaultPrevented",stopImmediatePropagation:"isImmediatePropagationStopped",stopPropagation:"isPropagationStopped"};a.fn.delegate=function(b,c,d){return this.each(function(e,f){n(f,c,d,b,function(c){return function(d){var e,g=a(d.target).closest(b,f).get(0);if(g)return e=a.extend(t(d),{currentTarget:g,liveFired:f}),c.apply(g,[e].concat([].slice.call(arguments,1)))}})})},a.fn.undelegate=function(a,b,c){return this.each(function(){o(this,b,c,a)})},a.fn.live=function(b,c){return a(document.body).delegate(this.selector,b,c),this},a.fn.die=function(b,c){return a(document.body).undelegate(this.selector,b,c),this},a.fn.on=function(b,c,d){return!c||a.isFunction(c)?this.bind(b,c||d):this.delegate(c,b,d)},a.fn.off=function(b,c,d){return!c||a.isFunction(c)?this.unbind(b,c||d):this.undelegate(c,b,d)},a.fn.trigger=function(b,c){if(typeof b=="string"||a.isPlainObject(b))b=a.Event(b);return u(b),b.data=c,this.each(function(){"dispatchEvent"in this&&this.dispatchEvent(b)})},a.fn.triggerHandler=function(b,c){var d,e;return this.each(function(f,g){d=t(typeof b=="string"?a.Event(b):b),d.data=c,d.target=g,a.each(h(g,b.type||b),function(a,b){e=b.proxy(d);if(d.isImmediatePropagationStopped())return!1})}),e},"focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select keydown keypress keyup error".split(" ").forEach(function(b){a.fn[b]=function(a){return a?this.bind(b,a):this.trigger(b)}}),["focus","blur"].forEach(function(b){a.fn[b]=function(a){return a?this.bind(b,a):this.each(function(){try{this[b]()}catch(a){}}),this}}),a.Event=function(a,b){typeof a!="string"&&(b=a,a=b.type);var c=document.createEvent(e[a]||"Events"),d=!0;if(b)for(var f in b)f=="bubbles"?d=!!b[f]:c[f]=b[f];return c.initEvent(a,d,!0,null,null,null,null,null,null,null,null,null,null,null,null),c.isDefaultPrevented=function(){return this.defaultPrevented},c}}(Zepto),function($){function triggerAndReturn(a,b,c){var d=$.Event(b);return $(a).trigger(d,c),!d.defaultPrevented}function triggerGlobal(a,b,c,d){if(a.global)return triggerAndReturn(b||document,c,d)}function ajaxStart(a){a.global&&$.active++===0&&triggerGlobal(a,null,"ajaxStart")}function ajaxStop(a){a.global&&!--$.active&&triggerGlobal(a,null,"ajaxStop")}function ajaxBeforeSend(a,b){var c=b.context;if(b.beforeSend.call(c,a,b)===!1||triggerGlobal(b,c,"ajaxBeforeSend",[a,b])===!1)return!1;triggerGlobal(b,c,"ajaxSend",[a,b])}function ajaxSuccess(a,b,c){var d=c.context,e="success";c.success.call(d,a,e,b),triggerGlobal(c,d,"ajaxSuccess",[b,c,a]),ajaxComplete(e,b,c)}function ajaxError(a,b,c,d){var e=d.context;d.error.call(e,c,b,a),triggerGlobal(d,e,"ajaxError",[c,d,a]),ajaxComplete(b,c,d)}function ajaxComplete(a,b,c){var d=c.context;c.complete.call(d,b,a),triggerGlobal(c,d,"ajaxComplete",[b,c]),ajaxStop(c)}function empty(){}function mimeToDataType(a){return a&&(a=a.split(";",2)[0]),a&&(a==htmlType?"html":a==jsonType?"json":scriptTypeRE.test(a)?"script":xmlTypeRE.test(a)&&"xml")||"text"}function appendQuery(a,b){return(a+"&"+b).replace(/[&?]{1,2}/,"?")}function serializeData(a){a.processData&&a.data&&$.type(a.data)!="string"&&(a.data=$.param(a.data,a.traditional)),a.data&&(!a.type||a.type.toUpperCase()=="GET")&&(a.url=appendQuery(a.url,a.data))}function parseArguments(a,b,c,d){var e=!$.isFunction(b);return{url:a,data:e?b:undefined,success:e?$.isFunction(c)?c:undefined:b,dataType:e?d||c:c}}function serialize(a,b,c,d){var e,f=$.isArray(b);$.each(b,function(b,g){e=$.type(g),d&&(b=c?d:d+"["+(f?"":b)+"]"),!d&&f?a.add(g.name,g.value):e=="array"||!c&&e=="object"?serialize(a,g,c,b):a.add(b,g)})}var jsonpID=0,document=window.document,key,name,rscript=/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,scriptTypeRE=/^(?:text|application)\/javascript/i,xmlTypeRE=/^(?:text|application)\/xml/i,jsonType="application/json",htmlType="text/html",blankRE=/^\s*$/;$.active=0,$.ajaxJSONP=function(a){if("type"in a){var b="jsonp"+ ++jsonpID,c=document.createElement("script"),d=function(){clearTimeout(g),$(c).remove(),delete window[b]},e=function(c){d();if(!c||c=="timeout")window[b]=empty;ajaxError(null,c||"abort",f,a)},f={abort:e},g;return ajaxBeforeSend(f,a)===!1?(e("abort"),!1):(window[b]=function(b){d(),ajaxSuccess(b,f,a)},c.onerror=function(){e("error")},c.src=a.url.replace(/=\?/,"="+b),$("head").append(c),a.timeout>0&&(g=setTimeout(function(){e("timeout")},a.timeout)),f)}return $.ajax(a)},$.ajaxSettings={type:"GET",beforeSend:empty,success:empty,error:empty,complete:empty,context:null,global:!0,xhr:function(){return new window.XMLHttpRequest},accepts:{script:"text/javascript, application/javascript",json:jsonType,xml:"application/xml, text/xml",html:htmlType,text:"text/plain"},crossDomain:!1,timeout:0,processData:!0,cache:!0},$.ajax=function(options){var settings=$.extend({},options||{});for(key in $.ajaxSettings)settings[key]===undefined&&(settings[key]=$.ajaxSettings[key]);ajaxStart(settings),settings.crossDomain||(settings.crossDomain=/^([\w-]+:)?\/\/([^\/]+)/.test(settings.url)&&RegExp.$2!=window.location.host),settings.url||(settings.url=window.location.toString()),serializeData(settings),settings.cache===!1&&(settings.url=appendQuery(settings.url,"_="+Date.now()));var dataType=settings.dataType,hasPlaceholder=/=\?/.test(settings.url);if(dataType=="jsonp"||hasPlaceholder)return hasPlaceholder||(settings.url=appendQuery(settings.url,"callback=?")),$.ajaxJSONP(settings);var mime=settings.accepts[dataType],baseHeaders={},protocol=/^([\w-]+:)\/\//.test(settings.url)?RegExp.$1:window.location.protocol,xhr=settings.xhr(),abortTimeout;settings.crossDomain||(baseHeaders["X-Requested-With"]="XMLHttpRequest"),mime&&(baseHeaders.Accept=mime,mime.indexOf(",")>-1&&(mime=mime.split(",",2)[0]),xhr.overrideMimeType&&xhr.overrideMimeType(mime));if(settings.contentType||settings.contentType!==!1&&settings.data&&settings.type.toUpperCase()!="GET")baseHeaders["Content-Type"]=settings.contentType||"application/x-www-form-urlencoded";settings.headers=$.extend(baseHeaders,settings.headers||{}),xhr.onreadystatechange=function(){if(xhr.readyState==4){xhr.onreadystatechange=empty,clearTimeout(abortTimeout);var result,error=!1;if(xhr.status>=200&&xhr.status<300||xhr.status==304||xhr.status==0&&protocol=="file:"){dataType=dataType||mimeToDataType(xhr.getResponseHeader("content-type")),result=xhr.responseText;try{dataType=="script"?(1,eval)(result):dataType=="xml"?result=xhr.responseXML:dataType=="json"&&(result=blankRE.test(result)?null:$.parseJSON(result))}catch(e){error=e}error?ajaxError(error,"parsererror",xhr,settings):ajaxSuccess(result,xhr,settings)}else ajaxError(null,xhr.status?"error":"abort",xhr,settings)}};var async="async"in settings?settings.async:!0;xhr.open(settings.type,settings.url,async);for(name in settings.headers)xhr.setRequestHeader(name,settings.headers[name]);return ajaxBeforeSend(xhr,settings)===!1?(xhr.abort(),!1):(settings.timeout>0&&(abortTimeout=setTimeout(function(){xhr.onreadystatechange=empty,xhr.abort(),ajaxError(null,"timeout",xhr,settings)},settings.timeout)),xhr.send(settings.data?settings.data:null),xhr)},$.get=function(a,b,c,d){return $.ajax(parseArguments.apply(null,arguments))},$.post=function(a,b,c,d){var e=parseArguments.apply(null,arguments);return e.type="POST",$.ajax(e)},$.getJSON=function(a,b,c){var d=parseArguments.apply(null,arguments);return d.dataType="json",$.ajax(d)},$.fn.load=function(a,b,c){if(!this.length)return this;var d=this,e=a.split(/\s/),f,g=parseArguments(a,b,c),h=g.success;return e.length>1&&(g.url=e[0],f=e[1]),g.success=function(a){d.html(f?$("<div>").html(a.replace(rscript,"")).find(f):a),h&&h.apply(d,arguments)},$.ajax(g),this};var escape=encodeURIComponent;$.param=function(a,b){var c=[];return c.add=function(a,b){this.push(escape(a)+"="+escape(b))},serialize(c,a,b),c.join("&").replace(/%20/g,"+")}}(Zepto),function(a){a.fn.serializeArray=function(){var b=[],c;return a(Array.prototype.slice.call(this.get(0).elements)).each(function(){c=a(this);var d=c.attr("type");this.nodeName.toLowerCase()!="fieldset"&&!this.disabled&&d!="submit"&&d!="reset"&&d!="button"&&(d!="radio"&&d!="checkbox"||this.checked)&&b.push({name:c.attr("name"),value:c.val()})}),b},a.fn.serialize=function(){var a=[];return this.serializeArray().forEach(function(b){a.push(encodeURIComponent(b.name)+"="+encodeURIComponent(b.value))}),a.join("&")},a.fn.submit=function(b){if(b)this.bind("submit",b);else if(this.length){var c=a.Event("submit");this.eq(0).trigger(c),c.defaultPrevented||this.get(0).submit()}return this}}(Zepto),function(a,b){function s(a){return t(a.replace(/([a-z])([A-Z])/,"$1-$2"))}function t(a){return a.toLowerCase()}function u(a){return d?d+a:t(a)}var c="",d,e,f,g={Webkit:"webkit",Moz:"",O:"o",ms:"MS"},h=window.document,i=h.createElement("div"),j=/^((translate|rotate|scale)(X|Y|Z|3d)?|matrix(3d)?|perspective|skew(X|Y)?)$/i,k,l,m,n,o,p,q,r={};a.each(g,function(a,e){if(i.style[a+"TransitionProperty"]!==b)return c="-"+t(a)+"-",d=e,!1}),k=c+"transform",r[l=c+"transition-property"]=r[m=c+"transition-duration"]=r[n=c+"transition-timing-function"]=r[o=c+"animation-name"]=r[p=c+"animation-duration"]=r[q=c+"animation-timing-function"]="",a.fx={off:d===b&&i.style.transitionProperty===b,speeds:{_default:400,fast:200,slow:600},cssPrefix:c,transitionEnd:u("TransitionEnd"),animationEnd:u("AnimationEnd")},a.fn.animate=function(b,c,d,e){return a.isPlainObject(c)&&(d=c.easing,e=c.complete,c=c.duration),c&&(c=(typeof c=="number"?c:a.fx.speeds[c]||a.fx.speeds._default)/1e3),this.anim(b,c,d,e)},a.fn.anim=function(c,d,e,f){var g,h={},i,t="",u=this,v,w=a.fx.transitionEnd;d===b&&(d=.4),a.fx.off&&(d=0);if(typeof c=="string")h[o]=c,h[p]=d+"s",h[q]=e||"linear",w=a.fx.animationEnd;else{i=[];for(g in c)j.test(g)?t+=g+"("+c[g]+") ":(h[g]=c[g],i.push(s(g)));t&&(h[k]=t,i.push(k)),d>0&&typeof c=="object"&&(h[l]=i.join(", "),h[m]=d+"s",h[n]=e||"linear")}return v=function(b){if(typeof b!="undefined"){if(b.target!==b.currentTarget)return;a(b.target).unbind(w,v)}a(this).css(r),f&&f.call(this)},d>0&&this.bind(w,v),this.size()&&this.get(0).clientLeft,this.css(h),d<=0&&setTimeout(function(){u.each(function(){v.call(this)})},0),this},i=null}(Zepto)
+</script>
+<!--
+	作者：wuliang@dcloud.io
+	时间：2013-09-26
+	描述： 禁止鼠标右键
+-->
+<script type="text/javascript" charset="utf-8">
+	function nocontextmenu(){return event.cancelBubble=!0,event.returnValue=!1,!1}function norightclick(e){if(window.Event){if(e.which==2||e.which==3)return!1}else if(event.button==2||event.button==3)return event.cancelBubble=!0,event.returnValue=!1,!1}if(window.Event)try{document.captureEvents(Event.MOUSEUP)}catch(e){}document.oncontextmenu=nocontextmenu,document.onmousedown=norightclick
+</script>
+</head>
+<script type="text/javascript">
+	var showemails=new Array("@qq.com","@163.com","@gmail.com","@126.com","@yahoo.com","@sina.com","@hotmail.com","@foxmail.com");
+	var emaillogin = new Array("http://mail.qq.com","http://mail.163.com","http://gmail.com","http://mail.126.com","http://mail.yahoo.com","http://mail.sina.com","http://mail.hotmail.com","http://mail.foxmail.com");
+	//直接用existemails，是一个String数组，在ide初始化的。
+	var totalid = showemails.length;
+	var event_type = "login" ;
+	var nowid;
+	var totalid;
+	var can1press = false;
+	var emailafter;
+	var emailbefor;
+	var existemails;
+
+	function chagepage(type){
+		if(type=="reg"){
+			document.getElementById("proxybutton").style.display="none";
+			event_type = "reg" ;
+
+			$("#loginpage").css("display","block");
+			$("#regpage").css("display","block");
+		
+			setTimeout(function(){
+				$("#loginpage").css("bottom","100%");
+				$("#regpage").css("bottom","0%");
+			},0)
+			setTimeout(function(){
+				$("#loginpage").css("display","none");
+			},800)
+		}else if(type=="login"){
+			document.getElementById("proxybutton").style.display="block";
+			event_type = "login" ;
+	
+			$("#loginpage").css("display","block");
+			$("#regpage").css("display","block");
+			setTimeout(function(){
+				$("#loginpage").css("bottom","0%");
+				$("#regpage").css("bottom","-100%");
+			},0)
+			
+			setTimeout(function(){
+				$("#regpage").css("display","none");
+			},800)
+		}
+	}
+	function exist(){
+		if (navigator.platform == "Win32")
+		{
+			ExistIDE() ;
+		}
+		else //if (navigator.platform == "MacIntel")
+		{
+			var c = window.controller; //获得controller对象  
+	        c.ExitIDE();			
+		}
+	
+	}
+	function signIn(){
+		//取值
+		var username=$("#email").val() ;
+		var password=$("#password").val() ;
+		//值验证
+		if(!checkEmail(username)){
+			return ;
+		}
+		if(!checkPassword(password)){
+			return ;
+		}
+		var result;
+		setProgress(true);
+		if (navigator.platform == "Win32")
+		{
+			result = UserLogin(username,password);
+		}
+		else //if (navigator.platform == "MacIntel")
+		{
+			var c = window.controller;   
+			var result = c.LoginIDE(username,password); 	
+			
+		}
+		setProgress(false);
+		if(result=="1001"){//成功
+			cleargotoemail();
+		}else if(result=="999"){//联网失败
+			showmessage("网络连接失败，若需要使用代理，请点击 <a herf='#' onclick='goSetting()' style='clear:both;color:#6B6B6B;text-decoration:underline;cursor:pointer'>这里</a> 进行代理设置！");
+		}else{
+			showmessage(result);
+		}
+	}
+	function register(){
+		//取值
+		var username=$("#userId").val() ;
+		var password=$("#reg_password").val() ;
+		//值验证
+		if(!checkEmail(username)){
+			return ;
+		}
+		if(!checkPassword(password)){
+			return ;
+		}
+		var result;
+		if (navigator.platform == "Win32")
+		{
+			result = UserRegist(username,password) ;
+		}
+		else //if (navigator.platform == "MacIntel")
+		{
+			var c = window.controller; //获得controller对象            
+			result = c.RegistAccount(username,password);			
+		}
+
+		if(result=="1001"){//成功
+			UserLogin(username,password);
+		}else if(result=="999"){//联网失败
+			showmessage("网络连接失败，若需要使用代理，请点击 <a herf='#' onclick='goSetting()' style='clear:both;color:#6B6B6B;text-decoration:underline;cursor:pointer'>这里</a> 进行代理设置！");
+		}else if(result=="1003"){//联网失败
+			showmessage("该邮箱已被注册，如忘记密码，请在登录界面点击忘记密码找回密码！");
+		}else{
+			showmessage(result);
+		}
+	}
+	
+	function forgetPassword(){
+		var email=$("#email").val() ;
+		//验证值
+		if(!checkEmail(email)){
+			return ;
+		}
+		var result;
+		setProgress(true);
+		if (navigator.platform == "Win32")
+		{
+			result = ForgetPassword(email) ;
+		}
+		else
+		{
+			var c = window.controller; //获得controller对象            
+			result = c.forgetPassword(email);
+		}
+		setProgress(false);
+		if(result=="1001"){//成功
+			gotoemail();
+		}else if(result=="999"){//联网失败
+			showmessage("网络连接失败，若需要使用代理，请点击 <a herf='#' onclick='goSetting()' style='clear:both;color:#6B6B6B;text-decoration:underline;cursor:pointer'>这里</a> 进行代理设置！");
+		}else{
+			showmessage(result);
+		}
+	}
+	
+	function checkEmail(email){
+		if(email==''||email==null||email=='undefined'){
+			showlogintips("*&nbsp;&nbsp;请输入用户名/Email","1") ;
+			return false ;
+		}
+		var mailReg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/ ;
+		if(!mailReg.test(email)){
+			showlogintips("*&nbsp;&nbsp;用户名/Email格式不正确","1") ;
+			return false ;
+		}
+		clearlogintips("1") ;
+		return true ;
+	}
+	function isemail(email){
+		// if(email==''||email==null||email=='undefined'){	
+		// 	return false ;
+		// }
+		// var mailReg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/ ;
+		// if(!mailReg.test(email)){	
+		// 	return false ;
+		// }
+		if(email.indexOf('@')>0){
+			return true;
+		}else{
+			return false;
+		}
+		return true ;
+	}
+	function checkPassword(password){
+		if(password==''||password==null||password=='undefined'){
+			showlogintips("*&nbsp;&nbsp;请输入密码","2") ;
+			return false ;
+		}
+		
+		clearlogintips("2") ;
+		return true ;
+	}
+	function showmessage(message){
+
+		if(event_type=="login"){
+				$("#loginmessage").removeClass("clear");			
+				$("#loginmessage").addClass("show");		
+				$("#loginmessage").html(message);
+		}else{
+			$("#regmessage").removeClass("clear")
+			$("#regmessage").addClass("showreg")
+			$("#regmessage").html(message);
+		}
+	}
+	function clearmessage(){
+		if(event_type=="login"){
+			$("#loginmessage").removeClass("show")
+			$("#loginmessage").addClass("clear")
+			$("#loginmessage").html("");
+		}else{
+			$("#regmessage").removeClass("showreg")
+			$("#regmessage").addClass("clear")
+			$("#regmessage").html("");
+		}
+	}
+	function gotoemail(){
+		var forget = document.getElementById('email').value;
+		var forgetext = forget.substring(forget.indexOf("@"));
+		var emailurl = "";
+		var iscom = false;
+		for (var i =0;i< showemails.length;  i++) {
+			if(forgetext==showemails[i]){
+				emailurl =emaillogin[i];
+				iscom =true;
+				break;
+			}
+			
+		};
+		
+		var emailmessage = "";
+		if(iscom){
+			emailmessage = "我们向您的邮箱<a style='color:#f48533;' href='#' onclick='openurl(\""+emailurl+"\");'>"+forget+"</a > 发送了修改密码的链接，请查收邮件 !"
+		}else{
+			emailmessage = "我们向您的邮箱发送了修改密码的链接，请查收邮件！"
+		}
+		
+		showmessage(emailmessage);
+
+
+	}
+	function cleargotoemail(){
+		$("#loginmessage").removeClass("forgetshow")
+		$("#loginmessage").addClass("forgetclear")
+		$("#loginmessage").html('');
+	}
+	function openurl(url){
+		if (navigator.platform == "Win32")
+		{
+			WinOpenUrl(url);
+		}
+		else //if (navigator.platform == "MacIntel")
+		{
+			window.controller.openurl(url); //获得controller对象  
+		}
+	}
+	function showlogintips(message,type){
+		if(event_type=="login"){
+			if(type=="1"){//说明是邮箱错误
+				$("#emailtips").removeClass("clearlogintip")
+				$("#emailtips").addClass("logintips")
+				$("#emailtips").html(message);
+			}else{//说明是密码错误
+				$("#passtips").removeClass("clearlogintip")
+				$("#passtips").addClass("logintips")
+				$("#passtips").html(message);
+			}
+		}else{
+			if(type=="1"){//说明是邮箱错误
+				$("#reg_emailtips").removeClass("clearlogintip")
+				$("#reg_emailtips").addClass("logintips")
+				$("#reg_emailtips").html(message);
+			}else{//说明是密码错误
+				$("#reg_passtips").removeClass("clearlogintip")
+				$("#reg_passtips").addClass("logintips")
+				$("#reg_passtips").html(message);
+			}
+		}
+	}
+	function clearlogintips(type){
+		if(event_type=="login"){
+			if(type=="1"){//说明是邮箱错误
+				$("#emailtips").removeClass("logintips")
+				$("#emailtips").addClass("clearlogintip")
+				$("#emailtips").html("");
+			}else{//说明是密码错误
+				$("#passtips").removeClass("logintips")
+				$("#passtips").addClass("clearlogintip")
+				$("#passtips").html("");
+			}
+		}else{
+			if(type=="1"){//说明是邮箱错误
+				$("#reg_emailtips").removeClass("logintips")
+				$("#reg_emailtips").addClass("clearlogintip")
+				$("#reg_emailtips").html("");
+			}else{//说明是密码错误
+				$("#reg_passtips").removeClass("logintips")
+				$("#reg_passtips").addClass("clearlogintip")
+				$("#reg_passtips").html("");
+			}
+		}
+	}
+
+	$(document).ready(function(){
+		$("#email").focus(function(){ //文本框获得焦点，插入Email提示层
+			$("#myemail").remove();
+		$(this).after("<div id='myemail' style='width:454px; height:auto; background:#fff; color:#6B6B6B; position:absolute; z-index: 9999;left:"+$(this).get(0).offsetLeft+"px; top:"+($(this).get(0).offsetTop+$(this).height()+2)+"px; border:1px solid #ccc;z-index:5px; '></div>");
+			if($("#myemail").html()){
+				$("#myemail").css("display","block");
+				$(".newemail").css("width",$("#myemail").width());
+				can1press = true;
+			} else {
+				$("#myemail").css("display","none");
+				can1press = false;
+			}		
+		}).keyup(function(){ //文本框输入文字时，显示Email提示层和常用Email
+			typeemail();			
+		})
+		$("#userId").focus(function(){ //文本框获得焦点，插入Email提示层
+		$("#myemail").remove();
+		$(this).after("<div id='myemail' style='width:458px; height:auto; background:#fff; color:#6B6B6B; position:absolute; z-index: 9999;left:"+$(this).get(0).offsetLeft+"px; top:"+($(this).get(0).offsetTop+$(this).height()+2)+"px; border:1px solid #ccc;z-index:5px; '></div>");
+			if($("#myemail").html()){
+				 $("#myemail").css("display","block");
+		$(".newemail").css("width",$("#myemail").width());
+			can1press = true;
+			} else {
+				 $("#myemail").css("display","none");
+			can1press = false;
+			}		
+		}).keyup(function(){ //文本框输入文字时，显示Email提示层和常用Email
+			typeemail();
+
+		})
+		$(document).click(function(){ //文本框失焦时删除层
+			if(can1press){
+				$("#myemail").remove();
+				can1press = false;	
+			}
+			if(isproxytypeshow){
+	    		$("#selectcontent").css("display","none");
+	    		isproxytypeshow=false;
+	    	}
+		})
+	
+		$(".newemail").live("mouseover",function(){ //鼠标经过提示Email时，高亮该条Email
+			$(".newemail").css("background","#FFF");
+			$(this).css("background","#CACACA");		
+			$(this).focus();
+			nowid = $(this).index();
+		}).live("click",function(){ //鼠标点击Email时，文本框内容替换成该条Email，并删除提示层
+			var newhtml = $(this).html();
+			newhtml = newhtml.replace(/<.*?>/g,"");
+			if (event_type=='login') {
+				$("#email").val(newhtml); 
+			}else{
+				$("#userId").val(newhtml); 
+			}
+					
+			checkEmail(document.getElementById("email").value);
+			$("#myemail").remove();
+		})
+		$(document).bind("keydown",function(e)  
+		{
+			//alert(can1press)     
+			if(can1press){
+
+				switch(e.which)     
+				{            
+					case 38:
+					if (nowid > 0){		
+						$(".newemail").css("background","#FFF");
+						$(".newemail").eq(nowid).prev().css("background","#CACACA").focus();
+						nowid = nowid-1;		
+					}
+					if(!nowid){
+						nowid = 0;
+						$(".newemail").css("background","#FFF");
+						$(".newemail").eq(nowid).css("background","#CACACA");		
+						$(".newemail").eq(nowid).focus();				
+					}
+					break;       
+			
+					case 40:
+					if (nowid < totalid){				
+						$(".newemail").css("background","#FFF");
+						$(".newemail").eq(nowid).next().css("background","#CACACA").focus();	
+						nowid = nowid+1;			
+					}
+					if(!nowid){
+						nowid = 0;
+						$(".newemail").css("background","#FFF");
+						$(".newemail").eq(nowid).css("background","#CACACA");		
+						$(".newemail").eq(nowid).focus();				
+					}
+					break;  
+			
+					case 13:
+					var newhtml = $(".newemail").eq(nowid).html();
+					newhtml = newhtml.replace(/<.*?>/g,"");
+					if (event_type=='login') {
+						$("#email").val(newhtml); 
+					}else{
+						$("#userId").val(newhtml); 
+					}
+					
+					$("#myemail").remove();
+					checkEmail(document.getElementById('email').value);
+					break;
+					
+					case 9:
+					$("#myemail").remove();
+				}
+			}   
+		})
+		$(document).bind("keyup",function(e)  
+		{     
+			if(can1press){
+				switch(e.which)     
+				{            
+					case 38:
+					if (nowid > 0){		
+						$(".newemail").css("background","#FFF");
+						$(".newemail").eq(nowid).css("background","#CACACA").focus();
+						//nowid = nowid-1;		
+					}
+				
+					case 40:
+					if (nowid <= totalid){				
+						$(".newemail").css("background","#FFF");
+						$(".newemail").eq(nowid).css("background","#CACACA").focus();	
+						//nowid = nowid+1;			
+					}
+			
+			
+				
+				}
+			}   
+		})
+	}) 
+
+
+	function typeemail(){
+
+		var press;
+		if (event_type=='login') {
+			press=$("#email").val();
+		}else{
+			press=$("#userId").val();
+		}
+		
+		if (press!="" || press!=null){
+		var emailtxt = "";			
+		var emailvar = new Array("@qq.com","@163.com","@gmail.com","@126.com","@yahoo.com","@sina.com","@hotmail.com","@foxmail.com");
+		totalid = emailvar.length;
+			var emailmy = "<div class='newemail' style='width:10px; padding-left:15px;color:#6B6B6B; overflow:hidden;'><font color='#D33022'>" + press + "</font></div>";
+			if(!(isemail(press))){
+				for(var i=0; i<emailvar.length; i++) {
+					emailtxt = emailtxt + "<div class='newemail' style='width:10px;padding-left:15px; color:#6B6B6B; overflow:hidden;z-index: 9999;'><font color='#D33022'>" + press + "</font>" + emailvar[i] + "</div>"
+				}
+			} else {
+				emailbefor = press.split("@")[0];
+				emailafter = "@" + press.split("@")[1];
+				for(var i=0; i<emailvar.length; i++) {
+					 var theemail = emailvar[i];
+					 if(theemail.indexOf(emailafter) == 0)
+					 {
+						 emailtxt = emailtxt + "<div class='newemail' style='width:10px; padding-left:15px;color:#6B6B6B; overflow:hidden;z-index: 9999'><font style='color:#6B6B6B;'>" + emailbefor + "</font>" + emailvar[i] + "</div>"
+					 }
+				}
+			}
+			$("#myemail").html(emailmy+emailtxt);
+			if($("#myemail").html()){
+				 $("#myemail").css("display","block");
+				 $(".newemail").css("width",$("#myemail").width()-15);
+				 can1press = true;
+			} else {
+				 $("#myemail").css("display","none");
+				 can1press = false;
+			}
+			beforepress = press;
+		}
+		if (press=="" || press==null){
+			$("#myemail").html("");		
+			 $("#myemail").css("display","none");    
+		}	
+	}
+	var helpstatus = false, timer = null;
+	function onHelpMouseOver(e){
+		showhelp(e);
+		
+	}
+	function showhelp(e){
+		console.log('type:' + e.type + ',tag:' + e.target.tagName + ',id:' + e.target.id);
+		if(timer){
+			console.log('cancel timer');
+			clearTimeout(timer);
+			timer = null;
+		}
+		if(helpstatus) return;
+		helpcontent.onmouseout = hideHelp;
+		helpcontent.onmouseover = showhelp;
+		helpbuttondiv.onmouseout = hideHelp;
+		helpstatus = true;
+		$("#helpcontent").css("opacity","1");
+		$("#helpcontent").css("filter","alpha(opacity=0)");
+		console.log('showhelp');
+	}
+	function hideHelp(e){
+		if(!helpstatus) return;
+		helpstatus = false;
+		console.log('type:' + e.type + ',tag:' + e.target.tagName + ',id:' + e.target.id);
+		timer = setTimeout(function(){
+			$("#helpcontent").css("opacity","0");
+			$("#helpcontent").css("filter","alpha(opacity=0)");
+			helpcontent.onmouseout = null;
+			helpcontent.onmouseover = null;
+			helpbuttondiv.onmouseout = null;
+		},300);
+	}
+//	function showhelp(helpstatus){
+//		if (!helpstatus) {
+//			$("#helpcontent").css("opacity","0");
+//			$("#helpcontent").css("filter","alpha(opacity=0)");
+//			helpstatus=!helpstatus;
+//		}else{
+//			$("#helpcontent").css("opacity","1");
+//			$("#helpcontent").css("filter","alpha(opacity=0)");
+//			helpstatus=!helpstatus;
+//		}
+//	}
+//	function buttonfocushelp(){
+//		showhelp(true);
+//	}
+//	function focushelp(){
+//		showhelp(true);
+//	}
+//	function mouseover_content(){
+//		document.getElementById("helpcontent").onmouseout=blurhelp;
+//	}
+//	function blurhelp(e){
+//		showhelp(false);
+//		document.getElementById("helpcontent").onmouseout = null;
+//	}
+	document.addEventListener("DOMContentLoaded",
+	function(){
+		// var ifr = document.getElementById("isina");
+		
+		// var tmplocation = location.href; 
+		// var ifr = document.createElement('iframe');
+	 //    //ifr.style.display = 'none';
+	 //    // width="633" height="280" style="margin-top:-65px"
+	 //    // ifr.style.marginTop  = '-65px';
+	 //    ifr.width="633";
+	   
+	 //    ifr.height="225";
+
+	 //    ifr.src = 'https://open.weibo.cn/oauth2/authorize?client_id=30072859&display=mobile&redirect_uri=http://127.0.0.1&state='+encodeURI(tmplocation);
+	 //    document.getElementById("view2").appendChild(ifr);
+//		setProgress(true)
+  	    var emailString = GetAllUsers();
+  		var emailjson =  eval("("+emailString+")");
+  	    existemails =emailjson.EMails;
+	   
+		//selectObj.value="";
+		 getProxy();
+		
+	}, false);
+	window.addEventListener('message', function(e){
+		alert(e.data)
+	}, false); 
+
+	function showExistUser(){
+		$("#email").after("<div id='myemail' style='width:457px; height:auto; background:#fff; color:#6B6B6B; position:absolute; z-index: 9999;left:"+($("#email").get(0).offsetLeft-2)+"px; top:"+($("#email").get(0).offsetTop+$("#email").height()-2)+"px; border:1px solid #eaeaea;z-index:5px; '></div>");
+		
+	    var emailmy = "<div class='newemail' style='padding-left:15px;color:#6B6B6B; overflow:hidden;'></div>";
+	    var emailtxt ="";
+		for(var i=0;i<existemails.length;i++){
+//			selectObj.options[i] = new Option(emails[i], emails[i]);  
+			//这里把email写到newemail里面
+			emailtxt = emailtxt + "<div class='newemail' style='padding-left:15px; color:#6B6B6B; overflow:hidden;z-index: 9999;'>"  + existemails[i] + "</div>";
+			
+		}
+		//selectObj.value="";
+		//getProxy();
+		$("#myemail").html(emailtxt);		
+		setTimeout(function(){
+			
+			 can1press = true;
+		
+		},100)
+		
+	
+	}
+	function clearExistUser(){
+		$("#myemail").remove();
+	}
+	document.onkeydown=function(event){
+       
+		if(event.which==13){
+			//说明敲了回车键
+			if(isproxytypeshow){
+				//这里说明是代理类型的下拉列表框出来了，那么回车应该选中的是某个值
+				var parentobj = document.getElementById("selectcontent");
+				var childnodes = parentobj.childNodes;
+				for(var i = 0 ; i<childnodes.length;i++){
+					
+					if(childnodes[i]==undefined){
+						continue;
+					}
+					if(childnodes[i].nodeName!="SPAN"){
+						continue;						
+					}
+					if(childnodes[i].style.backgroundColor=="rgb(229, 229, 229)"){
+						document.getElementById("proxytype").innerHTML=childnodes[i].innerHTML;
+    					showProxyType();
+						break;
+					}					
+				}
+				return;
+			}
+			//看看现在是登录还是注册
+			if(event_type=='login'){
+				signIn();
+			}else if (event_type=='reg') {
+				register();
+			}
+		}  
+		if(event.which==40){
+			if(isproxytypeshow){
+				var parentobj = document.getElementById("selectcontent");
+				var childnodes = parentobj.childNodes;
+				for(var i = 0 ; i<childnodes.length;i++){
+					
+					if(childnodes[i]==undefined){
+						continue;
+					}
+					if(childnodes[i].nodeName!="SPAN"){
+						continue;						
+					}
+					if(childnodes[i].style.backgroundColor=="rgb(229, 229, 229)"){
+						childnodes[i].style.backgroundColor="#FFF";
+						if(i==childnodes.length-1||i==childnodes.length-2){
+							childnodes[1].style.backgroundColor="#E5E5E5";
+						}else{
+							
+							childnodes[i+2].style.backgroundColor="#E5E5E5";
+						}
+						break;
+					}					
+				}
+			}
+		}
+		if(event.which==38){
+			if(isproxytypeshow){
+				var parentobj = document.getElementById("selectcontent");
+				var childnodes = parentobj.childNodes;
+				for(var i = 0 ; i<childnodes.length;i++){
+					
+					if(childnodes[i]==undefined){
+						continue;
+					}
+					if(childnodes[i].nodeName!="SPAN"){
+						continue;						
+					}
+					if(childnodes[i].style.backgroundColor=="rgb(229, 229, 229)"){
+						childnodes[i].style.backgroundColor="#FFF";
+						if(i==1){
+							childnodes[childnodes.length-2].style.backgroundColor="#E5E5E5";
+						}else{
+							childnodes[i-2].style.backgroundColor="#E5E5E5";
+						}
+						break;
+					}					
+				}
+			}
+		}
+     }; 
+     function setProgress(isshow){
+	 if (isshow) {
+     		document.getElementById("progressbar").style.display="block";
+	    } else{
+	    	document.getElementById("progressbar").style.display="none";
+	    }
+     }
+     function changeE(){
+		document.getElementById("email").value=document.getElementById("existemails").value;
+	 }
+     var issettingpage=false;
+     function goSetting(){
+     	if(event_type = "reg"){
+     		chagepage('login');
+     	}
+		if(!issettingpage){
+			$('#loginpage').addClass("flipped");
+			$('#settingpage').css('z-index','9999');
+			$('#radiotabs').css('z-index','1');
+		}else{
+			$('#loginpage').removeClass("flipped");
+			$('#settingpage').css('z-index','1');
+			$('#radiotabs').css('z-index','100');
+		}
+		issettingpage=!issettingpage;
+		var nowtype = $("#proxytype").html();
+		if(nowtype=="不使用代理"){
+			document.getElementById("proxyaddress").disabled="true";
+			document.getElementById("proxyport").disabled="true";
+			document.getElementById("proxyusername").disabled="true";
+			document.getElementById("proxypwd").disabled="true";
+			document.getElementById("proxyusername").value="";
+ 			document.getElementById("proxypwd").value="";
+ 			document.getElementById("proxyaddress").value="";
+ 			document.getElementById("proxyport").value="";
+ 			proxytype =1;
+		}else if(nowtype=="使用浏览器默认代理"){
+			document.getElementById("proxyaddress").disabled="true";
+			document.getElementById("proxyport").disabled="true";
+			document.getElementById("proxyusername").disabled="true";
+			document.getElementById("proxypwd").disabled="true";
+			document.getElementById("proxyusername").value="";
+ 			document.getElementById("proxypwd").value="";
+ 			document.getElementById("proxyaddress").value="";
+ 			document.getElementById("proxyport").value="";
+			proxytype =2;
+		}else if(nowtype=="使用HTTP代理"){
+			document.getElementById("proxyaddress").disabled="";
+			document.getElementById("proxyport").disabled="";
+			document.getElementById("proxyusername").disabled="";
+			document.getElementById("proxypwd").disabled="";
+			document.getElementById("proxyusername").value=proxyu;
+ 			document.getElementById("proxypwd").value=proxyp;
+ 			document.getElementById("proxyaddress").value=proxya;
+ 			document.getElementById("proxyport").value=proxyport;
+			proxytype=3;
+		}
+	
+     }
+    function cancelproxy(){
+    	var obj1 = document.getElementById("radiotabs");
+		var obj2 = document.getElementById("settingpage");
+		
+		obj2.style.webkitTransform="rotateY(180deg)";
+		obj1.style.webkitTransform="rotateY(0deg)";
+		setTimeout(function(){
+			obj2.style.display="none";
+			obj1.style.display="block";
+		},600);
+		issettingpage=false;
+    }
+    var isproxytypeshow =false;
+    function showProxyType(){
+    	var obj = document.getElementById("selectcontent");
+    	if(!isproxytypeshow){
+    		obj.style.display="block";
+    		setTimeout(function(){
+    			isproxytypeshow=true;
+    		},100);
+    		
+    	}else{
+    		obj.style.display="none";
+    		isproxytypeshow=false;
+    	}
+    }
+    var proxytype = 1;
+    function selectproxy(obj){
+    	if(obj.innerHTML=="不使用代理"){
+			document.getElementById("proxyaddress").disabled="true";
+			document.getElementById("proxyport").disabled="true";
+			document.getElementById("proxyusername").disabled="true";
+			document.getElementById("proxypwd").disabled="true";
+			document.getElementById("proxyusername").value="";
+ 			document.getElementById("proxypwd").value="";
+ 			document.getElementById("proxyaddress").value="";
+ 			document.getElementById("proxyport").value="";
+ 		
+ 			proxytype =1;
+		}else if(obj.innerHTML=="使用浏览器默认代理"){
+			document.getElementById("proxyaddress").disabled="true";
+			document.getElementById("proxyport").disabled="true";
+			document.getElementById("proxyusername").disabled="true";
+			document.getElementById("proxypwd").disabled="true";
+			document.getElementById("proxyusername").value="";
+ 			document.getElementById("proxypwd").value="";
+ 			document.getElementById("proxyaddress").value="";
+ 			document.getElementById("proxyport").value="";
+			proxytype =2;
+		}else if(obj.innerHTML=="使用HTTP代理"){
+			document.getElementById("proxyaddress").disabled="";
+			document.getElementById("proxyport").disabled="";
+			document.getElementById("proxyusername").disabled="";
+			document.getElementById("proxypwd").disabled="";
+			document.getElementById("proxyusername").value= proxyu;
+ 			document.getElementById("proxypwd").value=proxyp;
+ 			document.getElementById("proxyaddress").value=proxya;
+ 			document.getElementById("proxyport").value=proxyport;
+			proxytype=3;
+		}
+    	document.getElementById("proxytype").innerHTML=obj.innerHTML;
+    	showProxyType();
+    }
+    
+    function focusOption(obj){
+    	
+    	var parentobj = obj.parentNode;
+		var childnodes = parentobj.childNodes;
+		for(var i = 0 ; i<childnodes.length;i++){
+			if(childnodes[i]==undefined){
+				continue;
+			}
+			if(childnodes[i].nodeName=="SPAN"){
+  				if(childnodes[i].innerHTML!=obj.innerHTML){
+  					childnodes[i].style.backgroundColor="#FFF";
+  				}else{
+  					childnodes[i].style.backgroundColor="#E5E5E5";
+  				}
+			}
+		}
+    }
+ 	function saveProxy(){
+ 		if(proxytype==1){
+ 			SetProxyType("ProxyNONE");
+ 			goSetting();
+ 		}else if(proxytype==2){
+ 			SetProxyType("ProxyIE");
+ 			goSetting();
+ 		}else{
+ 			var username = document.getElementById("proxyusername").value;
+ 			var password = document.getElementById("proxypwd").value;
+ 			var address = document.getElementById("proxyaddress").value;
+ 			var port = document.getElementById("proxyport").value;
+ 			if(""==address){
+ 				proxymessageshow("addressmessage","*请输入代理地址");
+ 				return;
+ 			}
+ 			var reg = /^\d+$/
+ 			if(""==port){
+ 				prot="80";
+ 			}
+ 			
+ 			if(!reg.test(port)){
+ 				proxymessageshow("portmessage","*端口格式错误");
+ 				return;
+ 			}
+// 			if(""==username){
+// 				alert("请输入代理用户名");
+// 				return;
+// 			}
+// 			if(""==password){
+// 				alert("请输入代理密码");
+// 				return;
+// 			}
+			if(""==username&&""!=password){
+				proxymessageshow("usernamemessage","*请输入用户名");
+ 				return;
+			}
+			proxyu=username;
+			proxyp=password;
+			proxya=address;
+			proxyport=port;
+ 			SetProxyInfo(username,password,address,port);
+ 			goSetting();
+ 		}
+ 	}
+ 	function proxymessageshow(messagetype,messagecontent){
+ 		$("#"+messagetype).css("display","block");
+ 		$("#"+messagetype).html(messagecontent)
+ 	}
+ 	function proxymessageclear(messagetype){
+ 		$("#"+messagetype).css("display","none");
+ 		$("#"+messagetype).html(messagecontent)
+ 	}
+ 	var proxyu ="";
+ 	var proxyp ="";
+ 	var proxya ="";
+ 	var proxyport ="";
+ 	function getProxy(){
+ 		var json = GetProxyInfo();
+   		var proxyinfo = eval("("+json+")");
+   		proxyu = proxyinfo.ProxyUserName;
+   		proxyp = proxyinfo.ProxyPassWord;
+   		proxya = proxyinfo.ProxyAddress;
+   		proxyport = proxyinfo.Port;
+   		var type = proxyinfo.ProxyType;
+   		if(type=="ProxyUser"){
+   			document.getElementById("proxyusername").value=proxyu;
+	 		document.getElementById("proxypwd").value=proxyp;
+	 		document.getElementById("proxyaddress").value=proxya;
+	 		document.getElementById("proxyport").value=proxyport;
+	 		document.getElementById("proxyaddress").disabled="";
+			document.getElementById("proxyport").disabled="";
+			document.getElementById("proxyusername").disabled="";
+			document.getElementById("proxypwd").disabled="";
+			document.getElementById("proxytype").innerHTML="使用HTTP代理"
+   		}else if(type=="ProxyNone"){
+   			document.getElementById("proxyusername").value="";
+	 		document.getElementById("proxypwd").value="";
+	 		document.getElementById("proxyaddress").value="";
+	 		document.getElementById("proxyport").value="";
+	 		document.getElementById("proxyaddress").disabled="true";
+			document.getElementById("proxyport").disabled="true";
+			document.getElementById("proxyusername").disabled="true";
+			document.getElementById("proxypwd").disabled="true";
+			document.getElementById("proxytype").innerHTML="不使用代理"
+   		}else if(type=="ProxyIE"){
+   			document.getElementById("proxyusername").value="";
+	 		document.getElementById("proxypwd").value="";
+	 		document.getElementById("proxyaddress").value="";
+	 		document.getElementById("proxyport").value="";
+	 		document.getElementById("proxyaddress").disabled="true";
+			document.getElementById("proxyport").disabled="true";
+			document.getElementById("proxyusername").disabled="true";
+			document.getElementById("proxypwd").disabled="true";
+			document.getElementById("proxytype").innerHTML="使用浏览器默认代理"
+   		}
+ 		//分析json数据
+ 	}
+	</script>
+	<!--
+    	作者：wuliang@dcloud.io
+    	时间：2014-03-25
+    	描述：这段js是未移动HBuilder窗体用的
+    -->	
+    <script type="text/javascript" charset="utf-8">
+
+			var ClickPointX ;
+			var ClickPointY;
+			var bIsMove = false;
+			var inputfocus = false;
+			document.addEventListener("mousedown", function(e)
+			{
+				ClickPointX = e.clientX;
+				ClickPointY = e.clientY;
+				bIsMove = true;
+			});
+			document.addEventListener("mouseup", function(){bIsMove = false;})
+			document.addEventListener("mouseover", function()
+			{ bIsMove = false; });
+		    
+			document.addEventListener("mousemove", function(e)
+			{
+				
+				if(bIsMove&&!inputfocus)
+				{
+					var moveX  = e.clientX - ClickPointX;
+					var moveY  = e.clientY - ClickPointY;
+					
+					HBMoveWindow(moveX, moveY);
+					
+				}
+				
+			});
+	</script>
+<body >	
+	<div class="top" style="background-color: #fffefb">
+		<div class="logo">
+		</div>
+		<div class="topcontent">
+			
+			<div class="helpbutton"  id="helpbuttondiv">
+				<div class="proxy"  onclick="goSetting()" id="proxybutton"></div>
+				<div class="close" onclick="exist();" ></div>
+				<div class="help" onmouseover="showhelp(event)" ></div>
+			</div>
+			<div id="helpcontent" class="helpcontent" >
+				<ul>
+					<li style="border-bottom:1px solid #d1d1d1" onclick="openurl('http://e.weibo.com/dhnetwork')">访问微博</li>
+					<li style="border-bottom:1px solid #d1d1d1" onclick="openurl('http://www.dcloud.io')">访问官网</li>
+					<li onclick="openurl('mailto:service@dcloud.io')">邮件反馈</li>
+				</ul>		
+			</div>
+		</div>
+		<div class="shadow"></div>
+	</div>
+	
+
+<div class="loginpage" id="loginpage">
+<section id="settingpage" class="settingpage div_3d_1">
+	<div class="proxy_title">代理设置</div> 
+	<div class="proxy_content">
+		<div class="proxy_line">
+			<span style="width: 230px; padding-left: 10px;margin-left: 15px; float:left;text-align: right;line-height:27px" id="selectarea">
+				类型：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="text"  maxlength="0" style="padding-left: 15px;height: 27px;position: fixed;margin-left: -171px; width: 162px; border:0px;z-index: 1;border-radius: 4px 4px 4px 4px;"  onfocus="showProxyType();"/>
+				<span  style="text-align: left;padding-left: 15px;line-height: 27px; position: fixed;height: 29px;width: 163px;border: 1px solid #adadad;float: left;top:78px;margin-left:-173px;border-radius: 4px 4px 4px 4px;z-index: 2;" onclick="showProxyType();">
+				    <span id="proxytype" style="text-align: left;margin-left: -40px; padding-left: 13px;line-height: 27px; position: absolute;height: 29px;width: 163px;float: left;top:0px;margin-left:-10px;border:0px;font-size: 12px;line-height: 27px;z-index: 2;"  >不使用代理</span>	<span class="selecticon" onclick="showProxyType();" ></span>
+				</span>
+				<span style="float: left; margin-left: 8px;display: none" id="selectcontent">
+					<span style="text-align: left;padding-left: 15px;position: fixed;height: 27px;width: 163px;border: 1px solid #adadad;float: left;top:108px;margin-left: 49px;background-color: #e5e5e5;font-size: 12px;line-height: 27px; z-index: 9999;" onclick="selectproxy(this)" onmouseover="focusOption(this)" >不使用代理</span>
+					<span style="text-align: left;padding-left: 15px;position: fixed;height: 27px;width: 163px;border: 1px solid #adadad;float: left;top:136px;margin-left: 49px;background-color: #FFFFFF;font-size: 12px;line-height: 27px;border-top: 0px;z-index: 9999;" onclick="selectproxy(this)"  onmouseover="focusOption(this)" >使用浏览器默认代理</span>
+					<span style="text-align: left;padding-left: 15px;position: fixed;height: 27px;width: 163px;border: 1px solid #adadad;float: left;top:163px;margin-left: 49px;background-color: #FFFFFF;font-size: 12px;line-height: 27px;border-top: 0px;z-index: 9999;" onclick="selectproxy(this)"  onmouseover="focusOption(this)" >使用HTTP代理</span>
+				</span>
+			</span>
+			<span style="width: 230px;padding-left: 25px;float:left;">
+				地址：<input type="text" id="proxyaddress" style="height: 27px;width: 168px;border:1px solid #ADADAD;border-radius: 4px 4px 4px 4px;padding-left: 10px;" onfocus="inputfocus=true;proxymessageclear('addressmessage');" onblur="inputfocus=false" />
+				<span style="width: 230px;padding-left: 5px;float:left;font-size: 10px;color: #F48400" id="addressmessage"></span>
+			</span>
+			<span style="width: 120px;float:left;">
+				端口：<input id="proxyport" maxlength="6" type="text" style="height: 27px;width: 50px;border:1px solid #ADADAD;border-radius: 4px 4px 4px 4px;padding-left: 10px;" onfocus="inputfocus=true;proxymessageclear('portmessage');" onblur="inputfocus=false"/>
+				<span style="width: 230px;padding-left: 5px;float:left;font-size: 10px;color: #F48400" id="portmessage"></span>
+			</span>
+		</div>
+		<div class="proxy_line">
+			<span style="width: 250px;padding-left: 26px;float:left;">
+				用户名：<input id="proxyusername" type="text" style="height: 27px;width: 168px;border:1px solid #ADADAD;border-radius: 4px 4px 4px 4px;padding-left: 10px;" onfocus="inputfocus=true;proxymessageclear('usernamemessage');" onblur="inputfocus=false" />
+				<span style="width: 230px;padding-left: 5px;float:left;font-size: 10px;color: #F48400" id="usernamemessage"></span>
+			</span>
+			<span style="width: 230px;float:left;padding-left:5px;">
+				密码：<input id="proxypwd" type="password" style="height: 27px;width: 168px;border:1px solid #ADADAD;border-radius: 4px 4px 4px 4px;padding-left: 10px;" onfocus="inputfocus=true" onblur="inputfocus=false"/>
+			</span>
+		</div>
+		<div class="proxy_line" style="text-align: center">
+			<!--<input type="button" value="测试" class="proxy_button"/>-->
+			<input type="button" value="确定" class="proxy_button" onclick="saveProxy()" />
+			<input type="button" value="取消" class="proxy_button" style="margin-left: 50px;" onclick="goSetting()"/>
+		</div>
+	</div>
+</section>	
+<section class="radiotabs div_3d" id="radiotabs">
+	<input type="radio" name="tab" id="tab1" class="tabs" checked="checked">
+		<label for="tab1" id="label1">
+			DAccount
+		</label>
+	<input type="radio" name="tab" id="tab2" class="tabs">
+		<label for="tab2" class="label">
+            <span class="sina" id="sina">新浪微博<span>
+		</label>
+		<!--
+	<input type="radio" name="tab" id="tab3" class="tabs">
+		<label for="tab3" class="label">
+			 <span class="qq" id="qq">腾讯账号<span>
+		</label>
+	<input type="radio" name="tab" id="tab4" class="tabs">
+		<label for="tab4" class="label">
+			 <span class="baidu" id="baidu">百度账号<span>
+		</label>
+	-->
+	<section id="view1" class="tabcontent">
+		<div id="loginmessage"></div>
+		<div id="progressbar" class="progressbar" cstyle="display: block;">
+			<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay:0ms;"></div>
+			<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay:160ms;"></div>
+			<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 320ms;"></div>
+			<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 480ms;"></div>
+			<div class="progress" style="-webkit-animation-duration:3000ms;-webkit-animation-delay: 640ms;"></div>
+		</div>
+		<span style="position:absolute;height:33px;	margin-left:80px;	margin-top:45px;	width:442px;">  
+		<!--<select name="existemails" id="existemails" style="width:462px;height:29px;margin:-2px;border-radius:2px 2px 2px 2px;color:5b5b5b;border:1px solid #eaeaea ;" onChange="changeE();">  
+		  
+		</select> -->
+		<span  class="email_select">
+			<span id="proxytype" style="text-align: left;margin-left: -40px; padding-left: 13px;line-height: 27px; position: absolute;height: 29px;width: 163px;float: left;top:4px;margin-left:-10px;border:0px;z-index: 2;"  ></span>	<span class="selecticon" style="margin-top: 5px;z-index: 9999;position: relative" onclick="showExistUser()"></span>
+		</span>
+		<!--<span style="float: left; margin-left: 8px;display: none" id="selectcontent">
+			<span style="text-align: left;padding-left: 15px;position:absolute;height: 27px;width: 163px;border: 1px solid #adadad;float: left;top:105px;margin-left: 49px;background-color: #e5e5e5;z-index: 9999;" onclick="selectproxy(this)" onmouseover="focusOption(this)" >不使用代理</span>
+			<span style="text-align: left;padding-left: 15px;position: absolute;height: 27px;width: 163px;border: 1px solid #adadad;float: left;top:133px;margin-left: 49px;background-color: #FFFFFF;border-top: 0px;z-index: 9999;" onclick="selectproxy(this)"  onmouseover="focusOption(this)" >使用浏览器默认代理</span>
+			<span style="text-align: left;padding-left: 15px;position: absolute;height: 27px;width: 163px;border: 1px solid #adadad;float: left;top:160px;margin-left: 49px;background-color: #FFFFFF;border-top: 0px;z-index: 9999;" onclick="selectproxy(this)"  onmouseover="focusOption(this)" >使用HTTP代理</span>
+		</span>-->
+		</span>
+		<span style="position:absolute;height:35px;	margin-left:82px; margin-top:46px;width:442px;z-index: 9997" >  
+		<input type="text" id="email" name="username" placeholder="用户名 / Email" node-type="userid" autocomplete="off" class="email_input" onkeyup="typeemail();checkEmail(this.value);" onblur="checkEmail(this.value);inputfocus=false" onkeydown="clearlogintips('1');" onfocus="clearmessage();inputfocus=true" />
+		</span>
+		<div id="emailtips" class="logintips"></div>
+		<input type="password" id="password" name="password" placeholder="密码" node-type="userid" autocomplete="off" class="password_input" onblur="checkPassword(this.value);inputfocus=false" onkeydown="clearlogintips('2');" onfocus="clearmessage();inputfocus=true" />
+		<div id="passtips" class="passtips"></div>
+		 
+		<a class="login" onclick="signIn();" href="#">登录</a><a class="forget"  onclick="forgetPassword();" href="#">忘记密码</a>
+	</section>
+	<section id="view2" class="tabcontent" >
+		<!--<iframe id="isina" src="https://open.weibo.cn/oauth2/authorize?client_id=30072859&display=mobile&redirect_uri=http://127.0.0.1&state=234234" width="633" height="210" scrollTop="100">
+		        
+		</iframe>
+		-->
+		<div  style="text-align:center;font-size:1em;color:#e05b1a;font-family: '微软雅黑',Arial;line-height:3em" > 敬请期待...</div>
+	</section>
+	<!--
+	<section id="view3" class="tabcontent">
+		内容三
+	</section>
+	<section id="view4" class="tabcontent">
+		内容四
+	</section>
+-->
+	<a class="goreg"  href="#" onclick="chagepage('reg')">注册账户
+		<!--<span>申请试用!</span>-->
+		
+		<span style="background:url(../icons/up.png) no-repeat;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		
+		</a>
+</section>
+</div>
+
+<div class="regpage" id="regpage">
+
+		<a class="gologin"  href="#" onclick="chagepage('login')">已有账号，直接登录<span style="background:url(../icons/down.png) no-repeat;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+
+	
+	<div class="regshow">
+		<div id="regmessage" ></div>
+		<input type="text" id="userId" name="reg_username" placeholder="Email" node-type="userid" autocomplete="off" class="reg_email_input" onkeyup="typeemail()" onblur="checkEmail(this.value);inputfocus=false" onkeydown="clearlogintips('1');" onfocus="inputfocus=true" />
+		<div id="reg_emailtips" class="regtips"></div>
+		<input type="password" id="reg_password" name="reg_password" placeholder="Password" node-type="userid" autocomplete="off" class="reg_password_input" onblur="checkPassword(this.value);inputfocus=false" onkeydown="clearlogintips('2');" onfocus="inputfocus=true"/>
+		<div id="reg_passtips" class="passtips"></div>
+		<a class="register" onclick="register();" href="#" >注册并登录</a>
+	</div>
+</div>
+
+</body>
+</html>

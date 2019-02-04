@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.pandora.feature"
+      label="%featureName"
+      version="5.3.0.201502161708"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <includes
+         id="com.pandora.cef3.feature"
+         version="2.0.0.201502161714"/>
+
+   <plugin
+         id="com.pandora.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502122154"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.pack.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502052313"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.pack.ui"
+         download-size="0"
+         install-size="0"
+         version="0.5.0.201502052313"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.projects.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502121603"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.projects.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502012040"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.stats.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201501151910"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.templates.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502161546"/>
+
+   <plugin
+         id="com.pandora.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502161704"/>
+
+   <plugin
+         id="com.pandora.refactor.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201405090055"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.refactor.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201412151642"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.launcher.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201501260015"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.launcher.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502132353"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.tools.android"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502152148"/>
+
+   <plugin
+         id="com.pandora.editor.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502021454"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.console.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201408282035"/>
+
+   <plugin
+         id="com.pandora.remotesource"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502051519"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.jslib.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201308090523"/>
+
+   <plugin
+         id="com.pandora.version"
+         download-size="0"
+         install-size="0"
+         version="5.3.0.201502161708"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.util.overide"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502130230"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.precompile"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201409241643"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.tools.android.mac_x86"
+         os="macosx"
+         ws="cocoa"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201502152148"
+         fragment="true"/>
+
+   <plugin
+         id="com.pandora.tools.android.win32.x86"
+         os="win32"
+         arch="x86"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201501152333"
+         fragment="true"/>
+
+</feature>

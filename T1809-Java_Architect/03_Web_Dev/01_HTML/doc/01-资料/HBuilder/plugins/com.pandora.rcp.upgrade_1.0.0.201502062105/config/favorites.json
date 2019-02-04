@@ -1,0 +1,119 @@
+{
+
+ "favorites": [
+ 
+
+ 		{
+			"name": "emmet",
+			"description": "快速编写html和css代码的方式（原名Zen coding）",
+			"url": "",
+	        "featureNames":[
+	        ]
+			
+			
+		},
+		
+				{
+			"name": "语法验证器",
+			"description": "集成了w3c及jshint等各种验证器",
+			"url": "",
+	        "featureNames":[
+	        ]
+			
+			
+		},
+ 
+ 		{
+			"name": "JsBeauty",
+			"description": "格式化html、js、css代码",
+			"url": "",
+	        "featureNames":[
+	        ]
+			
+			
+		},
+		
+		{
+			"name": "SVN",
+			"description": "SVN版本管理插件，版本号为1.6.x",
+			"url": "http://subclipse.tigris.org/update_1.6.x/",
+	        "featureNames":[
+	   "com.collabnet.subversion.merge.feature",
+        "org.tigris.subversion.subclipse.mylyn",
+        "org.tigris.subversion.subclipse.graph.feature",
+        "org.tmatesoft.svnkit",
+        "com.sun.jna",
+        "org.tigris.subversion.clientadapter.svnkit.feature",
+        "org.tigris.subversion.clientadapter.feature",
+        "org.tigris.subversion.subclipse",
+        "org.tigris.subversion.clientadapter.javahl.feature"
+
+	        ]
+			
+			
+		},
+		
+		 {
+			"name": "EGIT",
+			"description": "git分布式版本管理插件",
+			"url": "http://www.eclipse.org/egit/",
+			"featureNames":[
+	        "org.eclipse.egit",
+	        "org.eclipse.egit.mylyn"
+	        
+	        ]
+	
+		},
+				
+	  {
+			"name": "JsCompressor",
+			"description": "安装后对js和css文件点右键选Compress JavaScript、Compress CSS即可压缩",
+			"url": "http://jscompressor.oncereply.me",
+			"featureNames":[
+	        "me.oncereply.jscompressor.closurecompiler.feature",
+	        "me.oncereply.jscompressor.feature"
+	        
+	        ]
+			
+		},
+		
+			  {
+			"name": "Aptana php",
+			"description": "Aptana php插件 ",
+			"url": "http://www.aptana.com/products/php/",
+			"featureNames":[
+	        "com.aptana.php.feature"
+	        
+	        ]
+			
+		},
+		
+		
+			  {
+			"name": "Less4j",
+			"description": "提供保存less文件时自动将其预编译为同名css文件的功能 ",
+			"url": "http://update.dcloud.net.cn/test/plugin",
+			"featureNames":[
+	        "com.pandora.precompile.less.feature"
+	        
+	        ]
+			
+		},
+		
+		
+			  {
+			"name": "FTP Sync",
+			"description": "提供文件同步的功能，支持FTP、SFTP、FTPS、本地文件等",
+			"url": "http://update.dcloud.net.cn/test/plugin",
+			"featureNames":[
+	        "com.pandora.syncing.feature"
+	        
+	        ]
+			
+		}
+
+		
+				
+	]
+	
+}

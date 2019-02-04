@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.pandora.feature"
+      label="%featureName"
+      version="6.7.1.201511102201"
+      provider-name="%providerName"
+      plugin="com.pandora.version">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <includes
+         id="com.pandora.cef3.feature"
+         version="2.0.0.201511102207"/>
+
+   <includes
+         id="com.pandora.inputmethod.feature"
+         version="1.0.0.201511102207"/>
+
+   <includes
+         id="com.pandora.mobile.feature"
+         version="1.0.0.201511102207"/>
+
+   <includes
+         id="com.pandora.mem.feature"
+         version="1.0.0.201511102207"
+         os="win32"
+         arch="x86"/>
+         
+   <includes
+         id="com.pandora.rootfile.dll.feature"
+         version="1.0.0.201509142143"
+         os="win32"
+         arch="x86"/>
+
+   <includes
+         id="com.pandora.rootfile.starter.feature"
+         version="1.0.0.201511061818"/>
+
+   <includes
+         id="com.pandora.rootfile.starter.win32.feature"
+         version="1.0.0.201510201950"
+         os="win32"
+         arch="x86"/>
+
+   <includes
+         id="com.pandora.rootfile.xp.feature"
+         version="1.0.0.201509142143"
+         os="win32"
+         arch="x86"/>
+
+   <includes
+         id="com.pandora.rootfile.plugins.feature"
+         version="1.0.0.201511031648"/>
+
+   <includes
+         id="com.pandora.rootfile.jvm.feature"
+         version="1.0.0.201408171902"
+         os="win32"
+         arch="x86"/>
+
+   <plugin
+         id="com.pandora.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201510302039"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.pack.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201510261506"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.pack.ui"
+         download-size="0"
+         install-size="0"
+         version="0.5.0.201510281630"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.projects.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201510150029"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.projects.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201510261622"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.stats.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.templates.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201511100246"/>
+
+   <plugin
+         id="com.pandora.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201511102208"/>
+
+   <plugin
+         id="com.pandora.refactor.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.refactor.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.launcher.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.launcher.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201511091438"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.tools.android"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201511052021"/>
+
+   <plugin
+         id="com.pandora.editor.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201510291539"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.console.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"/>
+
+   <plugin
+         id="com.pandora.jslib.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"/>
+
+   <plugin
+         id="com.pandora.version"
+         download-size="0"
+         install-size="0"
+         version="6.7.1.201511102201"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.util.overide"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201510272148"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.precompile"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.tools.android.mac_x86"
+         os="macosx"
+         ws="cocoa"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201511052021"
+         fragment="true"/>
+
+   <plugin
+         id="com.pandora.tools.android.win32.x86"
+         os="win32"
+         arch="x86"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"
+         fragment="true"/>
+
+   <plugin
+         id="com.pandora.editor.dynamicpage"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201509142143"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.quicksearch.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201511051737"
+         unpack="false"/>
+         
+   <plugin
+         id="com.pandora.push"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.201510192313"
+         unpack="false"/>
+
+</feature>

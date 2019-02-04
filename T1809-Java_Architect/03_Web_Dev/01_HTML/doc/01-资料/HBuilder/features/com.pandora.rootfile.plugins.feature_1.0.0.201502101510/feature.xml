@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.pandora.rootfile.plugins.feature"
+      label="eclipse plugins upgrade"
+      version="1.0.0.201502101510"
+      provider-name="HBuilder">
+</feature>

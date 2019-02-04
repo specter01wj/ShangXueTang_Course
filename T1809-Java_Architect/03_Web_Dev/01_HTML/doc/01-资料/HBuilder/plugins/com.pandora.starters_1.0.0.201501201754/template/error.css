@@ -1,0 +1,40 @@
+.error{
+	width: 660px;
+	margin: 0px;
+	padding: 0px;
+}
+.errorcontent{
+	width: 320px;
+	height: 130px;
+	padding-left: 146px;
+	margin-top: 150px;
+	float: left;
+}
+.errorimg{
+	width: 178px;
+	height: 221px;
+	float: left;
+	margin-top: 110px;
+	margin-left: -60px;
+}
+.errorul{
+	margin-left: 10px;
+	list-style-type: inherit;
+}
+.errorul > li{
+	font-family: "宋体";
+	width: 160px;
+	margin:0px;
+	text-align: left;
+	font-size: 12px;
+	color: #d84c28;	
+}
+a:active{
+	color: #d84c28;	
+}
+a:hover{
+	color: #d84c28;	
+}
+a:focus{
+	color: #d84c28;	
+}

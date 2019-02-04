@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>欢迎向导</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<style type="text/css">
+			/* 页面样式 */
+			body, ul, li, h1, h2, h3, blockquote, p{
+				font-size: 14px;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				color: #333;
+				font-family: '微软雅黑', Arial, Helvetica, sans-serif;
+				background-color:#FFFAE8;
+			}
+			#content{
+				width:800px;
+				height: 500px;
+				margin: 0 auto;
+				margin-top: 10%;
+			}
+			#logo{
+				width:100%;
+				height:120px;
+			}
+			#section{
+				width:100%;
+				height: 200px;
+				margin-top: 100px;
+				margin-left: 70px;
+				color:#666666;
+			}
+			
+			#section .wizard{
+				float: left;
+				width: 150px;
+				margin-left: 10px;
+				text-align: center;
+				cursor: pointer;
+			}
+			#section .wizard span{
+				display: block;
+				margin-top: 20px;
+				font-family: '微软雅黑', Arial, Helvetica, sans-serif;
+				font-weight: bolder;
+				font-size: 14px;
+			}
+			.enter span{
+				color:#D84D24;
+			}
+			img {
+				border: none;
+			}
+			#skip a {
+				-webkit-border-radius: 3px;
+				background-color: #DDDDDD;
+				display: none;
+				width: 60px;
+				height: 25px;
+				line-height:25px;
+				font-size: 12px;
+				text-align: center;
+				margin-right: 20px;
+				color:#666666;
+				text-decoration: none;
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+			}
+			#skip a:hover{
+				color:#D84D24;
+			}
+			#assist{
+				text-align: center;
+				margin-top: 20px;
+			}
+
+			#assist span{
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			
+			#assist a{
+				font-size: 12px;
+				font-weight: bold;
+				color: #666666;
+			}
+			
+			#setting{
+				width: 100%;
+				height: 100px;
+				background-color: #E7E7E7;
+				position: absolute;
+				bottom: 0;
+				display:none;
+			}
+			#setting img{
+				display:block;
+				float:left;
+				margin-left: 10px;
+				margin-top: 50px;
+			}
+			#setting a{
+				display:block;
+				float:left;
+				margin-left: 30px;
+				margin-top: 50px;
+				color:#666666;
+				font-weight: bolder;
+			}
+			#setting a:hover{
+				color:#D84D24;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				function defaultHandler(){
+					alert("未知错误");
+				}
+				
+				$(".wizard").click(function(){
+					var funcName = $(this).attr("id")||"defaultHandler";
+					if(funcName){
+						//eval(funcName+"();");
+						if(window.cefQuery){
+							window.cefQuery({
+							    request: funcName,
+							    onSuccess: function(response) {},
+							    onFailure: function(error_code, error_message) {}
+							});
+						}else{
+							eval(funcName+"();");
+						}
+					}
+				});
+				
+				$(".wizard").hover(function(){
+					$(this).addClass("enter");
+				},function(){
+					$(this).removeClass("enter");
+				});
+			});
+			
+			function setTheme(bg){
+				document.body.style.background="#"+bg;
+			}
+			
+			function openurlAdapter(url){
+				if(window.cefQuery){
+					window.cefQuery({
+					    request: 'openurl?'+url,
+					    onSuccess: function(response) {},
+					    onFailure: function(error_code, error_message) {}
+					});
+				}else{
+					openurl(url)
+				}
+			}
+			
+		</script>
+	</head>
+
+	<body onkeypress="return false;">
+		<div id="content">
+			<div id="logo">
+				<img src="images/logo.png" />
+			</div>
+			<div id="section">
+				<div class="wizard" id="createWebProject" style="margin-top:4px;">
+					<img src="images/web.png" />
+					<span style="margin-top: 18px">
+						新建Web项目
+					</span>
+				</div>
+				
+				<div class="wizard" id="createMobileApp">
+					<img src="images/mobile.png" />
+					<span>
+						新建移动App
+					</span>
+				</div>
+				
+				<div class="wizard" id="importFolder" style="margin-top:4px;">
+					<img src="images/import.png" />
+					<span style="margin-top: 17px">
+						打开目录
+					</span>
+				</div>
+				
+				<div class="wizard" id="openProject" style="margin-top:2px;">
+					<img src="images/open.png" />
+					<span>
+						打开项目
+					</span>
+				</div>
+			</div>
+			
+			<div id="assist">
+					<a href="#" onclick="openurlAdapter('http://www.dcloud.net.cn/readme')"  >了解HBuilder</a><span>|</span>
+					<a href="#" onclick="openurlAdapter('http://www.dcloud.net.cn/readme#title1')">代码助手，飞一样的编码</a><span>|</span>
+					<a href="#" onclick="openurlAdapter('http://www.dcloud.net.cn/readme#title2')">绿柔，保护你的眼睛</a><span>|</span>		
+					<a href="#" onclick="openurlAdapter('http://www.dcloud.net.cn/readme#title3')">最全语法库和浏览器兼容数据</a><span>|</span>		
+					<a href="#" onclick="openurlAdapter('http://www.dcloud.net.cn/readme#title4')">更多挖宝</a><span>|</span>		
+					<a href="#" onclick="openurlAdapter('http://www.dcloud.net.cn/readme#thanks')">感谢</a>		
+			</div>
+			
+			<div id="skip">
+					<a href="index.html">&lt;&lt;后退</a>			
+			</div>
+		</div>
+		
+		<div id="setting">
+			
+			<img src="images/setting.png" />
+			
+			<a href="javascript:alert(this.innerText)">修改工作空间</a>
+			<a href="javascript:alert(this.innerText)">修改快捷键</a>
+			<a href="javascript:alert(this.innerText)">设置代码助手</a>
+			
+		</div>
+	</body>
+</html>

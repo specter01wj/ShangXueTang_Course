@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>欢迎向导</title>
+		<style type="text/css">
+			/* 页面样式 */
+			body, ul, li, h1, h2, h3, blockquote, p {
+				font-size: 14px;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				color: #333;
+				font-family: '微软雅黑', Arial, Helvetica, sans-serif;
+				background-color:#FFFCF4;
+			}
+			a img {
+				border: none;
+			}
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+		</style>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="js/MogFocus.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#features").mogFocus({
+					loadAnimation : false,
+					time : 3000,
+					scrollWidth : 1000,
+					animationWay : 'fade',
+					btnStyle : 'hidden',
+					randeasing : 'easeOutQuad'
+				});
+			});
+			
+			function skip(){
+				alert("Hello World");
+				skipToWizard();
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="content">
+			<div id="section">
+				<div id="features">
+					<div class="focusWarp">
+						<ul class="imgList">
+							<li>
+								<img src="images/1.png" width="800" height="600" />
+							</li>
+							<li>
+								<img src="images/2.png" width="800" height="600" />
+							</li>
+							<li>
+								<img src="images/3.png" width="800" height="600" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="skip">
+					<a href="wizard.html">跳过&gt;&gt;</a>			
+			</div>
+		</div>
+	</body>
+</html>

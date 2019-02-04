@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.pandora.cef3.feature"
+      label="%featureName"
+      version="2.0.0.201502161714"
+      provider-name="%providerName"
+      os="linux,macosx,win32"
+      ws="carbon,cocoa,gtk,win32"
+      arch="ppc,x86,x86_64">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <requires>
+      <import plugin="org.eclipse.swt" version="3.5.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.pandora.cef3"
+         download-size="0"
+         install-size="0"
+         version="2.0.0.201502061653"
+         unpack="false"/>
+
+   <plugin
+         id="com.pandora.cef3.win32.x86"
+         os="win32"
+         arch="x86"
+         download-size="0"
+         install-size="0"
+         version="2.0.0.201502051522"
+         fragment="true"/>
+
+</feature>
