@@ -31,10 +31,25 @@ public class IOFileDirCount {
 		}
 	}	
 
+	public long getLen() {
+		return len;
+	}
+
+	public int getFileSize() {
+		return fileSize;
+	}
+
+	public int getDirSize() {
+		return dirSize;
+	}
+
 
 	public static void main(String[] args) {
 		IOFileDirCount dir = new IOFileDirCount("./src");
+		System.out.println(dir.getLen());
 		
+		IOFileDirCount dir2 = new IOFileDirCount("./bin");
+		System.out.println(dir2.getLen());
 		
 	}
 	
