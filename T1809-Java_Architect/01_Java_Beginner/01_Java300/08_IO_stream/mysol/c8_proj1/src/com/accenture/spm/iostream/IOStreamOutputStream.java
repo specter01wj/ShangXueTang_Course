@@ -16,7 +16,10 @@ public class IOStreamOutputStream {
 		try {
 			os = new FileOutputStream(src);
 			
-			
+			String msg = "James Wang is coming!";
+			byte[] data = msg.getBytes();
+			os.write(data, 0, data.length);
+			os.flush();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
