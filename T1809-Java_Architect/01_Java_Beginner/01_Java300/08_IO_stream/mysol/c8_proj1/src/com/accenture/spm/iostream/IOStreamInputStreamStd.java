@@ -11,21 +11,30 @@ public class IOStreamInputStreamStd {
 	public static void main(String[] args) {
 		
 		File src = new File("abc.txt");
-		
+		InputStream is = null;
 		try {
-			InputStream is = new FileInputStream(src);
+			is = new FileInputStream(src);
 			int temp;
 			while((temp = is.read()) != -1) {
 				System.out.println((char)temp);
 			}
 			
-			is.close();
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			try {
+				if(null!=is) {
+					is.close();
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}
