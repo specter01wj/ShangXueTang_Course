@@ -1,0 +1,10 @@
+1、完成form表单校验
+2、完成网页倒计时
+3、总结今天学习的js技能点
+4、理解document执行的原理
+5、js的1573题（后天收）
+
+
+班级日记：
+	①：网上查阅资料查看js的事件及其作用
+	②：查阅资料，js中[object NodeList]和[object HTMLCollection]的区别。
