@@ -18,9 +18,11 @@ public class IOStreamInputStream {
 			int data1 = is.read();
 			int data2 = is.read();
 			int data3 = is.read();
+			int data4 = is.read();
 			System.out.println((char)data1);
 			System.out.println((char)data2);
 			System.out.println((char)data3);
+			System.out.println(data4);
 			is.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
