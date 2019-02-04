@@ -15,10 +15,10 @@ public class IOStreamInputStreamCache {
 		try {
 			is = new FileInputStream(src);
 			
-			byte[] car = new byte[3];
+			byte[] flush = new byte[5];
 			int len = -1;
-			while((len = is.read(car)) != -1) {
-				String str = new String(car, 0, len);
+			while((len = is.read(flush)) != -1) {
+				String str = new String(flush, 0, len);
 				System.out.println(str);
 			}
 			
