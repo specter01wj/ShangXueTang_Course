@@ -11,6 +11,10 @@ import java.io.OutputStream;
 public class IOStreamCopy {
 
 	public static void main(String[] args) {
+		
+	}
+	
+	public static void streamCopy() {
 		File src = new File("IO.png"); 
 		File dest = new File("io_2.png");
 		
