@@ -14,9 +14,9 @@ public class IOStreamCopy {
 		
 	}
 	
-	public static void streamCopy() {
-		File src = new File("IO.png"); 
-		File dest = new File("io_2.png");
+	public static void streamCopy(String srcPath,String destPath) {
+		File src = new File(srcPath); 
+		File dest = new File(destPath);
 		
 		InputStream  is = null;
 		OutputStream os = null;
