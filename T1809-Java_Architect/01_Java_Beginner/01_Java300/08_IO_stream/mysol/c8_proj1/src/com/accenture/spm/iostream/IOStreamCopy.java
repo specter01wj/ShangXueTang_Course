@@ -11,8 +11,8 @@ import java.io.OutputStream;
 public class IOStreamCopy {
 
 	public static void main(String[] args) {
-		File src = new File("abc.txt"); 
-		File dest = new File("io.txt");
+		File src = new File("IO.png"); 
+		File dest = new File("io_2.png");
 		
 		InputStream  is = null;
 		OutputStream os = null;
@@ -21,10 +21,10 @@ public class IOStreamCopy {
 			is =new FileInputStream(src);
 			os = new FileOutputStream(dest);		
 			
-			byte[] flush = new byte[1024]; //缓冲容器
-			int len = -1; //接收长度
+			byte[] flush = new byte[1024];
+			int len = -1;
 			while((len=is.read(flush))!=-1) {
-				os.write(flush,0,len); //分段写出
+				os.write(flush,0,len);
 			}			
 			os.flush();
 		}catch(FileNotFoundException e) {		
@@ -32,7 +32,6 @@ public class IOStreamCopy {
 		}catch (IOException e) {
 			e.printStackTrace();
 		}finally{
-			//4、释放资源 分别关闭 先打开的后关闭
 			try {
 				if (null != os) {
 					os.close();
