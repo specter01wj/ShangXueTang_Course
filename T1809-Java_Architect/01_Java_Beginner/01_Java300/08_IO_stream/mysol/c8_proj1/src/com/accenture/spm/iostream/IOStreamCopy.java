@@ -13,6 +13,7 @@ public class IOStreamCopy {
 	public static void main(String[] args) {
 		streamCopy("abc.txt", "abc_2.txt");
 		
+		
 	}
 	
 	public static void streamCopy(String srcPath,String destPath) {
