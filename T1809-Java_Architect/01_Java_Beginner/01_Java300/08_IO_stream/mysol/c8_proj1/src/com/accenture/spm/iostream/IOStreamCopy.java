@@ -14,6 +14,7 @@ public class IOStreamCopy {
 		streamCopy("abc.txt", "abc_2.txt");
 		
 		
+		
 	}
 	
 	public static void streamCopy(String srcPath,String destPath) {
