@@ -8,11 +8,11 @@ public class IOStreamPic {
 		
 	}
 	
-	public static void fileToByteArray() {
+	public static void fileToByteArray(String filePath) {
 		
 	}
 	
-	public static void ByteArrayToFile() {
+	public static void ByteArrayToFile(byte[] src, String filePath) {
 		
 	}
 	
