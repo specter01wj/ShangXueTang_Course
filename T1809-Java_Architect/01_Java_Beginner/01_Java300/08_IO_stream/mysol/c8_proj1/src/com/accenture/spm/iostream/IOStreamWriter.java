@@ -2,27 +2,24 @@ package com.accenture.spm.iostream;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
+import java.io.Writer;
 
-public class IOStreamReader {
+public class IOStreamWriter {
 
 	public static void main(String[] args) {
 		
-		File src = new File("abc_3.txt");
-		Reader reader = null;
+		File src = new File("dest_3.txt");
+		Writer writer = null;
+		
 		try {
-			reader = new FileReader(src);
+			writer = new FileWriter(src, true);
 			
-			char[] flush = new char[1024];
-			int len = -1;
-			while((len = reader.read(flush)) != -1) {
-				String str = new String(flush, 0, len);
-				System.out.println(str);
-			}
-			
-			
+			String msg = "James Wang is coming!\r\n王进在华盛顿！！！";
+			char[] data = msg.toCharArray();
+			writer.write(data, 0, data.length);
+			writer.flush();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,15 +28,14 @@ public class IOStreamReader {
 			e.printStackTrace();
 		} finally {
 			try {
-				if(null!=reader) {
-					reader.close();
+				if(null!=writer) {
+					writer.close();
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
 	}
 	
 }
