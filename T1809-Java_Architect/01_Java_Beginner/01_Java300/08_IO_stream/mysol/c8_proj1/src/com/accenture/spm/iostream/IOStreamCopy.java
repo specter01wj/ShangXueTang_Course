@@ -17,6 +17,7 @@ public class IOStreamCopy {
 		
 		
 		
+		
 	}
 	
 	public static void streamCopy(String srcPath,String destPath) {
