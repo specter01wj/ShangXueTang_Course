@@ -20,7 +20,7 @@ public class IOStreamByteArrayOutput {
 			os.flush();
 			
 			dest = os.toByteArray();
-			System.out.println(dest.length);
+			System.out.println(dest.length + "--->" + new String(dest, 0, os.size()));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
