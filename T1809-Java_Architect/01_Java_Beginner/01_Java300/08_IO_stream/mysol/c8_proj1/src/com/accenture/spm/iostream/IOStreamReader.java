@@ -10,7 +10,7 @@ public class IOStreamReader {
 
 public static void main(String[] args) {
 		
-		File src = new File("abc.txt");
+		File src = new File("abc_3.txt");
 		Reader reader = null;
 		try {
 			reader = new FileReader(src);
