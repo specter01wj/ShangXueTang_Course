@@ -16,7 +16,7 @@ public class IOStreamPic {
 		
 		byte[] data = fileToByteArray("IO.png");
 		System.out.println(data.length);
-		ByteArrayToFile(data,"io-byte.png");	
+		byteArrayToFile(data,"io-byte.png");	
 		
 	}
 	
@@ -32,7 +32,7 @@ public class IOStreamPic {
 			
 			byte[] flush = new byte[1024*10];
 			int len = -1;
-			while((len = is.read()) != -1) {
+			while((len = is.read(flush)) != -1) {
 				baos.write(flush,0,len);
 			}
 			baos.flush();
@@ -56,25 +56,24 @@ public class IOStreamPic {
 		return null;
 	}
 	
-	public static void ByteArrayToFile(byte[] src, String filePath) {
+	public static void byteArrayToFile(byte[] src, String filePath) {
 		File dest = new File(filePath);
-		//2、选择流
+		
 		InputStream  is =null;
 		OutputStream os =null;
 		try {
 			is =new ByteArrayInputStream(src);
 			os = new FileOutputStream(dest);
-			//3、操作 (分段读取)
-			byte[] flush = new byte[5]; //缓冲容器
-			int len = -1; //接收长度
+			
+			byte[] flush = new byte[5];
+			int len = -1;
 			while((len=is.read(flush))!=-1) {
-				os.write(flush,0,len);			//写出到文件	
+				os.write(flush,0,len);
 			}		
 			os.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally {
-			//4、释放资源
 			try {
 				if (null != os) {
 					os.close();
