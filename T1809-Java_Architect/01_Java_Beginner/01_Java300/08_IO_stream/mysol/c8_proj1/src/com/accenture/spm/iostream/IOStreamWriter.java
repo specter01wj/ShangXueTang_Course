@@ -17,8 +17,9 @@ public class IOStreamWriter {
 			writer = new FileWriter(src, true);
 			
 			String msg = "James Wang is coming!\r\n王进在华盛顿！！！";
-			char[] data = msg.toCharArray();
-			writer.write(data, 0, data.length);
+			/*char[] data = msg.toCharArray();
+			writer.write(data, 0, data.length);*/
+			writer.write(msg);
 			writer.flush();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
