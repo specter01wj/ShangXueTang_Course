@@ -13,15 +13,13 @@ public class IOStreamByteArray {
 		InputStream is = null;
 		try {
 			is = new ByteArrayInputStream(src);
-			int temp;
-			while((temp = is.read()) != -1) {
-				System.out.println((char)temp);
-			}
 			
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			byte[] flush = new byte[5];
+			int len = -1;
+			while((len=is.read(flush))!=-1) {
+				String str = new String(flush, 0, len);
+				System.out.println(str);
+			}			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
