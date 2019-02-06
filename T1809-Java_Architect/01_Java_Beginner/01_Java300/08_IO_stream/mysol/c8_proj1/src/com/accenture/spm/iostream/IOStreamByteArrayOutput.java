@@ -1,25 +1,26 @@
 package com.accenture.spm.iostream;
 
-import java.io.File;
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 
 public class IOStreamByteArrayOutput {
 
 	public static void main(String[] args) {
 		
 		byte[] dest = null;
-		OutputStream os = null;
+		ByteArrayOutputStream os = null;
 		
 		try {
-			os = new FileOutputStream(src, true);
+			os = new ByteArrayOutputStream();
 			
 			String msg = "James Wang is coming!\r\n";
 			byte[] data = msg.getBytes();
 			os.write(data, 0, data.length);
 			os.flush();
+			
+			dest = os.toByteArray();
+			System.out.println(dest.length);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
