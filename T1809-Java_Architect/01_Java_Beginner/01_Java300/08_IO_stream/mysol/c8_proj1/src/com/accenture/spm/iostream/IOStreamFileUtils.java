@@ -56,21 +56,26 @@ public class IOStreamFileUtils {
 		}catch (IOException e) {
 			e.printStackTrace();
 		}finally{
-			try {
-				if (null != os) {
-					os.close();
-				} 
-			} catch (IOException e) {
-				e.printStackTrace();
+			close(is, os);
+		}
+	}
+	
+	
+	public static void close(InputStream is ,OutputStream os) {
+		try {
+			if (null != os) {
+				os.close();
+			} 
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			if(null!=is) {
+				is.close();
 			}
-			
-			try {
-				if(null!=is) {
-					is.close();
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 
