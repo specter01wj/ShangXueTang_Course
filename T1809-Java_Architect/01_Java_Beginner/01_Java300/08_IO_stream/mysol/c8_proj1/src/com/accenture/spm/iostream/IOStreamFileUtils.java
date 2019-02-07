@@ -1,6 +1,6 @@
 package com.accenture.spm.iostream;
 
-import java.io.File;
+import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -19,6 +19,19 @@ public class IOStreamFileUtils {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		byte[] datas = null;
+		try {
+			InputStream is = new FileInputStream("IO.png");
+			ByteArrayOutputStream os = new ByteArrayOutputStream();
+			copy(is,os);
+			datas = os.toByteArray();
+			System.out.println(datas.length);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 	
 	public static void copy(InputStream is,OutputStream os) {
