@@ -2,6 +2,7 @@ package com.accenture.spm.iostream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.Closeable;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -76,6 +77,19 @@ public class IOStreamFileUtils {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void close(Closeable... ios) {
+		for(Closeable io:ios) {
+			try {
+				if(null!=io) {
+					io.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
