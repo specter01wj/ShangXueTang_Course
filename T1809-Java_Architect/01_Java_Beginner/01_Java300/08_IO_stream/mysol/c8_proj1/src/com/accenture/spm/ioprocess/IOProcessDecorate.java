@@ -13,3 +13,8 @@ public class IOProcessDecorate {
 interface Say {
 	void say();
 }
+
+class Person implements Say {
+	
+}
+
