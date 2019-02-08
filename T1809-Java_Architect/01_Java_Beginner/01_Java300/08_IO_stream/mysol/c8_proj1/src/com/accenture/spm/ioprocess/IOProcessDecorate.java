@@ -16,5 +16,12 @@ interface Say {
 
 class Person implements Say {
 	
+	private int voice = 10;
+	
+	public void say() {
+		
+	}
+	
+	
 }
 
