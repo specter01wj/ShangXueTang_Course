@@ -53,4 +53,44 @@ abstract class Decorate implements Drink {
 	
 }
 
+class Milk extends Decorate {
 
+	public Milk(Drink drink) {
+		super(drink);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public double cost() {
+		// TODO Auto-generated method stub
+		return super.cost()*6;
+	}
+
+	@Override
+	public String info() {
+		// TODO Auto-generated method stub
+		return super.info() + " add Mile!";
+	}
+	
+}
+
+class Sugar extends Decorate {
+
+	public Sugar(Drink drink) {
+		super(drink);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public double cost() {
+		// TODO Auto-generated method stub
+		return super.cost()*2;
+	}
+
+	@Override
+	public String info() {
+		// TODO Auto-generated method stub
+		return super.info() + " add Sugar!!";
+	}
+	
+}
