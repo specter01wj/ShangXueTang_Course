@@ -7,6 +7,8 @@ public class IOProcessDecorateCoffee {
 		Drink coffee = new Coffee();
 		Drink sugar = new Sugar(coffee);
 		System.out.println(sugar.info() + "--->" + sugar.cost());
+		Drink milk = new Milk(coffee);
+		System.out.println(milk.info() + "--->" + milk.cost());
 		
 	}
 	
