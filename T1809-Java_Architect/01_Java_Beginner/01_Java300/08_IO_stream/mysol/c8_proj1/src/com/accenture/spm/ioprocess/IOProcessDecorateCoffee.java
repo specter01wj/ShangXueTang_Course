@@ -4,7 +4,9 @@ public class IOProcessDecorateCoffee {
 
 	public static void main(String[] args) {
 		
-		
+		Drink coffee = new Coffee();
+		Drink sugar = new Sugar(coffee);
+		System.out.println(sugar.info() + "--->" + sugar.cost());
 		
 	}
 	
