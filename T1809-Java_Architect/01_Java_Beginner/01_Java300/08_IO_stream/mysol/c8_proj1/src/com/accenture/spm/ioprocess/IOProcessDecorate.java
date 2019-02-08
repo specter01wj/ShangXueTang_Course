@@ -18,10 +18,19 @@ class Person implements Say {
 	
 	private int voice = 10;
 	
+	@Override
 	public void say() {
 		
 	}
+
+	public int getVoice() {
+		return voice;
+	}
+
+	public void setVoice(int voice) {
+		this.voice = voice;
+	}
 	
-	
+
 }
 
