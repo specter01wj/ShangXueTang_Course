@@ -4,7 +4,11 @@ public class IOProcessDecorate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Person p = new Person();
+		p.say();
+		
+		Amplifier am = new Amplifier(p);
+		am.say();
 	}
 
 }
@@ -32,5 +36,20 @@ class Person implements Say {
 	}
 	
 
+}
+
+class Amplifier implements Say {
+	
+	private Person p;
+	
+	public Amplifier(Person p) {
+		this.p = p;
+	}
+
+	@Override
+	public void say() {
+		System.out.println("Voice: " + p.getVoice()*100);
+		System.out.println("Noise!!!");
+	}
 }
 
