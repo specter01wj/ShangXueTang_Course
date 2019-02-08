@@ -30,3 +30,27 @@ class Coffee implements Drink {
 	}
 	
 }
+
+abstract class Decorate implements Drink {
+	
+	private Drink drink;
+
+	public Decorate(Drink drink) {
+		this.drink = drink;
+	}
+
+	@Override
+	public double cost() {
+		// TODO Auto-generated method stub
+		return this.drink.cost();
+	}
+
+	@Override
+	public String info() {
+		// TODO Auto-generated method stub
+		return this.drink.info();
+	}
+	
+}
+
+
