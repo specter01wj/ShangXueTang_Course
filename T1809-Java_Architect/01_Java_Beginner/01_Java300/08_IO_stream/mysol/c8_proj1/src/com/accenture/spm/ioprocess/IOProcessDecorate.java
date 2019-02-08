@@ -20,7 +20,7 @@ class Person implements Say {
 	
 	@Override
 	public void say() {
-		
+		System.out.println("Voice: " + this.getVoice());
 	}
 
 	public int getVoice() {
