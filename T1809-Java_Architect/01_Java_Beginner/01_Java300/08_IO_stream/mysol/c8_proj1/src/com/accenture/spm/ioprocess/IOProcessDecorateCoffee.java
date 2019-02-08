@@ -10,6 +10,8 @@ public class IOProcessDecorateCoffee {
 		Drink milk = new Milk(coffee);
 		System.out.println(milk.info() + "--->" + milk.cost());
 		
+		milk = new Milk(sugar);
+		System.out.println(milk.info() + "--->" + milk.cost());
 	}
 	
 }
