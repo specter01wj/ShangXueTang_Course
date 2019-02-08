@@ -8,3 +8,8 @@ public class IOProcessDecorate {
 	}
 
 }
+
+
+interface Say {
+	void say();
+}
