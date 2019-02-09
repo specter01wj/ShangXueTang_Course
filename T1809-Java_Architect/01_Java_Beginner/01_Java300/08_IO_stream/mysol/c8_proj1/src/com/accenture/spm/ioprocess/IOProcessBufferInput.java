@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class IOProcessBuffer {
+public class IOProcessBufferInput {
 
 	public static void main(String[] args) {
 		File src = new File("abc.txt");
