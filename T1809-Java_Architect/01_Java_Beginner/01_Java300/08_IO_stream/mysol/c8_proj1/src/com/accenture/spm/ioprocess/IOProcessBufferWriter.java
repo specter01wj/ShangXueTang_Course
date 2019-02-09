@@ -15,7 +15,7 @@ public class IOProcessBufferWriter {
 			writer = new BufferedWriter(new FileWriter(dest));
 			writer.append("IO is so easy");
 			writer.newLine();
-			writer.append("尚学堂欢迎你");
+			writer.append("-- Coming to NYC!");
 			writer.flush();
 		}catch(FileNotFoundException e) {		
 			e.printStackTrace();
