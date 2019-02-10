@@ -18,7 +18,7 @@ public class IOProcessConvert {
 						msg = reader.readLine();
 						writer.write(msg);
 						writer.newLine();
-						writer.flush(); //强制刷新
+						writer.flush();
 					}
 				}catch(IOException e) {
 					System.out.println("操作异常");
