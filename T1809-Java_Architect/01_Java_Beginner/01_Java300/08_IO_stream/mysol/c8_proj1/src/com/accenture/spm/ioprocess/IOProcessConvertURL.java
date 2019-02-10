@@ -16,11 +16,11 @@ public class IOProcessConvertURL {
 		try(BufferedReader reader =
 				new BufferedReader(
 						new InputStreamReader(
-								new URL("http://www.baidu.com").openStream(),"UTF-8"));
+								new URL("http://www.google.com").openStream(),"UTF-8"));
 				BufferedWriter writer =
 						new BufferedWriter(
 								new OutputStreamWriter(
-										new FileOutputStream("baidu.html"),"UTF-8"));){
+										new FileOutputStream("google.html"),"UTF-8"));){
 			
 			String msg ;
 			while((msg=reader.readLine())!=null) {
