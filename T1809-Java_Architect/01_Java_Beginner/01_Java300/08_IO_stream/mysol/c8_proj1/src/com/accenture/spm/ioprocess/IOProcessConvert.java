@@ -15,7 +15,7 @@ public class IOProcessConvert {
 					
 					String msg ="";
 					while(!msg.equals("exit")) {
-						msg = reader.readLine(); //循环读取
+						msg = reader.readLine();
 						writer.write(msg); //循环写出
 						writer.newLine();
 						writer.flush(); //强制刷新
