@@ -15,12 +15,14 @@ public class IOProcessDataStream {
 		ByteArrayOutputStream baos =new ByteArrayOutputStream();
 		DataOutputStream dos =new DataOutputStream(new BufferedOutputStream(baos));
 		
-		dos.writeUTF("编码辛酸泪");
+		dos.writeUTF("James Wang!");
 		dos.writeInt(18);
 		dos.writeBoolean(false);
+		dos.writeInt(55);
 		dos.writeChar('a');
 		dos.flush();
 		byte[] datas =baos.toByteArray();
+		System.out.println(datas);
 		System.out.println(datas.length);
 		
 		DataInputStream dis =new DataInputStream(new BufferedInputStream(new ByteArrayInputStream(datas)));
@@ -28,8 +30,9 @@ public class IOProcessDataStream {
 		String msg = dis.readUTF(); 
 		int age = dis.readInt();
 		boolean flag = dis.readBoolean();
+		int age2 = dis.readInt();
 		char ch = dis.readChar();
-		System.out.println(flag);
+		System.out.println("msg: " + msg + "/ age: " + age2 + "/ flag: " + flag + "/ ch: " + ch);
 	}
 	
 }
