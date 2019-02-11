@@ -14,7 +14,7 @@ public class IOProcessObjectStream {
 		
 		ByteArrayOutputStream baos =new ByteArrayOutputStream();
 		ObjectOutputStream oos =new ObjectOutputStream(new BufferedOutputStream(baos));
-		//操作数据类型 +数据
+		
 		oos.writeUTF("编码辛酸泪");
 		oos.writeInt(18);
 		oos.writeBoolean(false);
