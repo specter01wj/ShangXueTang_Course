@@ -1,7 +1,10 @@
 package com.accenture.spm.ioprocess;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Date;
 
@@ -24,6 +27,8 @@ public class IOProcessObjectStream {
 		oos.flush();
 		byte[] datas =baos.toByteArray();
 		System.out.println(datas.length);
+		
+		ObjectInputStream ois =new ObjectInputStream(new BufferedInputStream(new ByteArrayInputStream(datas)));
 		
 	}
 	
