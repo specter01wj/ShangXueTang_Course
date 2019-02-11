@@ -34,7 +34,7 @@ public class IOProcessObjectStream {
 	
 }
 
-class Employee {
+class Employee implements java.io.Serializable {
 	
 	private String name;
 	private double salary;
