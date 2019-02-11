@@ -31,10 +31,6 @@ public class IOProcessObjectStream {
 		ObjectInputStream ois =new ObjectInputStream(new BufferedInputStream(new ByteArrayInputStream(datas)));
 		
 		
-		
-		
-		
-		
 	}
 	
 }
