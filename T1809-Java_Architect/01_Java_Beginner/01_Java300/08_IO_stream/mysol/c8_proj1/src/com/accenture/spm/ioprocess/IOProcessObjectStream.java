@@ -15,7 +15,7 @@ public class IOProcessObjectStream {
 		ByteArrayOutputStream baos =new ByteArrayOutputStream();
 		ObjectOutputStream oos =new ObjectOutputStream(new BufferedOutputStream(baos));
 		
-		oos.writeUTF("编码辛酸泪");
+		oos.writeUTF("James Wang!");
 		oos.writeInt(18);
 		oos.writeBoolean(false);
 		oos.writeChar('a');
