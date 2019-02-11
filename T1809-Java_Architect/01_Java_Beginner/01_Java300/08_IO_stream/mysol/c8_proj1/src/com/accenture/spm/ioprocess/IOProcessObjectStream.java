@@ -20,9 +20,9 @@ public class IOProcessObjectStream {
 		oos.writeBoolean(false);
 		oos.writeChar('a');
 		
-		oos.writeObject("谁解其中味");
+		oos.writeObject("Lebron?");
 		oos.writeObject(new Date());
-		Employee emp =new Employee("马云",400);
+		Employee emp =new Employee("Kim",400);
 		oos.writeObject(emp);
 		oos.flush();
 		byte[] datas =baos.toByteArray();
