@@ -34,7 +34,9 @@ public class IOProcessObjectStream {
 		int age = ois.readInt();
 		boolean flag = ois.readBoolean();
 		char ch = ois.readChar();
+		System.out.println(age);
 		System.out.println(flag);
+		System.out.println(ch);
 
 		Object str = ois.readObject();
 		Object date = ois.readObject();
