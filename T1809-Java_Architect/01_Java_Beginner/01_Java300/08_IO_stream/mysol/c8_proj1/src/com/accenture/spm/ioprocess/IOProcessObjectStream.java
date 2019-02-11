@@ -19,7 +19,7 @@ public class IOProcessObjectStream {
 		oos.writeInt(18);
 		oos.writeBoolean(false);
 		oos.writeChar('a');
-		//对象
+		
 		oos.writeObject("谁解其中味");
 		oos.writeObject(new Date());
 		Employee emp =new Employee("马云",400);
