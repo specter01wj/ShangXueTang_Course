@@ -60,7 +60,8 @@ public class IOProcessObjectStream {
 
 class Employee implements java.io.Serializable {
 	
-	private String name;
+	//private String name;
+	private transient String name;
 	private double salary;
 	
 	public Employee() {
@@ -87,8 +88,6 @@ class Employee implements java.io.Serializable {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	
-	
 	
 }
 
