@@ -52,7 +52,7 @@ public class IOProcessObjectStream {
 		}
 		if(employee instanceof Employee) {
 			Employee empObj = (Employee) employee;
-			System.out.println(empObj.getName()+"-->"+empObj.getSalary());
+			System.out.println(empObj.getName() + " --> " + empObj.getSalary());
 		}
 	}
 	
