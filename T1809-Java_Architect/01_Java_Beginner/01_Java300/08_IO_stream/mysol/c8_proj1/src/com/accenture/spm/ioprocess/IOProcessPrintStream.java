@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-public class IOProcessPrint {
+public class IOProcessPrintStream {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
