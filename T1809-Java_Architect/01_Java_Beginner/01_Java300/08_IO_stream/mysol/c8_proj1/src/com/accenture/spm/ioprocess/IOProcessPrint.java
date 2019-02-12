@@ -13,10 +13,10 @@ public class IOProcessPrint {
 		ps.println("Print Stream!");
 		ps.println(true);
 		
-		ps = new PrintStream(new BufferedOutputStream(new FileOutputStream("print.txt")));
+		ps = new PrintStream(new BufferedOutputStream(new FileOutputStream("print.txt")), true);
 		ps.println("Print Stream!");
 		ps.println(true);
-		ps.flush();
+		//ps.flush();
 	}
 	
 }
