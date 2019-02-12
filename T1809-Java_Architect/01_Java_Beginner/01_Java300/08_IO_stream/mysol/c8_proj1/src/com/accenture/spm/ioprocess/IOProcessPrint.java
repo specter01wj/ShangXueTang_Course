@@ -18,6 +18,7 @@ public class IOProcessPrint {
 		ps.println("Print Stream!");
 		ps.println(true);
 		//ps.flush();
+		ps.close();
 		
 		System.setOut(ps);
 		System.out.println("change!");
