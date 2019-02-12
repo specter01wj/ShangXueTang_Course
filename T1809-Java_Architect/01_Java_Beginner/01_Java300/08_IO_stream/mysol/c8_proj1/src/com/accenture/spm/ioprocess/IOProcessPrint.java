@@ -1,6 +1,7 @@
 package com.accenture.spm.ioprocess;
 
 import java.io.BufferedOutputStream;
+import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
@@ -17,6 +18,12 @@ public class IOProcessPrint {
 		ps.println("Print Stream!");
 		ps.println(true);
 		//ps.flush();
+		
+		System.setOut(ps);
+		System.out.println("change!");
+		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream(FileDescriptor.out)), true));
+		System.out.println("Back!!!");
+		
 	}
 	
 }
