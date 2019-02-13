@@ -8,6 +8,11 @@ import java.io.RandomAccessFile;
 public class IOProcessRandomAccessFile {
 
 	public static void main(String[] args) throws IOException {
+		test1();
+		
+	}
+	
+	public static void test1() throws IOException {
 		
 		RandomAccessFile raf = new RandomAccessFile(new File("abc.txt"), "r");
 		raf.seek(2);
@@ -17,6 +22,7 @@ public class IOProcessRandomAccessFile {
 			System.out.println(new String(flush,0,len));
 		}	
 		raf.close();
+		
 	}
 	
 }
