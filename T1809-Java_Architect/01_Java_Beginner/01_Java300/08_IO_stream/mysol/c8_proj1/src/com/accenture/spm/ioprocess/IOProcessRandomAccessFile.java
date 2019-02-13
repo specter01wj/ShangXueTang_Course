@@ -25,11 +25,11 @@ public class IOProcessRandomAccessFile {
 		int actualSize = (int)(blockSize>len?len:blockSize); 
 		for(int i=0;i<size;i++) {
 			beginPos = i*blockSize;
-			if(i==size-1) { //最后一块
+			if(i==size-1) {
 				actualSize = (int)len;
 			}else {
 				actualSize = blockSize;
-				len -=actualSize; //剩余量
+				len -=actualSize;
 			}
 			System.out.println(i+"-->"+beginPos +"-->"+actualSize);
 			split(i,beginPos,actualSize);
