@@ -42,9 +42,9 @@ public class IOProcessRandomAccessFile {
 		
 		raf.seek(beginPos);
 		byte[] flush = new byte[1024];
-		int len = -1; //接收长度
+		int len = -1;
 		while((len=raf.read(flush))!=-1) {			
-			if(actualSize>len) { //获取本次读取的所有内容
+			if(actualSize>len) {
 				System.out.println(new String(flush,0,len));
 				actualSize -=len;
 			}else { 
