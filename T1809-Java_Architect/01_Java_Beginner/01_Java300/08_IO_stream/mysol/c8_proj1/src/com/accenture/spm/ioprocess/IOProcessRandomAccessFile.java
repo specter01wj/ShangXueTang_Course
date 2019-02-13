@@ -15,15 +15,12 @@ public class IOProcessRandomAccessFile {
 	public static void test3() throws IOException {
 		
 		File src = new File("abc.txt");
-		//总长度
+		
 		long len = src.length();
-		//每块大小
-		int blockSize =12;
-		//块数: 多少块
+		int blockSize = 12;
 		int size =(int) Math.ceil(len*1.0/blockSize);
 		System.out.println(size);
 		
-		//起始位置和实际大小
 		int beginPos = 0;
 		int actualSize = (int)(blockSize>len?len:blockSize); 
 		for(int i=0;i<size;i++) {
