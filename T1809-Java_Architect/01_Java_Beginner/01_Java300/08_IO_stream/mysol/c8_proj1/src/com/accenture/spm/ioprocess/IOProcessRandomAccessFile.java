@@ -11,8 +11,8 @@ public class IOProcessRandomAccessFile {
 		
 		RandomAccessFile raf = new RandomAccessFile(new File("abc.txt"), "r");
 		raf.seek(2);
-		byte[] flush = new byte[1024]; //缓冲容器
-		int len = -1; //接收长度
+		byte[] flush = new byte[1024];
+		int len = -1;
 		while((len=raf.read(flush))!=-1) {
 			System.out.println(new String(flush,0,len));
 		}	
