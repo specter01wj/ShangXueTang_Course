@@ -39,11 +39,9 @@ public class IOProcessRandomAccessFile {
 	
 	public static void split(int i,int beginPos,int actualSize ) throws IOException {
 		RandomAccessFile raf =new RandomAccessFile(new File("abc.txt"),"r");
-		//随机读取 
+		
 		raf.seek(beginPos);
-		//读取
-		//3、操作 (分段读取)
-		byte[] flush = new byte[1024]; //缓冲容器
+		byte[] flush = new byte[1024];
 		int len = -1; //接收长度
 		while((len=raf.read(flush))!=-1) {			
 			if(actualSize>len) { //获取本次读取的所有内容
