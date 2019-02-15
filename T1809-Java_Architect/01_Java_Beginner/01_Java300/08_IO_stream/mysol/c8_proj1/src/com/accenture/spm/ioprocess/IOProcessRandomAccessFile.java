@@ -88,8 +88,6 @@ public class IOProcessRandomAccessFile {
 		}	
 		raf.close();
 		
-		
-		
 	}
 	
 }
