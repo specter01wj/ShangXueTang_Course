@@ -77,6 +77,7 @@ public class IOProcessRandomAccessFile {
 		raf.close();
 		
 		
+		
 	}
 	
 	public static void test1() throws IOException {
