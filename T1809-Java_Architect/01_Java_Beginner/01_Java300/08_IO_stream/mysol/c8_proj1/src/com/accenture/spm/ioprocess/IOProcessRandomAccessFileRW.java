@@ -6,7 +6,7 @@ import java.io.RandomAccessFile;
 
 public class IOProcessRandomAccessFileRW {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		File src = new File("p.png");
 		//总长度
 		long len = src.length();
