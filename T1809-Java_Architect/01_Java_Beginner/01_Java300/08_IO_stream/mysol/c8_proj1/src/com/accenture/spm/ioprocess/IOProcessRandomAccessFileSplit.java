@@ -25,12 +25,12 @@ public class IOProcessRandomAccessFileSplit {
 	public static void main(String[] args) throws IOException {
 		IOProcessRandomAccessFileSplit sf = new IOProcessRandomAccessFileSplit("p.png","dest") ;
 		sf.split();
-		sf.merge("aaa.java");
+		//sf.merge("aaa.java");
 
 	}
 	
 	public IOProcessRandomAccessFileSplit(String srcPath,String destDir) {
-		this(srcPath,destDir,1024);
+		this(srcPath,destDir,1024*15);
 	}
 	public IOProcessRandomAccessFileSplit(String srcPath,String destDir,int blockSize) {
 		this.src =new File(srcPath);
