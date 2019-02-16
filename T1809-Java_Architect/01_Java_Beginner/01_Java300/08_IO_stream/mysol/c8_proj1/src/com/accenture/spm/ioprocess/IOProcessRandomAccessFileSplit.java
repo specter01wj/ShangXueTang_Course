@@ -40,23 +40,16 @@ public class IOProcessRandomAccessFileSplit {
 		
 		 init();
 	}
-	//初始化
+	
 	private void init() {
-		//总长度
 		long len = this.src.length();		
-		//块数: 多少块
 		this.size =(int) Math.ceil(len*1.0/blockSize);
-		//路径
+		
 		for(int i=0;i<size;i++) {
 			this.destPaths.add(this.destDir +"/"+i+"-"+this.src.getName());
 		}
 	}
-	/**
-	 * 分割
-	 * 1、计算每一块的起始位置及大小
-	 * 2、分割
-	 * @throws IOException 
-	 */
+	
 	public void split() throws IOException {
 		//总长度
 		long len = src.length();		
