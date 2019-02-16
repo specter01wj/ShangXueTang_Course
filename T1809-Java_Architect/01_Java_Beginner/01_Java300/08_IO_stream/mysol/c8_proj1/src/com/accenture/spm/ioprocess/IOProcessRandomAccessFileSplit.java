@@ -51,18 +51,16 @@ public class IOProcessRandomAccessFileSplit {
 	}
 	
 	public void split() throws IOException {
-		//总长度
 		long len = src.length();		
-		//起始位置和实际大小
 		int beginPos = 0;
 		int actualSize = (int)(blockSize>len?len:blockSize); 
 		for(int i=0;i<size;i++) {
 			beginPos = i*blockSize;
-			if(i==size-1) { //最后一块
+			if(i==size-1) {
 				actualSize = (int)len;
 			}else {
 				actualSize = blockSize;
-				len -=actualSize; //剩余量
+				len -=actualSize;
 			}
 			splitDetail(i,beginPos,actualSize);
 		}
@@ -74,7 +72,7 @@ public class IOProcessRandomAccessFileSplit {
 	 * @param actualSize
 	 * @throws IOException
 	 */
-	private  void splitDetail(int i,int beginPos,int actualSize ) throws IOException {
+	private void splitDetail(int i,int beginPos,int actualSize ) throws IOException {
 		RandomAccessFile raf =new RandomAccessFile(this.src,"r");
 		RandomAccessFile raf2 =new RandomAccessFile(this.destPaths.get(i),"rw");
 		//随机读取 
