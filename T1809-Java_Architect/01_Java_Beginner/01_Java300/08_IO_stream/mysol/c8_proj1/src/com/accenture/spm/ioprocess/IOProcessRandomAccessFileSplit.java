@@ -25,7 +25,7 @@ public class IOProcessRandomAccessFileSplit {
 	public static void main(String[] args) throws IOException {
 		IOProcessRandomAccessFileSplit sf = new IOProcessRandomAccessFileSplit("p.png","dest") ;
 		sf.split();
-		//sf.merge("aaa.java");
+		sf.merge("dest/p_out.png");
 
 	}
 	
@@ -85,26 +85,21 @@ public class IOProcessRandomAccessFileSplit {
 		raf2.close();
 		raf.close();
 	}	
-	/**
-	 * 文件的合并
-	 * @throws IOException 
-	 */
+	
 	public void merge(String destPath) throws IOException {
-		//输出流
 		OutputStream os =new BufferedOutputStream( new FileOutputStream(destPath,true));	
 		Vector<InputStream> vi=new Vector<InputStream>();
 		SequenceInputStream sis =null;
-		//输入流
+		
 		for(int i=0;i<destPaths.size();i++) {
 			vi.add(new BufferedInputStream(new FileInputStream(destPaths.get(i))));											
 		}
 		sis =new SequenceInputStream(vi.elements());
-		//拷贝
-		//3、操作 (分段读取)
-		byte[] flush = new byte[1024]; //缓冲容器
-		int len = -1; //接收长度
+		
+		byte[] flush = new byte[1024];
+		int len = -1;
 		while((len=sis.read(flush))!=-1) {
-			os.write(flush,0,len); //分段写出
+			os.write(flush,0,len);
 		}			
 		os.flush();	
 		sis.close();
