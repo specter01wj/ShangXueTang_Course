@@ -17,13 +17,9 @@ import java.util.Vector;
 public class IOProcessRandomAccessFileSplit {
 	
 	private File src;
-	//目的地(文件夹)
 	private String destDir;
-	//所有分割后的文件存储路径
 	private List<String> destPaths;
-	//每块大小
 	private int blockSize;
-	//块数: 多少块
 	private int size;
 
 	public static void main(String[] args) throws IOException {
@@ -42,7 +38,6 @@ public class IOProcessRandomAccessFileSplit {
 		this.blockSize =blockSize;
 		this.destPaths =new ArrayList<String>();
 		
-		//初始化
 		 init();
 	}
 	//初始化
