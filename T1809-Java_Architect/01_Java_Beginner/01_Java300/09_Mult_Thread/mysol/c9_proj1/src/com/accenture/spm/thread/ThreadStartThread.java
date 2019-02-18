@@ -13,6 +13,7 @@ public class ThreadStartThread extends Thread {
 		
 		ThreadStartThread st = new ThreadStartThread();
 		st.start();
+		//st.run();
 		
 		for(int i = 0; i < 20; i++) {
 			System.out.println("Dancing?");
