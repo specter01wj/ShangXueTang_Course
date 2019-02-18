@@ -12,7 +12,8 @@ public class ThreadDownloader extends Thread {
 
 	@Override
 	public void run() {
-		
+		WebDownloader wd = new WebDownloader();
+		wd.download(url, name);
 	}
 
 	public static void main(String[] args) {
