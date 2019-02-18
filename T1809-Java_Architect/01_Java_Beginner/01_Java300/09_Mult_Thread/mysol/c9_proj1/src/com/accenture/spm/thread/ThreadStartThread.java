@@ -19,13 +19,6 @@ public class ThreadStartThread extends Thread {
 			System.out.println("Dancing?");
 		}
 
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
