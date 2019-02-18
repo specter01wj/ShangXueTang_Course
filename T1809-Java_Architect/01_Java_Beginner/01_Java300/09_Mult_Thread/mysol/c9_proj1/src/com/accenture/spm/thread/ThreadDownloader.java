@@ -14,6 +14,7 @@ public class ThreadDownloader extends Thread {
 	public void run() {
 		WebDownloader wd = new WebDownloader();
 		wd.download(url, name);
+		System.out.println(name);
 	}
 
 	public static void main(String[] args) {
