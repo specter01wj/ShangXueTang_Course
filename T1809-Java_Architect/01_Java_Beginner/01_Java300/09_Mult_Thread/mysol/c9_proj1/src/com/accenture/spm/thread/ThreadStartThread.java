@@ -11,7 +11,8 @@ public class ThreadStartThread extends Thread {
 
 	public static void main(String[] args) {
 		
-		
+		ThreadStartThread st = new ThreadStartThread();
+		st.start();
 		
 
 	}
