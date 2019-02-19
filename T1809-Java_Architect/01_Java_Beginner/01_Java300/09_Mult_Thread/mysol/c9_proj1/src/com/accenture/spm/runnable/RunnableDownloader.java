@@ -2,7 +2,6 @@ package com.accenture.spm.runnable;
 import com.accenture.spm.thread.WebDownloader;
 
 public class RunnableDownloader implements Runnable {
-
 	private String url; //远程路径
 	private String name;  //存储名字
 	
