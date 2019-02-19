@@ -11,8 +11,9 @@ public class RunnableStartRun implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		
-		
+		RunnableStartRun sr = new RunnableStartRun();
+		Thread th1 = new Thread(sr);
+		th1.start();
 		
 	}
 	
