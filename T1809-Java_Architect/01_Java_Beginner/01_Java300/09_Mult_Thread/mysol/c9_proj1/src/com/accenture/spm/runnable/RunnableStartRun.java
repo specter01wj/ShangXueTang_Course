@@ -15,6 +15,10 @@ public class RunnableStartRun implements Runnable {
 		Thread th1 = new Thread(sr);
 		th1.start();
 		
+		for(int i=0;i<20;i++) {
+			System.out.println("Dancing???");
+		}
+		
 	}
 	
 }
