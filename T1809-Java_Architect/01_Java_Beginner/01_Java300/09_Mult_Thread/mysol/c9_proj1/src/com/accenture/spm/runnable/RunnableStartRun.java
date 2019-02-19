@@ -11,9 +11,11 @@ public class RunnableStartRun implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		RunnableStartRun sr = new RunnableStartRun();
+		/*RunnableStartRun sr = new RunnableStartRun();
 		Thread th1 = new Thread(sr);
-		th1.start();
+		th1.start();*/
+		
+		new Thread(new RunnableStartRun()).start();
 		
 		for(int i=0;i<20;i++) {
 			System.out.println("Dancing???");
