@@ -1,6 +1,10 @@
 package com.accenture.spm.callable;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class CallableRacer implements Callable<Integer> {
 	private  String winner;
@@ -35,8 +39,19 @@ public class CallableRacer implements Callable<Integer> {
 		return false;
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws InterruptedException, ExecutionException {
+		CallableRacer racer = new CallableRacer();
+		//创建执行服务: 
+		ExecutorService  ser=Executors.newFixedThreadPool(2);
+		//提交执行: 
+		Future<Integer> result1 =ser.submit(racer) ;
+		Future<Integer> result2 =ser.submit(racer) ;
+		//获取结果:  
+		Integer r1 =result1.get();
+		Integer r2 =result2.get();
+		System.out.println(r1+"-->"+r2);
+		//关闭服务:  
+		ser.shutdownNow();
 
 	}
 
