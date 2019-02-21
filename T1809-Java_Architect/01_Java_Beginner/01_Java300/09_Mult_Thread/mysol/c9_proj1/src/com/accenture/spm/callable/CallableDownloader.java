@@ -3,6 +3,7 @@ package com.accenture.spm.callable;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import com.accenture.spm.thread.WebDownloader;
 
@@ -30,7 +31,9 @@ public class CallableDownloader implements Callable<Boolean> {
 		
 		ExecutorService  ser=Executors.newFixedThreadPool(3);
 		
-		
+		Future<Boolean> result1 =ser.submit(cd1);
+		Future<Boolean> result2 =ser.submit(cd2);
+		Future<Boolean> result3 =ser.submit(cd3);
 	}
 
 }
