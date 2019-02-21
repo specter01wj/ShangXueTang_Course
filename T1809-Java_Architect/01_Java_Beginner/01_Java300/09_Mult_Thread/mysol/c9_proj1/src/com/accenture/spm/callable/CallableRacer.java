@@ -11,10 +11,10 @@ public class CallableRacer implements Callable<Integer> {
 	
 	@Override
 	public Integer call() throws Exception {
-		for(int steps =1;steps<=100;steps++) {		
+		for(int steps =1;steps<=200;steps++) {		
 			//模拟休息
 			if(Thread.currentThread().getName().equals("pool-1-thread-1") && steps%10==0) {
-				Thread.sleep(100);
+				Thread.sleep(10);
 			}
 			System.out.println(Thread.currentThread().getName()+"-->"+steps);
 			//比赛是否结束
@@ -30,7 +30,7 @@ public class CallableRacer implements Callable<Integer> {
 		if(winner!=null) { //存在胜利者
 			return true;
 		}else {
-			if(steps ==100) {
+			if(steps ==200) {
 				winner = Thread.currentThread().getName();
 				System.out.println("winner==>"+winner);
 				return true;
