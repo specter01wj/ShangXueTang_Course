@@ -2,7 +2,7 @@ package com.accenture.spm.runnable;
 
 public class RunnableWeb12306 implements Runnable {
 
-	private int ticketNums = 99;
+	private int ticketNums = 10;
 	
 	@Override
 	public void run() {
