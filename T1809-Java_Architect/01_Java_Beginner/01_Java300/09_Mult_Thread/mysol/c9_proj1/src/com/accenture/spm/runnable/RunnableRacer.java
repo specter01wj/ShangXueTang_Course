@@ -1,13 +1,13 @@
 package com.accenture.spm.runnable;
 
 public class RunnableRacer implements Runnable {
-	private  String winner;
+	private String winner;
 	
 	@Override
 	public void run() {
 		for(int steps =1;steps<=100;steps++) {		
 			
-			if(Thread.currentThread().getName().equals("rabbit") && steps%10==0) {
+			if(Thread.currentThread().getName().equals("Alicia") && steps%10==0) {
 				try {
 					Thread.sleep(5);
 				} catch (InterruptedException e) {
@@ -38,8 +38,8 @@ public class RunnableRacer implements Runnable {
 	public static void main(String[] args) {
 		RunnableRacer racer = new RunnableRacer();
 		
-		new Thread(racer,"tortoise").start();
-		new Thread(racer,"rabbit").start();
+		new Thread(racer,"James").start();
+		new Thread(racer,"Alicia").start();
 	}
 
 }
