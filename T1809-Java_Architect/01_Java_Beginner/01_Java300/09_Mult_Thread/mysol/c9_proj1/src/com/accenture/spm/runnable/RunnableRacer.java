@@ -7,13 +7,13 @@ public class RunnableRacer implements Runnable {
 	public void run() {
 		for(int steps =1;steps<=100;steps++) {		
 			
-			/*if(Thread.currentThread().getName().equals("rabbit") && steps%10==0) {
+			if(Thread.currentThread().getName().equals("rabbit") && steps%10==0) {
 				try {
-					Thread.sleep(100);
+					Thread.sleep(5);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-			}*/
+			}
 			System.out.println(Thread.currentThread().getName()+"-->"+steps);
 			
 			boolean flag = gameOver(steps);
