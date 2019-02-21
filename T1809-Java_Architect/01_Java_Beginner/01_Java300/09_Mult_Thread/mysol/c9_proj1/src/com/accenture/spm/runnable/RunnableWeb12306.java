@@ -19,10 +19,10 @@ public class RunnableWeb12306 implements Runnable {
 		}
 	}
 	public static void main(String[] args) {
-		//一份资源
+		
 		RunnableWeb12306 web =new RunnableWeb12306();
 		System.out.println(Thread.currentThread().getName());
-		//多个代理
+		
 		new Thread(web,"James").start();
 		new Thread(web,"Kim").start();
 		new Thread(web,"Lee").start();;
