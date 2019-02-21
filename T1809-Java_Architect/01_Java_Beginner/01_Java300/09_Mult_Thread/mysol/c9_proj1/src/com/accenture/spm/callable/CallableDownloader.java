@@ -1,5 +1,6 @@
 package com.accenture.spm.callable;
 
+import com.accenture.spm.thread.WebDownloader;
 import java.util.concurrent.Callable;
 
 public class CallableDownloader implements Callable {
@@ -9,6 +10,14 @@ public class CallableDownloader implements Callable {
 	public CallableDownloader(String url, String name) {
 		this.url = url;
 		this.name = name;
+	}
+
+	@Override
+	public Object call() throws Exception {
+		WebDownloader wd =new WebDownloader();
+		wd.download(url, name);		
+		System.out.println(name);
+		return true;
 	}
 
 
