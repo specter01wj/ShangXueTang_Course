@@ -36,8 +36,10 @@ public class RunnableRacer implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		RunnableRacer racer = new RunnableRacer();
+		
+		new Thread(racer,"tortoise").start();
+		new Thread(racer,"rabbit").start();
 	}
 
 }
