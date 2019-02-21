@@ -10,11 +10,11 @@ public class RunnableWeb12306 implements Runnable {
 			if(ticketNums<0) {
 				break;
 			}
-			/*try {
-				Thread.sleep(200);
+			try {
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-			}*/
+			}
 			System.out.println(Thread.currentThread().getName()+"-->"+ticketNums--);
 		}
 	}
