@@ -30,7 +30,7 @@ public class IOCommonsIOList {
 		System.out.println("---------------------");
 		
 		 files =FileUtils.listFiles(new File("lib"),
-					new SuffixFileFilter("java"), DirectoryFileFilter.INSTANCE);
+					new SuffixFileFilter("jar"), DirectoryFileFilter.INSTANCE);
 		for (File file : files) {
 			System.out.println(file.getAbsolutePath());
 		}
@@ -39,7 +39,7 @@ public class IOCommonsIOList {
 		
 		 files =FileUtils.listFiles(new File("lib"),
 					FileFilterUtils.or(new SuffixFileFilter("java"),
-							new SuffixFileFilter("class"),EmptyFileFilter.EMPTY), DirectoryFileFilter.INSTANCE);
+							new SuffixFileFilter("png"),EmptyFileFilter.EMPTY), DirectoryFileFilter.INSTANCE);
 		for (File file : files) {
 			System.out.println(file.getAbsolutePath());
 		}
@@ -47,7 +47,7 @@ public class IOCommonsIOList {
 		System.out.println("---------------------");
 		
 		 files =FileUtils.listFiles(new File("lib"),
-					FileFilterUtils.and(new SuffixFileFilter("java"),
+					FileFilterUtils.and(new SuffixFileFilter("jar"),
 							EmptyFileFilter.NOT_EMPTY), DirectoryFileFilter.INSTANCE);
 		for (File file : files) {
 			System.out.println(file.getAbsolutePath());
