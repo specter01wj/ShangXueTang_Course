@@ -20,8 +20,15 @@ public class LambdaThread {
 				}
 			}
 		}		
-		new Thread(new Test2()).start();
+		//new Thread(new Test2()).start();
 		
+		new Thread(new Runnable() {
+			public void run() {
+				for(int i=0;i<20;i++) {
+					System.out.println("Singing 3!!!");
+				}
+			}
+		}).start();
 		
 	}
 
