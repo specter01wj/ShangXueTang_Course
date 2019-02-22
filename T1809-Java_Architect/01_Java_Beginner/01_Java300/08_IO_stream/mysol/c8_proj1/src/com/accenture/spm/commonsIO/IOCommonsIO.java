@@ -1,9 +1,14 @@
 package com.accenture.spm.commonsIO;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+
 public class IOCommonsIO {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		long fileLen =FileUtils.sizeOf(new File("lib/p.png"));
+		System.out.println(fileLen);
 
 	}
 
