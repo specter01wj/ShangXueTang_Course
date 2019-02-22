@@ -10,6 +10,8 @@ public class IOCommonsIO {
 		long fileLen =FileUtils.sizeOf(new File("lib/p.png"));
 		System.out.println(fileLen);
 
+		long dirLen = FileUtils.sizeOf(new File("lib"));
+		System.out.println(dirLen);
 	}
 
 }
