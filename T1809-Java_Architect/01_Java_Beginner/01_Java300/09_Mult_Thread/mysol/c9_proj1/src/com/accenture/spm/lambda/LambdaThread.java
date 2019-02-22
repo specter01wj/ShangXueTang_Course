@@ -11,8 +11,18 @@ public class LambdaThread {
 	}
 	
 	public static void main(String[] args) {
-		new Thread(new Test()).start();
+		//new Thread(new Test()).start();
 
+		class Test2 implements Runnable{		
+			public void run() {
+				for(int i=0;i<20;i++) {
+					System.out.println("Singing 2!!!");
+				}
+			}
+		}		
+		new Thread(new Test2()).start();
+		
+		
 	}
 
 }
