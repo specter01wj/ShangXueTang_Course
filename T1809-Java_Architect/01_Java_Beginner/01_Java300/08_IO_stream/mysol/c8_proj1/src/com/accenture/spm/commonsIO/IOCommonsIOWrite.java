@@ -1,8 +1,15 @@
 package com.accenture.spm.commonsIO;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.io.FileUtils;
+
 public class IOCommonsIOWrite {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		FileUtils.write(new File("happy.sxt"), "The father of a so-called\r\n","UTF-8");
 		FileUtils.writeStringToFile(new File("happy.sxt"), "who was born and raised in the U.S.\r\n","UTF-8",true);
