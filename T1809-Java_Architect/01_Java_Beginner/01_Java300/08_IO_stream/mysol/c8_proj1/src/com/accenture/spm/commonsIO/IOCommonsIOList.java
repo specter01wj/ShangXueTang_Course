@@ -38,7 +38,7 @@ public class IOCommonsIOList {
 		System.out.println("---------------------");
 		
 		 files =FileUtils.listFiles(new File("lib"),
-					FileFilterUtils.or(new SuffixFileFilter("java"),
+					FileFilterUtils.or(new SuffixFileFilter("jar"),
 							new SuffixFileFilter("png"),EmptyFileFilter.EMPTY), DirectoryFileFilter.INSTANCE);
 		for (File file : files) {
 			System.out.println(file.getAbsolutePath());
