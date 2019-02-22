@@ -21,7 +21,6 @@ public class IOCommonsIOWrite {
 		datas.add("George");
 		
 		FileUtils.writeLines(new File("happy.sxt"), datas,"----------",true);
-
 	}
 
 }
