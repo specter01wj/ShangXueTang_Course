@@ -20,7 +20,7 @@ public class IOCommonsIOWrite {
 		datas.add("Kim");
 		datas.add("George");
 		
-		FileUtils.writeLines(new File("happy.sxt"), datas,"。。。。。",true);
+		FileUtils.writeLines(new File("happy.sxt"), datas,"----------",true);
 
 	}
 
