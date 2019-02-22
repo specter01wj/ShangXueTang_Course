@@ -21,7 +21,7 @@ public class IOCommonsIOCopy {
 		
 		String url = "https://pic2.zhimg.com/v2-7d01cab20858648cbf62333a7988e6d0_qhd.jpg";
 		FileUtils.copyURLToFile(new URL(url), new File("marvel.jpg"));
-		String datas =IOUtils.toString(new URL("http://www.163.com"), "gbk");
+		String datas =IOUtils.toString(new URL("https://abcnews.go.com/"), "UTF-8");
 		System.out.println(datas);
 
 	}
