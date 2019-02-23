@@ -10,8 +10,19 @@ public class LambdaTest2 {
 		
 		love.lambda(100);
 		
+		love =(a) -> {
+			System.out.println("i like lambda2 -->"+a);
+		};
+		love.lambda(50);
 		
+		love =a -> {
+			System.out.println("i like lambda3 -->"+a);
+		};
 		
+		love.lambda(5);
+		
+		love =a ->System.out.println("i like lambda4 -->"+a);
+		love.lambda(0);
 	}
 
 }
