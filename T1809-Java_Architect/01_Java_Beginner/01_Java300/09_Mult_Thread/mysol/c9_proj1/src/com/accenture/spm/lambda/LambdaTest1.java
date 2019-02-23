@@ -9,6 +9,18 @@ public class LambdaTest1 {
 		
 		ILike like2 = new Like2();
 		like2.lambda();
+		
+		ILike like3 = new ILike() {
+			public void lambda() {
+				System.out.println("i like lambda3!");
+			}
+		};
+		like3.lambda();
+		
+		ILike like4 = ()-> {
+			System.out.println("i like lambda4!");
+		};
+		like4.lambda();
 	}
 	
 	static class Like2 implements ILike {
@@ -16,7 +28,7 @@ public class LambdaTest1 {
 		@Override
 		public void lambda() {
 			// TODO Auto-generated method stub
-			System.out.println("James - Lambda (in)!");
+			System.out.println("James - Lambda2 (in)!");
 		}
 		
 	}
