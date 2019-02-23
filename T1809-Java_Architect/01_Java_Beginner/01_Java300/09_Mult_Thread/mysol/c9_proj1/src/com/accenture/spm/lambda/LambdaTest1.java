@@ -8,3 +8,17 @@ public class LambdaTest1 {
 	}
 
 }
+
+interface ILike {
+	void lambda();
+}
+
+class Like implements ILike {
+
+	@Override
+	public void lambda() {
+		// TODO Auto-generated method stub
+		System.out.println("James - Lambda (out)!");
+	}
+	
+}
