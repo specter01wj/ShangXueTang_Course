@@ -1,6 +1,6 @@
 package com.accenture.spm.lambda;
 
-public class LambdaTest2 {
+public class LambdaTestParam {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
