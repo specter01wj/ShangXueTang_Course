@@ -8,3 +8,17 @@ public class LambdaTestReturn {
 	}
 
 }
+
+interface IInterest{
+	int lambda(int a,int b);
+}
+
+class Interest implements IInterest{
+
+	@Override
+	public int lambda(int a,int c) {
+		System.out.println("James - lambda -->"+(a+c));
+		return a+c;
+	}
+	
+}
