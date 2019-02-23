@@ -21,6 +21,16 @@ public class LambdaTest1 {
 			System.out.println("i like lambda4!");
 		};
 		like4.lambda();
+		
+		class Like5 implements ILike{
+			public void lambda() {
+				System.out.println("i like lambda5!");
+			}
+			
+		}
+		
+		ILike like5 = new Like5();
+		like5.lambda();
 	}
 	
 	static class Like2 implements ILike {
