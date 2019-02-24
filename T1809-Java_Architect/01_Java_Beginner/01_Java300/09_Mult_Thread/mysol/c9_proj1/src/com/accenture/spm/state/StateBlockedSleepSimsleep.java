@@ -11,31 +11,33 @@ public class StateBlockedSleepSimsleep {
 }
 
 class Racer implements Runnable {
-	private  String winner;//胜利者
+	private  String winner;
+	
 	@Override
 	public void run() {
-		for(int steps =1;steps<=100;steps++) {		
-			//模拟休息
+		for(int steps =1;steps<=1000;steps++) {		
+			
 			if(Thread.currentThread().getName().equals("rabbit") && steps%10==0) {
 				try {
-					Thread.sleep(100);
+					Thread.sleep(2);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
 			System.out.println(Thread.currentThread().getName()+"-->"+steps);
-			//比赛是否结束
+			
 			boolean flag = gameOver(steps);
 			if(flag) {
 				break;
 			}
 		}
 	}
+	
 	private boolean gameOver(int steps) {
-		if(winner!=null) { //存在胜利者
+		if(winner!=null) {
 			return true;
 		}else {
-			if(steps ==100) {
+			if(steps ==1000) {
 				winner = Thread.currentThread().getName();
 				System.out.println("winner==>"+winner);
 				return true;
