@@ -17,6 +17,9 @@ public class StateBlockedSleepCountdown {
 		while(true) {
 			Thread.sleep(200);
 			System.out.println(num--);
+			if(num < 1) {
+				 break;
+			 }
 		}
 	}
 	
@@ -27,7 +30,7 @@ public class StateBlockedSleepCountdown {
 		
 		while(true) {
 			System.out.println(new SimpleDateFormat("mm:ss").format(endTime));
-			Thread.sleep(1000);
+			Thread.sleep(300);
 			 endTime=new Date(endTime.getTime()-1000);		
 			 if(end-10000 >endTime.getTime() ) {
 				 break;
