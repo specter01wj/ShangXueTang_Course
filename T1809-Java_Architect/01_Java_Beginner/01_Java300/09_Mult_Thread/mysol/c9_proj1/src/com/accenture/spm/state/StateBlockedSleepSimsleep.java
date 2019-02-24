@@ -3,8 +3,9 @@ package com.accenture.spm.state;
 public class StateBlockedSleepSimsleep {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Racer racer = new Racer();
+		new Thread(racer,"tortoise").start();
+		new Thread(racer,"rabbit").start();
 	}
 
 }
