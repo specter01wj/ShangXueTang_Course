@@ -19,11 +19,21 @@ public class StateTerminateThread implements Runnable {
 		
 	}
 
-
+	public void terminate() {
+		this.flag = false;
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		StateTerminateThread tt = new StateTerminateThread("James!");
+		new Thread(tt).start();
+		
+		for(int i=0;i<=99;i++) {
+			if(i==18) {
+				tt.terminate();
+				System.out.println("tt game over");
+			}
+			System.out.println("main-->"+i);
+		}
 	}
 
 }
