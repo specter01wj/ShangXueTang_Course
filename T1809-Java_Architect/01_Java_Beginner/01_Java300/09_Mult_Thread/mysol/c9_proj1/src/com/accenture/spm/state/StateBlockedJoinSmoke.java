@@ -16,7 +16,7 @@ class Father extends Thread{
 		Thread t =new Thread(new Son());
 		t.start();
 		try {
-			t.join(); //father被阻塞
+			t.join();
 			System.out.println("老爸接过烟，把零钱给了儿子");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
