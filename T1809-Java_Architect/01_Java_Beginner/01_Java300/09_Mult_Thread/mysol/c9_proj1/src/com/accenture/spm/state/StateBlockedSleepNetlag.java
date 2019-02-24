@@ -3,7 +3,13 @@ package com.accenture.spm.state;
 public class StateBlockedSleepNetlag {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Web12306 web =new Web12306();
+		System.out.println(Thread.currentThread().getName());
+		//多个代理
+		new Thread(web,"码畜").start();
+		new Thread(web,"码农").start();
+		new Thread(web,"码蟥").start();;
 
 	}
 
