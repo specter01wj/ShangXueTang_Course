@@ -7,9 +7,9 @@ public class StateBlockedSleepNetlag {
 		Web12306 web =new Web12306();
 		System.out.println(Thread.currentThread().getName());
 		
-		new Thread(web,"码畜").start();
-		new Thread(web,"码农").start();
-		new Thread(web,"码蟥").start();;
+		new Thread(web,"James").start();
+		new Thread(web,"Kim").start();
+		new Thread(web,"Alicia").start();;
 
 	}
 
