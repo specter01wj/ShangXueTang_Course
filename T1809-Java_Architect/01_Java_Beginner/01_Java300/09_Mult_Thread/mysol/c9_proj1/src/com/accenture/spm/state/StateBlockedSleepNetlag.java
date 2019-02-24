@@ -22,7 +22,7 @@ class Web12306 implements Runnable {
 	@Override
 	public void run() {
 		while(true) {
-			if(ticketNums<0) {
+			if(ticketNums<=0) {
 				break;
 			}
 			
