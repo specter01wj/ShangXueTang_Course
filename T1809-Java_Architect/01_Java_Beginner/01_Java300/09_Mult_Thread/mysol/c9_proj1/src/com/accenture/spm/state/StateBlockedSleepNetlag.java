@@ -17,7 +17,7 @@ public class StateBlockedSleepNetlag {
 
 class Web12306 implements Runnable {
 	
-	private int ticketNums = 99;
+	private int ticketNums = 30;
 	
 	@Override
 	public void run() {
