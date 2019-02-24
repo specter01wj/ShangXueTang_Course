@@ -1,6 +1,6 @@
 package com.accenture.spm.state;
 
-public class StateBlockedSleepYield {
+public class StateBlockedYield {
 
 	public static void main(String[] args) {
 		MyYield my = new MyYield();

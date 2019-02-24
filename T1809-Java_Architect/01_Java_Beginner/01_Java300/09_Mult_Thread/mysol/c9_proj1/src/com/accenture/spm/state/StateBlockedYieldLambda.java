@@ -1,6 +1,6 @@
 package com.accenture.spm.state;
 
-public class StateBlockedSleepYieldLambda {
+public class StateBlockedYieldLambda {
 
 	public static void main(String[] args) {
 		new Thread(()->{
