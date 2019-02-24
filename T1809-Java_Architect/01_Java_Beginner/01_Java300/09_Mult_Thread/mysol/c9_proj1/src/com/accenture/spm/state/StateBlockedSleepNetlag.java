@@ -17,7 +17,8 @@ public class StateBlockedSleepNetlag {
 
 class Web12306 implements Runnable {
 	
-	private int ticketNums = 30;
+	private int ticketNums = 60;
+	private int c1 = 0, c2 = 0, c3 = 0; 
 	
 	@Override
 	public void run() {
@@ -27,11 +28,27 @@ class Web12306 implements Runnable {
 			}
 			
 			try {
-				Thread.sleep(200);
+				Thread.sleep(20);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			
+			switch(Thread.currentThread().getName()) {
+				case "James": 
+					c1++;
+					break;
+				case "Kim": 
+					c2++;
+					break;
+				case "Alicia": 
+					c3++;
+					break;
+			}
+			
 			System.out.println(Thread.currentThread().getName()+"-->"+ticketNums--);
 		}
-	}	
+		System.out.println("Total:" + c1 + "-->" + "-->" + c2 + "-->" + c3);
+	}
+	
+	
 }
