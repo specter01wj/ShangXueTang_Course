@@ -1,5 +1,7 @@
 package com.accenture.spm.location;
 
+import java.net.InetSocketAddress;
+
 public class LocationPortTest {
 
 	public static void main(String[] args) {
