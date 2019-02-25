@@ -14,7 +14,9 @@ public class LocationIPTest {
 		System.out.println(addr2.getHostAddress());
 		System.out.println(addr2.getHostName());
 		
-		
+		InetAddress addr3 = InetAddress.getByName("151.101.201.67"); 
+		System.out.println(addr3.getHostAddress());
+		System.out.println(addr3.getHostName());
 		
 	}
 
