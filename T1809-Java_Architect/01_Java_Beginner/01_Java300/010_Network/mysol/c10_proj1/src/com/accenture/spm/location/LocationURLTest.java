@@ -6,16 +6,16 @@ import java.net.URL;
 public class LocationURLTest {
 
 	public static void main(String[] args) throws MalformedURLException {
-		URL url = new URL("http://www.baidu.com:80/index.html?uname=shsxt&age=18#a");
+		URL url = new URL("https://www.google.com:8080/index.html?username=jwang&age=38#page");
 		
-		System.out.println("协议:"+url.getProtocol());
-		System.out.println("域名|ip:"+url.getHost());
-		System.out.println("端口:"+url.getPort());
-		System.out.println("请求资源1:"+url.getFile());
-		System.out.println("请求资源2:"+url.getPath());
+		System.out.println("Protocol:"+url.getProtocol());
+		System.out.println("Domain | IP:"+url.getHost());
+		System.out.println("Port:"+url.getPort());
+		System.out.println("Request1:"+url.getFile());
+		System.out.println("Request2:"+url.getPath());
 		
-		System.out.println("参数:"+url.getQuery());
-		System.out.println("锚点:"+url.getRef());
+		System.out.println("Param:"+url.getQuery());
+		System.out.println("#:"+url.getRef());
 	}
 
 }
