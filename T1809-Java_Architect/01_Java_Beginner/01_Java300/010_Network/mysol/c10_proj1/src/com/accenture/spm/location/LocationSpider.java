@@ -12,6 +12,7 @@ public class LocationSpider {
 
 	public static void main(String[] args) throws IOException {
 		URL url =new URL("https://www.ebay.com/");
+		//URL url =new URL("https://www.dianping.com");
 		InputStream is = url.openStream();
 		BufferedReader br =new BufferedReader(new InputStreamReader(is,"UTF-8"));
 		String msg =null;
