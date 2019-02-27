@@ -12,7 +12,7 @@ import java.util.Date;
 public class UDPObjServer {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		System.out.println("接收方启动中.....");
+		System.out.println("Receiving in progress.....");
 		// 1、使用DatagramSocket  指定端口 创建接收端
 		DatagramSocket server =new DatagramSocket(6666);
 		// 2、准备容器 封装成DatagramPacket 包裹
@@ -23,8 +23,8 @@ public class UDPObjServer {
 		// 4、分析数据    将字节数组还原为对应的类型
 		//    byte[]  getData​()
 		//                getLength​()
-		 byte[]  datas =packet.getData();
-		 int len = packet.getLength();		 
+		byte[]  datas =packet.getData();
+		int len = packet.getLength();		 
 		//读取 -->反序列化
 		ObjectInputStream ois =new ObjectInputStream(new BufferedInputStream(new ByteArrayInputStream(datas)));
 		//顺序与写出一致
@@ -50,7 +50,6 @@ public class UDPObjServer {
 			Employee empObj = (Employee) employee;
 			System.out.println(empObj.getName()+"-->"+empObj.getSalary());
 		}
-		 
 		 
 		// 5、释放资源
 		 server.close();
