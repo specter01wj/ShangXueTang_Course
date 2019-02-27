@@ -13,7 +13,7 @@ import java.util.Date;
 public class UDPObjClient {
 
 	public static void main(String[] args) throws IOException {
-		System.out.println("发送方启动中.....");
+		System.out.println("Sending in progress.....");
 		 // 1、使用DatagramSocket  指定端口 创建发送端
 		DatagramSocket client =new DatagramSocket(8888);
 		 //2、准备数据 一定转成字节数组
@@ -21,14 +21,14 @@ public class UDPObjClient {
 		ByteArrayOutputStream baos =new ByteArrayOutputStream();
 		ObjectOutputStream oos =new ObjectOutputStream(new BufferedOutputStream(baos));
 		//操作数据类型 +数据
-		oos.writeUTF("编码辛酸泪");
+		oos.writeUTF("James Wang!!!");
 		oos.writeInt(18);
 		oos.writeBoolean(false);
 		oos.writeChar('a');
 		//对象
-		oos.writeObject("谁解其中味");
+		oos.writeObject("Tim Duncan???");
 		oos.writeObject(new Date());
-		Employee emp =new Employee("马云",400);
+		Employee emp =new Employee("Kim",400);
 		oos.writeObject(emp);
 		oos.flush();
 		byte[] datas =baos.toByteArray();	
