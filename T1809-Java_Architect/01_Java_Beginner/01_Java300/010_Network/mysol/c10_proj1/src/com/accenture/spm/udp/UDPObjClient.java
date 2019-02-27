@@ -2,15 +2,17 @@ package com.accenture.spm.udp;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
+import java.net.SocketException;
 import java.util.Date;
 
 public class UDPObjClient {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("发送方启动中.....");
 		 // 1、使用DatagramSocket  指定端口 创建发送端
 		DatagramSocket client =new DatagramSocket(8888);
