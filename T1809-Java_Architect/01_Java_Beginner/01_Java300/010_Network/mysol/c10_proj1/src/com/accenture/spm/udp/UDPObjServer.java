@@ -2,14 +2,16 @@ package com.accenture.spm.udp;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.net.SocketException;
 import java.util.Date;
 
 public class UDPObjServer {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		System.out.println("接收方启动中.....");
 		// 1、使用DatagramSocket  指定端口 创建接收端
 		DatagramSocket server =new DatagramSocket(6666);
