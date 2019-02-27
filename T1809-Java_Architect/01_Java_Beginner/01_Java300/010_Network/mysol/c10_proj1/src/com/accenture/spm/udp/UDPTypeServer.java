@@ -32,6 +32,7 @@ public class UDPTypeServer {
 		System.out.println(msg+"-->"+flag);
 		// 5、释放资源
 		 server.close();
+		 
 	}
 
 }
