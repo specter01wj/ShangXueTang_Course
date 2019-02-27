@@ -33,6 +33,7 @@ public class UDPTypeServer {
 		// 5、释放资源
 		 server.close();
 		 
+		 
 	}
 
 }
