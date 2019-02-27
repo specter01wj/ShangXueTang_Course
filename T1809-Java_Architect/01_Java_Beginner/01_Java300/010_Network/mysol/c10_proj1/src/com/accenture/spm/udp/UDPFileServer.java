@@ -21,7 +21,7 @@ public class UDPFileServer {
 		//                getLength​()
 		 byte[]  datas =packet.getData();
 		 int len = packet.getLength();		 
-		 IOUtils.byteArrayToFile(datas, "src/copy.png");		 
+		 IOUtils.byteArrayToFile(datas, "img/logo_1.png");		 
 		// 5、释放资源
 		 server.close();
 	}
