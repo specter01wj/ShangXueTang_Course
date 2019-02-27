@@ -34,6 +34,7 @@ public class UDPTypeServer {
 		 server.close();
 		 
 		 
+		 
 	}
 
 }
