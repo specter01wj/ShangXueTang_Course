@@ -11,7 +11,7 @@ import java.net.SocketException;
 public class UDPTalkClient {
 
 	public static void main(String[] args) throws IOException {
-		System.out.println("发送方启动中.....");
+		System.out.println("Sending in progress.....");
 		 // 1、使用DatagramSocket  指定端口 创建发送端
 		DatagramSocket client =new DatagramSocket(8888);
 		 //2、准备数据 一定转成字节数组
