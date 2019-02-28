@@ -8,7 +8,7 @@ import java.net.SocketException;
 public class UDPTalkServer {
 
 	public static void main(String[] args) throws IOException {
-		System.out.println("接收方启动中.....");
+		System.out.println("Receiving in progress.....");
 		// 1、使用DatagramSocket  指定端口 创建接收端
 		DatagramSocket server =new DatagramSocket(6666);
 		
