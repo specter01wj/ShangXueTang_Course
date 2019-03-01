@@ -13,7 +13,7 @@ public class LoginServer {
 		ServerSocket server =new ServerSocket(8888);
 		// 2、阻塞式等待连接 accept
 		Socket  client =server.accept(); 
-		System.out.println("一个客户端建立了连接");
+		System.out.println("1 client connected!");
 		// 3、操作: 输入输出流操作
 		DataInputStream dis =new DataInputStream(client.getInputStream());
 		String datas =dis.readUTF();
