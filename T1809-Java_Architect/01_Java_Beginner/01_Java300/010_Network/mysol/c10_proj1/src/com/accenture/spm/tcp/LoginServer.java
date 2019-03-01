@@ -22,9 +22,9 @@ public class LoginServer {
 		for(String info:dataArray) {
 			String[] userInfo =info.split("=");
 				if(userInfo[0].equals("uname")) {
-					System.out.println("你的用户名为:"+userInfo[1]);
+					System.out.println("Your name:"+userInfo[1]);
 				}else if(userInfo[0].equals("upwd")) {
-					System.out.println("你的密码为:"+userInfo[1]);
+					System.out.println("Your password:"+userInfo[1]);
 				}
 				
 		}
