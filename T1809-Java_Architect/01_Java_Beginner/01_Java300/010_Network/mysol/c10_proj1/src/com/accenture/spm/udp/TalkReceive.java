@@ -9,6 +9,7 @@ public class TalkReceive implements Runnable {
 
 	private DatagramSocket server ;
 	private String from ;
+	
 	public TalkReceive(int port,String from) {
 		this.from = from ;
 		try {
@@ -17,6 +18,7 @@ public class TalkReceive implements Runnable {
 			e.printStackTrace();
 		}
 	}
+	
 	@Override
 	public void run() {
 		while(true) {
