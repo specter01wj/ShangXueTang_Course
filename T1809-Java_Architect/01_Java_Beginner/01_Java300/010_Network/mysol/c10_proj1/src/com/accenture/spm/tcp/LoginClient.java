@@ -25,6 +25,7 @@ public class LoginClient {
 		//3、释放资源 
 		dos.close();
 		client.close();
+		
 	}
 
 }
