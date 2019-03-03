@@ -12,9 +12,9 @@ public class Login2WayClient {
 	public static void main(String[] args) throws IOException {
 		System.out.println("-----Client-----");
 		BufferedReader console =new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("请输入用户名:");
+		System.out.print("Input your name::");
 		String uname =console.readLine();
-		System.out.print("请输入密码:");
+		System.out.print("Input password:");
 		String upwd =console.readLine();
 		
 		//1、建立连接: 使用Socket创建客户端 +服务的地址和端口
