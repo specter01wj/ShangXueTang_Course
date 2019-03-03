@@ -12,7 +12,7 @@ public class Login2WayClient {
 	public static void main(String[] args) throws IOException {
 		System.out.println("-----Client-----");
 		BufferedReader console =new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("Input your name::");
+		System.out.print("Input your name:");
 		String uname =console.readLine();
 		System.out.print("Input password:");
 		String upwd =console.readLine();
