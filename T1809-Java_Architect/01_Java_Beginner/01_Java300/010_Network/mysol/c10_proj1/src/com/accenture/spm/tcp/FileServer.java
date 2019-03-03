@@ -30,7 +30,6 @@ public class FileServer {
 		//3、释放资源 
 		os.close();
 		is.close();
-		
 		// 4、释放资源 
 		client.close();
 		
