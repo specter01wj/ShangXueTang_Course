@@ -17,7 +17,7 @@ public class FileServer {
 		ServerSocket server =new ServerSocket(8888);
 		// 2、阻塞式等待连接 accept
 		Socket  client =server.accept(); 
-		System.out.println("一个客户端建立了连接");
+		System.out.println("1 client connected!");
 		// 3、操作: 文件拷贝 存储
 		InputStream is =new BufferedInputStream(client.getInputStream());
 		OutputStream os =new BufferedOutputStream(new FileOutputStream("img/ndl_tcp.png"));
