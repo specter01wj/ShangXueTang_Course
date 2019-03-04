@@ -39,9 +39,9 @@ public class LoginMultiClient {
 		
 		private String init() {					
 			try {
-				System.out.print("请输入用户名:");
+				System.out.print("Input Name:");
 				String uname =console.readLine();
-				System.out.print("请输入密码:");
+				System.out.print("Input Password:");
 				String upwd =console.readLine();
 				return "uname="+uname+"&"+"upwd="+upwd;
 			} catch (IOException e) {
