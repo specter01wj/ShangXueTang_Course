@@ -100,10 +100,10 @@ public class LoginMultiServer {
 			for(String info:dataArray) {
 					String[] userInfo =info.split("=");
 					if(userInfo[0].equals("uname")) {
-						System.out.println("你的用户名为:"+userInfo[1]);
+						System.out.println("Your Name:"+userInfo[1]);
 						uname = userInfo[1];
 					}else if(userInfo[0].equals("upwd")) {
-						System.out.println("你的密码为:"+userInfo[1]);
+						System.out.println("Your Password:"+userInfo[1]);
 						upwd = userInfo[1];
 					}				
 			}					
