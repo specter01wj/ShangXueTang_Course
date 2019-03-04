@@ -107,10 +107,10 @@ public class LoginMultiServer {
 						upwd = userInfo[1];
 					}				
 			}					
-			if(uname.equals("shsxt") && upwd.equals("laopei")) { //成功
-				send("登录成功，欢迎回来");
+			if(uname.equals("specter01wj") && upwd.equals("551365")) { //成功
+				send("Success! Welcome Back!!!");
 			}else { //失败
-				send("用户名或密码错误");
+				send("Wrong password or username???");
 			}
 			release();
 		}
