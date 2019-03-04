@@ -28,6 +28,7 @@ public class LoginMultiServer {
 		private DataInputStream dis;
 		//输出流
 		private DataOutputStream dos;
+		
 		public Channel(Socket  client) {
 			this.client = client;
 			try {
@@ -52,6 +53,7 @@ public class LoginMultiServer {
 			}
 			return datas;
 		}
+		
 		//释放资源
 		private void release() {
 			// 4、释放资源 
@@ -77,6 +79,7 @@ public class LoginMultiServer {
 				e.printStackTrace();
 			}
 		}
+		
 		//发送数据
 		private void send(String msg) {
 			try {
@@ -86,6 +89,7 @@ public class LoginMultiServer {
 				e.printStackTrace();
 			}
 		}
+		
 		@Override
 		public void run() {						
 			// 3、操作: 输入输出流操作					
@@ -108,9 +112,7 @@ public class LoginMultiServer {
 			}else { //失败
 				send("用户名或密码错误");
 			}
-			
 			release();
-			
 		}
 		
 	}
