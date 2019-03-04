@@ -25,6 +25,7 @@ public class LoginMultiClient {
 		private DataOutputStream dos;
 		private BufferedReader console ;
 		private String msg;
+		
 		public Send(Socket client) {			
 			console=new BufferedReader(new InputStreamReader(System.in));
 			this.msg =init();
@@ -35,6 +36,7 @@ public class LoginMultiClient {
 				e.printStackTrace();
 			}
 		}
+		
 		private String init() {					
 			try {
 				System.out.print("请输入用户名:");
@@ -61,6 +63,7 @@ public class LoginMultiClient {
 	static class Receive{
 		private Socket client;
 		private DataInputStream dis;
+		
 		public Receive(Socket client) {
 			this.client = client;
 			try {
@@ -68,7 +71,8 @@ public class LoginMultiClient {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}		
+		}	
+		
 		public void receive() {
 			String result;
 			try {
@@ -76,8 +80,7 @@ public class LoginMultiClient {
 				System.out.println(result);
 			} catch (IOException e) {
 				e.printStackTrace();
-			}		
-			
+			}
 		}
 	}
 	
