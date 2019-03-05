@@ -20,6 +20,7 @@ public class UDPFileClient {
 		// 5、释放资源
 		client.close();
 		
+		
 	}
 
 }
