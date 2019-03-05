@@ -19,12 +19,6 @@ public class UDPFileClient {
 		client.send(packet);
 		// 5、释放资源
 		client.close();
-		
-		
-		
-		
-		
-		
 	}
 
 }
