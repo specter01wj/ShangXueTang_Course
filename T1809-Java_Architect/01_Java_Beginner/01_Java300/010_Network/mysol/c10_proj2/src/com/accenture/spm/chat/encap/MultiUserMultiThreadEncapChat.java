@@ -15,7 +15,7 @@ public class MultiUserMultiThreadEncapChat {
 		// 2、阻塞式等待连接 accept
 		while(true) {
 			Socket  client =server.accept(); 
-			System.out.println("一个客户端建立了连接");
+			System.out.println("1 client connected!");
 			new Thread(new Channel(client)).start();			
 		}	
 	}
