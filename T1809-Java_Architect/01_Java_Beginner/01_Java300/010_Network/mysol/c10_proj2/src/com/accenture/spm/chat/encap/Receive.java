@@ -1,6 +1,6 @@
 package com.accenture.spm.chat.encap;
 
-public class Receive {
+public class Receive implements Runnable {
 
 	private DataInputStream dis ;
 	private Socket client;
