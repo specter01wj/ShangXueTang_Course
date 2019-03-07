@@ -12,6 +12,7 @@ public class Send implements Runnable {
 	private DataOutputStream dos;
 	private Socket client;
 	private boolean isRunning;
+	
 	public Send(Socket client) {
 		this.client =client;
 		console =new BufferedReader(new InputStreamReader(System.in));
@@ -23,6 +24,7 @@ public class Send implements Runnable {
 			this.release();
 		}	
 	}
+	
 	@Override
 	public void run() {
 		while(isRunning) {
@@ -32,7 +34,7 @@ public class Send implements Runnable {
 			}
 		}
 	}	
-	//发送消息
+	
 	private void send(String msg) {
 		try {
 			dos.writeUTF(msg);
@@ -43,6 +45,7 @@ public class Send implements Runnable {
 			release();
 		}
 	}
+	
 	/**
 	 * 从控制台获取消息
 	 * @return
@@ -55,7 +58,7 @@ public class Send implements Runnable {
 		}
 		return "";
 	}
-	//释放资源
+	
 	private void release() {
 		this.isRunning = false;
 		SxtUtils.close(dos,client);
