@@ -64,5 +64,4 @@ public class Send implements Runnable {
 		SxtUtils.close(dos,client);
 	}
 	
-	
 }
