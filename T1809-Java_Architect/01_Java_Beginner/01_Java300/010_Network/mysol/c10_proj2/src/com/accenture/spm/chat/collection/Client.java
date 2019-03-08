@@ -10,7 +10,7 @@ public class Client {
 	public static void main(String[] args) throws IOException {
 		System.out.println("-----Client-----");
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("请输入用户名:");
+		System.out.println("Your name:");
 		String name =br.readLine();
 		//1、建立连接: 使用Socket创建客户端 +服务的地址和端口
 		Socket client =new Socket("localhost",8888);
