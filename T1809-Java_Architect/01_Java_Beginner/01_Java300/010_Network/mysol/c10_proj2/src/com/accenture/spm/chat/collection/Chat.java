@@ -41,8 +41,8 @@ public class Chat {
 				//获取名称
 				this.name =receive();
 				//欢迎你的到来
-				this.send("欢迎你的到来");
-				sendOthers(this.name+"来了shsxt聊天室",true);
+				this.send("Welcome!!!");
+				sendOthers(this.name+" Coming to JW chatroom!",true);
 			} catch (IOException e) {
 				System.out.println("---1------");
 				release();					
