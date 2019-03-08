@@ -31,6 +31,7 @@ public class Chat {
 		private Socket  client;			
 		private boolean isRunning;
 		private String name;
+		
 		public Channel(Socket  client) {
 			this.client = client;
 			try {
@@ -47,7 +48,7 @@ public class Chat {
 				release();					
 			}			
 		}
-		//接收消息
+		
 		private String receive() {
 			String msg ="";
 			try {
@@ -58,7 +59,7 @@ public class Chat {
 			}
 			return msg;
 		}
-		//发送消息
+		
 		private void send(String msg) {
 			try {
 				dos.writeUTF(msg);
@@ -68,23 +69,20 @@ public class Chat {
 				release();
 			}
 		}
-		/**
-		 * 群聊：获取自己的消息，发给其他人
-		 * @param msg
-		 */
+		
 		private void sendOthers(String msg,boolean isSys) {
 			for(Channel other: all) {
 				if(other==this) { //自己
 					continue;
 				}
 				if(!isSys) {
-					other.send(this.name +"对所有人说:"+msg);//群聊消息
+					other.send(this.name +"@ALL:"+msg);//群聊消息
 				}else {
 					other.send(msg); //系统消息
 				}
 			}
 		}
-		//释放资源
+		
 		private void release() {
 			this.isRunning = false;
 			SxtUtils.close(dis,dos,client);
@@ -92,6 +90,7 @@ public class Chat {
 			all.remove(this);
 			sendOthers(this.name+"离开大家庭...",true);
 		}
+		
 		@Override
 		public void run() {
 			while(isRunning) {
