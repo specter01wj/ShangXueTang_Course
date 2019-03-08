@@ -88,7 +88,7 @@ public class Chat {
 			SxtUtils.close(dis,dos,client);
 			//退出
 			all.remove(this);
-			sendOthers(this.name+"离开大家庭...",true);
+			sendOthers(this.name+"Left Chatroom...",true);
 		}
 		
 		@Override
