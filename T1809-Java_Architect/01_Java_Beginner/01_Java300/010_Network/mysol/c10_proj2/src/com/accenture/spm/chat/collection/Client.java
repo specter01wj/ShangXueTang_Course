@@ -1,15 +1,13 @@
 package com.accenture.spm.chat.collection;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-import com.accenture.spm.chat.encap.Receive;
-import com.accenture.spm.chat.encap.Send;
-
 public class Client {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("-----Client-----");
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("请输入用户名:");

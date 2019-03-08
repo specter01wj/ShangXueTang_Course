@@ -7,8 +7,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.accenture.spm.chat.encap.SxtUtils;
-
 public class Chat {
 
 	private static CopyOnWriteArrayList<Channel> all =new CopyOnWriteArrayList<Channel>();

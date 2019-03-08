@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-import com.accenture.spm.chat.encap.SxtUtils;
-
 public class Send implements Runnable {
 
 	private BufferedReader console ;
