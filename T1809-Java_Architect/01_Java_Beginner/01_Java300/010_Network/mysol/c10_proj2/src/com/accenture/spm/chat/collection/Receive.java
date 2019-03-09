@@ -49,16 +49,4 @@ public class Receive implements Runnable {
 		SxtUtils.close(dis,client);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
