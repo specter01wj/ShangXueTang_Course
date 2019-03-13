@@ -40,8 +40,8 @@ public class Chat {
 				//获取名称
 				this.name =receive();
 				//欢迎你的到来
-				this.send("欢迎你的到来");
-				sendOthers(this.name+"来了shsxt聊天室",true);
+				this.send("Welcome Home!");
+				sendOthers(this.name+"-coming to ChatRoom!",true);
 			} catch (IOException e) {
 				System.out.println("---1------");
 				release();					
@@ -82,7 +82,7 @@ public class Chat {
 				msg = msg.substring(idx+1);
 				for(Channel other: all) {
 					if(other.name.equals(targetName)) {//目标
-						other.send(this.name +"悄悄地对您说:"+msg);
+						other.send(this.name +"PRIVATE:"+msg);
 						break;
 					}
 				}
@@ -92,7 +92,7 @@ public class Chat {
 						continue;
 					}
 					if(!isSys) {
-						other.send(this.name +"对所有人说:"+msg);//群聊消息
+						other.send(this.name +"ALL:"+msg);//群聊消息
 					}else {
 						other.send(msg); //系统消息
 					}
@@ -105,7 +105,7 @@ public class Chat {
 			SxtUtils.close(dis,dos,client);
 			//退出
 			all.remove(this);
-			sendOthers(this.name+"离开大家庭...",true);
+			sendOthers(this.name+"->Leaving...",true);
 		}
 		@Override
 		public void run() {
