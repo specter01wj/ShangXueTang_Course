@@ -19,6 +19,7 @@ public class Client {
 		new Thread(new Receive(client)).start();
 		
 		
+		
 	}
 
 }
