@@ -26,11 +26,13 @@ public class Chat {
 	}
 	
 	static class Channel implements Runnable{
+		
 		private DataInputStream dis;
 		private DataOutputStream dos;
 		private Socket  client;			
 		private boolean isRunning;
 		private String name;
+		
 		public Channel(Socket  client) {
 			this.client = client;
 			try {
@@ -47,6 +49,7 @@ public class Chat {
 				release();					
 			}			
 		}
+		
 		//接收消息
 		private String receive() {
 			String msg ="";
@@ -58,6 +61,7 @@ public class Chat {
 			}
 			return msg;
 		}
+		
 		//发送消息
 		private void send(String msg) {
 			try {
@@ -68,6 +72,7 @@ public class Chat {
 				release();
 			}
 		}
+		
 		/**
 		 * 群聊：获取自己的消息，发给其他人
 		 * 私聊: 约定数据格式: @xxx:msg
@@ -99,6 +104,7 @@ public class Chat {
 				}
 			}
 		}
+		
 		//释放资源
 		private void release() {
 			this.isRunning = false;
@@ -107,6 +113,7 @@ public class Chat {
 			all.remove(this);
 			sendOthers(this.name+"->Leaving...",true);
 		}
+		
 		@Override
 		public void run() {
 			while(isRunning) {
