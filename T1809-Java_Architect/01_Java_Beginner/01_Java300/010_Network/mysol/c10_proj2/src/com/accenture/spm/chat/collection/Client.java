@@ -18,20 +18,6 @@ public class Client {
 		new Thread(new Send(client,name)).start();  
 		new Thread(new Receive(client)).start();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
