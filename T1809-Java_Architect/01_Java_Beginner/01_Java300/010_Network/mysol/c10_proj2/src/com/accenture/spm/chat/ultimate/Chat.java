@@ -87,7 +87,7 @@ public class Chat {
 				msg = msg.substring(idx+1);
 				for(Channel other: all) {
 					if(other.name.equals(targetName)) {//目标
-						other.send(this.name +"PRIVATE:"+msg);
+						other.send("(" + this.name + ")" +" - PRIVATE: "+msg);
 						break;
 					}
 				}
@@ -97,7 +97,7 @@ public class Chat {
 						continue;
 					}
 					if(!isSys) {
-						other.send(this.name +"ALL:"+msg);//群聊消息
+						other.send("(" + this.name + ")" +" - ALL: "+msg);//群聊消息
 					}else {
 						other.send(msg); //系统消息
 					}
