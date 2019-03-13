@@ -9,6 +9,7 @@ public class Receive implements Runnable {
 	private DataInputStream dis ;
 	private Socket client;
 	private boolean isRunning;
+	
 	public Receive(Socket client) {
 		this.client = client;
 		this.isRunning = true;
@@ -19,6 +20,7 @@ public class Receive implements Runnable {
 			release();
 		}
 	}
+	
 	//接收消息
 	private String receive() {
 		String msg ="";
@@ -40,6 +42,7 @@ public class Receive implements Runnable {
 			}
 		}
 	}
+	
 	//释放资源
 	private void release() {
 		this.isRunning = false;
