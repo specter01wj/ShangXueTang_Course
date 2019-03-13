@@ -1,6 +1,13 @@
 package com.accenture.spm.chat.ultimate;
 
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.nio.channels.Channel;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 public class Chat {
+	
+	private static CopyOnWriteArrayList<Channel> all =new CopyOnWriteArrayList<Channel>();
 
 	public static void main(String[] args) {
 		System.out.println("-----Server-----");
