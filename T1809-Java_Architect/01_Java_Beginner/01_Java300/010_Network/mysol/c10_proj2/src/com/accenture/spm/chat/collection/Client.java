@@ -17,6 +17,7 @@ public class Client {
 		//2、客户端发送消息
 		new Thread(new Send(client,name)).start();  
 		new Thread(new Receive(client)).start();
+		
 	}
 
 }
