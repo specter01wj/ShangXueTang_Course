@@ -16,6 +16,7 @@ public class ReflectTest {
 //		System.out.println(iphone2);
 		Iphone iphone3 = (Iphone)clz3.getConstructor().newInstance();
 		System.out.println(iphone3);
+		
 	}
 
 }
