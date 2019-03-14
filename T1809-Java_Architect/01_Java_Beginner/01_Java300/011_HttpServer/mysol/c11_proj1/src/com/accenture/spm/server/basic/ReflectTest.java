@@ -2,7 +2,7 @@ package com.accenture.spm.server.basic;
 
 public class ReflectTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
 		
 		Class clz1 = new Iphone().getClass();
 		
