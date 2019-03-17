@@ -1,13 +1,17 @@
 package com.accenture.spm.server.basic;
 
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class XmlSax {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		//SAX解析
 		//1、获取解析工厂
 		SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -27,5 +31,4 @@ class PHandler extends DefaultHandler{
 
 	
 	
-}
 }
