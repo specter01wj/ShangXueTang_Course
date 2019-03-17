@@ -3,6 +3,8 @@ package com.accenture.spm.server.basic;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.xml.sax.helpers.DefaultHandler;
+
 public class XmlSax {
 
 	public static void main(String[] args) {
@@ -16,8 +18,14 @@ public class XmlSax {
 		PHandler handler=new PHandler();
 		//5、解析
 		parse.parse(Thread.currentThread().getContextClassLoader()
-		.getResourceAsStream("com/sxt/server/basic/p.xml")
-		,handler);
+				.getResourceAsStream("p.xml"), handler);
 	}
 
+}
+
+class PHandler extends DefaultHandler{
+
+	
+	
+}
 }
