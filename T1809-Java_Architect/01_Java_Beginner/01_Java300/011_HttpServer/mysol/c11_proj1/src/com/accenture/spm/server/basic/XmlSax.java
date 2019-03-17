@@ -6,6 +6,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -35,6 +36,26 @@ class PHandler extends DefaultHandler{
 		super.startDocument();
 		System.out.println("----Analysis Doc Start!----");
 	}
+	
+	
+
+	@Override
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		// TODO Auto-generated method stub
+		super.startElement(uri, localName, qName, attributes);
+		System.out.println(qName+" --> Analysis Begin!");
+	}
+
+
+
+	@Override
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		// TODO Auto-generated method stub
+		super.endElement(uri, localName, qName);
+		System.out.println(qName+" --> Analysis Terminated!");
+	}
+
+
 
 	@Override
 	public void endDocument() throws SAXException {
