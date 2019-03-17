@@ -29,6 +29,20 @@ public class XmlSax {
 
 class PHandler extends DefaultHandler{
 
+	@Override
+	public void startDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		super.startDocument();
+		System.out.println("----Analysis Doc Start!----");
+	}
+
+	@Override
+	public void endDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		super.endDocument();
+		System.out.println("----Analysis Doc End!----");
+	}
+
 	
 	
 }
