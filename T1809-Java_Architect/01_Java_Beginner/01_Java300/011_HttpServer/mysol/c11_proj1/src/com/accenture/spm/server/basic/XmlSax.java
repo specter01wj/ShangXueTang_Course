@@ -46,6 +46,14 @@ class PHandler extends DefaultHandler{
 		System.out.println(qName+" --> Analysis Begin!");
 	}
 
+	
+
+	@Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		// TODO Auto-generated method stub
+		super.characters(ch, start, length);
+	}
+
 
 
 	@Override
