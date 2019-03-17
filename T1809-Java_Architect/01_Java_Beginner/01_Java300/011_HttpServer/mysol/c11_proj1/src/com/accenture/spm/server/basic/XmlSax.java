@@ -52,6 +52,12 @@ class PHandler extends DefaultHandler{
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		// TODO Auto-generated method stub
 		super.characters(ch, start, length);
+		String contents = new String(ch,start,length).trim();
+		if(contents.length() > 0) {
+			System.out.println("Content->" + contents);			
+		}else {
+			System.out.println("Content->" + "Empty");		
+		}
 	}
 
 
