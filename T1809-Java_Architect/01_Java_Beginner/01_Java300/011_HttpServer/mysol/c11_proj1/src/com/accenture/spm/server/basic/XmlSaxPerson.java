@@ -1,6 +1,7 @@
 package com.accenture.spm.server.basic;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -30,6 +31,10 @@ public class XmlSaxPerson {
 
 class PersonHandler extends DefaultHandler{
 
+	private List<Person> persons ;
+	private Person person ;
+	private String tag;
+	
 	@Override
 	public void startDocument() throws SAXException {
 		// TODO Auto-generated method stub
@@ -37,16 +42,12 @@ class PersonHandler extends DefaultHandler{
 		System.out.println("----Analysis Doc Start!----");
 	}
 	
-	
-
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		// TODO Auto-generated method stub
 		super.startElement(uri, localName, qName, attributes);
 		System.out.println(qName+" --> Analysis Begin!");
 	}
-
-	
 
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
@@ -60,16 +61,12 @@ class PersonHandler extends DefaultHandler{
 		}
 	}
 
-
-
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		// TODO Auto-generated method stub
 		super.endElement(uri, localName, qName);
 		System.out.println(qName+" --> Analysis Terminated!");
 	}
-
-
 
 	@Override
 	public void endDocument() throws SAXException {
@@ -78,6 +75,9 @@ class PersonHandler extends DefaultHandler{
 		System.out.println("----Analysis Doc End!----");
 	}
 
+	public List<Person> getPersons() {
+		return persons;
+	}
 	
 	
 }
