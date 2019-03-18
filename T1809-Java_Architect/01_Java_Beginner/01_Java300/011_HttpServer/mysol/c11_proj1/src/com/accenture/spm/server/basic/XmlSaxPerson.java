@@ -6,7 +6,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 
 public class XmlSaxPerson {
 
@@ -25,3 +27,58 @@ public class XmlSaxPerson {
 	}
 
 }
+
+class PHandler extends DefaultHandler{
+
+	@Override
+	public void startDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		super.startDocument();
+		System.out.println("----Analysis Doc Start!----");
+	}
+	
+	
+
+	@Override
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		// TODO Auto-generated method stub
+		super.startElement(uri, localName, qName, attributes);
+		System.out.println(qName+" --> Analysis Begin!");
+	}
+
+	
+
+	@Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		// TODO Auto-generated method stub
+		super.characters(ch, start, length);
+		String contents = new String(ch,start,length).trim();
+		if(contents.length() > 0) {
+			System.out.println("Content->" + contents);			
+		}else {
+			System.out.println("Content->" + "Empty");		
+		}
+	}
+
+
+
+	@Override
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		// TODO Auto-generated method stub
+		super.endElement(uri, localName, qName);
+		System.out.println(qName+" --> Analysis Terminated!");
+	}
+
+
+
+	@Override
+	public void endDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		super.endDocument();
+		System.out.println("----Analysis Doc End!----");
+	}
+
+	
+	
+}
+
