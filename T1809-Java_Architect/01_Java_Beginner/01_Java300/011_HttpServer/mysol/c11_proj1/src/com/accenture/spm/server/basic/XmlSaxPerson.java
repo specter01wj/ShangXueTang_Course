@@ -1,6 +1,7 @@
 package com.accenture.spm.server.basic;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -39,6 +40,7 @@ class PersonHandler extends DefaultHandler{
 	public void startDocument() throws SAXException {
 		// TODO Auto-generated method stub
 		super.startDocument();
+		persons = new ArrayList<Person>();
 		System.out.println("----Analysis Doc Start!----");
 	}
 	
