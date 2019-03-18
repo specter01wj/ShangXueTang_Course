@@ -49,6 +49,12 @@ class PersonHandler extends DefaultHandler{
 		// TODO Auto-generated method stub
 		super.startElement(uri, localName, qName, attributes);
 		System.out.println(qName+" --> Analysis Begin!");
+		if(null!=qName) {
+			tag = qName;
+			if(tag.equals("person")) {
+				person = new Person();
+			}
+		}
 	}
 
 	@Override
