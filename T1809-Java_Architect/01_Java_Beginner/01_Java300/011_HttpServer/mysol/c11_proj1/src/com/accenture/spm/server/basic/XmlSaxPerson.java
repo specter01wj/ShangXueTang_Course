@@ -20,7 +20,7 @@ public class XmlSaxPerson {
 		SAXParser parse = factory.newSAXParser();
 		//3、编写处理器
 		//4、加载文档 Document 注册处理器
-		PHandler handler=new PHandler();
+		PersonHandler handler=new PersonHandler();
 		//5、解析
 		parse.parse(Thread.currentThread().getContextClassLoader()
 				.getResourceAsStream("p.xml"), handler);
@@ -28,7 +28,7 @@ public class XmlSaxPerson {
 
 }
 
-class PHandler extends DefaultHandler{
+class PersonHandler extends DefaultHandler{
 
 	@Override
 	public void startDocument() throws SAXException {
