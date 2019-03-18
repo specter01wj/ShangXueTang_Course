@@ -62,10 +62,19 @@ class PersonHandler extends DefaultHandler{
 		// TODO Auto-generated method stub
 		super.characters(ch, start, length);
 		String contents = new String(ch,start,length).trim();
-		if(contents.length() > 0) {
+		/*if(contents.length() > 0) {
 			System.out.println("Content->" + contents);			
 		}else {
 			System.out.println("Content->" + "Empty");		
+		}*/
+		if(null!=tag) {
+			if(tag.equals("name")) {
+				person.setName(contents);
+			}else if(tag.equals("age")) {
+				if(contents.length()>0) {
+					person.setAge(Integer.valueOf(contents));
+				}			
+			}
 		}
 	}
 
@@ -73,6 +82,12 @@ class PersonHandler extends DefaultHandler{
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		// TODO Auto-generated method stub
 		super.endElement(uri, localName, qName);
+		if(null!=qName) { 
+			if(qName.equals("person")) {
+				persons.add(person);
+			}
+		}
+		tag = null;
 		System.out.println(qName+" --> Analysis Terminated!");
 	}
 
