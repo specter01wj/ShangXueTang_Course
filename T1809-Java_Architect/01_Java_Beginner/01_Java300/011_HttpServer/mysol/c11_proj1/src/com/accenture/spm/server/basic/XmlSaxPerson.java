@@ -26,6 +26,12 @@ public class XmlSaxPerson {
 		//5、解析
 		parse.parse(Thread.currentThread().getContextClassLoader()
 				.getResourceAsStream("p.xml"), handler);
+		
+		//获取数据
+		List<Person> persons = handler.getPersons();
+		for(Person p:persons) {
+			System.out.println(p.getName()+" --> "+p.getAge());
+		}
 	}
 
 }
