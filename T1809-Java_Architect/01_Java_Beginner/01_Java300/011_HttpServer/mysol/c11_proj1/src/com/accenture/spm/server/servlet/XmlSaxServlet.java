@@ -109,15 +109,4 @@ class WebHandler extends DefaultHandler{
 		return mappings;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
