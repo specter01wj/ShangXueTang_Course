@@ -1,6 +1,7 @@
 package com.accenture.spm.server.servlet;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class XmlSaxServlet {
 
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		//SAX解析
 		//1、获取解析工厂
 		SAXParserFactory factory = SAXParserFactory.newInstance();
