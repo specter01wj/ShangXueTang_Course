@@ -28,10 +28,17 @@ public class XmlSaxServlet {
 				.getResourceAsStream("web.xml"), handler);
 		
 		//获取数据
-		List<Entity> entitys = handler.getEntitys();
+		/*List<Entity> entitys = handler.getEntitys();
 		List<Mapping> mappings = handler.getMappings();
 		System.out.println(entitys.size());
-		System.out.println(mappings.size());
+		System.out.println(mappings.size());*/
+		WebContext context = new WebContext(handler.getEntitys(),handler.getMappings());
+		//假设你输入了 /login
+		String className = context.getClz("/g");
+		Class clz =Class.forName(className);
+		Servlet servlet =(Servlet)clz.getConstructor().newInstance();
+		System.out.println(servlet);
+		servlet.service();
 	}
 
 }
