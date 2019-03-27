@@ -15,7 +15,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class XmlSaxServlet {
 
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+	public static void main(String[] args) throws Exception {
 		//SAX解析
 		//1、获取解析工厂
 		SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -35,8 +35,8 @@ public class XmlSaxServlet {
 		System.out.println(mappings.size());*/
 		WebContext context = new WebContext(handler.getEntitys(),handler.getMappings());
 		//假设你输入了 /login
-		String className = context.getClz("/g");
-		Class clz =Class.forName(className);
+		String className = context.getClz("/reg");
+		Class clz = Class.forName(className);
 		Servlet servlet =(Servlet)clz.getConstructor().newInstance();
 		System.out.println(servlet);
 		servlet.service();
