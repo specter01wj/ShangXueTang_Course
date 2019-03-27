@@ -1,5 +1,9 @@
 package com.accenture.spm.server.servlet;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class WebContext {
 
 	private List<Entity> entitys  =null;
