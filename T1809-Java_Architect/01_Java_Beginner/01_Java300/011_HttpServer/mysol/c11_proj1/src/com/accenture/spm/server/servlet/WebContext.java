@@ -13,6 +13,7 @@ public class WebContext {
 	private Map<String,String> entityMap =new HashMap<String,String>();
 	//key -->url-pattern value -->servlet-name
 	private Map<String,String> mappingMap =new HashMap<String,String>();
+	
 	public WebContext(List<Entity> entitys, List<Mapping> mappings) {
 		this.entitys = entitys;
 		this.mappings = mappings;
