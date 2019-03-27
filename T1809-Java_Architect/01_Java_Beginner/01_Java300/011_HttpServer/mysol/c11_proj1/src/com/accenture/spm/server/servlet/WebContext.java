@@ -29,11 +29,7 @@ public class WebContext {
 			}
 		}
 	}
-	/**
-	 * 通过URL的路径找到了对应class
-	 * @param pattern
-	 * @return
-	 */
+	
 	public String getClz(String pattern) {
 		String name = mappingMap.get(pattern);
 		return entityMap.get(name);
