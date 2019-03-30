@@ -20,14 +20,14 @@ public class ServerConnect {
 			 receive();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("服务器启动失败....");
+			System.out.println("ServerSocket Failure....");
 		}
 	}
 	
 	public void receive() {
 		try {
 			Socket client = serverSocket.accept();
-			System.out.println("一个客户端建立了连接....");
+			System.out.println("1 client Connected....");
 			//获取请求协议
 			InputStream is =client.getInputStream();
 			byte[] datas = new byte[1024*1024];
@@ -36,7 +36,7 @@ public class ServerConnect {
 			System.out.println(requestInfo);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("客户端错误");
+			System.out.println("Client Error!");
 		}
 	}
 	
