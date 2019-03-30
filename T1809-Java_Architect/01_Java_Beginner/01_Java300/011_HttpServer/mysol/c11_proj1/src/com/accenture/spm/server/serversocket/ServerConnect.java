@@ -1,11 +1,18 @@
 package com.accenture.spm.server.serversocket;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 public class ServerConnect {
 
 	public static void main(String[] args) {
 		ServerConnect server = new ServerConnect();
 		server.start();
 	}
+	
+	private ServerSocket serverSocket;
 	
 	public void start() {
 		try {
