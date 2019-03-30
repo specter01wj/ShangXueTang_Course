@@ -17,7 +17,7 @@ public class ServerConnect {
 	public void start() {
 		try {
 			serverSocket =  new ServerSocket(8888);
-			 receive();
+			receive();
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("ServerSocket Failure....");
