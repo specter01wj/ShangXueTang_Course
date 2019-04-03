@@ -39,11 +39,11 @@ public class ServerReturn {
 			content.append("<html>");
 			content.append("<head>");
 			content.append("<title>");
-			content.append("服务器响应成功");
+			content.append("Server Response Success!!!");
 			content.append("</title>");
 			content.append("</head>");
 			content.append("<body>");
-			content.append("shsxt server终于回来了。。。。");
+			content.append("shsxt server is Back!!!");
 			content.append("</body>");
 			content.append("</html>");
 			int size = content.toString().getBytes().length; //必须获取字节长度
