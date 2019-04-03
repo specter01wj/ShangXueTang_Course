@@ -78,7 +78,6 @@ public class ServerReturn {
 			bw.write(responseInfo.toString());
 			bw.flush();
 			
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Client Error!");
