@@ -46,7 +46,7 @@ public class ServerReturn {
 			content.append("</title>");
 			content.append("</head>");
 			content.append("<body>");
-			content.append("shsxt server is Back!!!");
+			content.append("James's server is Back!!!");
 			content.append("</body>");
 			content.append("</html>");
 			int size = content.toString().getBytes().length; //必须获取字节长度
