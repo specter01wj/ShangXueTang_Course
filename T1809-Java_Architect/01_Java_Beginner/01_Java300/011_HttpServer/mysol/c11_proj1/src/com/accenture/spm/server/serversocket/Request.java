@@ -14,6 +14,7 @@ public class Request {
 	//请求参数
 	private String queryStr;
 	private final  String CRLF = "\r\n";
+	
 	public Request(Socket client) throws IOException {
 		this(client.getInputStream());
 	}
