@@ -18,6 +18,7 @@ public class Request {
 	public Request(Socket client) throws IOException {
 		this(client.getInputStream());
 	}
+	
 	public Request(InputStream is) {		
 		byte[] datas = new byte[1024*1024];
 		int len;
