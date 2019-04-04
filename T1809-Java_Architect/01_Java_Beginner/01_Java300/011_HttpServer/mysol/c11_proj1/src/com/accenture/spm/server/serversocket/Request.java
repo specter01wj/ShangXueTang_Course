@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.net.Socket;
 
 public class Request {
-
 	//协议信息
 	private String requestInfo;
 	//请求方式
