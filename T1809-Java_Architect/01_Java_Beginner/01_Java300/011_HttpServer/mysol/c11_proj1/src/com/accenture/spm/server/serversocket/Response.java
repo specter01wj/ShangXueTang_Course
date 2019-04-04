@@ -39,12 +39,12 @@ public class Response {
 	}
 	
 	//动态添加内容
-	public	Response print(String info) {
+	public Response print(String info) {
 		content.append(info);
 		len+=info.getBytes().length;
 		return this;
 	}
-	public	Response println(String info) {
+	public Response println(String info) {
 		content.append(info).append(CRLF);
 		len+=(info+CRLF).getBytes().length;
 		return this;

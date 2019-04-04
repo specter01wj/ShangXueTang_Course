@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import javax.xml.ws.Response;
+import com.accenture.spm.server.serversocket.Response;
 
 public class ServerEncap {
 
