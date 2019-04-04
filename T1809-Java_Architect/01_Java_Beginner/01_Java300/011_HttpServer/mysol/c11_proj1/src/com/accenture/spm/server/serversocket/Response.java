@@ -37,6 +37,7 @@ public class Response {
 		this();
 		bw=new BufferedWriter(new OutputStreamWriter(os));
 	}
+	
 	//动态添加内容
 	public	Response print(String info) {
 		content.append(info);
