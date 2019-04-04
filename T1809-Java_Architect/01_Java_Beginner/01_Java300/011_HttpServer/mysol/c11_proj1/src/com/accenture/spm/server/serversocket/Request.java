@@ -54,7 +54,6 @@ public class Request {
 			queryStr =urlArray[1];
 		}
 		System.out.println(this.url);
-		
 		System.out.println("---3、获取请求参数:如果Get已经获取,如果是post可能在请求体中------");
 		
 		if(method.equals("post")) {
