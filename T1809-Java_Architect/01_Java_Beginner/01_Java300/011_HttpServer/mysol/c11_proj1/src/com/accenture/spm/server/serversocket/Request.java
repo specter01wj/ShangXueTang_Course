@@ -1,5 +1,9 @@
 package com.accenture.spm.server.serversocket;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.Socket;
+
 public class Request {
 
 	//协议信息
