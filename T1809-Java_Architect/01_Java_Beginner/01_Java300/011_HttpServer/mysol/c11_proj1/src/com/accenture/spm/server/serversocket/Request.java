@@ -69,6 +69,7 @@ public class Request {
 		System.out.println(method+"-->"+url+"-->"+queryStr);
 		
 		
+		
 	}
 	
 }
