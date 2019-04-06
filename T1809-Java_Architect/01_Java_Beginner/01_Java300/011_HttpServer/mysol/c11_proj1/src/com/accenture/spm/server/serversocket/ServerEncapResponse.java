@@ -42,11 +42,11 @@ public class ServerEncapResponse {
 			response.print("<html>");
 			response.print("<head>");
 			response.print("<title>");
-			response.print("服务器响应成功");
+			response.print("Server Response Success!!!");
 			response.print("</title>");
 			response.print("</head>");
 			response.print("<body>");
-			response.print("shsxt server终于回来了。。。。");
+			response.print("James's server is Back!!!");
 			response.print("</body>");
 			response.print("</html>");
 			//关注了状态码
