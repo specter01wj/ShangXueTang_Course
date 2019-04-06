@@ -7,10 +7,10 @@ import java.net.Socket;
 
 import com.accenture.spm.server.serversocket.Response;
 
-public class ServerEncapResonse {
+public class ServerEncapResponse {
 
 	public static void main(String[] args) {
-		ServerEncapResonse server = new ServerEncapResonse();
+		ServerEncapResponse server = new ServerEncapResponse();
 		server.start();
 	}
 	
