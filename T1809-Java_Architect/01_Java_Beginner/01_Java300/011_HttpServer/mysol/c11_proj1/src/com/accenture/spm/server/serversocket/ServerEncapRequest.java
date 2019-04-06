@@ -29,11 +29,7 @@ public class ServerEncapRequest {
 			Socket client = serverSocket.accept();
 			System.out.println("1 client Connected....");
 			//获取请求协议
-			InputStream is =client.getInputStream();
-			byte[] datas = new byte[1024*10];
-			int len = is.read(datas);
-			String requestInfo = new String(datas,0,len);
-			System.out.println(requestInfo);
+			Request request =new Request(client);
 			
 			Response response =new Response(client);
 			//关注了内容
