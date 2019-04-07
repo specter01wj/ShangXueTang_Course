@@ -73,7 +73,8 @@ public class RequestMap {
 		}
 		queryStr = null == queryStr ? "" : queryStr;
 		System.out.println(method + "-->" + url + "-->" + queryStr);
-		
+		//转成Map fav=1&fav=2&uname=shsxt&age=18&others=
+		convertMap();
 	}
 	
 }
