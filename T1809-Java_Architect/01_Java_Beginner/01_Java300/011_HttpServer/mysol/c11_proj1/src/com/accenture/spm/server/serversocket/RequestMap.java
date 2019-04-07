@@ -3,6 +3,7 @@ package com.accenture.spm.server.serversocket;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,8 +24,9 @@ public class RequestMap {
 		this(client.getInputStream());
 	}
 	
-	public RequestMap(InputStream is) {		
-		byte[] datas = new byte[1024*1024];
+	public RequestMap(InputStream is) {	
+		parameterMap = new HashMap<String,List<String>>();
+		byte[] datas = new byte[1024*10];
 		int len;
 		try {
 			len = is.read(datas);
