@@ -65,7 +65,7 @@ public class Request {
 				queryStr +="&"+qStr;
 			}
 		}
-		queryStr = null==queryStr?"":queryStr;
+		queryStr = null == queryStr ? "" : queryStr;
 		System.out.println(method+"-->"+url+"-->"+queryStr);
 		
 	}
