@@ -3,6 +3,8 @@ package com.accenture.spm.server.serversocket;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
+import java.util.List;
+import java.util.Map;
 
 public class RequestMap {
 
@@ -14,6 +16,7 @@ public class RequestMap {
 	private String url; 
 	//请求参数
 	private String queryStr;
+	private Map<String,List<String>> parameterMap;
 	private final  String CRLF = "\r\n";
 	
 	public RequestMap(Socket client) throws IOException {
