@@ -2,7 +2,10 @@ package com.accenture.spm.server.serversocket;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -75,6 +78,70 @@ public class RequestMap {
 		System.out.println(method + "-->" + url + "-->" + queryStr);
 		//转成Map fav=1&fav=2&uname=shsxt&age=18&others=
 		convertMap();
+	}
+	
+	//处理请求参数为Map
+	private void convertMap() {
+		//1、分割字符串 &
+		String[] keyValues =this.queryStr.split("&");
+		for(String queryStr:keyValues) {
+			//2、再次分割字符串  =
+			String[] kv = queryStr.split("=");
+			kv =Arrays.copyOf(kv, 2);
+			//获取key和value
+			String key = kv[0];
+			String value = kv[1]==null?null:decode( kv[1],"utf-8");
+			//存储到map中
+			if(!parameterMap.containsKey(key)) { //第一次
+				parameterMap.put(key, new ArrayList<String>());
+			}
+			parameterMap.get(key).add(value);			
+		}
+	}
+	/**
+	 * 处理中文
+	 * @return
+	 */
+	private String decode(String value,String enc) {
+		try {
+			return java.net.URLDecoder.decode(value, enc);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	/**
+	 * 通过name获取对应的多个值
+	 * @param key
+	 * @return
+	 */
+	public String[] getParameterValues(String key) {
+		List<String> values = this.parameterMap.get(key);
+		if(null==values || values.size()<1) {
+			return null;
+		}
+		return values.toArray(new String[0]);
+	}
+	/**
+	 * 通过name获取对应的一个值
+	 * @param key
+	 * @return
+	 */
+	public String getParameter(String key) {
+		String []  values =getParameterValues(key);
+		return values ==null?null:values[0];
+	}
+	public String getMethod() {
+		return method;
+	}
+	
+	public String getUrl() {
+		return url;
+	}
+	
+	public String getQueryStr() {
+		return queryStr;
 	}
 	
 }
