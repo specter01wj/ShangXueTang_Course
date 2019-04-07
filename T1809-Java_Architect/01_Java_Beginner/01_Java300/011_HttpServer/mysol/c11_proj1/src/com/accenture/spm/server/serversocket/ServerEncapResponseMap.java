@@ -29,11 +29,7 @@ public class ServerEncapResponseMap {
 			Socket client = serverSocket.accept();
 			System.out.println("1 client Connected....");
 			//获取请求协议
-			InputStream is =client.getInputStream();
-			byte[] datas = new byte[1024*10];
-			int len = is.read(datas);
-			String requestInfo = new String(datas,0,len);
-			System.out.println(requestInfo);
+			RequestMap request =new RequestMap(client);
 			
 			Response response =new Response(client);
 			//关注了内容
@@ -44,7 +40,7 @@ public class ServerEncapResponseMap {
 			response.print("</title>");
 			response.print("</head>");
 			response.print("<body>");
-			response.print("James's server is Back!!!");
+			response.print("James's server is Back!!!" + request.getParameter("uname"));
 			response.print("</body>");
 			response.print("</html>");
 			//关注了状态码
