@@ -1,14 +1,14 @@
-package com.accenture.spm.server.serversocket;
+package com.accenture.spm.server.serverServlet;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServerEncapResponseMap {
+public class ServerEncapServlet {
 
 	public static void main(String[] args) {
-		ServerEncapResponseMap server = new ServerEncapResponseMap();
+		ServerEncapServlet server = new ServerEncapServlet();
 		server.start();
 	}
 	

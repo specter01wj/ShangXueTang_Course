@@ -1,4 +1,4 @@
-package com.accenture.spm.server.serversocket;
+package com.accenture.spm.server.serverServlet;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
