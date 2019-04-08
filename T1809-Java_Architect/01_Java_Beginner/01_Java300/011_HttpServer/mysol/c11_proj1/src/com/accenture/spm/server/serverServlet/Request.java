@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RequestMap {
+public class Request {
 
 	//协议信息
 	private String requestInfo;
@@ -23,11 +23,11 @@ public class RequestMap {
 	private Map<String,List<String>> parameterMap;
 	private final  String CRLF = "\r\n";
 	
-	public RequestMap(Socket client) throws IOException {
+	public Request(Socket client) throws IOException {
 		this(client.getInputStream());
 	}
 	
-	public RequestMap(InputStream is) {	
+	public Request(InputStream is) {	
 		parameterMap = new HashMap<String,List<String>>();
 		byte[] datas = new byte[1024*10];
 		int len;
