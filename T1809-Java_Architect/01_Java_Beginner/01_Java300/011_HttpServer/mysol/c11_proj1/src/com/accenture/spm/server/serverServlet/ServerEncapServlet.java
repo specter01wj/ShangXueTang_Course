@@ -32,17 +32,18 @@ public class ServerEncapServlet {
 			Request request =new Request(client);
 			
 			Response response =new Response(client);
+			
 			//关注了内容
-			response.print("<html>");
-			response.print("<head>");
-			response.print("<title>");
-			response.print("Server Response Success!!!");
-			response.print("</title>");
-			response.print("</head>");
-			response.print("<body>");
-			response.print("James's server is Back!!!" + request.getParameter("uname"));
-			response.print("</body>");
-			response.print("</html>");
+			Servlet servlet= null;
+			if(request.getUrl().equals("login")) {
+				servlet= new LoginServlet();
+			}else if(request.getUrl().equals("reg")) {
+				servlet= new RegisterServlet();
+			}else {
+				//首页....
+			}
+			
+			servlet.service(request, response);		
 			//关注了状态码
 			response.pushToBrowser(200);
 		} catch (IOException e) {
