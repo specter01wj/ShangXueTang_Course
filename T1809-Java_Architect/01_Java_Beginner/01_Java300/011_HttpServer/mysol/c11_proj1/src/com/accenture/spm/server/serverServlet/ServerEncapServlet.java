@@ -29,12 +29,6 @@ public class ServerEncapServlet {
 			System.out.println("1 client Connected....");
 			//获取请求协议
 			Request request =new Request(client);
-			
-			
-			
-			
-			
-			
 			Response response =new Response(client);
 			
 			//关注了内容
