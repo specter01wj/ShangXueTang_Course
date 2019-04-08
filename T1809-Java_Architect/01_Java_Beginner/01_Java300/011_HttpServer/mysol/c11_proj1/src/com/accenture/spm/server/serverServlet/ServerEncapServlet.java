@@ -32,6 +32,7 @@ public class ServerEncapServlet {
 			
 			
 			
+			
 			Response response =new Response(client);
 			
 			//关注了内容
