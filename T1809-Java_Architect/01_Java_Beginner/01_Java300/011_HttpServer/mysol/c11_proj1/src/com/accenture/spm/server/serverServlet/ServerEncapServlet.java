@@ -28,8 +28,8 @@ public class ServerEncapServlet {
 			Socket client = serverSocket.accept();
 			System.out.println("1 client Connected....");
 			//获取请求协议
-			Request request =new Request(client);
-			Response response =new Response(client);
+			Request request = new Request(client);
+			Response response = new Response(client);
 			
 			//关注了内容
 			Servlet servlet= null;
