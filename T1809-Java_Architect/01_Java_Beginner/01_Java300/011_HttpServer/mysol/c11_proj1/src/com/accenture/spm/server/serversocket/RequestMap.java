@@ -98,6 +98,7 @@ public class RequestMap {
 			parameterMap.get(key).add(value);			
 		}
 	}
+	
 	/**
 	 * 处理中文
 	 * @return
@@ -111,6 +112,7 @@ public class RequestMap {
 		}
 		return null;
 	}
+	
 	/**
 	 * 通过name获取对应的多个值
 	 * @param key
@@ -123,6 +125,7 @@ public class RequestMap {
 		}
 		return values.toArray(new String[0]);
 	}
+	
 	/**
 	 * 通过name获取对应的一个值
 	 * @param key
@@ -132,6 +135,7 @@ public class RequestMap {
 		String []  values =getParameterValues(key);
 		return values ==null?null:values[0];
 	}
+	
 	public String getMethod() {
 		return method;
 	}
