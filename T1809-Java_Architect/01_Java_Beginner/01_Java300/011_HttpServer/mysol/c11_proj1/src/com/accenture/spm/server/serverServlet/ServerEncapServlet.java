@@ -1,7 +1,6 @@
 package com.accenture.spm.server.serverServlet;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -41,6 +40,7 @@ public class ServerEncapServlet {
 				servlet= new RegisterServlet();
 			}else {
 				//首页....
+				servlet= new LoginServlet();
 			}
 			
 			servlet.service(request, response);		
