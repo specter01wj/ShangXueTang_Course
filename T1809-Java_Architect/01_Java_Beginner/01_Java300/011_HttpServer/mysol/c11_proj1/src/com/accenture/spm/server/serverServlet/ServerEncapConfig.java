@@ -11,21 +11,6 @@ public class ServerEncapConfig {
 		server.start();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	private ServerSocket serverSocket;
 	
 	public void start() {
