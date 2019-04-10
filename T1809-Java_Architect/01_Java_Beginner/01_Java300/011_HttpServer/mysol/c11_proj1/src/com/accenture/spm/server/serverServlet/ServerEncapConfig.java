@@ -24,6 +24,7 @@ public class ServerEncapConfig {
 	
 	
 	
+	
 	private ServerSocket serverSocket;
 	
 	public void start() {
