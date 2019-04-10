@@ -34,9 +34,15 @@ public class ServerEncapConfig {
 			//关注了内容
 			Servlet servlet= WebApp.getServletFromUrl(request.getUrl());
 			
-			servlet.service(request, response);		
-			//关注了状态码
-			response.pushToBrowser(200);
+			if(null!=servlet) {
+				servlet.service(request, response);
+				//关注了状态码
+				response.pushToBrowser(200);
+			}else {
+				//错误....
+				response.pushToBrowser(404);
+			}
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Client Error!");
