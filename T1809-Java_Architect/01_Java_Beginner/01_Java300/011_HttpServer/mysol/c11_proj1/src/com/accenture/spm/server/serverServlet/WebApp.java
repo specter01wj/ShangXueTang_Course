@@ -18,7 +18,7 @@ public class WebApp {
 			WebHandler handler=new WebHandler();
 			//5、解析
 			parse.parse(Thread.currentThread().getContextClassLoader()
-			.getResourceAsStream("web.xml")
+			.getResourceAsStream("web2.xml")
 			,handler);			
 			//获取数据
 			webContext = new WebContext(handler.getEntitys(),handler.getMappings());
