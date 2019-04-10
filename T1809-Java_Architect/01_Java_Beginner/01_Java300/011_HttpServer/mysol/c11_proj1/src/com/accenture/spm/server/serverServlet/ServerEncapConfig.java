@@ -32,15 +32,7 @@ public class ServerEncapConfig {
 			Response response = new Response(client);
 			
 			//关注了内容
-			Servlet servlet= null;
-			if(request.getUrl().equals("login")) {
-				servlet= new LoginServlet();
-			}else if(request.getUrl().equals("reg")) {
-				servlet= new RegisterServlet();
-			}else {
-				//首页....
-				servlet= new LoginServlet();
-			}
+			Servlet servlet= WebApp.getServletFromUrl(request.getUrl());
 			
 			servlet.service(request, response);		
 			//关注了状态码
