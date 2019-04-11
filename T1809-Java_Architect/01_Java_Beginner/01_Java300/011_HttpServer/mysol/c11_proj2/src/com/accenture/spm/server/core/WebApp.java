@@ -1,4 +1,4 @@
-package com.shsxt.server.core;
+package com.accenture.spm.server.core;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -25,6 +25,7 @@ public class WebApp {
 			System.out.println("解析配置文件错误");
 		}
 	}
+	
 	/**
 	 * 通过url获取配置文件对应的servlet
 	 * @param url
