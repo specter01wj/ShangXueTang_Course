@@ -32,8 +32,6 @@ public class RegisterServlet implements Servlet {
 		response.print("</body>");
 		response.print("</html>");
 		
-		
-		
 	}
 
 }
