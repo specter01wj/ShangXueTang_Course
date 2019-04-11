@@ -1,15 +1,9 @@
-package com.shsxt.server.core;
+package com.accenture.spm.server.core;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * 目标: 处理404 505 和首页
- * 
- * @author 裴新 QQ:3401997271
- *
- */
 public class Server {
 	private ServerSocket serverSocket ;
 	private boolean isRunning;
@@ -17,6 +11,7 @@ public class Server {
 		Server server = new Server();
 		server.start();
 	}
+	
 	//启动服务
 	public void start() {
 		try {
@@ -29,6 +24,7 @@ public class Server {
 			stop();
 		}
 	}
+	
 	//接受连接处理
 	public void receive() {
 			while(isRunning) {
@@ -43,6 +39,7 @@ public class Server {
 				}
 			}	
 	}
+	
 	//停止服务
 	public void stop() {
 		isRunning = false;
