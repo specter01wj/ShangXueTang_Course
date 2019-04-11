@@ -1,10 +1,5 @@
-package com.shsxt.server.core;
-/**
- * 服务器小脚本接口
- * 
- * @author 裴新 QQ:3401997271
- *
- */
+package com.accenture.spm.server.core;
+
 public interface Servlet {
 	void service(Request request,Response response);
 }
