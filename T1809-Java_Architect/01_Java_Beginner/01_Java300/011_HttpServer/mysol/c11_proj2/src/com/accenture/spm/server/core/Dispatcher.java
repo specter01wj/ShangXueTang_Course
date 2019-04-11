@@ -1,18 +1,14 @@
-package com.shsxt.server.core;
+package com.accenture.spm.server.core;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
-/**
- * 分发器：加入状态内容处理  404 505 及首页
- * 
- * @author 裴新 QQ:3401997271
- *
- */
+
 public class Dispatcher implements Runnable {
 	private Socket client;
 	private Request request;
-	private Response response ;
+	private Response response;
+	
 	public Dispatcher(Socket client) {
 		this.client = client;
 		try {
@@ -25,9 +21,9 @@ public class Dispatcher implements Runnable {
 			this.release();
 		}
 	}
+	
 	@Override
 	public void run() {	
-		
 		try {
 			if(null== request.getUrl() || request.getUrl().equals("")) {
 				InputStream is =Thread.currentThread().getContextClassLoader().getResourceAsStream("index.html");
@@ -58,6 +54,7 @@ public class Dispatcher implements Runnable {
 		}		
 		release();
 	}
+	
 	//释放资源
 	private void release() {
 		try {
