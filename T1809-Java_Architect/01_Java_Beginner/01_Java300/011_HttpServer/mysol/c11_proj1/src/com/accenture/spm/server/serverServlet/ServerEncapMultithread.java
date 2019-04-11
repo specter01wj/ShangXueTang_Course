@@ -30,22 +30,8 @@ public class ServerEncapMultithread {
 			try {
 				Socket client = serverSocket.accept();
 				System.out.println("1 client Connected....");
-				//获取请求协议
-				Request request = new Request(client);
-				Response response = new Response(client);
-				
-				//关注了内容
-				Servlet servlet= WebApp.getServletFromUrl(request.getUrl());
-				
-				if(null!=servlet) {
-					servlet.service(request, response);
-					//关注了状态码
-					response.pushToBrowser(200);
-				}else {
-					//错误....
-					response.pushToBrowser(404);
-				}
-				
+				//多线程处理
+				new Thread(new Dispatcher(client)).start();
 			} catch (IOException e) {
 				e.printStackTrace();
 				System.out.println("Client Error!");
