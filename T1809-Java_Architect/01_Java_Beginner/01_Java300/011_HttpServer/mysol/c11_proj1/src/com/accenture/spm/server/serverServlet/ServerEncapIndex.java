@@ -32,7 +32,7 @@ public class ServerEncapIndex {
 				Socket client = serverSocket.accept();
 				System.out.println("1 client Connected....");
 				//多线程处理
-				new Thread(new Dispatcher(client)).start();
+				new Thread(new DispatcherIndex(client)).start();
 			} catch (IOException e) {
 				e.printStackTrace();
 				System.out.println("Client Error!");
