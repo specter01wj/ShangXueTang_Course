@@ -1,4 +1,4 @@
-package com.shsxt.server.core;
+package com.accenture.spm.server.core;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -17,11 +17,13 @@ public class Response {
 	
 	private final String BLANK =" ";
 	private final  String CRLF = "\r\n";
+	
 	private Response() {
 		content =new StringBuilder();
 		headInfo=new StringBuilder();
 		len =0;
 	}
+	
 	public Response(Socket client) {
 		this();
 		try {
@@ -36,12 +38,14 @@ public class Response {
 		this();
 		bw=new BufferedWriter(new OutputStreamWriter(os));
 	}
+	
 	//动态添加内容
 	public	Response print(String info) {
 		content.append(info);
 		len+=info.getBytes().length;
 		return this;
 	}
+	
 	public	Response println(String info) {
 		content.append(info).append(CRLF);
 		len+=(info+CRLF).getBytes().length;
