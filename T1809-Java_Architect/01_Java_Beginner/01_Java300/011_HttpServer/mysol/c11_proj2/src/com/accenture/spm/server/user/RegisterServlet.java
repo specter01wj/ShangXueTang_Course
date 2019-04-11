@@ -1,8 +1,8 @@
-package com.shsxt.user;
+package com.accenture.spm.server.user;
 
-import com.shsxt.server.core.Request;
-import com.shsxt.server.core.Response;
-import com.shsxt.server.core.Servlet;
+import com.accenture.spm.server.core.Request;
+import com.accenture.spm.server.core.Response;
+import com.accenture.spm.server.core.Servlet;
 
 public class RegisterServlet implements Servlet {
 	@Override

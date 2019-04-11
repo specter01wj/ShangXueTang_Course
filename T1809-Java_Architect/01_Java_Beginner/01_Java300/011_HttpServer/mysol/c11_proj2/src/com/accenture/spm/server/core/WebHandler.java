@@ -1,4 +1,4 @@
-package com.shsxt.server.core;
+package com.accenture.spm.server.core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +6,7 @@ import java.util.List;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-/**
- * 处理器
- * 
- * @author 裴新 QQ:3401997271
- *
- */
+
 public class WebHandler extends DefaultHandler{
 	private List<Entity> entitys  = new ArrayList<Entity>();
 	private List<Mapping> mappings = new ArrayList<Mapping>();
@@ -19,7 +14,6 @@ public class WebHandler extends DefaultHandler{
 	private Mapping mapping ;
 	private String tag; //存储操作标签
 	private boolean isMapping = false;
-	
 	
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
