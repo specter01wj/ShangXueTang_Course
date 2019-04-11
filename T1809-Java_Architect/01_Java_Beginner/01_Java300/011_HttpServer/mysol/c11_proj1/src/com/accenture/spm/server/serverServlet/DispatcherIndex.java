@@ -28,7 +28,7 @@ public class DispatcherIndex implements Runnable {
 	public void run() {
 		try {
 			if(null== request.getUrl() || request.getUrl().equals("")) {
-				InputStream is =Thread.currentThread().getContextClassLoader().getResourceAsStream("index.html");
+				InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("index.html");
 				response.print((new String(is.readAllBytes())));
 				response.pushToBrowser(200);
 				is.close();
