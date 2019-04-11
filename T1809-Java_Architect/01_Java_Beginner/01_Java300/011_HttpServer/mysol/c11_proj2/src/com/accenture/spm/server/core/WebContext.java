@@ -1,4 +1,4 @@
-package com.shsxt.server.core;
+package com.accenture.spm.server.core;
 
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +28,7 @@ public class WebContext {
 			}
 		}
 	}
+	
 	/**
 	 * 通过URL的路径找到了对应class
 	 * @param pattern
