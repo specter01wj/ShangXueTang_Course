@@ -1,4 +1,4 @@
-package com.shsxt.server.core;
+package com.accenture.spm.server.core;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,12 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 封装请求协议: 封装请求参数为Map
- * 
- * @author 裴新 QQ:3401997271
- *
- */
 public class Request {
 	//协议信息
 	private String requestInfo;
@@ -28,9 +22,11 @@ public class Request {
 	//存储参数
 	private Map<String,List<String>> parameterMap;
 	private final  String CRLF = "\r\n";
+	
 	public Request(Socket client) throws IOException {
 		this(client.getInputStream());
 	}
+	
 	public Request(InputStream is) {		
 		parameterMap = new HashMap<String,List<String>>();
 		byte[] datas = new byte[1024*1024*1024];
@@ -45,6 +41,7 @@ public class Request {
 		//分解字符串
 		parseRequestInfo();
 	}
+	
 	//分解字符串
 	private void parseRequestInfo() {
 		System.out.println("------分解-------");
@@ -84,6 +81,7 @@ public class Request {
 		//转成Map fav=1&fav=2&uname=shsxt&age=18&others=
 		convertMap();
 	}
+	
 	//处理请求参数为Map
 	private void convertMap() {
 		//1、分割字符串 &
@@ -102,6 +100,7 @@ public class Request {
 			parameterMap.get(key).add(value);			
 		}
 	}
+	
 	/**
 	 * 处理中文
 	 * @return
@@ -115,6 +114,7 @@ public class Request {
 		}
 		return null;
 	}
+	
 	/**
 	 * 通过name获取对应的多个值
 	 * @param key
@@ -127,6 +127,7 @@ public class Request {
 		}
 		return values.toArray(new String[0]);
 	}
+	
 	/**
 	 * 通过name获取对应的一个值
 	 * @param key
@@ -136,6 +137,7 @@ public class Request {
 		String []  values =getParameterValues(key);
 		return values ==null?null:values[0];
 	}
+	
 	public String getMethod() {
 		return method;
 	}
@@ -147,6 +149,5 @@ public class Request {
 	public String getQueryStr() {
 		return queryStr;
 	}
-	
 	
 }
