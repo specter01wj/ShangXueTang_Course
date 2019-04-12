@@ -1,6 +1,8 @@
 package com.accenture.spm.annotation;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class AnnotationInner {
 
@@ -17,6 +19,11 @@ public class AnnotationInner {
 	@Deprecated
 	public static void test001(){
 		System.out.println("test001");
+	}
+	
+	public static void test002(){
+		List list = new ArrayList();
+		List list2 = new ArrayList();
 	}
 
 }
