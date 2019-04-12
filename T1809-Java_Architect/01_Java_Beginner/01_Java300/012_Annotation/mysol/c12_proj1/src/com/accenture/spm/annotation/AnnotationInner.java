@@ -26,5 +26,6 @@ public class AnnotationInner {
 		List list = new ArrayList();
 		List list2 = new ArrayList();
 	}
+	
 
 }
