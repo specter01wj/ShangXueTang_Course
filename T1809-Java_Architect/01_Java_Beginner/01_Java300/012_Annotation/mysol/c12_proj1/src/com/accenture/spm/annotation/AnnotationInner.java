@@ -21,6 +21,7 @@ public class AnnotationInner {
 		System.out.println("test001");
 	}
 	
+	@SuppressWarnings("all")
 	public static void test002(){
 		List list = new ArrayList();
 		List list2 = new ArrayList();
