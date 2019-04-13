@@ -10,5 +10,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SchoolAnnotation {
 
+	String studentName() default "";
+	int age() default 0;
+	int id() default -1;
+	
+	String[] schools() default {"Duke","UVA","UNC","UK"};
 
 }
