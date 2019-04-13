@@ -11,6 +11,7 @@ public class AnnotationCustom {
 	public void test2(){
 		
 		
+		
 	}
 	
 }
