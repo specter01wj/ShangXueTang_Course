@@ -7,5 +7,8 @@ public class AnnotationCustom {
 		
 	}
 	
+	@ValueAnnotation("A101")
+	public void test2(){
+	}
 	
 }
