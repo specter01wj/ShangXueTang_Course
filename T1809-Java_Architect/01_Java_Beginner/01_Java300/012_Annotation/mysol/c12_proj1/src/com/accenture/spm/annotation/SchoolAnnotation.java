@@ -17,6 +17,7 @@ public @interface SchoolAnnotation {
 	
 	
 	
+	
 	String[] schools() default {"Duke","UVA","UNC","UK"};
 
 }
