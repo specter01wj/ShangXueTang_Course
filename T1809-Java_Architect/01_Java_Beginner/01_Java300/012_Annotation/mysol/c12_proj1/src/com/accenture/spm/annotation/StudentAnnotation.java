@@ -3,8 +3,11 @@ package com.accenture.spm.annotation;
 @TableAnnotation("tb_student")
 public class StudentAnnotation {
 
+	@FieldAnnotation(columnName="id",type="int",length=10)
 	private int id;
+	@FieldAnnotation(columnName="sname",type="varchar",length=10)
 	private String studentName;
+	@FieldAnnotation(columnName="age",type="int",length=3)
 	private int age;
 	
 	
