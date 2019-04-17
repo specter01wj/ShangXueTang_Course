@@ -1,5 +1,6 @@
 package com.accenture.spm.annotation;
 
+@TableAnnotation("tb_student")
 public class StudentAnnotation {
 
 	private int id;
