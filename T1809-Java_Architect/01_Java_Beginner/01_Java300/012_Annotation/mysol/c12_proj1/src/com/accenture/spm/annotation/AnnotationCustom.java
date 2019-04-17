@@ -12,16 +12,4 @@ public class AnnotationCustom {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
